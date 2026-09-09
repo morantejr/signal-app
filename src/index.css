@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f6f5f2;
+  color: #16181c;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+a { color: #2f6f8f; text-decoration: none; }
+a:hover { color: #1d4d66; }
+input, button, textarea { font-family: inherit; }
+
+@keyframes sIn { from { opacity: 0; transform: translateY(10px) } to { opacity: 1; transform: none } }
+@keyframes sFade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes sBreathe { 0%, 100% { opacity: .35 } 50% { opacity: 1 } }
+@keyframes sGrow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+
+.hoverInk { transition: color .2s; }
+.hoverInk:hover { color: #16181c !important; }
+.hoverFade { transition: opacity .2s; }
+.hoverFade:hover { opacity: .62; }
+.hoverFadeLight { transition: opacity .2s; }
+.hoverFadeLight:hover { opacity: .6; }
+.advBack:hover { background: #1d252b !important; }

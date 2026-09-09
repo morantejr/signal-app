@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  html, body { margin:0; padding:0; background:#f6f5f2; color:#16181c; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:#2f6f8f; text-decoration:none; }
+  a:hover { color:#1d4d66; }
+  input, button, textarea { font-family:inherit; }
+  @keyframes sIn { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:none } }
+  @keyframes sFade { from { opacity:0 } to { opacity:1 } }
+  @keyframes sBreathe { 0%,100% { opacity:.35 } 50% { opacity:1 } }
+  @keyframes sGrow { from { transform:scaleX(0) } to { transform:scaleX(1) } }
+</style>
+</helmet>
+
+<div style="min-height:100vh;width:100%;background:#f6f5f2;color:#16181c;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;display:flex;flex-direction:column">
+
+  <sc-if value="{{ chromeOn }}" hint-placeholder-val="{{ true }}">
+    <div style="position:sticky;top:0;z-index:20;background:rgba(246,245,242,.86);backdrop-filter:blur(14px);border-bottom:1px solid #e9e6e0">
+      <div style="max-width:960px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;gap:28px">
+        <span onClick="{{ goHome }}" style="font:500 17px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:.16em;cursor:pointer">SIGNAL</span>
+        <div style="flex:1;display:flex;gap:22px">
+          <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+            <span onClick="{{ t.go }}" style="{{ t.style }}" style-hover="color:#16181c">{{ t.label }}</span>
+          </sc-for>
+        </div>
+        <div style="width:30px;height:30px;border-radius:50%;background:#e5e1d9;border:1px solid #dbd6cc;display:flex;align-items:center;justify-content:center;font:500 11px/1 'Helvetica Neue',Helvetica,sans-serif;color:#6b6f76;cursor:pointer">JR</div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="flex:1;display:flex;flex-direction:column">
+
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:80px 24px 120px;animation:sIn .4s ease both">
+        <div style="width:100%;max-width:620px">
+          <div style="font:400 40px/1.15 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.02em;margin-bottom:28px">Ask SIGNAL</div>
+          <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e2ded6;border-radius:14px;padding:0 20px;height:62px;box-shadow:0 1px 2px rgba(20,22,26,.04)">
+            <input value="{{ q }}" onChange="{{ onQ }}" onKeyDown="{{ onQKey }}" placeholder="Should I buy NVDA?" style="flex:1;border:0;outline:0;background:transparent;font:400 19px/1 'Helvetica Neue',Helvetica,sans-serif;color:#16181c" />
+            <button onClick="{{ ask }}" style="{{ askBtn }}">Ask</button>
+          </div>
+          <div style="margin-top:34px">
+            <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:10px">Recent</div>
+            <sc-for list="{{ recents }}" as="r" hint-placeholder-count="4">
+              <div onClick="{{ r.go }}" style="display:flex;align-items:center;justify-content:space-between;padding:14px 2px;border-bottom:1px solid #e9e6e0;cursor:pointer" style-hover="opacity:.6">
+                <span style="font:400 16px/1.3 'Helvetica Neue',Helvetica,sans-serif;color:#16181c">{{ r.label }}</span>
+                <span style="{{ r.viewStyle }}">{{ r.view }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isThinking }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:80px 24px;animation:sFade .3s ease both">
+        <div style="width:100%;max-width:620px">
+          <div style="font:400 15px/1.4 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:14px">{{ askedQ }}</div>
+          <div style="font:400 26px/1.3 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em;animation:sBreathe 1.8s ease-in-out infinite">{{ thinkLine }}</div>
+          <div style="height:2px;background:#e6e2da;border-radius:2px;margin-top:26px;overflow:hidden">
+            <div style="{{ thinkBar }}"></div>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isAsset }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:720px;width:100%;margin:0 auto;padding:44px 24px 120px;animation:sIn .4s ease both">
+
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px">
+          <div>
+            <div style="font:400 34px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em">{{ sym }}</div>
+            <div style="font:400 15px/1.4 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:8px">{{ name }}</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font:400 28px/1 'Helvetica Neue',Helvetica,sans-serif">{{ price }}</div>
+            <div style="{{ chgStyle }}">{{ chg }} today</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:26px;margin:30px 0 4px;border-bottom:1px solid #e9e6e0">
+          <sc-for list="{{ subtabs }}" as="s" hint-placeholder-count="4">
+            <span onClick="{{ s.go }}" style="{{ s.style }}" style-hover="color:#16181c">{{ s.label }}</span>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+          <div style="animation:sIn .3s ease both">
+            <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:32px;margin-top:26px;box-shadow:0 1px 2px rgba(20,22,26,.04)">
+              <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:.06em;color:#9a9ea5">SIGNAL VIEW</div>
+              <div style="{{ stanceStyle }}">{{ stance }}</div>
+              <div style="display:flex;flex-wrap:wrap;gap:44px;margin-top:26px">
+                <div>
+                  <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:9px">Confidence</div>
+                  <div style="font:400 26px/1 'Helvetica Neue',Helvetica,sans-serif">{{ conf }}</div>
+                </div>
+                <sc-if value="{{ showER }}" hint-placeholder-val="{{ true }}">
+                  <div>
+                    <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:9px">Expected over 3 months</div>
+                    <div style="{{ erStyle }}">{{ er }}</div>
+                  </div>
+                </sc-if>
+              </div>
+              <div style="margin-top:30px">
+                <div style="position:relative;height:6px;background:#eeebe5;border-radius:4px">
+                  <div style="{{ scaleFill }}"></div>
+                  <div style="{{ scaleMark }}"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;font:400 12px/1 'Helvetica Neue',Helvetica,sans-serif;color:#a5a9af;margin-top:10px">
+                  <span>Bearish</span><span>Neutral</span><span>Bullish</span>
+                </div>
+              </div>
+              <div style="font:400 19px/1.55 'Helvetica Neue',Helvetica,sans-serif;color:#2c2f35;margin-top:30px;text-wrap:pretty">{{ headline }}</div>
+            </div>
+
+            <div style="font:400 22px/1.2 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em;margin:44px 0 6px">Why</div>
+            <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="3">
+              <div style="display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #e9e6e0">
+                <span style="font:400 15px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#2f8f6b">✓</span>
+                <div style="flex:1">
+                  <div style="font:400 17px/1.45 'Helvetica Neue',Helvetica,sans-serif">{{ r.t }}</div>
+                  <div style="font:400 14px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:5px">{{ r.d }}</div>
+                </div>
+              </div>
+            </sc-for>
+
+            <div style="font:400 22px/1.2 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em;margin:40px 0 6px">Biggest risks</div>
+            <sc-for list="{{ risks }}" as="r" hint-placeholder-count="2">
+              <div style="display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #e9e6e0">
+                <span style="font:400 15px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#b78330">⚠</span>
+                <div style="flex:1">
+                  <div style="font:400 17px/1.45 'Helvetica Neue',Helvetica,sans-serif">{{ r.t }}</div>
+                  <div style="font:400 14px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:5px">{{ r.d }}</div>
+                </div>
+              </div>
+            </sc-for>
+
+            <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:26px 28px;margin-top:40px">
+              <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:.06em;color:#9a9ea5;margin-bottom:12px">BOTTOM LINE</div>
+              <div style="font:400 17px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#2c2f35;text-wrap:pretty">{{ bottomLine }}</div>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px">
+              <button onClick="{{ goWhy }}" style="{{ btnPrimary }}">Why?</button>
+              <button onClick="{{ goRisks }}" style="{{ btnGhost }}">What could change this?</button>
+              <button onClick="{{ goResearch }}" style="{{ btnGhost }}">See full research</button>
+            </div>
+
+            <div style="font:400 13px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#a5a9af;margin-top:34px;text-wrap:pretty">SIGNAL organises evidence and weighs it against the opposite case. It does not make the decision for you.</div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isWhy }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:sIn .3s ease both;margin-top:26px">
+            <div style="display:flex;height:10px;border-radius:6px;overflow:hidden;background:#eeebe5">
+              <div style="{{ upFill }}"></div>
+              <div style="{{ downFill }}"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;margin-top:10px">
+              <span style="color:#2f8f6b;white-space:nowrap">Could go up · {{ upP }}</span>
+              <span style="color:#c0563f;white-space:nowrap">Could go down · {{ downP }}</span>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:26px">
+              <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:26px 28px">
+                <div style="font:400 20px/1.25 'Helvetica Neue',Helvetica,sans-serif;color:#2f8f6b">Why it could go up</div>
+                <div style="font:400 34px/1 'Helvetica Neue',Helvetica,sans-serif;margin-top:14px">{{ upP }}</div>
+                <sc-for list="{{ upReasons }}" as="r" hint-placeholder-count="3">
+                  <div style="font:400 16px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#2c2f35;padding:11px 0;border-bottom:1px solid #efece6">{{ r }}</div>
+                </sc-for>
+                <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin:20px 0 8px">If this plays out</div>
+                <div style="font:400 24px/1 'Helvetica Neue',Helvetica,sans-serif;color:#2f8f6b">+18% to +30%</div>
+              </div>
+              <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:26px 28px">
+                <div style="font:400 20px/1.25 'Helvetica Neue',Helvetica,sans-serif;color:#c0563f">Why it could go down</div>
+                <div style="font:400 34px/1 'Helvetica Neue',Helvetica,sans-serif;margin-top:14px">{{ downP }}</div>
+                <sc-for list="{{ downReasons }}" as="r" hint-placeholder-count="3">
+                  <div style="font:400 16px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#2c2f35;padding:11px 0;border-bottom:1px solid #efece6">{{ r }}</div>
+                </sc-for>
+                <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin:20px 0 8px">If this plays out</div>
+                <div style="font:400 24px/1 'Helvetica Neue',Helvetica,sans-serif;color:#c0563f">−21% to −25%</div>
+              </div>
+            </div>
+
+            <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:26px 28px;margin-top:16px">
+              <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:.06em;color:#9a9ea5;margin-bottom:12px">SIGNAL'S INTERPRETATION</div>
+              <div style="font:400 18px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#2c2f35;text-wrap:pretty">Upside is currently more likely, but the downside is meaningful if growth disappoints. That is why the view is moderate rather than strong.</div>
+            </div>
+
+            <div style="margin-top:34px">
+              <div onClick="{{ toggleDeeper }}" style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-top:1px solid #e9e6e0;cursor:pointer">
+                <span style="font:400 16px/1 'Helvetica Neue',Helvetica,sans-serif;color:#2f6f8f">{{ deeperLabel }}</span>
+                <span style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#a5a9af">{{ deeperCaret }}</span>
+              </div>
+              <sc-if value="{{ deeperOpen }}" hint-placeholder-val="{{ false }}">
+                <div style="animation:sIn .25s ease both;padding-bottom:8px">
+                  <sc-for list="{{ deeper }}" as="d" hint-placeholder-count="4">
+                    <div style="padding:14px 0;border-bottom:1px solid #efece6">
+                      <div style="font:400 16px/1.4 'Helvetica Neue',Helvetica,sans-serif">{{ d.t }}</div>
+                      <div style="font:400 14px/1.55 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:5px">{{ d.d }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isRisks }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:sIn .3s ease both;margin-top:26px">
+            <div style="font:400 24px/1.25 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em">What could change our mind?</div>
+            <div style="font:400 16px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:10px;max-width:560px;text-wrap:pretty">These are the few things SIGNAL watches. If any of them stops looking healthy, the view changes on its own — and you get told.</div>
+            <sc-for list="{{ health }}" as="h" hint-placeholder-count="4">
+              <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:24px 26px;margin-top:14px">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+                  <span style="font:400 19px/1.3 'Helvetica Neue',Helvetica,sans-serif">{{ h.name }}</span>
+                  <span style="{{ h.pill }}">{{ h.status }}</span>
+                </div>
+                <div style="display:flex;align-items:baseline;gap:26px;margin-top:16px">
+                  <div>
+                    <div style="font:400 12px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:7px">Now</div>
+                    <div style="font:400 22px/1 'Helvetica Neue',Helvetica,sans-serif">{{ h.now }}</div>
+                  </div>
+                  <div>
+                    <div style="font:400 12px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:7px">Worrying if</div>
+                    <div style="font:400 22px/1 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a">{{ h.danger }}</div>
+                  </div>
+                </div>
+                <div style="position:relative;height:8px;background:#f0ede7;border-radius:5px;margin-top:20px;overflow:hidden">
+                  <div style="{{ h.zone }}"></div>
+                  <div style="{{ h.mark }}"></div>
+                </div>
+                <div style="font:400 14px/1.55 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:14px">{{ h.plain }}</div>
+              </div>
+            </sc-for>
+            <div style="font:400 14px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#a5a9af;margin-top:22px">Right now: {{ healthySummary }}</div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isResearchTab }}" hint-placeholder-val="{{ false }}">
+          <div style="animation:sIn .3s ease both;margin-top:26px">
+            <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:30px 30px">
+              <div style="font:400 24px/1.25 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em">The work behind the answer</div>
+              <div style="font:400 16px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:12px;max-width:540px;text-wrap:pretty">Six research agents read the filings, the market data, the economy and the news, then a separate model checked the numbers and an internal committee argued about the result. You don't need any of it — it's here if you want it.</div>
+              <div style="display:flex;flex-wrap:wrap;gap:26px;margin-top:26px">
+                <sc-for list="{{ researchStats }}" as="s" hint-placeholder-count="4">
+                  <div>
+                    <div style="font:400 24px/1 'Helvetica Neue',Helvetica,sans-serif">{{ s.v }}</div>
+                    <div style="font:400 13px/1.4 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-top:7px">{{ s.k }}</div>
+                  </div>
+                </sc-for>
+              </div>
+              <button onClick="{{ openAdvanced }}" style="{{ btnPrimary }}">Open Advanced Research</button>
+              <div style="font:400 13px/1.55 'Helvetica Neue',Helvetica,sans-serif;color:#a5a9af;margin-top:14px">Built for professionals: agents, evidence graph, model calibration, historical analogies, committee debate and system architecture.</div>
+            </div>
+            <sc-for list="{{ sourceGroups }}" as="g" hint-placeholder-count="3">
+              <div style="padding:18px 2px;border-bottom:1px solid #e9e6e0">
+                <div style="display:flex;justify-content:space-between;gap:14px">
+                  <span style="font:400 16px/1.4 'Helvetica Neue',Helvetica,sans-serif">{{ g.claim }}</span>
+                  <span style="font:400 14px/1.4 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;white-space:nowrap">{{ g.strength }}</span>
+                </div>
+                <div style="font:400 14px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-top:6px">{{ g.sources }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isWatchlist }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:720px;width:100%;margin:0 auto;padding:44px 24px 120px;animation:sIn .35s ease both">
+        <div style="font:400 32px/1.15 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.02em">Watchlist</div>
+        <div style="font:400 16px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:10px">SIGNAL keeps watching these and tells you when its view changes.</div>
+        <sc-for list="{{ watchlist }}" as="w" hint-placeholder-count="5">
+          <div onClick="{{ w.go }}" style="display:flex;align-items:center;gap:18px;padding:20px 2px;border-bottom:1px solid #e9e6e0;cursor:pointer" style-hover="opacity:.62">
+            <div style="width:74px">
+              <div style="font:400 18px/1 'Helvetica Neue',Helvetica,sans-serif">{{ w.sym }}</div>
+              <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-top:7px">{{ w.price }}</div>
+            </div>
+            <div style="flex:1">
+              <div style="{{ w.viewStyle }}">{{ w.view }}</div>
+              <div style="font:400 14px/1.45 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:5px">{{ w.note }}</div>
+            </div>
+            <div style="text-align:right;width:96px">
+              <div style="font:400 16px/1 'Helvetica Neue',Helvetica,sans-serif">{{ w.conf }}</div>
+              <div style="font:400 12px/1 'Helvetica Neue',Helvetica,sans-serif;color:#a5a9af;margin-top:7px">confidence</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isPortfolio }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:720px;width:100%;margin:0 auto;padding:44px 24px 120px;animation:sIn .35s ease both">
+        <div style="font:400 32px/1.15 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.02em">Portfolio</div>
+        <div style="display:flex;flex-wrap:wrap;gap:44px;margin-top:24px">
+          <div>
+            <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:9px">Value</div>
+            <div style="font:400 28px/1 'Helvetica Neue',Helvetica,sans-serif">$2.41M</div>
+          </div>
+          <div>
+            <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:9px">Expected over 3 months</div>
+            <div style="font:400 28px/1 'Helvetica Neue',Helvetica,sans-serif;color:#2f8f6b">+8.6%</div>
+          </div>
+          <div>
+            <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-bottom:9px">Ups and downs</div>
+            <div style="font:400 28px/1 'Helvetica Neue',Helvetica,sans-serif">Bumpy</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:28px 30px;margin-top:26px">
+          <div style="font:400 13px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:.06em;color:#9a9ea5;margin-bottom:12px">ONE THING TO KNOW</div>
+          <div style="font:400 20px/1.45 'Helvetica Neue',Helvetica,sans-serif;color:#16181c;text-wrap:pretty">Four of your five holdings rise and fall with the same thing: how much companies spend on AI advertising and software.</div>
+          <div style="font:400 16px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:14px;text-wrap:pretty">It looks like five separate bets. It behaves like about two. If that spending slows, most of the portfolio moves down together.</div>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:22px">
+            <div style="flex:1;height:8px;background:#f0ede7;border-radius:5px;overflow:hidden"><div style="width:71%;height:100%;background:#b78330;transform-origin:left;animation:sGrow .7s ease both"></div></div>
+            <span style="font:400 15px/1 'Helvetica Neue',Helvetica,sans-serif;color:#b78330">71% linked</span>
+          </div>
+        </div>
+        <sc-for list="{{ holdings }}" as="h" hint-placeholder-count="5">
+          <div onClick="{{ h.go }}" style="display:flex;align-items:center;gap:18px;padding:18px 2px;border-bottom:1px solid #e9e6e0;cursor:pointer" style-hover="opacity:.62">
+            <span style="width:74px;font:400 17px/1 'Helvetica Neue',Helvetica,sans-serif">{{ h.sym }}</span>
+            <span style="width:64px;font:400 15px/1 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a">{{ h.w }}</span>
+            <span style="flex:1;font:400 15px/1.4 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a">{{ h.driver }}</span>
+            <span style="{{ h.viewStyle }}">{{ h.view }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isResearchHome }}" hint-placeholder-val="{{ false }}">
+      <div style="max-width:720px;width:100%;margin:0 auto;padding:44px 24px 120px;animation:sIn .35s ease both">
+        <div style="font:400 32px/1.15 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.02em">Research</div>
+        <div style="font:400 16px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:10px">Everything you've asked, and the answer SIGNAL gave.</div>
+        <sc-for list="{{ history }}" as="h" hint-placeholder-count="4">
+          <div onClick="{{ h.go }}" style="padding:20px 2px;border-bottom:1px solid #e9e6e0;cursor:pointer" style-hover="opacity:.62">
+            <div style="display:flex;justify-content:space-between;gap:16px">
+              <span style="font:400 17px/1.4 'Helvetica Neue',Helvetica,sans-serif">{{ h.q }}</span>
+              <span style="{{ h.viewStyle }}">{{ h.view }}</span>
+            </div>
+            <div style="font:400 14px/1.5 'Helvetica Neue',Helvetica,sans-serif;color:#9a9ea5;margin-top:6px">{{ h.when }}</div>
+          </div>
+        </sc-for>
+        <div style="background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:28px 30px;margin-top:30px">
+          <div style="font:400 22px/1.25 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:-.01em">Advanced Research</div>
+          <div style="font:400 16px/1.6 'Helvetica Neue',Helvetica,sans-serif;color:#8e939a;margin-top:12px;text-wrap:pretty">The full professional terminal: research agents, evidence graph, prediction model and calibration, historical analogies, investment committee and system architecture. Off by default.</div>
+          <button onClick="{{ openAdvanced }}" style="{{ btnPrimary }}">Open Advanced Research</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isAdvanced }}" hint-placeholder-val="{{ false }}">
+      <div style="position:fixed;inset:0;z-index:50;background:#08090a;display:flex;flex-direction:column;animation:sFade .3s ease both">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 16px;background:#0b0d0f;border-bottom:1px solid #1e2328">
+          <span style="font:400 11px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:.14em;color:#8b949c">ADVANCED RESEARCH</span>
+          <button onClick="{{ closeAdvanced }}" style="background:#151a1e;border:1px solid #2c3740;color:#cfe9f5;font:400 11px/1 'Helvetica Neue',Helvetica,sans-serif;letter-spacing:.08em;padding:9px 13px;border-radius:4px;cursor:pointer" style-hover="background:#1d252b">Back to the simple view</button>
+        </div>
+        <div style="flex:1;overflow:hidden">
+          <dc-import name="SIGNAL" hint-size="100%,100%" style="width:100%;height:100%"></dc-import>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showExpectedReturn&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Experience&quot;},&quot;answerDepth&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;short&quot;,&quot;full&quot;],&quot;default&quot;:&quot;short&quot;,&quot;tsType&quot;:&quot;'short'|'full'&quot;,&quot;section&quot;:&quot;Experience&quot;}}">
+const GREEN = '#2f8f6b', RED = '#c0563f', AMBER = '#b78330', INK = '#16181c', MUTED = '#8e939a';
+const F = "'Helvetica Neue',Helvetica,sans-serif";
+
+class Component extends DCLogic {
+  state = {
+    screen: 'home', sub: 'overview', q: '', askedQ: '', think: 0, deeperOpen: false, advanced: false
+  };
+
+  ask = () => {
+    const q = this.state.q.trim() || 'Should I buy ZETA for the next 3 months?';
+    this.setState({ askedQ: q, screen: 'thinking', think: 0, sub: 'overview' });
+    if (this._t) clearInterval(this._t);
+    this._t = setInterval(() => this.setState(s => {
+      if (s.think >= 3) { clearInterval(this._t); return { screen: 'asset' }; }
+      return { think: s.think + 1 };
+    }), 520);
+  };
+  componentWillUnmount() { if (this._t) clearInterval(this._t); }
+
+  go = (screen, sub) => () => this.setState(s => ({ screen, sub: sub || s.sub, advanced: false }));
+
+  renderVals() {
+    const S = this.state, V = S.screen;
+    const showER = this.props.showExpectedReturn !== false;
+    const deep = this.props.answerDepth === 'full';
+
+    const navStyle = on => `font:400 15px/1 ${F};color:${on ? INK : '#9a9ea5'};cursor:pointer;padding:4px 0;box-shadow:${on ? 'inset 0 -2px 0 ' + INK : 'none'};transition:color .2s`;
+    const tabs = [['home', 'Home'], ['watchlist', 'Watchlist'], ['portfolio', 'Portfolio'], ['research', 'Research']]
+      .map(([k, label]) => ({ label, go: this.go(k), style: navStyle(V === k || (k === 'home' && (V === 'asset' || V === 'thinking'))) }));
+
+    const subStyle = on => `font:400 15px/1 ${F};color:${on ? INK : '#9a9ea5'};cursor:pointer;padding:14px 0;box-shadow:${on ? 'inset 0 -2px 0 ' + INK : 'none'};transition:color .2s`;
+    const subtabs = [['overview', 'Overview'], ['why', 'Why'], ['risks', 'Risks'], ['research', 'Research']]
+      .map(([k, label]) => ({ label, go: () => this.setState({ sub: k }), style: subStyle(S.sub === k) }));
+
+    const viewPill = (text, color) => `font:400 15px/1 ${F};color:${color};white-space:nowrap`;
+    const recents = [
+      ['Should I hold ZETA for the next 3 months?', 'Moderately bullish', GREEN],
+      ['Is Apple expensive right now?', 'Fairly valued', AMBER],
+      ['Why is META falling today?', 'Answered', MUTED],
+      ['Compare MSFT and GOOG', 'MSFT preferred', GREEN]
+    ].map(([label, view, c]) => ({ label, view, viewStyle: viewPill(view, c), go: this.ask }));
+
+    const thinkLines = ['Reading the latest results…', 'Checking what analysts expect…', 'Weighing what could go wrong…', 'Putting it together…'];
+
+    const health = [
+      ['Revenue growth', '38%', 'below 20%', 'Healthy', 0.78, 'Sales are growing much faster than the level that would worry us.'],
+      ['Profit margin', '62%', 'below 55%', 'Healthy', 0.66, 'The company keeps a similar share of each sale as it did a year ago.'],
+      ['Analyst expectations', 'Rising', 'analysts start cutting', 'Healthy', 0.72, 'The people who follow this company are raising their forecasts, not lowering them.'],
+      ['Ad spending across the industry', 'Growing', 'growth stalls', 'Watching', 0.42, 'Still growing, but more slowly than it was six months ago. This is the one to keep an eye on.']
+    ].map(([name, now, danger, status, pos, plain]) => ({
+      name, now, danger, status, plain,
+      pill: `font:400 13px/1 ${F};color:${status === 'Healthy' ? GREEN : AMBER};background:${status === 'Healthy' ? 'rgba(47,143,107,.1)' : 'rgba(183,131,48,.12)'};padding:7px 11px;border-radius:20px;white-space:nowrap`,
+      zone: `position:absolute;left:0;top:0;bottom:0;width:26%;background:rgba(192,86,63,.16)`,
+      mark: `position:absolute;top:-3px;bottom:-3px;left:${26 + pos * 66}%;width:3px;border-radius:3px;background:${status === 'Healthy' ? GREEN : AMBER};transition:left .5s`
+    }));
+
+    const watchlist = [
+      ['ZETA', '$18.42', 'Moderately bullish', GREEN, '72%', 'Growth ahead of expectations, but priced richly.'],
+      ['NVDA', '$1,042', 'Bullish', GREEN, '77%', 'Demand still outruns supply.'],
+      ['AAPL', '$243', 'Neutral', AMBER, '58%', 'Fairly priced for how fast it is growing.'],
+      ['META', '$612', 'Moderately bullish', GREEN, '64%', 'Ad revenue steady; spending is the question.'],
+      ['BTC', '$96,400', 'Neutral', AMBER, '51%', 'Moves with how much risk markets want to take.']
+    ].map(([sym, price, view, c, conf, note]) => ({ sym, price, view, conf, note, viewStyle: viewPill(view, c), go: () => this.setState({ screen: 'asset', sub: 'overview' }) }));
+
+    const holdings = [
+      ['ZETA', '32%', 'AI advertising demand', 'Moderately bullish', GREEN],
+      ['MSFT', '24%', 'AI software spending', 'Bullish', GREEN],
+      ['META', '16%', 'AI advertising demand', 'Moderately bullish', GREEN],
+      ['BTC', '12%', 'Appetite for risk', 'Neutral', AMBER],
+      ['SPY', '16%', 'The whole market (a third of it tech)', 'Neutral', AMBER]
+    ].map(([sym, w, driver, view, c]) => ({ sym, w, driver, view, viewStyle: viewPill(view, c), go: () => this.setState({ screen: 'asset', sub: 'overview' }) }));
+
+    const history = [
+      ['Should I hold ZETA for the next 3 months?', 'Moderately bullish', GREEN, 'Today, 4:04pm'],
+      ['Is my portfolio too concentrated?', 'Yes — one theme', AMBER, 'Today, 11:20am'],
+      ['Why is META falling today?', 'Answered', MUTED, 'Yesterday'],
+      ['Compare MSFT and GOOG', 'MSFT preferred', GREEN, 'Monday']
+    ].map(([q, view, c, when]) => ({ q, view, when, viewStyle: viewPill(view, c), go: () => this.setState({ screen: 'asset', sub: 'overview' }) }));
+
+    const btnBase = `font:400 16px/1 ${F};padding:15px 22px;border-radius:11px;cursor:pointer;transition:opacity .2s`;
+
+    return {
+      chromeOn: V !== 'advanced' || true,
+      tabs, subtabs, goHome: this.go('home'),
+      isHome: V === 'home', isThinking: V === 'thinking', isAsset: V === 'asset',
+      isWatchlist: V === 'watchlist', isPortfolio: V === 'portfolio', isResearchHome: V === 'research',
+      isAdvanced: S.advanced,
+      openAdvanced: () => this.setState({ advanced: true }),
+      closeAdvanced: () => this.setState({ advanced: false }),
+      q: S.q, onQ: e => this.setState({ q: e.target.value }),
+      onQKey: e => { if (e.key === 'Enter') this.ask(); },
+      ask: this.ask, recents,
+      askBtn: `background:${INK};color:#fff;border:0;font:400 16px/1 ${F};padding:13px 20px;border-radius:9px;cursor:pointer`,
+      askedQ: S.askedQ, thinkLine: thinkLines[Math.min(S.think, 3)],
+      thinkBar: `width:${(S.think + 1) * 25}%;height:100%;background:${INK};opacity:.55;transition:width .5s`,
+
+      sym: 'ZETA', name: 'Zeta Global', price: '$18.42', chg: '+2.1%',
+      chgStyle: `font:400 15px/1 ${F};color:${GREEN};margin-top:9px`,
+      isOverview: S.sub === 'overview', isWhy: S.sub === 'why', isRisks: S.sub === 'risks', isResearchTab: S.sub === 'research',
+      stance: 'Moderately Bullish',
+      stanceStyle: `font:400 40px/1.1 ${F};letter-spacing:-.02em;color:${GREEN};margin-top:14px`,
+      conf: '72%', showER, er: '+9%', erStyle: `font:400 26px/1 ${F};color:${GREEN}`,
+      scaleFill: `position:absolute;left:50%;top:0;bottom:0;width:22%;background:${GREEN};border-radius:4px;transform-origin:left;animation:sGrow .7s ease both`,
+      scaleMark: `position:absolute;top:-5px;left:72%;width:3px;height:16px;border-radius:3px;background:${INK}`,
+      headline: 'Revenue trends and analyst expectations are improving, but the stock is expensive enough that downside risk remains meaningful.',
+      reasons: [
+        ['Revenue growth is stronger than expected', 'Sales grew 38% last quarter — ahead of what analysts had modelled.'],
+        ['Analysts are raising their estimates', 'Nine have raised forecasts in the last three months; two lowered them.'],
+        ['AI advertising demand remains strong', 'The largest ad platforms all guided their own spending higher.']
+      ].concat(deep ? [['Cash generation is improving', 'The company now funds its own growth without raising money.']] : []).map(([t, d]) => ({ t, d })),
+      risks: [
+        ['Valuation is expensive', 'The share price already assumes several more strong quarters.'],
+        ['A slowdown in ad spending would hurt the thesis', 'Most of the growth story depends on marketing budgets staying generous.']
+      ].concat(deep ? [['Big platforms could compete directly', 'Google and Meta can bundle similar tools at lower cost.']] : []).map(([t, d]) => ({ t, d })),
+      bottomLine: 'SIGNAL currently sees more upside than downside, but the stock is expensive enough that expectations need to remain strong.',
+      btnPrimary: `${btnBase};background:${INK};color:#fff;border:0;margin-top:24px`,
+      btnGhost: `${btnBase};background:transparent;color:${INK};border:1px solid #dcd7cd`,
+      goWhy: () => this.setState({ sub: 'why' }), goRisks: () => this.setState({ sub: 'risks' }), goResearch: () => this.setState({ sub: 'research' }),
+
+      upP: '64%', downP: '36%',
+      upFill: `flex:64;background:${GREEN};transform-origin:left;animation:sGrow .7s ease both`,
+      downFill: `flex:36;background:${RED};transform-origin:left;animation:sGrow .7s .1s ease both`,
+      upReasons: ['Sales growing faster than expected', 'Analysts lifting their forecasts', 'Companies keep spending on AI advertising'],
+      downReasons: ['The stock is expensive', 'Advertising budgets could tighten', 'A weaker economy would slow growth'],
+      deeperOpen: S.deeperOpen, toggleDeeper: () => this.setState(s => ({ deeperOpen: !s.deeperOpen })),
+      deeperLabel: S.deeperOpen ? 'Hide the detail' : 'Show a little more detail',
+      deeperCaret: S.deeperOpen ? 'Close' : 'Open',
+      deeper: [
+        ['Where the numbers come from', 'Company filings, the last six earnings calls and forecasts from 34 analysts.'],
+        ['How the odds are set', 'SIGNAL looks at how similar situations turned out in the past, then adjusts for how well it has predicted lately.'],
+        ['Why not a stronger view', 'The evidence for and against is unusually balanced, so SIGNAL keeps the view moderate on purpose.'],
+        ['What SIGNAL is unsure about', 'How long marketing budgets stay this generous. Nobody has good data on that yet.']
+      ].map(([t, d]) => ({ t, d })),
+
+      health, healthySummary: 'three healthy, one worth watching.',
+      watchlist, holdings, history,
+      researchStats: [['6', 'research agents'], ['41', 'sources read'], ['3', 'disagreeing opinions'], ['3m 41s', 'to reach the answer']].map(([v, k]) => ({ v, k })),
+      sourceGroups: [
+        ['AI advertising demand is strong', 'Very strong', 'Filings from three ad platforms, industry spend data'],
+        ['Growth is beating expectations', 'Strong', 'Company results, 34 analyst forecasts'],
+        ['The stock is expensive', 'Very strong', 'Ten years of its own valuation history']
+      ].map(([claim, strength, sources]) => ({ claim, strength, sources }))
+    };
+  }
+}
+</script>
+</body>
+</html>
