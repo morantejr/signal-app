@@ -9,6 +9,8 @@ from __future__ import annotations
 import math
 from datetime import datetime, timezone
 
+import pandas as pd
+
 from ..schemas import QuantInputs, Source
 
 
@@ -76,7 +78,10 @@ def fetch_quant_inputs(ticker: str) -> tuple[QuantInputs, list[Source], dict]:
                 rev = _f(fin.loc["Total Revenue", col])
                 if not rev or rev <= 0:
                     continue
-                idx = full.index.searchsorted(col)
+                ts = pd.Timestamp(col)
+                if ts.tzinfo is None and full.index.tz is not None:
+                    ts = ts.tz_localize(full.index.tz)
+                idx = full.index.searchsorted(ts)
                 if idx >= len(full):
                     idx = len(full) - 1
                 px = _f(full.iloc[idx])
