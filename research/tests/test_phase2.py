@@ -152,7 +152,7 @@ def test_export_falls_back_to_stubs_when_the_daily_cap_is_hit(no_llm_settings, r
     def fake_run(ticker, *, settings, **kw):
         calls.append(f"{ticker}:{'llm' if settings.llm_enabled else 'stub'}")
         if settings.llm_enabled:
-            capped = fake_client([httpx.Response(429, json={"error": {"message": "Rate limit exceeded: free-models-per-day"}})] * 6)  # bull + bear, 3 attempts each
+            capped = fake_client([httpx.Response(429, json={"error": {"message": "Rate limit exceeded: free-models-per-day"}})] * 6, env={"OPENROUTER_FALLBACK_MODELS": ""})  # bull + bear, 3 attempts each, no fallbacks
             return run(ticker, settings=settings, client=capped, evidence_fn=lambda t, s, tr: bundle_for("growth"), runs_root=runs_root, **kw)
         return run(ticker, settings=settings, evidence_fn=lambda t, s, tr: bundle_for("growth"), runs_root=runs_root, **kw)
 

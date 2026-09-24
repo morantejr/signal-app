@@ -48,9 +48,21 @@ def main(argv: list[str] | None = None) -> int:
     if not tickers:
         print("no tickers given", file=sys.stderr)
         return 2
+    stub_settings = type(s)(**{**s.__dict__, "openrouter_api_key": ""})
+    llm_ok = s.llm_enabled
     for t in tickers:
         try:
-            r = run(t, settings=s, horizon=a.horizon, store=store)
+            try:
+                r = run(t, settings=s if llm_ok else stub_settings, horizon=a.horizon, store=store)
+            except LLMError as exc:
+                # The evidence and the quant do not need a model. Publish them with stub memos
+                # rather than nothing, and stop spending requests once the daily cap is hit.
+                if "per-day" in str(exc):
+                    llm_ok = False
+                    print(f"{t}: daily free-model cap reached; remaining tickers get stub memos (add credits at openrouter.ai to lift the cap)", file=sys.stderr)
+                else:
+                    print(f"{t}: LLM unavailable ({str(exc)[:120]}…); using stub memos", file=sys.stderr)
+                r = run(t, settings=stub_settings, horizon=a.horizon, store=store)
         except Exception as exc:  # noqa: BLE001
             failures += 1
             print(f"{t}: FAILED {exc}", file=sys.stderr)
