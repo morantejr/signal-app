@@ -34,3 +34,17 @@ npm run dev
 ```
 
 Then open http://localhost:5173.
+
+## Live data
+
+Every number on the Simple surface is read live from [Finnhub](https://finnhub.io) (free tier, 60 calls a minute): price, company profile, twelve-month fundamentals, analyst recommendation trends, the last four earnings surprises and two weeks of company news. The stance is a deterministic weight of six checks computed in `src/analysis.ts`; no language model is involved and the copy is templated from the numbers.
+
+The site is static, so the key is bring-your-own: create a free account at [finnhub.io/register](https://finnhub.io/register) and paste the key into the avatar menu (Market data). It is stored in `localStorage` and only ever sent to Finnhub. For local development you can instead put it in `.env.local`:
+
+```
+VITE_FINNHUB_KEY=your_key
+```
+
+Setting a `FINNHUB_KEY` repository secret bakes a key into the GitHub Pages build so the deployed site works without a prompt. That key is then visible in the bundle, so only do it with a throwaway free key.
+
+The Advanced Research terminal (`public/advanced/`) is still the design prototype with illustrative numbers. The Python research system that will feed it lives in `research/`.

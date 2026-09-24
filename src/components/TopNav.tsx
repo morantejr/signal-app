@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { font, INK, FAINT } from '../theme'
+import { font, INK, FAINT, GREEN, AMBER, MUTED } from '../theme'
+import { hasKey } from '../api/finnhub'
+import KeyPrompt from './KeyPrompt'
 import type { Screen, Settings } from '../App'
 
 const TABS: Array<[Screen, string]> = [
@@ -14,10 +16,14 @@ interface Props {
   go: (screen: Screen) => void
   settings: Settings
   onSettings: (patch: Partial<Settings>) => void
+  keyVersion: number
+  onKeyChange: () => void
 }
 
-export default function TopNav({ screen, go, settings, onSettings }: Props) {
+export default function TopNav({ screen, go, settings, onSettings, keyVersion, onKeyChange }: Props) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const connected = hasKey()
+  void keyVersion
 
   const navStyle = (on: boolean): React.CSSProperties => ({
     ...font(400, 15),
@@ -41,12 +47,13 @@ export default function TopNav({ screen, go, settings, onSettings }: Props) {
         <div style={{ position: 'relative' }}>
           <div
             onClick={() => setMenuOpen(o => !o)}
-            style={{ width: 30, height: 30, borderRadius: '50%', background: '#e5e1d9', border: '1px solid #dbd6cc', display: 'flex', alignItems: 'center', justifyContent: 'center', ...font(500, 11), color: '#6b6f76', cursor: 'pointer' }}
+            style={{ width: 30, height: 30, borderRadius: '50%', background: '#e5e1d9', border: '1px solid #dbd6cc', display: 'flex', alignItems: 'center', justifyContent: 'center', ...font(500, 11), color: '#6b6f76', cursor: 'pointer', position: 'relative' }}
           >
             JR
+            <span style={{ position: 'absolute', right: -2, bottom: -2, width: 9, height: 9, borderRadius: '50%', background: connected ? GREEN : AMBER, border: '2px solid #f6f5f2' }} />
           </div>
           {menuOpen && (
-            <div style={{ position: 'absolute', right: 0, top: 40, width: 250, background: '#fff', border: '1px solid #e6e2da', borderRadius: 12, boxShadow: '0 8px 24px rgba(20,22,26,.08)', padding: '8px 0', animation: 'sFade .15s ease both' }}>
+            <div style={{ position: 'absolute', right: 0, top: 40, width: 300, background: '#fff', border: '1px solid #e6e2da', borderRadius: 12, boxShadow: '0 8px 24px rgba(20,22,26,.08)', padding: '8px 0', animation: 'sFade .15s ease both' }}>
               <label style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '11px 16px', cursor: 'pointer' }}>
                 <span style={font(400, 14, 1.3)}>Show expected return</span>
                 <input
@@ -66,6 +73,13 @@ export default function TopNav({ screen, go, settings, onSettings }: Props) {
                   <option value="full">full</option>
                 </select>
               </label>
+              <div style={{ padding: '12px 16px 14px', borderTop: '1px solid #efece6', marginTop: 4 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={font(400, 14, 1.3)}>Market data</span>
+                  <span style={{ ...font(400, 12), color: connected ? GREEN : MUTED }}>{connected ? 'Connected' : 'Not connected'}</span>
+                </div>
+                <KeyPrompt compact onSaved={onKeyChange} />
+              </div>
             </div>
           )}
         </div>

@@ -1,13 +1,16 @@
 import { font, INK, FAINT, viewPill } from '../theme'
-import { recents } from '../data'
+import { suggestions } from '../data'
+import type { HistoryRow } from '../store'
 
 interface Props {
   q: string
   onQ: (q: string) => void
   ask: (q?: string) => void
+  history: HistoryRow[]
 }
 
-export default function Home({ q, onQ, ask }: Props) {
+export default function Home({ q, onQ, ask, history }: Props) {
+  const recents = history.slice(0, 4)
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '80px 24px 120px', animation: 'sIn .4s ease both' }}>
       <div style={{ width: '100%', maxWidth: 620 }}>
@@ -18,20 +21,27 @@ export default function Home({ q, onQ, ask }: Props) {
             onChange={e => onQ(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter') ask() }}
             placeholder="Should I buy NVDA?"
-            style={{ flex: 1, border: 0, outline: 0, background: 'transparent', ...font(400, 19), color: INK }}
+            style={{ flex: 1, minWidth: 0, border: 0, outline: 0, background: 'transparent', ...font(400, 19), color: INK }}
           />
           <button onClick={() => ask()} style={{ background: INK, color: '#fff', border: 0, ...font(400, 16), padding: '13px 20px', borderRadius: 9, cursor: 'pointer' }}>
             Ask
           </button>
         </div>
         <div style={{ marginTop: 34 }}>
-          <div style={{ ...font(400, 13), color: FAINT, marginBottom: 10 }}>Recent</div>
-          {recents.map(r => (
-            <div key={r.label} className="hoverFadeLight" onClick={() => ask(r.label)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 2px', borderBottom: '1px solid #e9e6e0', cursor: 'pointer' }}>
-              <span style={{ ...font(400, 16, 1.3), color: INK }}>{r.label}</span>
-              <span style={viewPill(r.color)}>{r.view}</span>
-            </div>
-          ))}
+          <div style={{ ...font(400, 13), color: FAINT, marginBottom: 10 }}>{recents.length ? 'Recent' : 'Try'}</div>
+          {recents.length
+            ? recents.map(r => (
+                <div key={r.q} className="hoverFadeLight" onClick={() => ask(r.q)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, padding: '14px 2px', borderBottom: '1px solid #e9e6e0', cursor: 'pointer' }}>
+                  <span style={{ ...font(400, 16, 1.3), color: INK }}>{r.q}</span>
+                  <span style={viewPill(r.color)}>{r.view}</span>
+                </div>
+              ))
+            : suggestions.map(s => (
+                <div key={s} className="hoverFadeLight" onClick={() => ask(s)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, padding: '14px 2px', borderBottom: '1px solid #e9e6e0', cursor: 'pointer' }}>
+                  <span style={{ ...font(400, 16, 1.3), color: INK }}>{s}</span>
+                  <span style={viewPill(FAINT)}>Ask</span>
+                </div>
+              ))}
         </div>
       </div>
     </div>

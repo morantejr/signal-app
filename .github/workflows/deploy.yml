@@ -28,6 +28,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # Optional. If set as a repo secret the deployed site works without
+          # a bring-your-own key. Note the key is then visible in the bundle.
+          VITE_FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
