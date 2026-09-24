@@ -1,0 +1,27 @@
+[project]
+name = "signal-research"
+version = "0.1.0"
+description = "SIGNAL research backend: evidence gathering, a standalone quant score, bull/bear/synthesis agents through OpenRouter, Langfuse tracing and offline evals."
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.40",
+  "httpx>=0.27",
+  "pydantic>=2.7",
+  "yfinance>=0.2.40",
+  "pandas>=2.0",
+  "langfuse>=3.0",
+  "python-dotenv>=1.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["signal_research"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

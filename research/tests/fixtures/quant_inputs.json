@@ -1,0 +1,89 @@
+{
+ "growth": {
+  "ticker": "ZETA",
+  "price": 18.42,
+  "high_52w": 21.0,
+  "low_52w": 11.0,
+  "ret_1m": 4.0,
+  "ret_3m": 14.2,
+  "ret_6m": 22.0,
+  "ret_12m": 48.0,
+  "vol_60d_ann": 55.0,
+  "max_drawdown_1y": -28.0,
+  "trailing_pe": null,
+  "price_to_sales": 3.8,
+  "ps_hist_median": 3.1,
+  "debt_to_equity": 60.0,
+  "current_ratio": 2.1,
+  "free_cash_flow": 90000000,
+  "revenue_growth": 38.4,
+  "profit_margin": -3.2,
+  "data_age_days": 1,
+  "source_ids": [
+   "yf:hist:ZETA",
+   "yf:info:ZETA"
+  ],
+  "as_of": "2026-09-23T00:00:00Z"
+ },
+ "megacap": {
+  "ticker": "AAPL",
+  "price": 243.0,
+  "high_52w": 260.0,
+  "low_52w": 169.0,
+  "ret_1m": 1.0,
+  "ret_3m": 3.1,
+  "ret_6m": 9.0,
+  "ret_12m": 20.0,
+  "vol_60d_ann": 22.0,
+  "max_drawdown_1y": -12.0,
+  "trailing_pe": 33.0,
+  "forward_pe": 29.0,
+  "price_to_sales": 9.1,
+  "ps_hist_median": 7.0,
+  "debt_to_equity": 150.0,
+  "current_ratio": 0.9,
+  "free_cash_flow": 100000000000,
+  "revenue_growth": 4.1,
+  "profit_margin": 24.3,
+  "data_age_days": 1,
+  "source_ids": [
+   "yf:hist:AAPL",
+   "yf:info:AAPL"
+  ],
+  "as_of": "2026-09-23T00:00:00Z"
+ },
+ "faller": {
+  "ticker": "XYZ",
+  "price": 9.1,
+  "high_52w": 30.0,
+  "low_52w": 8.0,
+  "ret_1m": -12.0,
+  "ret_3m": -32.0,
+  "ret_6m": -45.0,
+  "ret_12m": -60.0,
+  "vol_60d_ann": 80.0,
+  "max_drawdown_1y": -70.0,
+  "trailing_pe": null,
+  "price_to_sales": 0.6,
+  "ps_hist_median": 1.4,
+  "debt_to_equity": 260.0,
+  "current_ratio": 0.8,
+  "free_cash_flow": -30000000,
+  "revenue_growth": -12.0,
+  "profit_margin": -18.0,
+  "data_age_days": 1,
+  "source_ids": [
+   "yf:hist:XYZ",
+   "yf:info:XYZ"
+  ],
+  "as_of": "2026-09-23T00:00:00Z"
+ },
+ "sparse": {
+  "ticker": "SPY",
+  "price": 640.0,
+  "source_ids": [
+   "yf:hist:SPY"
+  ],
+  "as_of": "2026-09-23T00:00:00Z"
+ }
+}
