@@ -64,7 +64,7 @@ export default function Watchlist({ openAsset, keyVersion, onKeyChange }: Props)
         const r = rows[sym]
         const a = r && !('error' in r) ? r : null
         return (
-          <div key={sym} className="hoverFade" onClick={() => a && openAsset(sym)} style={{ display: 'flex', alignItems: 'center', gap: 18, padding: '20px 2px', borderBottom: '1px solid #e9e6e0', cursor: a ? 'pointer' : 'default' }}>
+          <div key={sym} className="hoverFade" onClick={() => (a || runs[sym]) && openAsset(sym)} style={{ display: 'flex', alignItems: 'center', gap: 18, padding: '20px 2px', borderBottom: '1px solid #e9e6e0', cursor: a || runs[sym] ? 'pointer' : 'default' }}>
             <div style={{ width: 74 }}>
               <div style={font(400, 18)}>{sym}</div>
               <div style={{ ...font(400, 13), color: FAINT, marginTop: 7 }}>{a ? fmtPrice(a.price) : ''}</div>
@@ -74,14 +74,14 @@ export default function Watchlist({ openAsset, keyVersion, onKeyChange }: Props)
                 <>
                   <div style={viewPill(a.color)}>{a.stance}</div>
                   <div style={{ ...font(400, 14, 1.45), color: MUTED, marginTop: 5 }}>{a.headline}</div>
-                  {runs[sym] && (
-                    <div style={{ ...font(400, 13, 1.4), color: FAINTER, marginTop: 5 }}>
-                      Full research: quant {bandLabel(runs[sym].quant_band).toLowerCase()}{runs[sym].quant_score != null ? ` (${runs[sym].quant_score})` : ''} · narrative {leanLabel(runs[sym].narrative_lean).toLowerCase()} · {runs[sym].agree ? 'agree' : 'disagree'}
-                    </div>
-                  )}
                 </>
               ) : (
-                <div style={{ ...font(400, 14, 1.45), color: FAINTER }}>{r && 'error' in r ? r.error : connected ? 'Reading…' : 'Waiting for a data key'}</div>
+                <div style={{ ...font(400, 14, 1.45), color: FAINTER }}>{r && 'error' in r ? r.error : connected ? 'Reading…' : 'Quick read needs a data key'}</div>
+              )}
+              {runs[sym] && (
+                <div style={{ ...font(400, 13, 1.4), color: FAINTER, marginTop: 5 }}>
+                  Full research: quant {bandLabel(runs[sym].quant_band).toLowerCase()}{runs[sym].quant_score != null ? ` (${runs[sym].quant_score})` : ''} · narrative {leanLabel(runs[sym].narrative_lean).toLowerCase()} · {runs[sym].agree ? 'agree' : 'disagree'}
+                </div>
               )}
             </div>
             <div style={{ textAlign: 'right', width: 96 }}>
