@@ -109,9 +109,9 @@ Model: `OPENROUTER_MODEL` defaults to `google/gemma-4-31b-it:free`, taken from O
 | OpenRouter client | real | mocked transport in tests; retries, JSON repair, attribution headers |
 | Bull / Bear / Synthesis agents | real when `OPENROUTER_API_KEY` is set, otherwise labelled stubs built from quant components | prompts enforce citations, no price targets, steelmanning |
 | Disagreement object | real | computed in code every run |
-| Critic | real, code-only | citation backing, dangling ids, zero confidences, numbers in quant-citing claims checked against the quant, one-sided synthesis |
-| Prediction log + calibration | real | `runs/predictions.jsonl`; `make calibrate` reports hit rates by band and lean once horizons mature |
-| API + static export | real | `make api` (FastAPI, cached per ticker per day), `make export` writes `public/runs/*.json` for the web app |
+| Critic | real, code-only | citation backing, dangling ids, zero confidences, numbers in quant-citing claims checked against the quant, statements about the quant's structure (equal weighting, use of forward P/E, peers) checked against the real weights and inputs, one-sided synthesis |
+| Prediction log + calibration | real | local runs log to `runs/predictions.jsonl`; CI exports log to `public/runs/predictions.jsonl` and commit it back to main, so calibration survives the ephemeral runner; `make calibrate` reads both |
+| API + static export | real | `make api` (FastAPI, cached per ticker per day); `make export` writes `public/runs/*.json` for every ticker in `research/tickers.txt`, and the Pages workflow runs it each weekday evening and commits the results back |
 | Langfuse tracing | real when configured; local JSONL always | Langfuse calls guarded so they can never break a run |
 | Evals | real | 13 cases, `make eval` |
 | User PDFs / URLs as evidence | not built | |
@@ -120,6 +120,6 @@ Model: `OPENROUTER_MODEL` defaults to `google/gemma-4-31b-it:free`, taken from O
 
 ## 6. What shipped in Phase 1, and next decisions
 
-Shipped: data sources including filing text, quant v0.1, OpenRouter client with fallbacks and mocked tests, the pipeline with parallel memos and stub fallbacks, code-side disagreement, critic with quant-claim and one-sidedness rules, prediction log and calibration report, SQLite store, FastAPI service, static export consumed by the web app, local tracing with Langfuse hooks, 16 evals. `make test` proves the LLM path cannot mutate the score.
+Shipped: data sources including filing text, quant v0.1, OpenRouter client with fallbacks and mocked tests, the pipeline with parallel memos and stub fallbacks, code-side disagreement, critic with quant-claim and one-sidedness rules, prediction log and calibration report, SQLite store, FastAPI service, static export consumed by the web app, local tracing with Langfuse hooks, 17 evals. `make test` proves the LLM path cannot mutate the score.
 
 Decide next: (a) demo tickers for the eval fixtures beyond ZETA / AAPL; (b) score lean (v0.1 is balanced across value, momentum, risk, balance sheet; a momentum-tilted variant is a weight change and a version bump); (c) horizon default (3m); (d) where to host the API if you want fresh runs for arbitrary tickers on the public site (the static export covers the default watchlist).
