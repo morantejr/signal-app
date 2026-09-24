@@ -1,9 +1,9 @@
 {
- "run_id": "amzn-20260924T160628-8ca13d",
+ "run_id": "amzn-20260924T210356-5dbff8",
  "ticker": "AMZN",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-24T16:06:30.451115Z",
+ "created_at": "2026-09-24T21:03:57.447570Z",
  "sources": [
   {
    "source_id": "yf:hist:AMZN",
@@ -11,10 +11,10 @@
    "title": "Yahoo Finance daily prices, 1y (AMZN)",
    "url": "https://finance.yahoo.com/quote/AMZN/history",
    "accession": null,
-   "retrieved_at": "2026-09-24T16:06:28.922956Z",
+   "retrieved_at": "2026-09-24T21:03:56.679085Z",
    "excerpt": null,
    "data": {
-    "rows": 252,
+    "rows": 251,
     "last": "2026-09-24T00:00:00-04:00"
    }
   },
@@ -24,16 +24,16 @@
    "title": "Yahoo Finance key statistics (AMZN)",
    "url": "https://finance.yahoo.com/quote/AMZN/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-24T16:06:28.922956Z",
+   "retrieved_at": "2026-09-24T21:03:56.679085Z",
    "excerpt": null,
    "data": {
     "longName": "Amazon.com, Inc.",
     "sector": "Consumer Cyclical",
     "industry": "Internet Retail",
-    "marketCap": 2659796910080,
-    "trailingPE": 19.822348,
-    "forwardPE": 23.736916,
-    "priceToSalesTrailing12Months": 3.4289873,
+    "marketCap": 2689890779136,
+    "trailingPE": 20.046625,
+    "forwardPE": 24.005484,
+    "priceToSalesTrailing12Months": 3.467784,
     "enterpriseToEbitda": 16.679,
     "debtToEquity": 45.617,
     "currentRatio": 1.033,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (AMZN), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/AMZN/financials",
    "accession": null,
-   "retrieved_at": "2026-09-24T16:06:28.922956Z",
+   "retrieved_at": "2026-09-24T21:03:56.679085Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,40 +65,40 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-24T16:06:30.449917Z",
+   "retrieved_at": "2026-09-24T21:03:57.446389Z",
    "excerpt": null,
    "data": {
     "from": "2026-06-16",
-    "to": "2026-09-22",
+    "to": "2026-09-23",
     "first": 4.43,
-    "last": 4.96
+    "last": 5.11
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T16:06:30.450299+00:00) from yf:hist:AMZN, yf:info:AMZN, yf:financials:AMZN, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T21:03:57.446745+00:00) from yf:hist:AMZN, yf:info:AMZN, yf:financials:AMZN, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-24T16:06:30.450361Z",
+   "retrieved_at": "2026-09-24T21:03:57.446816Z",
    "excerpt": null,
    "data": {
-    "quant_score": 10,
+    "quant_score": 11,
     "quant_band": "fair",
     "components": [
      {
       "name": "valuation",
       "value": 0.0,
-      "note": "P/E 19.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.99\u00d7 its own median \u2192 +0.00"
+      "note": "P/E 20.0 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.00\u00d7 its own median \u2192 +0.00"
      },
      {
       "name": "momentum",
-      "value": 0.4936175722283524,
-      "note": "6m return +16.5% \u2192 +0.55; 12m\u22121m +17.5% \u2192 +0.44"
+      "value": 0.5314272834706544,
+      "note": "6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47"
      },
      {
       "name": "risk",
-      "value": -0.0721378996137112,
+      "value": -0.07112946868554426,
       "note": "1y drawdown 22% \u2192 +0.05; 60d vol 42% ann. \u2192 -0.19"
      },
      {
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.68pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -117,7 +117,7 @@
  ],
  "quant": {
   "ticker": "AMZN",
-  "quant_score": 10,
+  "quant_score": 11,
   "quant_band": "fair",
   "components": [
    {
@@ -125,28 +125,28 @@
     "value": 0.0,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 19.822348,
-     "ps_vs_own_median": 0.99
+     "trailing_pe": 20.046625,
+     "ps_vs_own_median": 1.0
     },
-    "note": "P/E 19.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.99\u00d7 its own median \u2192 +0.00"
+    "note": "P/E 20.0 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.00\u00d7 its own median \u2192 +0.00"
    },
    {
     "name": "momentum",
-    "value": 0.4936175722283524,
+    "value": 0.5314272834706544,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": 16.475361824141288,
-     "ret_12m_minus_1m": 17.52
+     "ret_6m": 17.793206260607942,
+     "ret_12m_minus_1m": 18.79
     },
-    "note": "6m return +16.5% \u2192 +0.55; 12m\u22121m +17.5% \u2192 +0.44"
+    "note": "6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47"
    },
    {
     "name": "risk",
-    "value": -0.0721378996137112,
+    "value": -0.07112946868554426,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -21.73622311569574,
-     "vol_60d_ann": 42.102534758571196
+     "vol_60d_ann": 42.0327203096981
     },
     "note": "1y drawdown 22% \u2192 +0.05; 60d vol 42% ann. \u2192 -0.19"
    },
@@ -166,26 +166,26 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.5300000000000002
+     "fred_10y_change_3m": 0.6800000000000006
     },
-    "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.68pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "AMZN",
-   "as_of": "2026-09-24T16:06:28.922956Z",
-   "price": 246.58999633789062,
+   "as_of": "2026-09-24T21:03:56.679085Z",
+   "price": 249.3800048828125,
    "high_52w": 284.0199890136719,
    "low_52w": 198.7899932861328,
-   "ret_1m": -5.542787618181677,
-   "ret_3m": 8.625171712633595,
-   "ret_6m": 16.475361824141288,
-   "ret_12m": 11.979469061231462,
-   "vol_60d_ann": 42.102534758571196,
+   "ret_1m": -4.474064500502317,
+   "ret_3m": 9.854196254475012,
+   "ret_6m": 17.793206260607942,
+   "ret_12m": 14.315843163006114,
+   "vol_60d_ann": 42.0327203096981,
    "max_drawdown_1y": -21.73622311569574,
-   "trailing_pe": 19.822348,
-   "forward_pe": 23.736916,
-   "price_to_sales": 3.4289873,
+   "trailing_pe": 20.046625,
+   "forward_pe": 24.005484,
+   "price_to_sales": 3.467784,
    "ps_hist_median": 3.4727488237112447,
    "ev_to_ebitda": 16.679,
    "debt_to_equity": 45.617,
@@ -193,8 +193,8 @@
    "free_cash_flow": 3219124992.0,
    "revenue_growth": 19.6,
    "profit_margin": 17.44,
-   "fred_10y_change_3m": 0.5300000000000002,
-   "data_age_days": 0.5045014231018519,
+   "fred_10y_change_3m": 0.6800000000000006,
+   "data_age_days": 0.7110726745949074,
    "source_ids": [
     "yf:hist:AMZN",
     "yf:info:AMZN",
@@ -203,14 +203,14 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-24T16:06:30.450299Z",
+  "computed_at": "2026-09-24T21:03:57.446745Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +16.5% \u2192 +0.55; 12m\u22121m +17.5% \u2192 +0.44",
+   "momentum: 6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47",
    "balance_sheet: D/E 46% \u2192 +0.5; current ratio 1.03 \u2192 +0.0; FCF positive \u2192 +0.3",
-   "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+   "macro: 10y yield +0.68pp over 3m \u2192 -0.50",
    "risk: 1y drawdown 22% \u2192 +0.05; 60d vol 42% ann. \u2192 -0.19",
-   "valuation: P/E 19.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.99\u00d7 its own median \u2192 +0.00"
+   "valuation: P/E 20.0 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.00\u00d7 its own median \u2192 +0.00"
   ]
  },
  "bull": {
@@ -219,7 +219,7 @@
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "momentum: 6m return +16.5% \u2192 +0.55; 12m\u22121m +17.5% \u2192 +0.44",
+    "text": "momentum: 6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -258,7 +258,7 @@
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+    "text": "macro: 10y yield +0.68pp over 3m \u2192 -0.50",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -288,7 +288,7 @@
   ],
   "disagreement": {
    "quant_band": "fair",
-   "quant_score": 10,
+   "quant_score": 11,
    "narrative_lean": "mixed",
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
