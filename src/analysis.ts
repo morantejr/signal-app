@@ -181,15 +181,17 @@ function buildSignals(b: Bundle) {
       const delta = now - recNet(prev)
       analystTrend = recs.length > 1 ? (delta > 0.06 ? 'rising' : delta < -0.06 ? 'falling' : 'steady') : 'steady'
       analystNow = { buys: latest.strongBuy + latest.buy, sells: latest.sell + latest.strongSell, n, net: now }
-      s.score = clamp(now * 1.5, -1, 1)
-      if (now >= 0.2) {
-        s.up = { t: analystTrend === 'rising' ? 'Analysts are getting more positive' : 'Analysts lean toward buying', d: `${analystNow.buys} of ${n} analysts rate it a buy and ${analystNow.sells} say sell${analystTrend === 'rising' ? ', and the balance has shifted toward buy over the last three months' : ''}.` }
-        s.upShort = 'analysts lean toward buying'
+      // Sell-side ratings skew heavily to "buy": a typical large cap sits near net 0.3.
+      // Centre there so only an unusually strong consensus counts as a positive signal.
+      s.score = clamp((now - 0.3) * 2, -1, 1)
+      if (s.score >= 0.15) {
+        s.up = { t: analystTrend === 'rising' ? 'Analysts are getting more positive' : 'Analysts are unusually positive', d: `${analystNow.buys} of ${n} analysts rate it a buy and ${analystNow.sells} say sell, a stronger consensus than most large companies get${analystTrend === 'rising' ? ', and the balance has shifted toward buy over the last three months' : ''}.` }
+        s.upShort = 'analysts are unusually positive'
       } else if (now < 0) {
         s.down = { t: 'Analysts lean toward selling', d: `${analystNow.sells} of ${n} analysts rate it a sell and only ${analystNow.buys} say buy.` }
         s.downShort = 'analysts lean toward selling'
-      } else {
-        s.down = { t: 'Analysts are lukewarm', d: `Most of the ${n} analysts covering it say hold rather than buy.` }
+      } else if (s.score <= -0.15) {
+        s.down = { t: 'Analysts are lukewarm', d: `Only ${analystNow.buys} of the ${n} analysts covering it say buy; most say hold. That is weak by the standards of sell-side ratings.` }
         s.downShort = 'analysts are lukewarm'
       }
       if (analystTrend === 'falling') {
@@ -246,8 +248,21 @@ function buildSignals(b: Bundle) {
   return { signals, g, npm, r13, hi, lo, beta, analystTrend, analystNow, qs }
 }
 
+/** Finnhub's company-news feed is loosely tagged; keep stories that actually name the company. */
+export function relevantNews(news: NewsItem[] | null, sym: string, name: string): NewsItem[] {
+  if (!news) return []
+  const first = name.split(/[\s,.]+/)[0]?.toLowerCase() ?? ''
+  const needles = [sym.toLowerCase(), ...(first.length >= 3 ? [first] : [])]
+  const hit = news.filter(n => {
+    const h = n.headline.toLowerCase()
+    return needles.some(k => new RegExp(`\\b${k}\\b`).test(h))
+  })
+  return hit.length >= 3 ? hit : news
+}
+
 export function analyse(b: Bundle): Analysis {
   const { signals, g, npm, r13, hi, lo, beta, analystTrend, analystNow, qs } = buildSignals(b)
+  const news = relevantNews(b.news, b.sym, b.profile.name || b.sym)
   const price = b.quote.c
   const name = b.profile.name || b.sym
 
@@ -311,7 +326,7 @@ export function analyse(b: Bundle): Analysis {
     b.metrics ? 'twelve-month fundamentals' : '',
     analystNow ? `${analystNow.n} analyst ratings` : '',
     qs.length ? `the last ${qs.length} quarterly results` : '',
-    b.news?.length ? `${b.news.length} news ${b.news.length === 1 ? 'story' : 'stories'} from the last two weeks` : '',
+    news.length ? `${news.length} news ${news.length === 1 ? 'story' : 'stories'} about the company from the last two weeks` : '',
   ].filter(Boolean)
   const strengthTitle = stance === 'Neutral' ? 'Why no lean either way' : stance.startsWith('Moderately') ? 'Why not a stronger view' : 'Why the view is strong'
   const deeper: Point[] = [
@@ -346,7 +361,7 @@ export function analyse(b: Bundle): Analysis {
   const endpoints = [true, Boolean(b.profile.name), Boolean(b.metrics), Boolean(analystNow), qs.length > 0].filter(Boolean).length
   const stats: Stat[] = [
     { v: `${avail.length} of 6`, k: 'checks with data' },
-    { v: String(endpoints + (b.news?.length ?? 0)), k: 'sources read' },
+    { v: String(endpoints + news.length), k: 'sources read' },
     { v: String(conflicting), k: conflicting === 1 ? 'check that disagrees' : 'checks that disagree' },
     { v: `${(b.elapsedMs / 1000).toFixed(1)}s`, k: 'to reach the answer' },
   ]
@@ -384,7 +399,7 @@ export function analyse(b: Bundle): Analysis {
     deeper,
     health,
     healthySummary,
-    research: { stats, claims, news: (b.news ?? []).slice(0, 5), missing },
+    research: { stats, claims, news: news.slice(0, 5), missing },
     asOf: (b.quote.t || Math.floor(Date.now() / 1000)) * 1000,
   }
 }
