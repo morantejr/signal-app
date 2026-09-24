@@ -1,0 +1,318 @@
+{
+ "run_id": "jpm-20260924T152042-75fb7c",
+ "ticker": "JPM",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T15:20:43.283544Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:JPM",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (JPM)",
+   "url": "https://finance.yahoo.com/quote/JPM/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:42.037061Z",
+   "excerpt": null,
+   "data": {
+    "rows": 252,
+    "last": "2026-09-24T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:JPM",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (JPM)",
+   "url": "https://finance.yahoo.com/quote/JPM/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:42.037061Z",
+   "excerpt": null,
+   "data": {
+    "longName": "JPMorgan Chase & Co.",
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "marketCap": 892964503552,
+    "trailingPE": 14.405231,
+    "forwardPE": 13.443658,
+    "priceToSalesTrailing12Months": 4.7924333,
+    "enterpriseToEbitda": null,
+    "debtToEquity": null,
+    "currentRatio": null,
+    "freeCashflow": null,
+    "revenueGrowth": 0.304,
+    "profitMargins": 0.34921002
+   }
+  },
+  {
+   "source_id": "yf:financials:JPM",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (JPM), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/JPM/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:42.037061Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     2.58,
+     2.78,
+     3.63,
+     4.64
+    ]
+   }
+  },
+  {
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:43.282338Z",
+   "excerpt": null,
+   "data": {
+    "from": "2026-06-16",
+    "to": "2026-09-22",
+    "first": 4.43,
+    "last": 4.96
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:43.282699+00:00) from yf:hist:JPM, yf:info:JPM, yf:financials:JPM, fred:DGS10",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:43.282749Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": 15,
+    "quant_band": "fair",
+    "components": [
+     {
+      "name": "valuation",
+      "value": 0.05000000000000002,
+      "note": "P/E 14.4 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.32\u00d7 its own median \u2192 -0.30"
+     },
+     {
+      "name": "momentum",
+      "value": 0.4349838428569782,
+      "note": "6m return +14.8% \u2192 +0.49; 12m\u22121m +15.1% \u2192 +0.38"
+     },
+     {
+      "name": "risk",
+      "value": 0.2912391629641567,
+      "note": "1y drawdown 15% \u2192 +0.28; 60d vol 19% ann. \u2192 +0.30"
+     },
+     {
+      "name": "balance_sheet",
+      "value": null,
+      "note": "no balance sheet data"
+     },
+     {
+      "name": "macro",
+      "value": -0.5,
+      "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "JPM",
+  "quant_score": 15,
+  "quant_band": "fair",
+  "components": [
+   {
+    "name": "valuation",
+    "value": 0.05000000000000002,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 14.405231,
+     "ps_vs_own_median": 1.32
+    },
+    "note": "P/E 14.4 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.32\u00d7 its own median \u2192 -0.30"
+   },
+   {
+    "name": "momentum",
+    "value": 0.4349838428569782,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": 14.809505621807295,
+     "ret_12m_minus_1m": 15.05
+    },
+    "note": "6m return +14.8% \u2192 +0.49; 12m\u22121m +15.1% \u2192 +0.38"
+   },
+   {
+    "name": "risk",
+    "value": 0.2912391629641567,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -15.471737378853101,
+     "vol_60d_ann": 19.049149360852592
+    },
+    "note": "1y drawdown 15% \u2192 +0.28; 60d vol 19% ann. \u2192 +0.30"
+   },
+   {
+    "name": "balance_sheet",
+    "value": null,
+    "weight": 0.2,
+    "inputs_used": {},
+    "note": "no balance sheet data"
+   },
+   {
+    "name": "macro",
+    "value": -0.5,
+    "weight": 0.1,
+    "inputs_used": {
+     "fred_10y_change_3m": 0.5300000000000002
+    },
+    "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "JPM",
+   "as_of": "2026-09-24T15:20:42.037061Z",
+   "price": 335.92999267578125,
+   "high_52w": 365.17999267578125,
+   "low_52w": 280.13787841796875,
+   "ret_1m": -5.820182686234743,
+   "ret_3m": 0.6932880496130389,
+   "ret_6m": 14.809505621807295,
+   "ret_12m": 9.232517246580452,
+   "vol_60d_ann": 19.049149360852592,
+   "max_drawdown_1y": -15.471737378853101,
+   "trailing_pe": 14.405231,
+   "forward_pe": 13.443658,
+   "price_to_sales": 4.7924333,
+   "ps_hist_median": 3.631090007568359,
+   "ev_to_ebitda": null,
+   "debt_to_equity": null,
+   "current_ratio": null,
+   "free_cash_flow": null,
+   "revenue_growth": 30.4,
+   "profit_margin": 34.921002,
+   "fred_10y_change_3m": 0.5300000000000002,
+   "data_age_days": 0.4727087622800926,
+   "source_ids": [
+    "yf:hist:JPM",
+    "yf:info:JPM",
+    "yf:financials:JPM",
+    "fred:DGS10"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T15:20:43.282699Z",
+  "freshness_flags": [
+   "missing:balance_sheet"
+  ],
+  "drivers": [
+   "momentum: 6m return +14.8% \u2192 +0.49; 12m\u22121m +15.1% \u2192 +0.38",
+   "risk: 1y drawdown 15% \u2192 +0.28; 60d vol 19% ann. \u2192 +0.30",
+   "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+   "valuation: P/E 14.4 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.32\u00d7 its own median \u2192 -0.30"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bull case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "momentum: 6m return +14.8% \u2192 +0.49; 12m\u22121m +15.1% \u2192 +0.38",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:JPM",
+     "yf:info:JPM",
+     "yf:financials:JPM",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bull-2",
+    "text": "risk: 1y drawdown 15% \u2192 +0.28; 60d vol 19% ann. \u2192 +0.30",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:JPM",
+     "yf:info:JPM",
+     "yf:financials:JPM",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bear case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:JPM",
+     "yf:info:JPM",
+     "yf:financials:JPM",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "brief": {
+  "ticker": "JPM",
+  "one_view": "[STUB \u2014 no OPENROUTER_API_KEY] Bull and bear memos were built from quant components only. The disagreement object below is computed by code against the quant band.",
+  "narrative_lean": "mixed",
+  "claims": [],
+  "kill_criteria": [
+   "Watch: missing:balance_sheet"
+  ],
+  "disagreement": {
+   "quant_band": "fair",
+   "quant_score": 15,
+   "narrative_lean": "mixed",
+   "agree": true,
+   "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
+   "quant_may_be_wrong_because": [
+    "missing:balance_sheet"
+   ],
+   "narrative_may_be_wrong_because": [
+    "No LLM synthesis was run (stub); the narrative lean is a placeholder"
+   ]
+  },
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "critic": {
+  "flags": [
+   "stub_outputs_present"
+  ],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": null
+ },
+ "models": {
+  "bull": "stub",
+  "bear": "stub",
+  "synthesis": "stub",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}

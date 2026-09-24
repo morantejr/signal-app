@@ -1,0 +1,321 @@
+{
+ "run_id": "googl-20260924T152036-c9a248",
+ "ticker": "GOOGL",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T15:20:37.171483Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:GOOGL",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (GOOGL)",
+   "url": "https://finance.yahoo.com/quote/GOOGL/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:36.129602Z",
+   "excerpt": null,
+   "data": {
+    "rows": 252,
+    "last": "2026-09-24T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:GOOGL",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (GOOGL)",
+   "url": "https://finance.yahoo.com/quote/GOOGL/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:36.129602Z",
+   "excerpt": null,
+   "data": {
+    "longName": "Alphabet Inc.",
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "marketCap": 4135858208768,
+    "trailingPE": 16.968138,
+    "forwardPE": 22.697512,
+    "priceToSalesTrailing12Months": 9.276012,
+    "enterpriseToEbitda": 23.261,
+    "debtToEquity": 18.859,
+    "currentRatio": 2.724,
+    "freeCashflow": 22665000960,
+    "revenueGrowth": 0.242,
+    "profitMargins": 0.54771
+   }
+  },
+  {
+   "source_id": "yf:financials:GOOGL",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (GOOGL), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/GOOGL/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:36.129602Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     1.83,
+     2.61,
+     3.15,
+     4.55
+    ]
+   }
+  },
+  {
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:37.170180Z",
+   "excerpt": null,
+   "data": {
+    "from": "2026-06-16",
+    "to": "2026-09-22",
+    "first": 4.43,
+    "last": 4.96
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:37.170643+00:00) from yf:hist:GOOGL, yf:info:GOOGL, yf:financials:GOOGL, fred:DGS10",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:37.170699Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": 17,
+    "quant_band": "fair",
+    "components": [
+     {
+      "name": "valuation",
+      "value": -0.09999999999999998,
+      "note": "P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.94\u00d7 its own median \u2192 -0.60"
+     },
+     {
+      "name": "momentum",
+      "value": 0.76841968905411,
+      "note": "6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99"
+     },
+     {
+      "name": "risk",
+      "value": 0.04749225739314315,
+      "note": "1y drawdown 21% \u2192 +0.08; 60d vol 35% ann. \u2192 +0.02"
+     },
+     {
+      "name": "balance_sheet",
+      "value": 0.3666666666666667,
+      "note": "D/E 19% \u2192 +0.5; current ratio 2.72 \u2192 +0.3; FCF positive \u2192 +0.3"
+     },
+     {
+      "name": "macro",
+      "value": -0.5,
+      "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "GOOGL",
+  "quant_score": 17,
+  "quant_band": "fair",
+  "components": [
+   {
+    "name": "valuation",
+    "value": -0.09999999999999998,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 16.968138,
+     "ps_vs_own_median": 2.94
+    },
+    "note": "P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.94\u00d7 its own median \u2192 -0.60"
+   },
+   {
+    "name": "momentum",
+    "value": 0.76841968905411,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": 16.36456594593454,
+     "ret_12m_minus_1m": 39.65
+    },
+    "note": "6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99"
+   },
+   {
+    "name": "risk",
+    "value": 0.04749225739314315,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -21.047200943300936,
+     "vol_60d_ann": 34.70633261601086
+    },
+    "note": "1y drawdown 21% \u2192 +0.08; 60d vol 35% ann. \u2192 +0.02"
+   },
+   {
+    "name": "balance_sheet",
+    "value": 0.3666666666666667,
+    "weight": 0.2,
+    "inputs_used": {
+     "debt_to_equity": 18.859,
+     "current_ratio": 2.724,
+     "free_cash_flow_positive": true
+    },
+    "note": "D/E 19% \u2192 +0.5; current ratio 2.72 \u2192 +0.3; FCF positive \u2192 +0.3"
+   },
+   {
+    "name": "macro",
+    "value": -0.5,
+    "weight": 0.1,
+    "inputs_used": {
+     "fred_10y_change_3m": 0.5300000000000002
+    },
+    "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "GOOGL",
+   "as_of": "2026-09-24T15:20:36.129602Z",
+   "price": 338.1199951171875,
+   "high_52w": 402.1211853027344,
+   "low_52w": 235.95635986328125,
+   "ret_1m": -2.4852044758077896,
+   "ret_3m": -1.5631355252306967,
+   "ret_6m": 16.36456594593454,
+   "ret_12m": 37.16894938727495,
+   "vol_60d_ann": 34.70633261601086,
+   "max_drawdown_1y": -21.047200943300936,
+   "trailing_pe": 16.968138,
+   "forward_pe": 22.697512,
+   "price_to_sales": 9.276012,
+   "ps_hist_median": 3.154614460013721,
+   "ev_to_ebitda": 23.261,
+   "debt_to_equity": 18.859,
+   "current_ratio": 2.724,
+   "free_cash_flow": 22665000960.0,
+   "revenue_growth": 24.2,
+   "profit_margin": 54.771,
+   "fred_10y_change_3m": 0.5300000000000002,
+   "data_age_days": 0.472640388912037,
+   "source_ids": [
+    "yf:hist:GOOGL",
+    "yf:info:GOOGL",
+    "yf:financials:GOOGL",
+    "fred:DGS10"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T15:20:37.170643Z",
+  "freshness_flags": [],
+  "drivers": [
+   "momentum: 6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99",
+   "balance_sheet: D/E 19% \u2192 +0.5; current ratio 2.72 \u2192 +0.3; FCF positive \u2192 +0.3",
+   "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+   "valuation: P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.94\u00d7 its own median \u2192 -0.60",
+   "risk: 1y drawdown 21% \u2192 +0.08; 60d vol 35% ann. \u2192 +0.02"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bull case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "momentum: 6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:GOOGL",
+     "yf:info:GOOGL",
+     "yf:financials:GOOGL",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bull-2",
+    "text": "balance_sheet: D/E 19% \u2192 +0.5; current ratio 2.72 \u2192 +0.3; FCF positive \u2192 +0.3",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:GOOGL",
+     "yf:info:GOOGL",
+     "yf:financials:GOOGL",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bear case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:GOOGL",
+     "yf:info:GOOGL",
+     "yf:financials:GOOGL",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "brief": {
+  "ticker": "GOOGL",
+  "one_view": "[STUB \u2014 no OPENROUTER_API_KEY] Bull and bear memos were built from quant components only. The disagreement object below is computed by code against the quant band.",
+  "narrative_lean": "mixed",
+  "claims": [],
+  "kill_criteria": [
+   "Set a key to get model-written kill criteria"
+  ],
+  "disagreement": {
+   "quant_band": "fair",
+   "quant_score": 17,
+   "narrative_lean": "mixed",
+   "agree": true,
+   "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
+   "quant_may_be_wrong_because": [
+    "v0 formula uses fixed reference bands rather than sector peers"
+   ],
+   "narrative_may_be_wrong_because": [
+    "No LLM synthesis was run (stub); the narrative lean is a placeholder"
+   ]
+  },
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "critic": {
+  "flags": [
+   "stub_outputs_present"
+  ],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": null
+ },
+ "models": {
+  "bull": "stub",
+  "bear": "stub",
+  "synthesis": "stub",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}

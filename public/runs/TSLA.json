@@ -1,0 +1,348 @@
+{
+ "run_id": "tsla-20260924T152038-bed79e",
+ "ticker": "TSLA",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T15:20:39.147011Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:TSLA",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (TSLA)",
+   "url": "https://finance.yahoo.com/quote/TSLA/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:38.069052Z",
+   "excerpt": null,
+   "data": {
+    "rows": 252,
+    "last": "2026-09-24T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:TSLA",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (TSLA)",
+   "url": "https://finance.yahoo.com/quote/TSLA/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:38.069052Z",
+   "excerpt": null,
+   "data": {
+    "longName": "Tesla, Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "marketCap": 1487320514560,
+    "trailingPE": 342.34543,
+    "forwardPE": 171.38773,
+    "priceToSalesTrailing12Months": 14.353743,
+    "enterpriseToEbitda": 137.101,
+    "debtToEquity": 18.373,
+    "currentRatio": 1.941,
+    "freeCashflow": 4835999744,
+    "revenueGrowth": 0.255,
+    "profitMargins": 0.03671
+   }
+  },
+  {
+   "source_id": "yf:financials:TSLA",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (TSLA), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/TSLA/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:38.069052Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     5.24,
+     10.14,
+     16.33,
+     18.73
+    ]
+   }
+  },
+  {
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:39.145807Z",
+   "excerpt": null,
+   "data": {
+    "from": "2026-06-16",
+    "to": "2026-09-22",
+    "first": 4.43,
+    "last": 4.96
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:39.146178+00:00) from yf:hist:TSLA, yf:info:TSLA, yf:financials:TSLA, fred:DGS10",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:39.146237Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": -31,
+    "quant_band": "expensive",
+    "components": [
+     {
+      "name": "valuation",
+      "value": -0.5,
+      "note": "P/E 342.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.88\u00d7 its own median \u2192 +0.00"
+     },
+     {
+      "name": "momentum",
+      "value": -0.3213430434548928,
+      "note": "6m return -2.4% \u2192 -0.08; 12m\u22121m -22.5% \u2192 -0.56"
+     },
+     {
+      "name": "risk",
+      "value": -0.5582177456839551,
+      "note": "1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52"
+     },
+     {
+      "name": "balance_sheet",
+      "value": 0.3666666666666667,
+      "note": "D/E 18% \u2192 +0.5; current ratio 1.94 \u2192 +0.3; FCF positive \u2192 +0.3"
+     },
+     {
+      "name": "macro",
+      "value": -0.5,
+      "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "TSLA",
+  "quant_score": -31,
+  "quant_band": "expensive",
+  "components": [
+   {
+    "name": "valuation",
+    "value": -0.5,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 342.34543,
+     "ps_vs_own_median": 0.88
+    },
+    "note": "P/E 342.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.88\u00d7 its own median \u2192 +0.00"
+   },
+   {
+    "name": "momentum",
+    "value": -0.3213430434548928,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": -2.427782183807614,
+     "ret_12m_minus_1m": -22.47
+    },
+    "note": "6m return -2.4% \u2192 -0.08; 12m\u22121m -22.5% \u2192 -0.56"
+   },
+   {
+    "name": "risk",
+    "value": -0.5582177456839551,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -39.10345301895269,
+     "vol_60d_ann": 53.42492081968629
+    },
+    "note": "1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52"
+   },
+   {
+    "name": "balance_sheet",
+    "value": 0.3666666666666667,
+    "weight": 0.2,
+    "inputs_used": {
+     "debt_to_equity": 18.373,
+     "current_ratio": 1.941,
+     "free_cash_flow_positive": true
+    },
+    "note": "D/E 18% \u2192 +0.5; current ratio 1.94 \u2192 +0.3; FCF positive \u2192 +0.3"
+   },
+   {
+    "name": "macro",
+    "value": -0.5,
+    "weight": 0.1,
+    "inputs_used": {
+     "fred_10y_change_3m": 0.5300000000000002
+    },
+    "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "TSLA",
+   "as_of": "2026-09-24T15:20:38.069052Z",
+   "price": 376.5799865722656,
+   "high_52w": 489.8800048828125,
+   "low_52w": 298.32000732421875,
+   "ret_1m": 7.517483675165071,
+   "ret_3m": 0.3892065136709144,
+   "ret_6m": -2.427782183807614,
+   "ret_12m": -14.95291688948287,
+   "vol_60d_ann": 53.42492081968629,
+   "max_drawdown_1y": -39.10345301895269,
+   "trailing_pe": 342.34543,
+   "forward_pe": 171.38773,
+   "price_to_sales": 14.353743,
+   "ps_hist_median": 16.327005887289236,
+   "ev_to_ebitda": 137.101,
+   "debt_to_equity": 18.373,
+   "current_ratio": 1.941,
+   "free_cash_flow": 4835999744.0,
+   "revenue_growth": 25.5,
+   "profit_margin": 3.671,
+   "fred_10y_change_3m": 0.5300000000000002,
+   "data_age_days": 0.47266283625,
+   "source_ids": [
+    "yf:hist:TSLA",
+    "yf:info:TSLA",
+    "yf:financials:TSLA",
+    "fred:DGS10"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T15:20:39.146178Z",
+  "freshness_flags": [],
+  "drivers": [
+   "valuation: P/E 342.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.88\u00d7 its own median \u2192 +0.00",
+   "risk: 1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52",
+   "momentum: 6m return -2.4% \u2192 -0.08; 12m\u22121m -22.5% \u2192 -0.56",
+   "balance_sheet: D/E 18% \u2192 +0.5; current ratio 1.94 \u2192 +0.3; FCF positive \u2192 +0.3",
+   "macro: 10y yield +0.53pp over 3m \u2192 -0.50"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bull case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "balance_sheet: D/E 18% \u2192 +0.5; current ratio 1.94 \u2192 +0.3; FCF positive \u2192 +0.3",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:TSLA",
+     "yf:info:TSLA",
+     "yf:financials:TSLA",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bear case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "valuation: P/E 342.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.88\u00d7 its own median \u2192 +0.00",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:TSLA",
+     "yf:info:TSLA",
+     "yf:financials:TSLA",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "momentum: 6m return -2.4% \u2192 -0.08; 12m\u22121m -22.5% \u2192 -0.56",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:TSLA",
+     "yf:info:TSLA",
+     "yf:financials:TSLA",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "risk: 1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:TSLA",
+     "yf:info:TSLA",
+     "yf:financials:TSLA",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-4",
+    "text": "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:TSLA",
+     "yf:info:TSLA",
+     "yf:financials:TSLA",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "brief": {
+  "ticker": "TSLA",
+  "one_view": "[STUB \u2014 no OPENROUTER_API_KEY] Bull and bear memos were built from quant components only. The disagreement object below is computed by code against the quant band.",
+  "narrative_lean": "mixed",
+  "claims": [],
+  "kill_criteria": [
+   "Set a key to get model-written kill criteria"
+  ],
+  "disagreement": {
+   "quant_band": "expensive",
+   "quant_score": -31,
+   "narrative_lean": "mixed",
+   "agree": false,
+   "disagreement_summary": "Quant says 'expensive' (score -31); the narrative leans 'mixed'. This is shown, not reconciled. One of them is wrong, or the horizon differs.",
+   "quant_may_be_wrong_because": [
+    "v0 formula uses fixed reference bands rather than sector peers"
+   ],
+   "narrative_may_be_wrong_because": [
+    "No LLM synthesis was run (stub); the narrative lean is a placeholder"
+   ]
+  },
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "critic": {
+  "flags": [
+   "stub_outputs_present",
+   "quant_narrative_disagree"
+  ],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": null
+ },
+ "models": {
+  "bull": "stub",
+  "bear": "stub",
+  "synthesis": "stub",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}

@@ -1,0 +1,347 @@
+{
+ "run_id": "avgo-20260924T152040-a100ae",
+ "ticker": "AVGO",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T15:20:40.988139Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:AVGO",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (AVGO)",
+   "url": "https://finance.yahoo.com/quote/AVGO/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.051966Z",
+   "excerpt": null,
+   "data": {
+    "rows": 252,
+    "last": "2026-09-24T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:AVGO",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (AVGO)",
+   "url": "https://finance.yahoo.com/quote/AVGO/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.051966Z",
+   "excerpt": null,
+   "data": {
+    "longName": "Broadcom Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "marketCap": 1656807620608,
+    "trailingPE": 44.32631,
+    "forwardPE": 17.905315,
+    "priceToSalesTrailing12Months": 18.594357,
+    "enterpriseToEbitda": 33.104,
+    "debtToEquity": 59.604,
+    "currentRatio": 2.504,
+    "freeCashflow": 30596499456,
+    "revenueGrowth": 0.855,
+    "profitMargins": 0.42944
+   }
+  },
+  {
+   "source_id": "yf:financials:AVGO",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (AVGO), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/AVGO/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.051966Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     6.37,
+     10.85,
+     15.45,
+     27.41
+    ]
+   }
+  },
+  {
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.987016Z",
+   "excerpt": null,
+   "data": {
+    "from": "2026-06-16",
+    "to": "2026-09-22",
+    "first": 4.43,
+    "last": 4.96
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:40.987340+00:00) from yf:hist:AVGO, yf:info:AVGO, yf:financials:AVGO, fred:DGS10",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.987421Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": -14,
+    "quant_band": "fair",
+    "components": [
+     {
+      "name": "valuation",
+      "value": -0.5,
+      "note": "P/E 44.3 \u2192 -0.7 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.20\u00d7 its own median \u2192 -0.30"
+     },
+     {
+      "name": "momentum",
+      "value": 0.22373478904409355,
+      "note": "6m return +9.2% \u2192 +0.31; 12m\u22121m +5.6% \u2192 +0.14"
+     },
+     {
+      "name": "risk",
+      "value": -0.18903963328043394,
+      "note": "1y drawdown 29% \u2192 -0.24; 60d vol 40% ann. \u2192 -0.14"
+     },
+     {
+      "name": "balance_sheet",
+      "value": 0.26666666666666666,
+      "note": "D/E 60% \u2192 +0.2; current ratio 2.50 \u2192 +0.3; FCF positive \u2192 +0.3"
+     },
+     {
+      "name": "macro",
+      "value": -0.5,
+      "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "AVGO",
+  "quant_score": -14,
+  "quant_band": "fair",
+  "components": [
+   {
+    "name": "valuation",
+    "value": -0.5,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 44.32631,
+     "ps_vs_own_median": 1.2
+    },
+    "note": "P/E 44.3 \u2192 -0.7 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.20\u00d7 its own median \u2192 -0.30"
+   },
+   {
+    "name": "momentum",
+    "value": 0.22373478904409355,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": 9.238202722042388,
+     "ret_12m_minus_1m": 5.58
+    },
+    "note": "6m return +9.2% \u2192 +0.31; 12m\u22121m +5.6% \u2192 +0.14"
+   },
+   {
+    "name": "risk",
+    "value": -0.18903963328043394,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -29.437682720893054,
+     "vol_60d_ann": 40.293855069475235
+    },
+    "note": "1y drawdown 29% \u2192 -0.24; 60d vol 40% ann. \u2192 -0.14"
+   },
+   {
+    "name": "balance_sheet",
+    "value": 0.26666666666666666,
+    "weight": 0.2,
+    "inputs_used": {
+     "debt_to_equity": 59.604,
+     "current_ratio": 2.504,
+     "free_cash_flow_positive": true
+    },
+    "note": "D/E 60% \u2192 +0.2; current ratio 2.50 \u2192 +0.3; FCF positive \u2192 +0.3"
+   },
+   {
+    "name": "macro",
+    "value": -0.5,
+    "weight": 0.1,
+    "inputs_used": {
+     "fred_10y_change_3m": 0.5300000000000002
+    },
+    "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "AVGO",
+   "as_of": "2026-09-24T15:20:40.051966Z",
+   "price": 347.0799865722656,
+   "high_52w": 479.9350891113281,
+   "low_52w": 292.41387939453125,
+   "ret_1m": -2.5306879910267144,
+   "ret_3m": -8.233618199136572,
+   "ret_6m": 9.238202722042388,
+   "ret_12m": 3.050491503110919,
+   "vol_60d_ann": 40.293855069475235,
+   "max_drawdown_1y": -29.437682720893054,
+   "trailing_pe": 44.32631,
+   "forward_pe": 17.905315,
+   "price_to_sales": 18.594357,
+   "ps_hist_median": 15.446250141853923,
+   "ev_to_ebitda": 33.104,
+   "debt_to_equity": 59.604,
+   "current_ratio": 2.504,
+   "free_cash_flow": 30596499456.0,
+   "revenue_growth": 85.5,
+   "profit_margin": 42.943999999999996,
+   "fred_10y_change_3m": 0.5300000000000002,
+   "data_age_days": 0.4726857866435185,
+   "source_ids": [
+    "yf:hist:AVGO",
+    "yf:info:AVGO",
+    "yf:financials:AVGO",
+    "fred:DGS10"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T15:20:40.987340Z",
+  "freshness_flags": [],
+  "drivers": [
+   "valuation: P/E 44.3 \u2192 -0.7 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.20\u00d7 its own median \u2192 -0.30",
+   "momentum: 6m return +9.2% \u2192 +0.31; 12m\u22121m +5.6% \u2192 +0.14",
+   "balance_sheet: D/E 60% \u2192 +0.2; current ratio 2.50 \u2192 +0.3; FCF positive \u2192 +0.3",
+   "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+   "risk: 1y drawdown 29% \u2192 -0.24; 60d vol 40% ann. \u2192 -0.14"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bull case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "momentum: 6m return +9.2% \u2192 +0.31; 12m\u22121m +5.6% \u2192 +0.14",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AVGO",
+     "yf:info:AVGO",
+     "yf:financials:AVGO",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bull-2",
+    "text": "balance_sheet: D/E 60% \u2192 +0.2; current ratio 2.50 \u2192 +0.3; FCF positive \u2192 +0.3",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AVGO",
+     "yf:info:AVGO",
+     "yf:financials:AVGO",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bear case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "valuation: P/E 44.3 \u2192 -0.7 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.20\u00d7 its own median \u2192 -0.30",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AVGO",
+     "yf:info:AVGO",
+     "yf:financials:AVGO",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "risk: 1y drawdown 29% \u2192 -0.24; 60d vol 40% ann. \u2192 -0.14",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AVGO",
+     "yf:info:AVGO",
+     "yf:financials:AVGO",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AVGO",
+     "yf:info:AVGO",
+     "yf:financials:AVGO",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "brief": {
+  "ticker": "AVGO",
+  "one_view": "[STUB \u2014 no OPENROUTER_API_KEY] Bull and bear memos were built from quant components only. The disagreement object below is computed by code against the quant band.",
+  "narrative_lean": "mixed",
+  "claims": [],
+  "kill_criteria": [
+   "Set a key to get model-written kill criteria"
+  ],
+  "disagreement": {
+   "quant_band": "fair",
+   "quant_score": -14,
+   "narrative_lean": "mixed",
+   "agree": true,
+   "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
+   "quant_may_be_wrong_because": [
+    "v0 formula uses fixed reference bands rather than sector peers"
+   ],
+   "narrative_may_be_wrong_because": [
+    "No LLM synthesis was run (stub); the narrative lean is a placeholder"
+   ]
+  },
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "critic": {
+  "flags": [
+   "stub_outputs_present"
+  ],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": null
+ },
+ "models": {
+  "bull": "stub",
+  "bear": "stub",
+  "synthesis": "stub",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}

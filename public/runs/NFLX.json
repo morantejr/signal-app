@@ -1,0 +1,335 @@
+{
+ "run_id": "nflx-20260924T152040-0cb07f",
+ "ticker": "NFLX",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T15:20:42.033849Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:NFLX",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (NFLX)",
+   "url": "https://finance.yahoo.com/quote/NFLX/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.991806Z",
+   "excerpt": null,
+   "data": {
+    "rows": 252,
+    "last": "2026-09-24T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:NFLX",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (NFLX)",
+   "url": "https://finance.yahoo.com/quote/NFLX/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.991806Z",
+   "excerpt": null,
+   "data": {
+    "longName": "Netflix, Inc.",
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "marketCap": 297367764992,
+    "trailingPE": 22.457546,
+    "forwardPE": 18.728266,
+    "priceToSalesTrailing12Months": 6.1476755,
+    "enterpriseToEbitda": 20.688,
+    "debtToEquity": 55.236,
+    "currentRatio": 1.142,
+    "freeCashflow": 25387552768,
+    "revenueGrowth": 0.134,
+    "profitMargins": 0.28219
+   }
+  },
+  {
+   "source_id": "yf:financials:NFLX",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (NFLX), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/NFLX/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.991806Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     3.88,
+     5.78,
+     8.64,
+     9.52
+    ]
+   }
+  },
+  {
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:42.032698Z",
+   "excerpt": null,
+   "data": {
+    "from": "2026-06-16",
+    "to": "2026-09-22",
+    "first": 4.43,
+    "last": 4.96
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:42.033040+00:00) from yf:hist:NFLX, yf:info:NFLX, yf:financials:NFLX, fred:DGS10",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:42.033092Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": -22,
+    "quant_band": "expensive",
+    "components": [
+     {
+      "name": "valuation",
+      "value": 0.125,
+      "note": "P/E 22.5 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.71\u00d7 its own median \u2192 +0.25"
+     },
+     {
+      "name": "momentum",
+      "value": -0.7209748545099968,
+      "note": "6m return -22.6% \u2192 -0.75; 12m\u22121m -27.5% \u2192 -0.69"
+     },
+     {
+      "name": "risk",
+      "value": -0.4420479916205756,
+      "note": "1y drawdown 46% \u2192 -0.83; 60d vol 37% ann. \u2192 -0.05"
+     },
+     {
+      "name": "balance_sheet",
+      "value": 0.16666666666666666,
+      "note": "D/E 55% \u2192 +0.2; current ratio 1.14 \u2192 +0.0; FCF positive \u2192 +0.3"
+     },
+     {
+      "name": "macro",
+      "value": -0.5,
+      "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "NFLX",
+  "quant_score": -22,
+  "quant_band": "expensive",
+  "components": [
+   {
+    "name": "valuation",
+    "value": 0.125,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 22.457546,
+     "ps_vs_own_median": 0.71
+    },
+    "note": "P/E 22.5 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.71\u00d7 its own median \u2192 +0.25"
+   },
+   {
+    "name": "momentum",
+    "value": -0.7209748545099968,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": -22.610531144101643,
+     "ret_12m_minus_1m": -27.53
+    },
+    "note": "6m return -22.6% \u2192 -0.75; 12m\u22121m -27.5% \u2192 -0.69"
+   },
+   {
+    "name": "risk",
+    "value": -0.4420479916205756,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -45.54316082426592,
+     "vol_60d_ann": 37.10277506341224
+    },
+    "note": "1y drawdown 46% \u2192 -0.83; 60d vol 37% ann. \u2192 -0.05"
+   },
+   {
+    "name": "balance_sheet",
+    "value": 0.16666666666666666,
+    "weight": 0.2,
+    "inputs_used": {
+     "debt_to_equity": 55.236,
+     "current_ratio": 1.142,
+     "free_cash_flow_positive": true
+    },
+    "note": "D/E 55% \u2192 +0.2; current ratio 1.14 \u2192 +0.0; FCF positive \u2192 +0.3"
+   },
+   {
+    "name": "macro",
+    "value": -0.5,
+    "weight": 0.1,
+    "inputs_used": {
+     "fred_10y_change_3m": 0.5300000000000002
+    },
+    "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "NFLX",
+   "as_of": "2026-09-24T15:20:40.991806Z",
+   "price": 71.41500091552734,
+   "high_52w": 124.13500213623047,
+   "low_52w": 67.5999984741211,
+   "ret_1m": -13.152136689648252,
+   "ret_3m": 0.7263742998093736,
+   "ret_6m": -22.610531144101643,
+   "ret_12m": -40.68275019164581,
+   "vol_60d_ann": 37.10277506341224,
+   "max_drawdown_1y": -45.54316082426592,
+   "trailing_pe": 22.457546,
+   "forward_pe": 18.728266,
+   "price_to_sales": 6.1476755,
+   "ps_hist_median": 8.640654269378773,
+   "ev_to_ebitda": 20.688,
+   "debt_to_equity": 55.236,
+   "current_ratio": 1.142,
+   "free_cash_flow": 25387552768.0,
+   "revenue_growth": 13.4,
+   "profit_margin": 28.219,
+   "fred_10y_change_3m": 0.5300000000000002,
+   "data_age_days": 0.47269666442129626,
+   "source_ids": [
+    "yf:hist:NFLX",
+    "yf:info:NFLX",
+    "yf:financials:NFLX",
+    "fred:DGS10"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T15:20:42.033040Z",
+  "freshness_flags": [],
+  "drivers": [
+   "momentum: 6m return -22.6% \u2192 -0.75; 12m\u22121m -27.5% \u2192 -0.69",
+   "risk: 1y drawdown 46% \u2192 -0.83; 60d vol 37% ann. \u2192 -0.05",
+   "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+   "valuation: P/E 22.5 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.71\u00d7 its own median \u2192 +0.25",
+   "balance_sheet: D/E 55% \u2192 +0.2; current ratio 1.14 \u2192 +0.0; FCF positive \u2192 +0.3"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bull case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "balance_sheet: D/E 55% \u2192 +0.2; current ratio 1.14 \u2192 +0.0; FCF positive \u2192 +0.3",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:NFLX",
+     "yf:info:NFLX",
+     "yf:financials:NFLX",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bear case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "momentum: 6m return -22.6% \u2192 -0.75; 12m\u22121m -27.5% \u2192 -0.69",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:NFLX",
+     "yf:info:NFLX",
+     "yf:financials:NFLX",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "risk: 1y drawdown 46% \u2192 -0.83; 60d vol 37% ann. \u2192 -0.05",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:NFLX",
+     "yf:info:NFLX",
+     "yf:financials:NFLX",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:NFLX",
+     "yf:info:NFLX",
+     "yf:financials:NFLX",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "brief": {
+  "ticker": "NFLX",
+  "one_view": "[STUB \u2014 no OPENROUTER_API_KEY] Bull and bear memos were built from quant components only. The disagreement object below is computed by code against the quant band.",
+  "narrative_lean": "mixed",
+  "claims": [],
+  "kill_criteria": [
+   "Set a key to get model-written kill criteria"
+  ],
+  "disagreement": {
+   "quant_band": "expensive",
+   "quant_score": -22,
+   "narrative_lean": "mixed",
+   "agree": false,
+   "disagreement_summary": "Quant says 'expensive' (score -22); the narrative leans 'mixed'. This is shown, not reconciled. One of them is wrong, or the horizon differs.",
+   "quant_may_be_wrong_because": [
+    "v0 formula uses fixed reference bands rather than sector peers"
+   ],
+   "narrative_may_be_wrong_because": [
+    "No LLM synthesis was run (stub); the narrative lean is a placeholder"
+   ]
+  },
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "critic": {
+  "flags": [
+   "stub_outputs_present",
+   "quant_narrative_disagree"
+  ],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": null
+ },
+ "models": {
+  "bull": "stub",
+  "bear": "stub",
+  "synthesis": "stub",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}

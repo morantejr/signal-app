@@ -1,0 +1,347 @@
+{
+ "run_id": "amd-20260924T152039-2607c0",
+ "ticker": "AMD",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T15:20:40.048327Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:AMD",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (AMD)",
+   "url": "https://finance.yahoo.com/quote/AMD/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:39.150856Z",
+   "excerpt": null,
+   "data": {
+    "rows": 252,
+    "last": "2026-09-24T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:AMD",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (AMD)",
+   "url": "https://finance.yahoo.com/quote/AMD/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:39.150856Z",
+   "excerpt": null,
+   "data": {
+    "longName": "Advanced Micro Devices, Inc.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "marketCap": 998927761408,
+    "trailingPE": 155.70229,
+    "forwardPE": 39.298836,
+    "priceToSalesTrailing12Months": 24.184183,
+    "enterpriseToEbitda": 104.005,
+    "debtToEquity": 6.361,
+    "currentRatio": 2.609,
+    "freeCashflow": 8841499648,
+    "revenueGrowth": 0.501,
+    "profitMargins": 0.15577
+   }
+  },
+  {
+   "source_id": "yf:financials:AMD",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (AMD), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/AMD/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:39.150856Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     4.43,
+     7.65,
+     9.97,
+     10.09
+    ]
+   }
+  },
+  {
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.047157Z",
+   "excerpt": null,
+   "data": {
+    "from": "2026-06-16",
+    "to": "2026-09-22",
+    "first": 4.43,
+    "last": 4.96
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:40.047524+00:00) from yf:hist:AMD, yf:info:AMD, yf:financials:AMD, fred:DGS10",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T15:20:40.047576Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": -11,
+    "quant_band": "fair",
+    "components": [
+     {
+      "name": "valuation",
+      "value": -0.8,
+      "note": "P/E 155.7 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.42\u00d7 its own median \u2192 -0.60"
+     },
+     {
+      "name": "momentum",
+      "value": 1.0,
+      "note": "6m return +177.8% \u2192 +1.00; 12m\u22121m +252.7% \u2192 +1.00"
+     },
+     {
+      "name": "risk",
+      "value": -0.5844517457191551,
+      "note": "1y drawdown 28% \u2192 -0.17; 60d vol 70% ann. \u2192 -0.99"
+     },
+     {
+      "name": "balance_sheet",
+      "value": 0.3666666666666667,
+      "note": "D/E 6% \u2192 +0.5; current ratio 2.61 \u2192 +0.3; FCF positive \u2192 +0.3"
+     },
+     {
+      "name": "macro",
+      "value": -0.5,
+      "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "AMD",
+  "quant_score": -11,
+  "quant_band": "fair",
+  "components": [
+   {
+    "name": "valuation",
+    "value": -0.8,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 155.70229,
+     "ps_vs_own_median": 2.42
+    },
+    "note": "P/E 155.7 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.42\u00d7 its own median \u2192 -0.60"
+   },
+   {
+    "name": "momentum",
+    "value": 1.0,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": 177.7999551802954,
+     "ret_12m_minus_1m": 252.65
+    },
+    "note": "6m return +177.8% \u2192 +1.00; 12m\u22121m +252.7% \u2192 +1.00"
+   },
+   {
+    "name": "risk",
+    "value": -0.5844517457191551,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -27.760751088284852,
+     "vol_60d_ann": 69.82459473298186
+    },
+    "note": "1y drawdown 28% \u2192 -0.17; 60d vol 70% ann. \u2192 -0.99"
+   },
+   {
+    "name": "balance_sheet",
+    "value": 0.3666666666666667,
+    "weight": 0.2,
+    "inputs_used": {
+     "debt_to_equity": 6.361,
+     "current_ratio": 2.609,
+     "free_cash_flow_positive": true
+    },
+    "note": "D/E 6% \u2192 +0.5; current ratio 2.61 \u2192 +0.3; FCF positive \u2192 +0.3"
+   },
+   {
+    "name": "macro",
+    "value": -0.5,
+    "weight": 0.1,
+    "inputs_used": {
+     "fred_10y_change_3m": 0.5300000000000002
+    },
+    "note": "10y yield +0.53pp over 3m \u2192 -0.50"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "AMD",
+   "as_of": "2026-09-24T15:20:39.150856Z",
+   "price": 611.9099731445312,
+   "high_52w": 623.77001953125,
+   "low_52w": 159.4600067138672,
+   "ret_1m": 27.699399494451903,
+   "ret_3m": 14.897565527382728,
+   "ret_6m": 177.7999551802954,
+   "ret_12m": 280.35178678062323,
+   "vol_60d_ann": 69.82459473298186,
+   "max_drawdown_1y": -27.760751088284852,
+   "trailing_pe": 155.70229,
+   "forward_pe": 39.298836,
+   "price_to_sales": 24.184183,
+   "ps_hist_median": 9.97479692722712,
+   "ev_to_ebitda": 104.005,
+   "debt_to_equity": 6.361,
+   "current_ratio": 2.609,
+   "free_cash_flow": 8841499648.0,
+   "revenue_growth": 50.1,
+   "profit_margin": 15.577,
+   "fred_10y_change_3m": 0.5300000000000002,
+   "data_age_days": 0.47267535712962966,
+   "source_ids": [
+    "yf:hist:AMD",
+    "yf:info:AMD",
+    "yf:financials:AMD",
+    "fred:DGS10"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T15:20:40.047524Z",
+  "freshness_flags": [],
+  "drivers": [
+   "valuation: P/E 155.7 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.42\u00d7 its own median \u2192 -0.60",
+   "momentum: 6m return +177.8% \u2192 +1.00; 12m\u22121m +252.7% \u2192 +1.00",
+   "risk: 1y drawdown 28% \u2192 -0.17; 60d vol 70% ann. \u2192 -0.99",
+   "balance_sheet: D/E 6% \u2192 +0.5; current ratio 2.61 \u2192 +0.3; FCF positive \u2192 +0.3",
+   "macro: 10y yield +0.53pp over 3m \u2192 -0.50"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bull case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "momentum: 6m return +177.8% \u2192 +1.00; 12m\u22121m +252.7% \u2192 +1.00",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMD",
+     "yf:info:AMD",
+     "yf:financials:AMD",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bull-2",
+    "text": "balance_sheet: D/E 6% \u2192 +0.5; current ratio 2.61 \u2192 +0.3; FCF positive \u2192 +0.3",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMD",
+     "yf:info:AMD",
+     "yf:financials:AMD",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bear case assembled from quant components only. Set a key to get a sourced memo.",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "valuation: P/E 155.7 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.42\u00d7 its own median \u2192 -0.60",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMD",
+     "yf:info:AMD",
+     "yf:financials:AMD",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "risk: 1y drawdown 28% \u2192 -0.17; 60d vol 70% ann. \u2192 -0.99",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMD",
+     "yf:info:AMD",
+     "yf:financials:AMD",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMD",
+     "yf:info:AMD",
+     "yf:financials:AMD",
+     "fred:DGS10"
+    ],
+    "confidence": 0.5
+   }
+  ],
+  "steelman_of_other_side": "(stub)",
+  "missing_data": [
+   "LLM memo not generated"
+  ],
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "brief": {
+  "ticker": "AMD",
+  "one_view": "[STUB \u2014 no OPENROUTER_API_KEY] Bull and bear memos were built from quant components only. The disagreement object below is computed by code against the quant band.",
+  "narrative_lean": "mixed",
+  "claims": [],
+  "kill_criteria": [
+   "Set a key to get model-written kill criteria"
+  ],
+  "disagreement": {
+   "quant_band": "fair",
+   "quant_score": -11,
+   "narrative_lean": "mixed",
+   "agree": true,
+   "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
+   "quant_may_be_wrong_because": [
+    "v0 formula uses fixed reference bands rather than sector peers"
+   ],
+   "narrative_may_be_wrong_because": [
+    "No LLM synthesis was run (stub); the narrative lean is a placeholder"
+   ]
+  },
+  "model": null,
+  "provider": null,
+  "is_stub": true
+ },
+ "critic": {
+  "flags": [
+   "stub_outputs_present"
+  ],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": null
+ },
+ "models": {
+  "bull": "stub",
+  "bear": "stub",
+  "synthesis": "stub",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}
