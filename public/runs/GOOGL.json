@@ -1,9 +1,9 @@
 {
- "run_id": "googl-20260924T152036-c9a248",
+ "run_id": "googl-20260924T160627-bad455",
  "ticker": "GOOGL",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-24T15:20:37.171483Z",
+ "created_at": "2026-09-24T16:06:28.919332Z",
  "sources": [
   {
    "source_id": "yf:hist:GOOGL",
@@ -11,7 +11,7 @@
    "title": "Yahoo Finance daily prices, 1y (GOOGL)",
    "url": "https://finance.yahoo.com/quote/GOOGL/history",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:36.129602Z",
+   "retrieved_at": "2026-09-24T16:06:27.395586Z",
    "excerpt": null,
    "data": {
     "rows": 252,
@@ -24,16 +24,16 @@
    "title": "Yahoo Finance key statistics (GOOGL)",
    "url": "https://finance.yahoo.com/quote/GOOGL/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:36.129602Z",
+   "retrieved_at": "2026-09-24T16:06:27.395586Z",
    "excerpt": null,
    "data": {
     "longName": "Alphabet Inc.",
     "sector": "Communication Services",
     "industry": "Internet Content & Information",
-    "marketCap": 4135858208768,
-    "trailingPE": 16.968138,
-    "forwardPE": 22.697512,
-    "priceToSalesTrailing12Months": 9.276012,
+    "marketCap": 4150228680704,
+    "trailingPE": 17.027096,
+    "forwardPE": 22.776377,
+    "priceToSalesTrailing12Months": 9.3081045,
     "enterpriseToEbitda": 23.261,
     "debtToEquity": 18.859,
     "currentRatio": 2.724,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (GOOGL), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/GOOGL/financials",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:36.129602Z",
+   "retrieved_at": "2026-09-24T16:06:27.395586Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,7 +65,7 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:37.170180Z",
+   "retrieved_at": "2026-09-24T16:06:28.918172Z",
    "excerpt": null,
    "data": {
     "from": "2026-06-16",
@@ -77,10 +77,10 @@
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:37.170643+00:00) from yf:hist:GOOGL, yf:info:GOOGL, yf:financials:GOOGL, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T16:06:28.918570+00:00) from yf:hist:GOOGL, yf:info:GOOGL, yf:financials:GOOGL, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:37.170699Z",
+   "retrieved_at": "2026-09-24T16:06:28.918624Z",
    "excerpt": null,
    "data": {
     "quant_score": 17,
@@ -89,16 +89,16 @@
      {
       "name": "valuation",
       "value": -0.09999999999999998,
-      "note": "P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.94\u00d7 its own median \u2192 -0.60"
+      "note": "P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.95\u00d7 its own median \u2192 -0.60"
      },
      {
       "name": "momentum",
-      "value": 0.76841968905411,
-      "note": "6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99"
+      "value": 0.7772779257615584,
+      "note": "6m return +16.8% \u2192 +0.56; 12m\u22121m +39.8% \u2192 +0.99"
      },
      {
       "name": "risk",
-      "value": 0.04749225739314315,
+      "value": 0.047277138845644925,
       "note": "1y drawdown 21% \u2192 +0.08; 60d vol 35% ann. \u2192 +0.02"
      },
      {
@@ -125,28 +125,28 @@
     "value": -0.09999999999999998,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 16.968138,
-     "ps_vs_own_median": 2.94
+     "trailing_pe": 17.027096,
+     "ps_vs_own_median": 2.95
     },
-    "note": "P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.94\u00d7 its own median \u2192 -0.60"
+    "note": "P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.95\u00d7 its own median \u2192 -0.60"
    },
    {
     "name": "momentum",
-    "value": 0.76841968905411,
+    "value": 0.7772779257615584,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": 16.36456594593454,
-     "ret_12m_minus_1m": 39.65
+     "ret_6m": 16.787876299062866,
+     "ret_12m_minus_1m": 39.8
     },
-    "note": "6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99"
+    "note": "6m return +16.8% \u2192 +0.56; 12m\u22121m +39.8% \u2192 +0.99"
    },
    {
     "name": "risk",
-    "value": 0.04749225739314315,
+    "value": 0.047277138845644925,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -21.047200943300936,
-     "vol_60d_ann": 34.70633261601086
+     "vol_60d_ann": 34.72122543852997
     },
     "note": "1y drawdown 21% \u2192 +0.08; 60d vol 35% ann. \u2192 +0.02"
    },
@@ -173,20 +173,20 @@
   ],
   "quant_inputs": {
    "ticker": "GOOGL",
-   "as_of": "2026-09-24T15:20:36.129602Z",
-   "price": 338.1199951171875,
+   "as_of": "2026-09-24T16:06:27.395586Z",
+   "price": 339.3500061035156,
    "high_52w": 402.1211853027344,
-   "low_52w": 235.95635986328125,
-   "ret_1m": -2.4852044758077896,
-   "ret_3m": -1.5631355252306967,
-   "ret_6m": 16.36456594593454,
-   "ret_12m": 37.16894938727495,
-   "vol_60d_ann": 34.70633261601086,
+   "low_52w": 235.9563446044922,
+   "ret_1m": -2.130465709818141,
+   "ret_3m": -1.2050424620810518,
+   "ret_6m": 16.787876299062866,
+   "ret_12m": 37.66793328568938,
+   "vol_60d_ann": 34.72122543852997,
    "max_drawdown_1y": -21.047200943300936,
-   "trailing_pe": 16.968138,
-   "forward_pe": 22.697512,
-   "price_to_sales": 9.276012,
-   "ps_hist_median": 3.154614460013721,
+   "trailing_pe": 17.027096,
+   "forward_pe": 22.776377,
+   "price_to_sales": 9.3081045,
+   "ps_hist_median": 3.15461471578826,
    "ev_to_ebitda": 23.261,
    "debt_to_equity": 18.859,
    "current_ratio": 2.724,
@@ -194,7 +194,7 @@
    "revenue_growth": 24.2,
    "profit_margin": 54.771,
    "fred_10y_change_3m": 0.5300000000000002,
-   "data_age_days": 0.472640388912037,
+   "data_age_days": 0.5044837452083333,
    "source_ids": [
     "yf:hist:GOOGL",
     "yf:info:GOOGL",
@@ -203,13 +203,13 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-24T15:20:37.170643Z",
+  "computed_at": "2026-09-24T16:06:28.918570Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99",
+   "momentum: 6m return +16.8% \u2192 +0.56; 12m\u22121m +39.8% \u2192 +0.99",
    "balance_sheet: D/E 19% \u2192 +0.5; current ratio 2.72 \u2192 +0.3; FCF positive \u2192 +0.3",
    "macro: 10y yield +0.53pp over 3m \u2192 -0.50",
-   "valuation: P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.94\u00d7 its own median \u2192 -0.60",
+   "valuation: P/E 17.0 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.95\u00d7 its own median \u2192 -0.60",
    "risk: 1y drawdown 21% \u2192 +0.08; 60d vol 35% ann. \u2192 +0.02"
   ]
  },
@@ -219,7 +219,7 @@
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "momentum: 6m return +16.4% \u2192 +0.55; 12m\u22121m +39.7% \u2192 +0.99",
+    "text": "momentum: 6m return +16.8% \u2192 +0.56; 12m\u22121m +39.8% \u2192 +0.99",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [

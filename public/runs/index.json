@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24T15:20:46.304022+00:00",
+ "generated_at": "2026-09-24T16:06:32.505230+00:00",
  "runs": [
   {
    "ticker": "AAPL",
@@ -19,8 +19,8 @@
   },
   {
    "ticker": "AMZN",
-   "run_id": "amzn-20260924T152037-731a42",
-   "created_at": "2026-09-24T15:20:38.065657+00:00",
+   "run_id": "amzn-20260924T160628-8ca13d",
+   "created_at": "2026-09-24T16:06:30.451115+00:00",
    "quant_score": 10,
    "quant_band": "fair",
    "narrative_lean": "mixed",
@@ -35,8 +35,8 @@
   },
   {
    "ticker": "GOOGL",
-   "run_id": "googl-20260924T152036-c9a248",
-   "created_at": "2026-09-24T15:20:37.171483+00:00",
+   "run_id": "googl-20260924T160627-bad455",
+   "created_at": "2026-09-24T16:06:28.919332+00:00",
    "quant_score": 17,
    "quant_band": "fair",
    "narrative_lean": "mixed",
@@ -99,8 +99,8 @@
   },
   {
    "ticker": "TSLA",
-   "run_id": "tsla-20260924T152038-bed79e",
-   "created_at": "2026-09-24T15:20:39.147011+00:00",
+   "run_id": "tsla-20260924T160630-b10efd",
+   "created_at": "2026-09-24T16:06:32.501415+00:00",
    "quant_score": -31,
    "quant_band": "expensive",
    "narrative_lean": "mixed",

@@ -1,9 +1,9 @@
 {
- "run_id": "tsla-20260924T152038-bed79e",
+ "run_id": "tsla-20260924T160630-b10efd",
  "ticker": "TSLA",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-24T15:20:39.147011Z",
+ "created_at": "2026-09-24T16:06:32.501415Z",
  "sources": [
   {
    "source_id": "yf:hist:TSLA",
@@ -11,7 +11,7 @@
    "title": "Yahoo Finance daily prices, 1y (TSLA)",
    "url": "https://finance.yahoo.com/quote/TSLA/history",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:38.069052Z",
+   "retrieved_at": "2026-09-24T16:06:30.455334Z",
    "excerpt": null,
    "data": {
     "rows": 252,
@@ -24,16 +24,16 @@
    "title": "Yahoo Finance key statistics (TSLA)",
    "url": "https://finance.yahoo.com/quote/TSLA/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:38.069052Z",
+   "retrieved_at": "2026-09-24T16:06:30.455334Z",
    "excerpt": null,
    "data": {
     "longName": "Tesla, Inc.",
     "sector": "Consumer Cyclical",
     "industry": "Auto Manufacturers",
-    "marketCap": 1487320514560,
-    "trailingPE": 342.34543,
-    "forwardPE": 171.38773,
-    "priceToSalesTrailing12Months": 14.353743,
+    "marketCap": 1487221817344,
+    "trailingPE": 342.32272,
+    "forwardPE": 171.07506,
+    "priceToSalesTrailing12Months": 14.352599,
     "enterpriseToEbitda": 137.101,
     "debtToEquity": 18.373,
     "currentRatio": 1.941,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (TSLA), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/TSLA/financials",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:38.069052Z",
+   "retrieved_at": "2026-09-24T16:06:30.455334Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,7 +65,7 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:39.145807Z",
+   "retrieved_at": "2026-09-24T16:06:32.500213Z",
    "excerpt": null,
    "data": {
     "from": "2026-06-16",
@@ -77,10 +77,10 @@
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T15:20:39.146178+00:00) from yf:hist:TSLA, yf:info:TSLA, yf:financials:TSLA, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T16:06:32.500617+00:00) from yf:hist:TSLA, yf:info:TSLA, yf:financials:TSLA, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-24T15:20:39.146237Z",
+   "retrieved_at": "2026-09-24T16:06:32.500670Z",
    "excerpt": null,
    "data": {
     "quant_score": -31,
@@ -93,12 +93,12 @@
      },
      {
       "name": "momentum",
-      "value": -0.3213430434548928,
+      "value": -0.3214323335939749,
       "note": "6m return -2.4% \u2192 -0.08; 12m\u22121m -22.5% \u2192 -0.56"
      },
      {
       "name": "risk",
-      "value": -0.5582177456839551,
+      "value": -0.5582238798322781,
       "note": "1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52"
      },
      {
@@ -125,28 +125,28 @@
     "value": -0.5,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 342.34543,
+     "trailing_pe": 342.32272,
      "ps_vs_own_median": 0.88
     },
     "note": "P/E 342.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.88\u00d7 its own median \u2192 +0.00"
    },
    {
     "name": "momentum",
-    "value": -0.3213430434548928,
+    "value": -0.3214323335939749,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": -2.427782183807614,
+     "ret_6m": -2.4342581251714845,
      "ret_12m_minus_1m": -22.47
     },
     "note": "6m return -2.4% \u2192 -0.08; 12m\u22121m -22.5% \u2192 -0.56"
    },
    {
     "name": "risk",
-    "value": -0.5582177456839551,
+    "value": -0.5582238798322781,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -39.10345301895269,
-     "vol_60d_ann": 53.42492081968629
+     "vol_60d_ann": 53.42534549149327
     },
     "note": "1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52"
    },
@@ -173,19 +173,19 @@
   ],
   "quant_inputs": {
    "ticker": "TSLA",
-   "as_of": "2026-09-24T15:20:38.069052Z",
-   "price": 376.5799865722656,
+   "as_of": "2026-09-24T16:06:30.455334Z",
+   "price": 376.55499267578125,
    "high_52w": 489.8800048828125,
    "low_52w": 298.32000732421875,
-   "ret_1m": 7.517483675165071,
-   "ret_3m": 0.3892065136709144,
-   "ret_6m": -2.427782183807614,
-   "ret_12m": -14.95291688948287,
-   "vol_60d_ann": 53.42492081968629,
+   "ret_1m": 7.510347659038197,
+   "ret_3m": 0.38254360665190834,
+   "ret_6m": -2.4342581251714845,
+   "ret_12m": -14.958561528251145,
+   "vol_60d_ann": 53.42534549149327,
    "max_drawdown_1y": -39.10345301895269,
-   "trailing_pe": 342.34543,
-   "forward_pe": 171.38773,
-   "price_to_sales": 14.353743,
+   "trailing_pe": 342.32272,
+   "forward_pe": 171.07506,
+   "price_to_sales": 14.352599,
    "ps_hist_median": 16.327005887289236,
    "ev_to_ebitda": 137.101,
    "debt_to_equity": 18.373,
@@ -194,7 +194,7 @@
    "revenue_growth": 25.5,
    "profit_margin": 3.671,
    "fred_10y_change_3m": 0.5300000000000002,
-   "data_age_days": 0.47266283625,
+   "data_age_days": 0.5045191589583333,
    "source_ids": [
     "yf:hist:TSLA",
     "yf:info:TSLA",
@@ -203,7 +203,7 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-24T15:20:39.146178Z",
+  "computed_at": "2026-09-24T16:06:32.500617Z",
   "freshness_flags": [],
   "drivers": [
    "valuation: P/E 342.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.88\u00d7 its own median \u2192 +0.00",
