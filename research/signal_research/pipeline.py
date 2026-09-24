@@ -19,7 +19,7 @@ from .config import Settings
 from .evidence.store import EvidenceStore
 from .llm.openrouter import OpenRouterClient
 from .quant.score import compute_quant
-from .schemas import EvidenceBundle, RunResult
+from .schemas import EvidenceBundle, RunResult, Source
 from .tracing import Tracer
 
 EvidenceFn = Callable[[str, Settings, Tracer], EvidenceBundle]
@@ -49,6 +49,8 @@ def run(
     with tracer.span("quant", input=bundle.quant_inputs.model_dump(mode="json")) as sp:
         quant = compute_quant(bundle.quant_inputs)  # no LLM here, ever
         sp.set_output({"quant_score": quant.quant_score, "band": quant.quant_band, "version": quant.quant_version})
+    # The quant result is a code artifact derived from listed sources; make it citable.
+    bundle.sources.append(Source(source_id=f"quant:{quant.quant_version}", kind="derived", title=f"SIGNAL quant {quant.quant_version} (code, computed {quant.computed_at.isoformat()}) from {', '.join(quant.quant_inputs.source_ids)}", data={"quant_score": quant.quant_score, "quant_band": quant.quant_band, "components": [{"name": c.name, "value": c.value, "note": c.note} for c in quant.components]}))
 
     with tracer.span("bull_memo", input={"model": settings.model_bull}) as sp:
         bull = write_memo("bull", bundle, quant, client=client, model=settings.model_bull, thesis=thesis, horizon=horizon, tracer=tracer)

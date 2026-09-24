@@ -28,3 +28,11 @@ def test_llm_run_traces_each_generation(no_llm_settings, runs_root):
     assert all(g["model"] and g["usage"]["input"] == 10 for g in gens)
     spans = [e["name"] for e in events if e["kind"] == "span_start"]
     assert spans == ["evidence", "quant", "bull_memo", "bear_memo", "synthesis", "critic"]
+
+
+def test_quant_result_is_a_citable_source(no_llm_settings, runs_root):
+    client = fake_client([completion(memo_json("bull", source_ids=["quant:v0.1"])), completion(memo_json("bear")), completion(synthesis_json())])
+    r = run("ZETA", settings=no_llm_settings, client=client, evidence_fn=lambda t, s, tr: bundle_for("growth"), runs_root=runs_root)
+    q = next(s for s in r.sources if s.source_id == "quant:v0.1")
+    assert q.kind == "derived" and q.data["quant_score"] == r.quant.quant_score
+    assert r.bull.claims[0].support == "sourced" and r.critic.dangling_source_ids == []

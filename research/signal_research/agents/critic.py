@@ -19,6 +19,9 @@ def critique(sources: list[Source], quant: QuantResult, bull: Memo, bear: Memo, 
         flags.append(f"dangling_source_ids:{len(dangling)}")
     if unsupported:
         flags.append(f"unsupported_claims:{len(unsupported)}")
+    zero = [c.claim_id for c in all_claims if c.confidence == 0.0]
+    if zero:
+        flags.append(f"zero_confidence_claims:{len(zero)}")
     if bull.is_stub or bear.is_stub or brief.is_stub:
         flags.append("stub_outputs_present")
     if quant.quant_band == "unknown":

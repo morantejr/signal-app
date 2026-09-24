@@ -25,7 +25,7 @@ def utcnow() -> datetime:
 
 class Source(BaseModel):
     source_id: str
-    kind: Literal["price", "fundamental", "filing", "facts", "news", "macro", "user"]
+    kind: Literal["price", "fundamental", "filing", "facts", "news", "macro", "user", "derived"]
     title: str
     url: str | None = None
     accession: str | None = None

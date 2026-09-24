@@ -9,6 +9,8 @@ from ..schemas import EvidenceBundle, Memo, QuantResult
 RULES = """Rules you must follow:
 - Prefer primary sources (filings, reported numbers). Separate fact from interpretation.
 - Every claim must cite source_ids from the EVIDENCE list. If you cannot cite one, set is_inference=true.
+- A claim about the quant components (momentum, drawdown, valuation multiple vs history, etc.) cites the quant source id shown in the QUANT block, plus the underlying data source ids.
+- confidence is a number between 0 and 1: how sure YOU are that the claim is true given the evidence. 0.9 = the number is read straight from a source; 0.5 = a reasonable inference; never leave it at 0.
 - Never invent prices, multiples, dates or filing quotes. If a number is not in the evidence, say it is missing.
 - No price targets. No "sure thing" language. State what data is missing and where you might be biased.
 - The QUANT block is read-only context computed by code. Do not restate it as your own number, do not adjust it, do not output any score field.
@@ -16,7 +18,7 @@ RULES = """Rules you must follow:
 
 MEMO_SCHEMA = {
     "summary": "3-6 sentences",
-    "claims": [{"text": "one factual or interpretive claim", "stance": "bull|bear|neutral|context", "source_ids": ["ids from EVIDENCE"], "confidence": 0.0, "is_inference": False}],
+    "claims": [{"text": "one factual or interpretive claim", "stance": "bull|bear|neutral|context", "source_ids": ["ids from EVIDENCE"], "confidence": 0.85, "is_inference": False}],
     "steelman_of_other_side": "2-4 sentences giving the strongest opposing point",
     "missing_data": ["what you wanted but did not have"],
 }
@@ -25,14 +27,14 @@ SYNTHESIS_SCHEMA = {
     "one_view": "4-8 sentences: what a careful reader should take away, acknowledging both memos",
     "narrative_lean": "bullish|bearish|neutral|mixed",
     "kill_criteria": ["observable events or numbers that would falsify the prevailing case"],
-    "claims": [{"text": "...", "stance": "bull|bear|neutral|context", "source_ids": ["..."], "confidence": 0.0, "is_inference": False}],
+    "claims": [{"text": "...", "stance": "bull|bear|neutral|context", "source_ids": ["..."], "confidence": 0.85, "is_inference": False}],
     "quant_may_be_wrong_because": ["reasons the code-computed score could mislead here"],
     "narrative_may_be_wrong_because": ["reasons the memos could mislead here"],
 }
 
 
 def render_quant(q: QuantResult) -> str:
-    lines = [f"QUANT (read-only, {q.quant_version}, computed {q.computed_at.isoformat()}):", f"  score={q.quant_score} band={q.quant_band}"]
+    lines = [f"QUANT (read-only, {q.quant_version}, computed {q.computed_at.isoformat()}; cite as source_id quant:{q.quant_version}):", f"  score={q.quant_score} band={q.quant_band}"]
     for c in q.components:
         lines.append(f"  {c.name} (w={c.weight}): value={c.value} — {c.note}")
     if q.freshness_flags:
