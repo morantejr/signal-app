@@ -47,7 +47,18 @@ VITE_FINNHUB_KEY=your_key
 
 Setting a `FINNHUB_KEY` repository secret bakes a key into the GitHub Pages build so the deployed site works without a prompt. That key is then visible in the bundle, so only do it with a throwaway free key.
 
-If you'd rather not ask visitors for a key, `proxy/` holds a Cloudflare Worker that keeps the key server-side; set `VITE_FINNHUB_PROXY` (or the `FINNHUB_PROXY` repo secret) to its URL.
+## Where the keys live
+
+No key is ever in the published JavaScript. The rule for every service the project talks to:
+
+| key | client (browser) | server side | notes |
+|---|---|---|---|
+| Finnhub | never, once the proxy is deployed | Cloudflare Worker secret (`proxy/`) | until then the site asks each visitor for their own key, kept in their browser |
+| OpenRouter | never | `research/.env` locally, `OPENROUTER_API_KEY` repo secret for the nightly export | memos are generated server side and published as JSON |
+| FRED | never | `research/.env`, `FRED_API_KEY` repo secret | the exported JSON links to the FRED series, not the keyed request |
+| Langfuse | never | `research/.env` | optional |
+
+`.env.local` and `research/.env` are gitignored. Do not set a `FINNHUB_KEY` repository secret: the build would inline it into the bundle. Use `proxy/deploy.sh` instead.
 
 ## Full research
 

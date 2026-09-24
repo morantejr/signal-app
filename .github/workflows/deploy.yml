@@ -43,10 +43,9 @@ jobs:
         run: uv sync --no-dev && uv run python -m signal_research.export --tickers ZETA,NVDA,AAPL,META,MSFT --out ../public/runs
       - run: npm run build
         env:
-          # Optional. FINNHUB_PROXY (see proxy/README.md) keeps the key server-side.
-          # FINNHUB_KEY bakes a key into the public bundle; only use a throwaway one.
+          # FINNHUB_PROXY (see proxy/README.md) keeps the Finnhub key server side.
+          # No key is ever passed into the bundle.
           VITE_FINNHUB_PROXY: ${{ secrets.FINNHUB_PROXY }}
-          VITE_FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

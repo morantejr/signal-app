@@ -4,25 +4,23 @@ A 60-line Cloudflare Worker so the public site can read live data without asking
 each visitor for a key. Cloudflare's free plan allows 100,000 requests a day, which
 is more than the Finnhub free tier will let through anyway.
 
-## Deploy (needs a Cloudflare account and the wrangler CLI)
+## Deploy
+
+One-time: sign in to Cloudflare (creates a free account if you don't have one; opens a browser).
 
 ```bash
-cd proxy
-npx wrangler login
-npx wrangler secret put FINNHUB_KEY        # paste the Finnhub key when prompted
-npx wrangler deploy                        # prints https://signal-finnhub-proxy.<you>.workers.dev
+cd proxy && npx wrangler login
 ```
 
-Then build the web app with the proxy URL:
+Then run the script. It reads the key from `../.env.local`, stores it as a Worker secret over stdin,
+deploys, smoke-tests, sets the `FINNHUB_PROXY` repository secret to the Worker URL, redeploys the
+site, and points local dev at the proxy. The key is never printed and never enters the bundle.
 
 ```bash
-# local: .env.local
-VITE_FINNHUB_PROXY=https://signal-finnhub-proxy.<you>.workers.dev
+./proxy/deploy.sh
 ```
 
-For the deployed site add a `FINNHUB_PROXY` repository secret; the Pages workflow passes it
-through as `VITE_FINNHUB_PROXY`. When the proxy is set the app never asks for a key and
-never sends one.
+When `VITE_FINNHUB_PROXY` is set the app never asks visitors for a key and never sends one.
 
 ## What it does
 
