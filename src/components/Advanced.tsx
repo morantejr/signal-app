@@ -15,7 +15,7 @@ export default function Advanced({ close }: { close: () => void }) {
       </div>
       <div style={{ flex: 1, overflow: 'hidden' }}>
         <iframe
-          src="/advanced/SIGNAL.dc.html"
+          src={`${import.meta.env.BASE_URL}advanced/SIGNAL.dc.html`}
           title="Advanced Research terminal"
           style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
         />
