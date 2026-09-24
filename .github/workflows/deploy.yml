@@ -38,6 +38,7 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           EDGAR_USER_AGENT: SIGNAL research github-actions ${{ github.repository_owner }}
         run: uv sync --no-dev && uv run python -m signal_research.export --tickers ZETA,NVDA,AAPL,META,MSFT --out ../public/runs
       - run: npm run build
