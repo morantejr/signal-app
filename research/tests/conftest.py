@@ -29,15 +29,28 @@ def completion(content: str, *, model: str = "google/gemma-4-31b-it:free") -> di
 
 
 def fake_client(responses: list[httpx.Response | dict], *, env: dict | None = None, record: list | None = None) -> OpenRouterClient:
-    """OpenRouter client with a scripted transport. Each entry is consumed in order."""
-    queue = list(responses)
+    """OpenRouter client with a scripted transport.
+
+    Entries are consumed in order, except that the first two are tagged bull / bear
+    and served to whichever memo agent asks (they run in parallel), so a thread can
+    never receive the other side's memo."""
+    queue: list[tuple[str | None, httpx.Response | dict]] = [("bull" if i == 0 else "bear" if i == 1 else None, r) for i, r in enumerate(responses)]
+
+    def role_of(request: httpx.Request) -> str | None:
+        try:
+            system = json.loads(request.content)["messages"][0]["content"]
+        except Exception:  # noqa: BLE001
+            return None
+        return "bull" if "BULL case" in system else "bear" if "BEAR case" in system else None
 
     def handler(request: httpx.Request) -> httpx.Response:
         if record is not None:
             record.append(request)
         if not queue:
             raise AssertionError("fake OpenRouter got more requests than scripted")
-        nxt = queue.pop(0)
+        role = role_of(request)
+        idx = next((i for i, (tag, _) in enumerate(queue) if tag == role), None) if role else None
+        _, nxt = queue.pop(idx if idx is not None else 0)
         return nxt if isinstance(nxt, httpx.Response) else httpx.Response(200, json=nxt)
 
     settings = load_settings({"OPENROUTER_API_KEY": "test-key", **(env or {})})

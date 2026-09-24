@@ -7,7 +7,7 @@ import json
 from ..schemas import EvidenceBundle, Memo, QuantResult
 
 RULES = """Rules you must follow:
-- Prefer primary sources (filings, reported numbers). Separate fact from interpretation.
+- Prefer primary sources: filing EXCERPTS (risk factors, MD&A) and reported numbers over key-statistics snapshots. Separate fact from interpretation.
 - Every claim must cite source_ids from the EVIDENCE list. If you cannot cite one, set is_inference=true.
 - A claim about the quant components (momentum, drawdown, valuation multiple vs history, etc.) cites the quant source id shown in the QUANT block, plus the underlying data source ids.
 - confidence is a number between 0 and 1: how sure YOU are that the claim is true given the evidence. 0.9 = the number is read straight from a source; 0.5 = a reasonable inference; never leave it at 0.
@@ -47,8 +47,10 @@ def render_evidence(b: EvidenceBundle) -> str:
     lines.append("  " + json.dumps({k: v for k, v in b.quant_inputs.model_dump(mode="json").items() if v is not None and k not in ("source_ids",)}))
     lines.append("EVIDENCE:")
     for s in b.sources:
-        extra = f" data={json.dumps(s.data)[:400]}" if s.data else ""
+        extra = f" data={json.dumps(s.data)[:400]}" if s.data and not s.excerpt else ""
         lines.append(f"  [{s.source_id}] ({s.kind}) {s.title} {s.url or ''}{extra}")
+        if s.excerpt:
+            lines.append("    EXCERPT: " + s.excerpt[:3500].replace("\n", " ") + (" …" if len(s.excerpt) > 3500 else ""))
     if b.notes:
         lines.append("NOTES: " + "; ".join(b.notes))
     return "\n".join(lines)

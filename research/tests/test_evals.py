@@ -74,7 +74,9 @@ def eval_order(no_llm_settings, runs_root):
         synthesise(b, q, None, memo, client=None, model="m", thesis=None, horizon="3m")
     r = _llm_run(no_llm_settings, runs_root)
     events = [json.loads(l) for l in (runs_root / r.run_id / "trace.jsonl").read_text().splitlines()]
-    assert [e["name"] for e in events if e["kind"] == "span_start"] == ["evidence", "quant", "bull_memo", "bear_memo", "synthesis", "critic"]
+    assert [e["name"] for e in events if e["kind"] == "span_start"] == ["evidence", "quant", "memos", "synthesis", "critic"]
+    gens = [e["name"] for e in events if e["kind"] == "generation"]
+    assert set(gens[:2]) == {"bull_memo", "bear_memo"} and gens[2] == "synthesis"
 
 
 @case("high_confidence_claims_mostly_sourced")
@@ -148,6 +150,27 @@ def eval_unknown_never_agrees():
     for lean in ("bullish", "bearish", "neutral", "mixed"):
         d = build_disagreement(q, lean, [], [])
         assert d.agree is False and "unanchored" in d.disagreement_summary
+
+
+@case("quant_claims_match_quant_numbers")
+def eval_quant_claim_numbers():
+    from tests.test_phase2 import test_quant_claim_mismatch_rule
+
+    test_quant_claim_mismatch_rule()
+
+
+@case("synthesis_not_one_sided")
+def eval_synthesis_one_sided(no_llm_settings, runs_root):
+    from tests.test_phase2 import test_one_sided_synthesis_and_mismatch_are_flagged
+
+    test_one_sided_synthesis_and_mismatch_are_flagged(no_llm_settings, runs_root)
+
+
+@case("predictions_are_logged_for_calibration")
+def eval_predictions_logged(no_llm_settings, runs_root):
+    from tests.test_phase2 import test_prediction_logged_and_calibration_report
+
+    test_prediction_logged_and_calibration_report(no_llm_settings, runs_root)
 
 
 def test_every_eval_case_has_a_check():

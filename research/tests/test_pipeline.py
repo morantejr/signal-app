@@ -24,10 +24,10 @@ def test_llm_run_traces_each_generation(no_llm_settings, runs_root):
     assert not r.bull.is_stub and r.models["bull"] == "google/gemma-4-31b-it:free" and r.bull.provider == "TestProvider"
     events = [json.loads(l) for l in (runs_root / r.run_id / "trace.jsonl").read_text().splitlines()]
     gens = [e for e in events if e["kind"] == "generation"]
-    assert [g["name"] for g in gens] == ["bull_memo", "bear_memo", "synthesis"]
+    assert sorted(g["name"] for g in gens[:2]) == ["bear_memo", "bull_memo"] and gens[2]["name"] == "synthesis"
     assert all(g["model"] and g["usage"]["input"] == 10 for g in gens)
     spans = [e["name"] for e in events if e["kind"] == "span_start"]
-    assert spans == ["evidence", "quant", "bull_memo", "bear_memo", "synthesis", "critic"]
+    assert spans == ["evidence", "quant", "memos", "synthesis", "critic"]
 
 
 def test_quant_result_is_a_citable_source(no_llm_settings, runs_root):

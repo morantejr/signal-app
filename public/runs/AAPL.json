@@ -1,0 +1,659 @@
+{
+ "run_id": "aapl-20260924T035045-ff5f80",
+ "ticker": "AAPL",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T03:51:08.428162Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:AAPL",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (AAPL)",
+   "url": "https://finance.yahoo.com/quote/AAPL/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:50:45.395696Z",
+   "excerpt": null,
+   "data": {
+    "rows": 251,
+    "last": "2026-09-23T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:AAPL",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (AAPL)",
+   "url": "https://finance.yahoo.com/quote/AAPL/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:50:45.395696Z",
+   "excerpt": null,
+   "data": {
+    "longName": "Apple Inc.",
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "marketCap": 4918530277376,
+    "trailingPE": 38.91686,
+    "forwardPE": 35.256454,
+    "priceToSalesTrailing12Months": 10.536179,
+    "enterpriseToEbitda": 29.415,
+    "debtToEquity": 78.445,
+    "currentRatio": 1.003,
+    "freeCashflow": 107721875456,
+    "revenueGrowth": 0.164,
+    "profitMargins": 0.27618998
+   }
+  },
+  {
+   "source_id": "yf:financials:AAPL",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (AAPL), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/AAPL/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:50:45.395696Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     5.02,
+     6.53,
+     8.62,
+     8.9
+    ]
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000020",
+   "kind": "filing",
+   "title": "10-Q filed 2026-07-31",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+   "accession": "0000320193-26-000020",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "10-Q",
+    "filed": "2026-07-31"
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000018",
+   "kind": "filing",
+   "title": "8-K filed 2026-07-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+   "accession": "0000320193-26-000018",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-07-30"
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000013",
+   "kind": "filing",
+   "title": "10-Q filed 2026-05-01",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+   "accession": "0000320193-26-000013",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "10-Q",
+    "filed": "2026-05-01"
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000011",
+   "kind": "filing",
+   "title": "8-K filed 2026-04-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm",
+   "accession": "0000320193-26-000011",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-04-30"
+   }
+  },
+  {
+   "source_id": "edgar:0001140361-26-015711",
+   "kind": "filing",
+   "title": "8-K filed 2026-04-20",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015711/ef20071035_8k.htm",
+   "accession": "0001140361-26-015711",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-04-20"
+   }
+  },
+  {
+   "source_id": "edgar:0001140361-26-006577",
+   "kind": "filing",
+   "title": "8-K filed 2026-02-24",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126006577/ef20060722_8k.htm",
+   "accession": "0001140361-26-006577",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-02-24"
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000006",
+   "kind": "filing",
+   "title": "10-Q filed 2026-01-30",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm",
+   "accession": "0000320193-26-000006",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "10-Q",
+    "filed": "2026-01-30"
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000005",
+   "kind": "filing",
+   "title": "8-K filed 2026-01-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000005/aapl-20260129.htm",
+   "accession": "0000320193-26-000005",
+   "retrieved_at": "2026-09-24T03:50:51.441944Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-01-29"
+   }
+  },
+  {
+   "source_id": "edgar:facts:0000320193",
+   "kind": "facts",
+   "title": "SEC XBRL company facts (CIK 0000320193)",
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:50:52.233950Z",
+   "excerpt": null,
+   "data": {
+    "revenue": [
+     {
+      "fy": 2018,
+      "end": "2018-03-31",
+      "value": 61137000000,
+      "accession": "0000320193-18-000145"
+     },
+     {
+      "fy": 2018,
+      "end": "2018-06-30",
+      "value": 53265000000,
+      "accession": "0000320193-18-000145"
+     },
+     {
+      "fy": 2018,
+      "end": "2018-09-29",
+      "value": 265595000000,
+      "accession": "0000320193-18-000145"
+     },
+     {
+      "fy": 2018,
+      "end": "2018-09-29",
+      "value": 62900000000,
+      "accession": "0000320193-18-000145"
+     }
+    ],
+    "net_income": [
+     {
+      "fy": 2025,
+      "end": "2023-09-30",
+      "value": 96995000000,
+      "accession": "0000320193-25-000079"
+     },
+     {
+      "fy": 2024,
+      "end": "2024-09-28",
+      "value": 93736000000,
+      "accession": "0000320193-24-000123"
+     },
+     {
+      "fy": 2025,
+      "end": "2024-09-28",
+      "value": 93736000000,
+      "accession": "0000320193-25-000079"
+     },
+     {
+      "fy": 2025,
+      "end": "2025-09-27",
+      "value": 112010000000,
+      "accession": "0000320193-25-000079"
+     }
+    ],
+    "long_term_debt": [
+     {
+      "fy": 2024,
+      "end": "2023-09-30",
+      "value": 95281000000,
+      "accession": "0000320193-24-000123"
+     },
+     {
+      "fy": 2024,
+      "end": "2024-09-28",
+      "value": 85750000000,
+      "accession": "0000320193-24-000123"
+     },
+     {
+      "fy": 2025,
+      "end": "2024-09-28",
+      "value": 85750000000,
+      "accession": "0000320193-25-000079"
+     },
+     {
+      "fy": 2025,
+      "end": "2025-09-27",
+      "value": 78328000000,
+      "accession": "0000320193-25-000079"
+     }
+    ],
+    "cash": [
+     {
+      "fy": 2024,
+      "end": "2023-09-30",
+      "value": 29965000000,
+      "accession": "0000320193-24-000123"
+     },
+     {
+      "fy": 2024,
+      "end": "2024-09-28",
+      "value": 29943000000,
+      "accession": "0000320193-24-000123"
+     },
+     {
+      "fy": 2025,
+      "end": "2024-09-28",
+      "value": 29943000000,
+      "accession": "0000320193-25-000079"
+     },
+     {
+      "fy": 2025,
+      "end": "2025-09-27",
+      "value": 35934000000,
+      "accession": "0000320193-25-000079"
+     }
+    ]
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000020#risk-factors",
+   "kind": "filing",
+   "title": "10-Q filed 2026-07-31 \u2014 Risk factors",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+   "accession": "0000320193-26-000020",
+   "retrieved_at": "2026-09-24T03:50:53.036694Z",
+   "excerpt": "Item 1A. Risk Factors \n The Company\u2019s business, reputation, results of operations, financial condition and stock price can be materially and adversely affected by a number of factors, whether currently known or unknown, including those described in Part I, Item 1A of the 2025 Form 10-K and Part II, Item 1A of the Form 10-Q for the quarter ended March 28, 2026 (the \u201csecond quarter 2026 Form 10-Q\u201d), in each case under the heading \u201cRisk Factors.\u201d Except for the risk factors set forth below and those disclosed in Part II, Item 1A of the second quarter 2026 Form 10-Q , which are incorporated by reference herein, there have been no material changes to the Company\u2019s risk factors since the 2025 Form 10-K. \n Future operating results depend upon the Company\u2019s ability to obtain components and computing resources in sufficient quantities and on commercially reasonable terms. \n The Company currently obtains certain components from single or limited sources, which exposes it to significant supply and pricing risks. In addition, many components, including those that are available from multiple sources, are at times subject to industry-wide shortages and significant commodity pricing fluctuations that can materially adversely affect the Company\u2019s business, results of operations, financial condition and stock price. For example, the Company is experiencing a period of supply constraints and increasing costs for components driven by factors such as industry supply-demand imbalances for components, including advanced semiconductors, storage (NAND) and memory (DRAM), which adversely affects the Company\u2019s ability to obtain sufficient quantities of components and products on commercially reasonable terms, or at all. The Company expects these trends to intensify, which may materially adversely impact the Company\u2019s revenue, costs, gross margin, results of operations and financial condition. Actions, such as price increases, that have been and may in the future be taken by the Company may not effectively mitigate these negative impacts, and may also reduce demand for the Company\u2019s products and materially adversely affect the Company\u2019s revenue, costs, gross margin, results of operations and financial condition. \n Additionally, the Company\u2019s new products often utilize custom components available from only one source. When a component or product uses new technologies, initial capacity constraints may exist until the suppliers\u2019 yields have matured or their manufacturing capacities have increased. The Company may not be able to extend or renew agreements for the supply of components on similar terms, or at all, and may not be successful in obtaining sufficient quantities from its suppliers in a timely manner, or in identifying and obtaining sufficient quantities from an alternative source. In addition, component suppliers may fail, be subject to consolidation within a particular industry, or decide to concentrate on the production of common components instead of components customized to meet the Company\u2019s requirements, further limiting the Company\u2019s ability to obtain sufficient quantities of components on commercially reasonable terms, or at all. \n The Company\u2019s business, including its artificial intelligence and machine learning offerings, also depends on access to sufficient computing resources. Demand for cloud computing and artificial intelligence infrastructure has increased substantially across the technology industry, resulting in constrained supply, extended lead times, and increasing costs. In addition to its own data center infrastructure, the Company relies on third-party cloud service providers to meet these compute needs, and the Company may be unable to secure sufficient capacity on commercially reasonable terms, or at all, to meet customer demand. If the Company is unable to obtain adequate compute capacity in a timely manner or at commercially reasonable rates, this can limit the functionality and availability of its products and services, delay the deployment of new features or offerings, or cause the Company to incur significantly higher costs to operate its business, any of which could materially adversely affect the Company\u2019s revenue, costs, gross margin, results of operations, and financial condition. In addition, the Company may over- or under-estimate requirements, either of which could result in higher-than-expected costs for the Company or an inability to fully satisfy customer demand. Therefore, the Company remains subject to significant risks of supply shortages and price increases that can materially adversely affect its business, results of operations, financial condition and stock price. \n The Company\u2019s future performance depends in part on support from third-party software developers. \n The Company believes decisions by customers to purchase its hardware products depend in part on the availability of third-party software applications and services. Third-party developers may discontinue the development and maintenance of software applications and services for the Company\u2019s products. If third-party software applications and services cease to be developed and maintained for the Company\u2019s products, customers may choose not to buy the Company\u2019s products, materially adversely impacting the Company\u2019s business, results of operations, financial condition and stock price. \n The Company believes that third-party developer support depends on the perceived benefits of creating software and services for the Company\u2019s products compared to competitors\u2019 platforms, such as Android for smartphones and tablets, Windows for personal computers and tablets, and PlayStation, Nintendo and Xbox for gaming platforms. This analysis may be based on factors such as the market position of the Company and its products, the anticipated revenue that may be generated, expected future growth of product sales, and the costs of developing such applications and services. \n Apple Inc. | Q3 2026 Form 10-Q | 21 \n The Company\u2019s minority market share in the global smartphone, personal computer, tablet and wearables markets can make developers less inclined to develop or upgrade software for the Company\u2019s products and more inclined to devote their resources to developing and upgrading software for competitors\u2019 products with larger market share. When developers focus their efforts on these competing platforms, the availability and quality of applications for the Company\u2019s devices can suffer. \n The Company relies on the continued availability and development of compelling and innovative software applications for its products. The Company\u2019s products and operating systems are subject to rapid technological change, and when third-party developers are unable to or choose not to keep up with this pace of change, their applications can fail to take advantage of these changes to deliver improved customer experiences, can operate incorrectly, and can result in dissatisfied customers and lower customer demand for the Company\u2019s products. \n The Company distributes third-party applications through the App Store. Where applicable, the Company may retain a commission from sales of applications and sales of digital services or goods initiated within an application. If third-party developers use alternative methods of distribution and payment for their apps and digital content, including direct-to-consumer distribution models, the Company may earn a lower commission on such sales, or may not earn a commission at all, which can materially adversely affect the Company\u2019s revenue, gross margin, results of operations, financial condition and stock price. \n The technology industry, including, in some instances, the Company, is subject to intense media, political and regulatory scrutiny, which exposes the Company to increasing regulation, government investigations, legal actions and penalties. \n From time to time, the Company has made changes to its business, including actions taken in response to litigation, compet",
+   "data": {
+    "form": "10-Q",
+    "section": "risk-factors",
+    "chars": 8000
+   }
+  },
+  {
+   "source_id": "edgar:0000320193-26-000020#mdna",
+   "kind": "filing",
+   "title": "10-Q filed 2026-07-31 \u2014 MD&A",
+   "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+   "accession": "0000320193-26-000020",
+   "retrieved_at": "2026-09-24T03:50:53.037715Z",
+   "excerpt": "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations \n This Item and other sections of this Quarterly Report on Form 10-Q (\u201cForm 10-Q\u201d) contain forward-looking statements, within the meaning of the Private Securities Litigation Reform Act of 1995, that involve risks and uncertainties. Forward-looking statements provide current expectations of future events based on certain assumptions and include any statement that does not directly relate to any historical or current fact. For example, statements in this Form 10-Q regarding the potential future impact of macroeconomic conditions and tariffs and other measures on the Company\u2019s business and results of operations are forward-looking statements . Forward-looking statements can also be identified by words such as \u201cfuture,\u201d \u201canticipates,\u201d \u201cbelieves,\u201d \u201cestimates,\u201d \u201cexpects,\u201d \u201cintends,\u201d \u201cplans,\u201d \u201cpredicts,\u201d \u201cwill,\u201d \u201cwould,\u201d \u201ccould,\u201d \u201ccan,\u201d \u201cmay,\u201d and similar terms. Forward-looking statements are not guarantees of future performance and the Company\u2019s actual results may differ significantly from the results discussed in the forward-looking statements. Factors that might cause such differences include, but are not limited to, those discussed in Part I, Item 1A of the 2025 Form 10-K and Part II, Item 1A of this Form 10-Q, in each case under the heading \u201cRisk Factors.\u201d The Company assumes no obligation to revise or update any forward-looking statements for any reason, except as required by law. \n Unless otherwise stated, all information presented herein is based on the Company\u2019s fiscal calendar, and references to particular years, quarters, months or periods refer to the Company\u2019s fiscal years ended in September and the associated quarters, months and periods of those fiscal years. \n The following discussion should be read in conjunction with the 2025 Form 10-K filed with the U.S. Securities and Exchange Commission (\u201cSEC\u201d) and the condensed consolidated financial statements and accompanying notes included in Part I, Item 1 of this Form 10-Q. \n Available Information \n The Company periodically provides certain information for investors on its corporate website, www.apple.com, and its investor relations website, investor.apple.com. This includes press releases and other information about financial performance, information on corporate governance, and details related to the Company\u2019s annual meeting of shareholders. The information contained on the websites referenced in this Form 10-Q is not incorporated by reference into this filing. Further, the Company\u2019s references to website URLs are intended to be inactive textual references only. \n Business Seasonality and Product Introductions \n The Company has historically experienced higher net sales in its first quarter compared to other quarters in its fiscal year due in part to seasonal holiday demand. Additionally, new product and service introductions can significantly impact net sales, cost of sales and operating expenses. The timing of product introductions can also impact the Company\u2019s net sales to its indirect distribution channels as these channels are filled with new inventory following a product launch, and channel inventory of an older product often declines as the launch of a newer product approaches. Net sales can also be affected when consumers and distributors anticipate a product introduction. \n During the third quarter of 2026, the Company announced iOS 27, macOS \u00ae 27 Golden Gate, iPadOS \u00ae 27, watchOS \u00ae 27, visionOS \u00ae 27 and tvOS \u00ae 27, and introduced Siri AI. \n Macroeconomic Conditions \n Macroeconomic conditions, including inflation, interest rates, component pricing and currency fluctuations, have directly and indirectly impacted, and could in the future materially impact, the Company\u2019s results of operations and financial condition. \n The Company is experiencing a period of supply constraints and increasing costs for components driven by factors such as industry supply-demand imbalances for components, including advanced semiconductors, storage (NAND) and memory (DRAM). The Company expects these trends to intensify, which may materially negatively impact the Company\u2019s revenue, costs, gross margin, results of operations and financial condition. Actions, such as price increases, that have been and may in the future be taken by the Company may not effectively mitigate these negative impacts, and may also reduce demand for the Company\u2019s products and materially adversely affect the Company\u2019s revenue, costs, gross margin, results of operations and financial condition. \n Apple Inc. | Q3 2026 Form 10-Q | 13 \n Tariffs and Other Measures \n Beginning in the second quarter of 2025, new tariffs were announced on imports to the U.S., including additional tariffs on imports from China, India, Japan, South Korea, Taiwan, Vietnam and the European Union (\u201cEU\u201d), among others. In response, several countries have imposed, or threatened to impose, reciprocal tariffs on imports from the U.S. and other retaliatory measures. On January 14, 2026, initial results were published of the previously announced U.S. Department of Commerce investigation under Section 232 of the Trade Expansion Act of 1962, as amended, into imports of semiconductors, semiconductor manufacturing equipment, and their derivative products, including downstream products that contain semiconductors. The announcement of the initial results of the investigation did not impose any additional tariffs affecting the Company\u2019s products. Separately, on February 20, 2026, the U.S. Supreme Court (\u201cSupreme Court\u201d) issued a ruling striking down certain tariffs previously imposed under the International Emergency Economic Powers Act of 1977. The Company has applied for a refund of tariffs paid, following the processes established by U.S. Customs and Border Protection, and has recognized any refunds received as a reduction of products cost of sales. Various modifications to U.S. tariffs have been announced, including the recent imposition of tariffs under Section 301 of the Trade Act of 1974, and further changes could be made in the future, which may include additional measures under the Section 232 semiconductor sector investigation, additional sector-based tariffs, further actions under Section 301, or other measures. Tariffs and other measures that are applied to the Company\u2019s products or their components can have a material adverse impact on the Company\u2019s business, results of operations and financial condition, including impacting the Company\u2019s supply chain, the availability of rare earths and other raw materials and components, pricing and gross margin. The ultimate impact remains uncertain and will depend on several factors, including whether additional or incremental U.S. tariffs or other measures are announced or imposed, to what extent other countries implement tariffs or other retaliatory measures in response, and the overall magnitude and duration of these measures. Trade and other international disputes can have an adverse impact on the overall macroeconomic environment and result in shifts and reductions in consumer spending and negative consumer sentiment for the Company\u2019s products and services, all of which can further adversely affect the Company\u2019s business and results of operations. \n Segment Operating Performance \n The following table shows net sales by reportable segment for the three- and nine-month periods ended June 27, 2026 and June 28, 2025 (dollars in millions): \n Three Months Ended Nine Months Ended \n June 27, 2026 June 28, 2025 Change June 27, 2026 June 28, 2025 Change \n Americas $ 45,781 $ 41,198 11% $ 149,403 $ 134,161 11% \n Europe 29,395 24,014 22% 95,596 82,329 16% \n Greater China 18,816 15,369 22% 64,839 49,884 30% \n Japan 6,554 5,782 13% 24,368 22,067 10% \n Rest of Asia Pacific 8,871 7,673 16% 30,151 25,254 19% \n Total net sales $ 109,417 $ 94,036 16% $ 364,357 $ 313,695 16% \n Americas \n Americas net sales increased during the third quarter and first",
+   "data": {
+    "form": "10-Q",
+    "section": "mdna",
+    "chars": 8000
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T03:50:53.038502+00:00) from yf:hist:AAPL, yf:info:AAPL, yf:financials:AAPL",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:50:53.038586Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": 16,
+    "quant_band": "fair",
+    "components": [
+     {
+      "name": "valuation",
+      "value": -0.35,
+      "note": "P/E 38.9 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.22\u00d7 its own median \u2192 -0.30"
+     },
+     {
+      "name": "momentum",
+      "value": 0.8183772132442936,
+      "note": "6m return +34.2% \u2192 +1.00; 12m\u22121m +25.5% \u2192 +0.64"
+     },
+     {
+      "name": "risk",
+      "value": 0.2463984977276354,
+      "note": "1y drawdown 14% \u2192 +0.30; 60d vol 29% ann. \u2192 +0.19"
+     },
+     {
+      "name": "balance_sheet",
+      "value": 0.16666666666666666,
+      "note": "D/E 78% \u2192 +0.2; current ratio 1.00 \u2192 +0.0; FCF positive \u2192 +0.3"
+     },
+     {
+      "name": "macro",
+      "value": null,
+      "note": "no FRED data (optional)"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "AAPL",
+  "quant_score": 16,
+  "quant_band": "fair",
+  "components": [
+   {
+    "name": "valuation",
+    "value": -0.35,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 38.91686,
+     "ps_vs_own_median": 1.22
+    },
+    "note": "P/E 38.9 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.22\u00d7 its own median \u2192 -0.30"
+   },
+   {
+    "name": "momentum",
+    "value": 0.8183772132442936,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": 34.168427225662136,
+     "ret_12m_minus_1m": 25.47
+    },
+    "note": "6m return +34.2% \u2192 +1.00; 12m\u22121m +25.5% \u2192 +0.64"
+   },
+   {
+    "name": "risk",
+    "value": 0.2463984977276354,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -13.798523953754415,
+     "vol_60d_ann": 28.710873234240626
+    },
+    "note": "1y drawdown 14% \u2192 +0.30; 60d vol 29% ann. \u2192 +0.19"
+   },
+   {
+    "name": "balance_sheet",
+    "value": 0.16666666666666666,
+    "weight": 0.2,
+    "inputs_used": {
+     "debt_to_equity": 78.445,
+     "current_ratio": 1.003,
+     "free_cash_flow_positive": true
+    },
+    "note": "D/E 78% \u2192 +0.2; current ratio 1.00 \u2192 +0.0; FCF positive \u2192 +0.3"
+   },
+   {
+    "name": "macro",
+    "value": null,
+    "weight": 0.1,
+    "inputs_used": {},
+    "note": "no FRED data (optional)"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "AAPL",
+   "as_of": "2026-09-24T03:50:45.395696Z",
+   "price": 337.0199890136719,
+   "high_52w": 339.78692626953125,
+   "low_52w": 244.3673095703125,
+   "ret_1m": 8.597020361736663,
+   "ret_3m": 15.091675994951315,
+   "ret_6m": 34.168427225662136,
+   "ret_12m": 34.06719742128015,
+   "vol_60d_ann": 28.710873234240626,
+   "max_drawdown_1y": -13.798523953754415,
+   "trailing_pe": 38.91686,
+   "forward_pe": 35.256454,
+   "price_to_sales": 10.536179,
+   "ps_hist_median": 8.623868766489567,
+   "ev_to_ebitda": 29.415,
+   "debt_to_equity": 78.445,
+   "current_ratio": 1.003,
+   "free_cash_flow": 107721875456.0,
+   "revenue_growth": 16.400000000000002,
+   "profit_margin": 27.618998,
+   "fred_10y_change_3m": null,
+   "data_age_days": 0.9935809687037038,
+   "source_ids": [
+    "yf:hist:AAPL",
+    "yf:info:AAPL",
+    "yf:financials:AAPL"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T03:50:53.038502Z",
+  "freshness_flags": [],
+  "drivers": [
+   "momentum: 6m return +34.2% \u2192 +1.00; 12m\u22121m +25.5% \u2192 +0.64",
+   "valuation: P/E 38.9 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.22\u00d7 its own median \u2192 -0.30",
+   "risk: 1y drawdown 14% \u2192 +0.30; 60d vol 29% ann. \u2192 +0.19",
+   "balance_sheet: D/E 78% \u2192 +0.2; current ratio 1.00 \u2192 +0.0; FCF positive \u2192 +0.3"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "Apple Inc. (AAPL) is poised for growth over the next three months, driven by strong momentum evidenced by a 34.2% return over the past six months and a solid revenue growth rate of 16.4%. The company's robust free cash flow of approximately $107.72 billion and a manageable debt-to-equity ratio of 78.4% further bolster its financial stability. Additionally, the anticipated product launches and seasonal demand could enhance sales, particularly during the holiday season. However, the stock's current valuation appears high, with a trailing P/E of 38.9, which may temper some investor enthusiasm.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "Apple's stock has shown a strong momentum with a 6-month return of 34.2%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-2",
+    "text": "The company reported a revenue growth rate of 16.4% in its latest financials.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-3",
+    "text": "Apple's free cash flow stands at approximately $107.72 billion, indicating strong financial health.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-4",
+    "text": "The company's debt-to-equity ratio is 78.4%, which is manageable and suggests financial stability.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   }
+  ],
+  "steelman_of_other_side": "The bear case for Apple centers on its high valuation, with a trailing P/E ratio of 38.9, which is significantly above historical averages. Additionally, potential supply chain constraints and rising component costs could adversely affect profit margins and revenue growth. The company also faces increasing competition in the technology sector, which may impact its market share and pricing power.",
+  "missing_data": [
+   "Specific details on upcoming product launches and their expected impact on sales",
+   "Historical context for the current P/E ratio to assess valuation relative to past performance"
+  ],
+  "model": "gpt-4o-mini-2024-07-18",
+  "provider": null,
+  "is_stub": false
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "The bear case for Apple Inc. (AAPL) centers on several key risks and challenges that could impact its performance over the next three months. Notably, the company faces significant supply chain constraints and rising component costs, which could adversely affect revenue and margins (edgar:0000320193-26-000020#risk-factors). Additionally, AAPL's current valuation metrics, including a trailing P/E of 38.9, suggest it may be overvalued relative to historical norms (quant:v0.1). Finally, the company's reliance on new product launches, which can be unpredictable, adds further uncertainty to its near-term outlook (edgar:0000320193-26-000020#mdna).",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "Apple is experiencing supply constraints and increasing costs for components, which may adversely impact revenue and margins.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0000320193-26-000020#risk-factors"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "AAPL's trailing P/E of 38.9 indicates a high valuation compared to historical norms.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL",
+     "quant:v0.1"
+    ],
+    "confidence": 0.85
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "The company's reliance on new product launches introduces unpredictability in revenue generation.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0000320193-26-000020#mdna"
+    ],
+    "confidence": 0.85
+   }
+  ],
+  "steelman_of_other_side": "The bull case for AAPL emphasizes its strong brand loyalty and ecosystem, which continue to drive sales across its product lines. The company's recent momentum, with a 6-month return of 34.2%, suggests robust market performance. Additionally, AAPL's strong free cash flow and profitability metrics indicate a solid financial foundation that can support growth initiatives.",
+  "missing_data": [
+   "Detailed projections on future revenue growth and margins",
+   "Specific data on upcoming product launches and their expected impact"
+  ],
+  "model": "gpt-4o-mini-2024-07-18",
+  "provider": null,
+  "is_stub": false
+ },
+ "brief": {
+  "ticker": "AAPL",
+  "one_view": "Apple Inc. (AAPL) presents a mixed outlook over the next three months. The bullish perspective highlights strong momentum with a 34.2% return over the past six months, robust revenue growth of 16.4%, and significant free cash flow of approximately $107.72 billion, suggesting financial stability. However, the bearish view emphasizes the company's high trailing P/E ratio of 38.9, indicating potential overvaluation, alongside risks from supply chain constraints and rising component costs that could impact margins and revenue. The quant analysis aligns with the bear case on valuation but supports the bull case on momentum, creating a divergence in perspectives that could be resolved by clearer guidance on upcoming product launches and their expected impact on sales.",
+  "narrative_lean": "mixed",
+  "claims": [
+   {
+    "claim_id": "syn-1",
+    "text": "Apple's stock has shown a strong momentum with a 6-month return of 34.2%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-2",
+    "text": "The company reported a revenue growth rate of 16.4% in its latest financials.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-3",
+    "text": "Apple's free cash flow stands at approximately $107.72 billion, indicating strong financial health.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-4",
+    "text": "The company's debt-to-equity ratio is 78.4%, which is manageable and suggests financial stability.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "Apple is experiencing supply constraints and increasing costs for components, which may adversely impact revenue and margins.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0000320193-26-000020#risk-factors"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-6",
+    "text": "AAPL's trailing P/E of 38.9 indicates a high valuation compared to historical norms.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL",
+     "quant:v0.1"
+    ],
+    "confidence": 0.85
+   },
+   {
+    "claim_id": "syn-7",
+    "text": "The company's reliance on new product launches introduces unpredictability in revenue generation.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0000320193-26-000020#mdna"
+    ],
+    "confidence": 0.85
+   }
+  ],
+  "kill_criteria": [
+   "A significant drop in revenue growth below 10% in the next quarter",
+   "A trailing P/E ratio falling below 25, indicating a shift in valuation perception",
+   "Confirmation of severe supply chain disruptions impacting production and sales"
+  ],
+  "disagreement": {
+   "quant_band": "fair",
+   "quant_score": 16,
+   "narrative_lean": "mixed",
+   "agree": true,
+   "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
+   "quant_may_be_wrong_because": [
+    "The quant score may not fully capture qualitative factors such as brand loyalty and market sentiment.",
+    "Momentum indicators could be misleading if driven by short-term trading rather than fundamental strength."
+   ],
+   "narrative_may_be_wrong_because": [
+    "The memos may overstate the impact of product launches without clear evidence of their success.",
+    "Risks highlighted in the bear memo may not materialize as anticipated, especially if supply chain issues are resolved."
+   ]
+  },
+  "model": "gpt-4o-mini-2024-07-18",
+  "provider": null,
+  "is_stub": false
+ },
+ "critic": {
+  "flags": [],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": 1.0
+ },
+ "models": {
+  "bull": "gpt-4o-mini-2024-07-18",
+  "bear": "gpt-4o-mini-2024-07-18",
+  "synthesis": "gpt-4o-mini-2024-07-18",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}

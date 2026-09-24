@@ -6,6 +6,7 @@ Tracing must never break a run, so every Langfuse call is guarded.
 from __future__ import annotations
 
 import json
+import threading
 import time
 from contextlib import contextmanager
 from dataclasses import dataclass
@@ -42,6 +43,7 @@ class Tracer:
         self.dir = (root or Path(settings.runs_dir)) / run_id
         self.dir.mkdir(parents=True, exist_ok=True)
         self._log = (self.dir / "trace.jsonl").open("a", encoding="utf-8")
+        self._lock = threading.Lock()
         self._lf = None
         self._lf_trace = None
         if settings.langfuse_enabled:
@@ -56,8 +58,9 @@ class Tracer:
 
     def event(self, kind: str, payload: dict[str, Any]) -> None:
         rec = {"t": time.time(), "run_id": self.run_id, "kind": kind, **_jsonable(payload)}
-        self._log.write(json.dumps(rec) + "\n")
-        self._log.flush()
+        with self._lock:
+            self._log.write(json.dumps(rec) + "\n")
+            self._log.flush()
 
     @contextmanager
     def span(self, name: str, input: Any = None) -> Iterator[SpanHandle]:

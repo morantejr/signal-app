@@ -6,6 +6,7 @@ import type { Analysis } from '../analysis'
 import { loadWatchlist, saveWatchlist } from '../store'
 import { fmtPrice } from '../format'
 import KeyPrompt from './KeyPrompt'
+import { fetchRunIndex, bandLabel, leanLabel, type RunIndexEntry } from '../api/research'
 
 type Row = Analysis | { error: string }
 
@@ -19,9 +20,12 @@ export default function Watchlist({ openAsset, keyVersion, onKeyChange }: Props)
   const [syms, setSyms] = useState<string[]>(loadWatchlist)
   const [rows, setRows] = useState<Record<string, Row | undefined>>({})
   const [input, setInput] = useState('')
+  const [runs, setRuns] = useState<Record<string, RunIndexEntry>>({})
   const rowsRef = useRef(rows)
   rowsRef.current = rows
   const connected = hasKey()
+
+  useEffect(() => { fetchRunIndex().then(setRuns) }, [])
 
   useEffect(() => {
     if (!hasKey()) return
@@ -70,6 +74,11 @@ export default function Watchlist({ openAsset, keyVersion, onKeyChange }: Props)
                 <>
                   <div style={viewPill(a.color)}>{a.stance}</div>
                   <div style={{ ...font(400, 14, 1.45), color: MUTED, marginTop: 5 }}>{a.headline}</div>
+                  {runs[sym] && (
+                    <div style={{ ...font(400, 13, 1.4), color: FAINTER, marginTop: 5 }}>
+                      Full research: quant {bandLabel(runs[sym].quant_band).toLowerCase()}{runs[sym].quant_score != null ? ` (${runs[sym].quant_score})` : ''} · narrative {leanLabel(runs[sym].narrative_lean).toLowerCase()} · {runs[sym].agree ? 'agree' : 'disagree'}
+                    </div>
+                  )}
                 </>
               ) : (
                 <div style={{ ...font(400, 14, 1.45), color: FAINTER }}>{r && 'error' in r ? r.error : connected ? 'Reading…' : 'Waiting for a data key'}</div>

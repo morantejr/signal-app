@@ -1,4 +1,4 @@
-.PHONY: setup test eval run langfuse langfuse-down
+.PHONY: setup test eval run api export calibrate langfuse langfuse-down
 
 setup:
 	uv sync --group dev
@@ -12,6 +12,18 @@ eval:
 # Usage: make run TICKER=ZETA THESIS="AI ad demand keeps growing"
 run:
 	uv run python -m signal_research.run --ticker $(TICKER) $(if $(THESIS),--thesis "$(THESIS)",) $(if $(NO_LLM),--no-llm,)
+
+# Local API for the web app: http://localhost:8000/research/ZETA
+api:
+	uv run uvicorn signal_research.api:app --reload --port 8000
+
+# Static export the web app can read without a server (public/runs/<SYM>.json)
+# Usage: make export TICKERS=ZETA,NVDA,AAPL,META,MSFT
+export:
+	uv run python -m signal_research.export --tickers $(or $(TICKERS),ZETA,NVDA,AAPL,META,MSFT) --out ../public/runs
+
+calibrate:
+	uv run python -m signal_research.calibration runs/predictions.jsonl
 
 # Self-hosted Langfuse (open source). Downloads the official compose file
 # rather than shipping a stale copy; needs Docker.

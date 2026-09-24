@@ -47,4 +47,15 @@ VITE_FINNHUB_KEY=your_key
 
 Setting a `FINNHUB_KEY` repository secret bakes a key into the GitHub Pages build so the deployed site works without a prompt. That key is then visible in the bundle, so only do it with a throwaway free key.
 
-The Advanced Research terminal (`public/advanced/`) is still the design prototype with illustrative numbers. The Python research system that will feed it lives in `research/`.
+If you'd rather not ask visitors for a key, `proxy/` holds a Cloudflare Worker that keeps the key server-side; set `VITE_FINNHUB_PROXY` (or the `FINNHUB_PROXY` repo secret) to its URL.
+
+## Full research
+
+The quick read is one engine. The canonical one is the Python research system in `research/`: evidence from Yahoo Finance and SEC filings (risk factors and MD&A excerpts), a versioned quant score computed in code, bull and bear memos written by a model through OpenRouter, a synthesis, and a disagreement object built in code from the quant band and the narrative lean. The web app reads its output two ways:
+
+- **Static export.** `public/runs/<TICKER>.json` plus `index.json`, produced by `make export` in `research/` and refreshed by the Pages workflow on every deploy and each weekday evening. The five default watchlist tickers ship this way.
+- **Local API.** `make api` in `research/` serves `GET /research/<TICKER>` on port 8000; set `VITE_RESEARCH_API=http://localhost:8000` in `.env.local` and any ticker you ask about gets a fresh run (about a minute, cached for a day).
+
+When a run exists the asset screen shows a Full Research card under the quick read: the quant band, the narrative lean, and whether they agree, with the reasons each could be wrong. The Research tab shows both memos with every claim labelled sourced, inference or unsupported and linked to its source, the synthesis with kill criteria, the quant components, and the critic's flags.
+
+The Advanced Research terminal (`public/advanced/`) is still the design prototype with illustrative numbers.

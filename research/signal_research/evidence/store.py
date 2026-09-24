@@ -40,6 +40,19 @@ class EvidenceStore:
     def source_ids(self, run_id: str) -> set[str]:
         return {row[0] for row in self._db.execute("SELECT source_id FROM sources WHERE run_id=?", (run_id,))}
 
+    def latest_run(self, ticker: str, *, max_age_hours: float | None = None) -> RunResult | None:
+        row = self._db.execute("SELECT payload, created_at FROM runs WHERE ticker=? ORDER BY created_at DESC LIMIT 1", (ticker.upper(),)).fetchone()
+        if not row:
+            return None
+        r = RunResult.model_validate_json(row[0])
+        if max_age_hours is not None:
+            from datetime import datetime, timezone
+
+            age_h = (datetime.now(timezone.utc) - r.created_at).total_seconds() / 3600
+            if age_h > max_age_hours:
+                return None
+        return r
+
     def load_run(self, run_id: str) -> RunResult | None:
         row = self._db.execute("SELECT payload FROM runs WHERE run_id=?", (run_id,)).fetchone()
         return RunResult.model_validate_json(row[0]) if row else None

@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Weekdays after the US close: refresh the research export for the default tickers.
+    - cron: "30 22 * * 1-5"
 
 permissions:
   contents: read
@@ -27,10 +30,21 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - uses: astral-sh/setup-uv@v5
+      - name: Research export (quant always; real memos only when OPENROUTER_API_KEY is set)
+        working-directory: research
+        timeout-minutes: 20
+        continue-on-error: true
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+          EDGAR_USER_AGENT: SIGNAL research github-actions ${{ github.repository_owner }}
+        run: uv sync --no-dev && uv run python -m signal_research.export --tickers ZETA,NVDA,AAPL,META,MSFT --out ../public/runs
       - run: npm run build
         env:
-          # Optional. If set as a repo secret the deployed site works without
-          # a bring-your-own key. Note the key is then visible in the bundle.
+          # Optional. FINNHUB_PROXY (see proxy/README.md) keeps the key server-side.
+          # FINNHUB_KEY bakes a key into the public bundle; only use a throwaway one.
+          VITE_FINNHUB_PROXY: ${{ secrets.FINNHUB_PROXY }}
           VITE_FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

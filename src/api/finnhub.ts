@@ -4,6 +4,9 @@
 // ever sent to Finnhub.
 
 const BASE = 'https://finnhub.io/api/v1'
+// Optional proxy (see proxy/README.md) that holds the key server-side. When set,
+// no key is needed in the browser and requests go through it without a token.
+const PROXY = (import.meta.env.VITE_FINNHUB_PROXY as string | undefined)?.replace(/\/$/, '')
 const KEY_STORAGE = 'signal.finnhubKey'
 const TTL_MS = 10 * 60 * 1000
 
@@ -36,20 +39,21 @@ export function setKey(k: string) {
   }
 }
 
-export const hasKey = () => getKey().length > 0
+export const hasKey = () => Boolean(PROXY) || getKey().length > 0
+export const viaProxy = () => Boolean(PROXY)
 
 const cache = new Map<string, { t: number; v: unknown }>()
 
 async function get<T>(path: string, params: Record<string, string>): Promise<T> {
   const key = getKey()
-  if (!key) throw new ApiError('nokey', 'No market data key is set.')
+  if (!PROXY && !key) throw new ApiError('nokey', 'No market data key is set.')
   const cacheKey = `${path}?${new URLSearchParams(params)}`
   const hit = cache.get(cacheKey)
   if (hit && Date.now() - hit.t < TTL_MS) return hit.v as T
 
   let res: Response
   try {
-    res = await fetch(`${BASE}${path}?${new URLSearchParams({ ...params, token: key })}`)
+    res = await fetch(PROXY ? `${PROXY}${path}?${new URLSearchParams(params)}` : `${BASE}${path}?${new URLSearchParams({ ...params, token: key })}`)
   } catch {
     throw new ApiError('network', 'Could not reach the market data service. Check your connection and try again.')
   }

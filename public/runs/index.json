@@ -1,0 +1,85 @@
+{
+ "generated_at": "2026-09-24T03:52:03.367888+00:00",
+ "runs": [
+  {
+   "ticker": "AAPL",
+   "run_id": "aapl-20260924T035045-ff5f80",
+   "created_at": "2026-09-24T03:51:08.428162+00:00",
+   "quant_score": 16,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "gpt-4o-mini-2024-07-18",
+    "bear": "gpt-4o-mini-2024-07-18",
+    "synthesis": "gpt-4o-mini-2024-07-18",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "META",
+   "run_id": "meta-20260924T035108-0bdc8a",
+   "created_at": "2026-09-24T03:51:27.446392+00:00",
+   "quant_score": 0,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "gpt-4o-mini-2024-07-18",
+    "bear": "gpt-4o-mini-2024-07-18",
+    "synthesis": "gpt-4o-mini-2024-07-18",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "MSFT",
+   "run_id": "msft-20260924T035127-4532a0",
+   "created_at": "2026-09-24T03:52:03.355838+00:00",
+   "quant_score": 11,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "gpt-4o-mini-2024-07-18",
+    "bear": "gpt-4o-mini-2024-07-18",
+    "synthesis": "gpt-4o-mini-2024-07-18",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "NVDA",
+   "run_id": "nvda-20260924T035024-fd9725",
+   "created_at": "2026-09-24T03:50:45.383170+00:00",
+   "quant_score": 23,
+   "quant_band": "attractive",
+   "narrative_lean": "mixed",
+   "agree": false,
+   "is_stub": false,
+   "models": {
+    "bull": "gpt-4o-mini-2024-07-18",
+    "bear": "gpt-4o-mini-2024-07-18",
+    "synthesis": "gpt-4o-mini-2024-07-18",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "ZETA",
+   "run_id": "zeta-20260924T034957-078e31",
+   "created_at": "2026-09-24T03:50:24.195341+00:00",
+   "quant_score": 14,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "gpt-4o-mini-2024-07-18",
+    "bear": "gpt-4o-mini-2024-07-18",
+    "synthesis": "gpt-4o-mini-2024-07-18",
+    "quant": "code:v0.1"
+   }
+  }
+ ]
+}

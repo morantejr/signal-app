@@ -1,0 +1,654 @@
+{
+ "run_id": "msft-20260924T035127-4532a0",
+ "ticker": "MSFT",
+ "thesis": null,
+ "horizon": "3m",
+ "created_at": "2026-09-24T03:52:03.355838Z",
+ "sources": [
+  {
+   "source_id": "yf:hist:MSFT",
+   "kind": "price",
+   "title": "Yahoo Finance daily prices, 1y (MSFT)",
+   "url": "https://finance.yahoo.com/quote/MSFT/history",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:51:27.460529Z",
+   "excerpt": null,
+   "data": {
+    "rows": 251,
+    "last": "2026-09-23T00:00:00-04:00"
+   }
+  },
+  {
+   "source_id": "yf:info:MSFT",
+   "kind": "fundamental",
+   "title": "Yahoo Finance key statistics (MSFT)",
+   "url": "https://finance.yahoo.com/quote/MSFT/key-statistics",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:51:27.460529Z",
+   "excerpt": null,
+   "data": {
+    "longName": "Microsoft Corporation",
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "marketCap": 3717153947648,
+    "trailingPE": 27.779688,
+    "forwardPE": 21.14346,
+    "priceToSalesTrailing12Months": 11.201678,
+    "enterpriseToEbitda": 19.405,
+    "debtToEquity": 29.118,
+    "currentRatio": 1.23,
+    "freeCashflow": 16545500160,
+    "revenueGrowth": 0.177,
+    "profitMargins": 0.40305
+   }
+  },
+  {
+   "source_id": "yf:financials:MSFT",
+   "kind": "fundamental",
+   "title": "Yahoo Finance annual income statement (MSFT), P/S history approximated with current share count",
+   "url": "https://finance.yahoo.com/quote/MSFT/financials",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:51:27.460529Z",
+   "excerpt": null,
+   "data": {
+    "ps_history": [
+     8.33,
+     11.63,
+     12.98,
+     13.6
+    ]
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-380280",
+   "kind": "filing",
+   "title": "8-K filed 2026-09-02",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+   "accession": "0001193125-26-380280",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-09-02"
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-323660",
+   "kind": "filing",
+   "title": "10-K filed 2026-07-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+   "accession": "0001193125-26-323660",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "10-K",
+    "filed": "2026-07-29"
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-323632",
+   "kind": "filing",
+   "title": "8-K filed 2026-07-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm",
+   "accession": "0001193125-26-323632",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-07-29"
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-258667",
+   "kind": "filing",
+   "title": "8-K filed 2026-06-05",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526258667/d26760d8k.htm",
+   "accession": "0001193125-26-258667",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-06-05"
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-224155",
+   "kind": "filing",
+   "title": "8-K filed 2026-05-14",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526224155/d125909d8k.htm",
+   "accession": "0001193125-26-224155",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-05-14"
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-191507",
+   "kind": "filing",
+   "title": "10-Q filed 2026-04-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm",
+   "accession": "0001193125-26-191507",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "10-Q",
+    "filed": "2026-04-29"
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-191457",
+   "kind": "filing",
+   "title": "8-K filed 2026-04-29",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191457/msft-20260429.htm",
+   "accession": "0001193125-26-191457",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "8-K",
+    "filed": "2026-04-29"
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-027207",
+   "kind": "filing",
+   "title": "10-Q filed 2026-01-28",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/msft-20251231.htm",
+   "accession": "0001193125-26-027207",
+   "retrieved_at": "2026-09-24T03:51:38.901484Z",
+   "excerpt": null,
+   "data": {
+    "form": "10-Q",
+    "filed": "2026-01-28"
+   }
+  },
+  {
+   "source_id": "edgar:facts:0000789019",
+   "kind": "facts",
+   "title": "SEC XBRL company facts (CIK 0000789019)",
+   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:51:50.286075Z",
+   "excerpt": null,
+   "data": {
+    "revenue": [
+     {
+      "fy": 2010,
+      "end": "2009-12-31",
+      "value": 19022000000,
+      "accession": "0001193125-10-171791"
+     },
+     {
+      "fy": 2010,
+      "end": "2010-03-31",
+      "value": 14503000000,
+      "accession": "0001193125-10-171791"
+     },
+     {
+      "fy": 2010,
+      "end": "2010-06-30",
+      "value": 62484000000,
+      "accession": "0001193125-10-171791"
+     },
+     {
+      "fy": 2010,
+      "end": "2010-06-30",
+      "value": 16039000000,
+      "accession": "0001193125-10-171791"
+     }
+    ],
+    "net_income": [
+     {
+      "fy": 2026,
+      "end": "2024-06-30",
+      "value": 88136000000,
+      "accession": "0001193125-26-323660"
+     },
+     {
+      "fy": 2025,
+      "end": "2025-06-30",
+      "value": 101832000000,
+      "accession": "0000950170-25-100235"
+     },
+     {
+      "fy": 2026,
+      "end": "2025-06-30",
+      "value": 101832000000,
+      "accession": "0001193125-26-323660"
+     },
+     {
+      "fy": 2026,
+      "end": "2026-06-30",
+      "value": 133749000000,
+      "accession": "0001193125-26-323660"
+     }
+    ],
+    "long_term_debt": [
+     {
+      "fy": 2025,
+      "end": "2024-06-30",
+      "value": 42688000000,
+      "accession": "0000950170-25-100235"
+     },
+     {
+      "fy": 2025,
+      "end": "2025-06-30",
+      "value": 40152000000,
+      "accession": "0000950170-25-100235"
+     },
+     {
+      "fy": 2026,
+      "end": "2025-06-30",
+      "value": 40152000000,
+      "accession": "0001193125-26-323660"
+     },
+     {
+      "fy": 2026,
+      "end": "2026-06-30",
+      "value": 31067000000,
+      "accession": "0001193125-26-323660"
+     }
+    ],
+    "cash": [
+     {
+      "fy": 2025,
+      "end": "2024-06-30",
+      "value": 18315000000,
+      "accession": "0000950170-25-100235"
+     },
+     {
+      "fy": 2025,
+      "end": "2025-06-30",
+      "value": 30242000000,
+      "accession": "0000950170-25-100235"
+     },
+     {
+      "fy": 2026,
+      "end": "2025-06-30",
+      "value": 30242000000,
+      "accession": "0001193125-26-323660"
+     },
+     {
+      "fy": 2026,
+      "end": "2026-06-30",
+      "value": 20935000000,
+      "accession": "0001193125-26-323660"
+     }
+    ]
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-191507#risk-factors",
+   "kind": "filing",
+   "title": "10-Q filed 2026-04-29 \u2014 Risk factors",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm",
+   "accession": "0001193125-26-191507",
+   "retrieved_at": "2026-09-24T03:51:51.622214Z",
+   "excerpt": "Item 1A. \n Risk Factors \n 49 \n Item 2. \n Unregistered Sales of Equity Securities and Use of Proceeds \n 65 \n Item 5. \n Other Information \n 66 \n Item 6. \n Exhibits \n 67 \n SIGNATURE \n 68 \n 2 \n PART I \n Item 1 \n PART I. FINANCI AL INFORMATION \n ITEM 1. FINA NCIAL STATEMENTS \n INCOME STA TEMENTS \n (In millions, except per share amounts) (Unaudited) \n Three Months Ended \n March 31, \n Nine Months Ended \n March 31, \n 2026 \n 2025 \n 2026 \n 2025 \n Revenue: \n Product \n $ \n 15,089 \n $ \n 15,319 \n $ \n 47,462 \n $ \n 46,810 \n Service and other \n 67,797 \n 54,747 \n 194,370 \n 158,473 \n Total revenue \n 82,886 \n 70,066 \n 241,832 \n 205,283 \n Cost of revenue: \n Product \n 2,733 \n 3,037 \n 9,160 \n 10,187 \n Service and other \n 24,095 \n 18,882 \n 67,689 \n 53,630 \n Total cost of revenue \n 26,828 \n 21,919 \n 76,849 \n 63,817 \n Gross margin \n 56,058 \n 48,147 \n 164,983 \n 141,466 \n Research and development \n 8,915 \n 8,198 \n 25,565 \n 23,659 \n Sales and marketing \n 6,814 \n 6,212 \n 19,115 \n 18,369 \n General and administrative \n 1,931 \n 1,737 \n 5,669 \n 5,233 \n Operating income \n 38,398 \n 32,000 \n 114,634 \n 94,205 \n Other income (expense), net \n 942 \n ( 623 \n ) \n 7,253 \n ( 3,194 \n ) \n Income before income taxes \n 39,340 \n 31,377 \n 121,887 \n 91,011 \n Provision for income taxes \n 7,562 \n 5,553 \n 23,904 \n 16,412 \n Net income \n $ \n 31,778 \n $ \n 25,824 \n $ \n 97,983 \n $ \n 74,599 \n Earnings per share: \n Basic \n $ \n 4.28 \n $ \n 3.47 \n $ \n 13.19 \n $ \n 10.03 \n Diluted \n $ \n 4.27 \n $ \n 3.46 \n $ \n 13.14 \n $ \n 9.99 \n Weighted average shares outstanding: \n Basic \n 7,426 \n 7,434 \n 7,430 \n 7,434 \n Diluted \n 7,445 \n 7,461 \n 7,457 \n 7,466 \n Refer to accompanying notes. \n 3 \n PART I \n Item 1 \n COMPREHENSIVE IN COME STATEMENTS \n (In millions) (Unaudited) \n Three Months Ended March 31, \n Nine Months Ended \n March 31, \n 2026 \n 2025 \n 2026 \n 2025 \n Net income \n $ \n 31,778 \n $ \n 25,824 \n $ \n 97,983 \n $ \n 74,599 \n Other comprehensive income (loss), net of tax: \n Net change related to derivatives \n 0 \n ( 20 \n ) \n ( 6 \n ) \n 4 \n Net change related to investments \n ( 239 \n ) \n 450 \n 287 \n 1,130 \n Translation adjustments and other \n ( 287 \n ) \n 353 \n ( 162 \n ) \n ( 377 \n ) \n Other comprehensive income (loss) \n ( 526 \n ) \n 783 \n 119 \n 757 \n Comprehensive income \n $ \n 31,252 \n $ \n 26,607 \n $ \n 98,102 \n $ \n 75,356 \n Refer to accompanying notes. \n 4 \n PART I \n Item 1 \n BALANCE SHEETS \n (In millions) (Unaudited) \n March 31, \n 2026 \n June 30, 2025 \n Assets \n Current assets: \n Cash and cash equivalents \n $ \n 32,105 \n $ \n 30,242 \n Short-term investments \n 46,167 \n 64,323 \n Total cash, cash equivalents, and short-term investments \n 78,272 \n 94,565 \n Accounts receivable, net of allowance for doubtful accounts of $ 794 and $ 944 \n 60,041 \n 69,905 \n Inventories \n 1,219 \n 938 \n Other current assets \n 35,797 \n 25,723 \n Total current assets \n 175,329 \n 191,131 \n Property and equipment, net of accumulated depreciation of $ 111,723 and $ 93,653 \n 283,228 \n 204,966 \n Operating lease right-of-use assets \n 24,403 \n 24,823 \n Equity and other investments \n 33,683 \n 15,405 \n Goodwill \n 119,661 \n 119,509 \n Intangible assets, net \n 19,325 \n 22,604 \n Other long-term assets \n 38,599 \n 40,565 \n Total assets \n $ \n 694,228 \n $ \n 619,003 \n Liabilities and stockholders\u2019 equity \n Current liabilities: \n Accounts payable \n $ \n 37,513 \n $ \n 27,724 \n Current portion of long-term debt \n 8,839 \n 2,999 \n Accrued compensation \n 11,270 \n 13,709 \n Short-term income taxes \n 3,563 \n 7,211 \n Short-term unearned revenue \n 50,924 \n 64,555 \n Other current liabilities \n 24,552 \n 25,020 \n Total current liabilities \n 136,661 \n 141,218 \n Long-term debt \n 31,423 \n 40,152 \n Long-term income taxes \n 27,941 \n 25,986 \n Long-term unearned revenue \n 2,753 \n 2,710 \n Deferred income taxes \n 2,899 \n 2,835 \n Operating lease liabilities \n 16,703 \n 17,437 \n Other long-term liabilities \n 61,481 \n 45,186 \n Total liabilities \n 279,861 \n 275,524 \n Commitments and contingencies \n Stockholders\u2019 equity: \n Common stock and paid-in capital \u2013 shares authorized 24,000 ; outstanding 7,429 and 7,434 \n 115,069 \n 109,095 \n Retained earnings \n 302,526 \n 237,731 \n Accumulated other comprehensive loss \n ( 3,228 \n ) \n ( 3,347 \n ) \n Total stockholders\u2019 equity \n 414,367 \n 343,479 \n Total liabilities and stockholders\u2019 equity \n $ \n 694,228 \n $ \n 619,003 \n Refer to accompanying notes. \n 5 \n PART I \n Item 1 \n CASH FLOWS STATEMENTS \n (In millions) (Unaudited) \n Three Months Ended \n March 31, \n Nine Months Ended \n March 31, \n 2026 \n 2025 \n 2026 \n 2025 \n Operations \n Net income \n $ \n 31,778 \n $ \n 25,824 \n $ \n 97,983 \n $ \n 74,599 \n Adjustments to reconcile net income to net cash from operations: \n Depreciation, amortization, and other \n 10,167 \n 7,734 \n 27,512 \n 20,116 \n Stock-based compensation expense \n 3,081 \n 2,980 \n 9,283 \n 8,901 \n Net recognized losses (gains) on investments and derivatives \n ( 1,280 \n ) \n 708 \n ( 7,304 \n ) \n 3,387 \n Deferred income taxes \n 2,602 \n ( 2,244 \n ) \n 9,539 \n ( 4,835 \n ) \n Changes in operating assets and liabilities: \n Accounts receivable \n ( 4,707 \n ) \n ( 2,461 \n ) \n 8,347 \n 5,598 \n Inventories \n ( 161 \n ) \n 52 \n ( 283 \n ) \n 390 \n Other current assets \n 758 \n 1,076 \n 215 \n 642 \n Other long-term assets \n ( 932 \n ) \n ( 518 \n ) \n ( 2,614 \n ) \n ( 3,368 \n ) \n Accounts payable \n 2,320 \n 1,179 \n 2,903 \n 1,221 \n Unearned revenue \n ( 166 \n ) \n ( 1,032 \n ) \n ( 13,067 \n ) \n ( 12,923 \n ) \n Income taxes \n 2,296 \n 1,298 \n ( 1,568 \n ) \n ( 1,081 \n ) \n Other current liabilities \n 2,539 \n 2,839 \n ( 166 \n ) \n 576 \n Other long-term liabilities \n ( 1,616 \n ) \n ( 391 \n ) \n ( 3,286 \n ) \n 292 \n Net cash from operations \n 46,679 \n 37,044 \n 127,494 \n 93,515 \n Financing \n Repayments of debt, maturities of 90 days or less \n 0 \n 0 \n 0 \n ( 5,746 \n ) \n Repayments of debt \n 0 \n ( 2,250 \n ) \n ( 3,000 \n ) \n ( 3,216 \n ) \n Common stock issued \n 541 \n 546 \n 1,489 \n 1,508 \n Common stock repurchased \n ( 4,627 \n ) \n ( 4,781 \n ) \n ( 17,692 \n ) \n ( 13,874 \n ) \n Common stock cash dividends paid \n ( 6,756 \n ) \n ( 6,169 \n ) \n ( 19,687 \n ) \n ( 17,913 \n ) \n Other, net \n ( 509 \n ) \n ( 382 \n ) \n ( 1,877 \n ) \n ( 1,614 \n ) \n Net cash used in financing \n ( 11,351 \n ) \n ( 13,036 \n ) \n ( 40,767 \n ) \n ( 40,855 \n ) \n Investing \n Additions to property and equipment \n ( 30,876 \n ) \n ( 16,745 \n ) \n ( 80,146 \n ) \n ( 47,472 \n ) \n Acquisition of companies, net of cash acquired and divestitures, and purchases of intangible and other assets \n ( 258 \n ) \n ( 981 \n ) \n ( 1,291 \n ) \n ( 4,235 \n ) \n Purchases of investments \n ( 12,006 \n ) \n ( 4,474 \n ) \n ( 39,522 \n ) \n ( 8,144 \n ) \n Maturities of investments \n 11,976 \n 6,721 \n 30,424 \n 11,461 \n Sales of investments \n 6,358 \n 2,161 \n 15,311 \n 6,688 \n Other, net \n ( 2,599 \n ) \n 604 \n ( 9,445 \n ) \n ( 325 \n ) \n Net cash used in investing \n ( 27,405 \n ) \n ( 12,714 \n ) \n ( 84,669 \n ) \n ( 42,027 \n ) \n Effect of foreign exchange rates on cash and cash equivalents \n ( 114 \n ) \n 52 \n ( 195 \n ) \n ( 120 \n ) \n Net change in cash and cash equivalents \n 7,809 \n 11,346 \n 1,863 \n 10,513 \n Cash and cash equivalents, beginning of period \n 24,296 \n 17,482 \n 30,242 \n 18,315 \n Cash and cash equivalents, end of period \n $ \n 32,105 \n $ \n 28,828 \n $ \n 32,105 \n $ \n 28,828 \n Refer to accompanying notes. \n 6 \n PART I \n Item 1 \n STOCKHOLDERS\u2019 EQ UITY STATEMENTS \n (In millions, except per share amounts) (Unaudited) \n Three Months Ended \n March 31, \n Nine Months Ended \n March 31, \n 2026 \n 2025 \n 2026 \n 2025 \n Common stock and paid-in capital \n Balance, beginning of period \n $ \n 112,788 \n $ \n 104,829 \n $ \n 109,095 \n $ \n 100,923 \n Common stock issued \n 541 \n 546 \n 1,489 \n 1,508 \n Common stock repurchased \n ( 1,341 \n ) \n ( 1,390 \n ) \n ( 4,796 \n ) \n ( 4,366 \n ) \n Stock-based compensation expense \n 3,081 \n 2,980 \n 9,283 \n 8,901 \n Other, net \n 0 \n 0 \n ( 2 \n ) \n ( 1 \n ) \n Balance, end of period \n 115,069 \n 106,965 \n 115,069 \n 106,965 \n Retained earnings \n Balance, beginning of period \n 280,789 \n 203,482 \n 237,731 \n 173,144 \n Net income \n 31,778 \n 25,824 \n 97,983 \n 74,599 \n Common stock cash dividends \n ( 6,756 \n ) \n ( 6,168 \n ) \n ( 20,2",
+   "data": {
+    "form": "10-Q",
+    "section": "risk-factors",
+    "chars": 8000
+   }
+  },
+  {
+   "source_id": "edgar:0001193125-26-191507#mdna",
+   "kind": "filing",
+   "title": "10-Q filed 2026-04-29 \u2014 MD&A",
+   "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331.htm",
+   "accession": "0001193125-26-191507",
+   "retrieved_at": "2026-09-24T03:51:51.624045Z",
+   "excerpt": "ITEM 2. MANAGEMENT\u2019S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS \n Note About Forward-Looking Statements \n This report includes estimates, projections, statements relating to our business plans, objectives, and expected operating results that are \u201cforward-looking statements\u201d within the meaning of the Private Securities Litigation Reform Act of 1995, Section 27A of the Securities Act of 1933, and Section 21E of the Securities Exchange Act of 1934. Forward-looking statements may appear throughout this report, including the following sections: \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d and \u201cRisk Factors\u201d (Part II, Item 1A of this Form 10-Q). These forward-looking statements generally are identified by the words \u201cbelieve,\u201d \u201cproject,\u201d \u201cexpect,\u201d \u201canticipate,\u201d \u201cestimate,\u201d \u201cintend,\u201d \u201cstrategy,\u201d \u201cfuture,\u201d \u201copportunity,\u201d \u201cplan,\u201d \u201cmay,\u201d \u201cshould,\u201d \u201cwill,\u201d \u201cwould,\u201d \u201cwill be,\u201d \u201cwill continue,\u201d \u201cwill likely result,\u201d and similar expressions. Forward-looking statements are based on current expectations and assumptions that are subject to risks and uncertainties that may cause actual results to differ materially. We describe risks and uncertainties that could cause actual results and events to differ materially in \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations,\u201d \u201cQuantitative and Qualitative Disclosures About Market Risk\u201d (Part I, Item 3 of this Form 10-Q), and \u201cRisk Factors\u201d. We undertake no obligation to update or revise publicly any forward-looking statements, whether because of new information, future events, or otherwise. \n The following Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations (\u201cMD&A\u201d) is intended to help the reader understand the results of operations and financial condition of Microsoft Corporation. MD&A is provided as a supplement to, and should be read in conjunction with, our Annual Report on Form 10-K for the year ended June 30, 2025, and our consolidated financial statements and the accompanying Notes to Financial Statements (Part I, Item 1 of this Form 10-Q). \n OVERVIEW \n Microsoft is a technology company committed to making digital technology and artificial intelligence (\u201cAI\u201d) available broadly and doing so responsibly, with a mission to empower every person and every organization on the planet to achieve more. We create platforms and tools, powered by AI, that deliver innovative solutions that meet the evolving needs of our customers. \n We generate revenue by offering a wide range of cloud-based solutions, content, and other services to people and businesses; licensing and supporting an array of software products; delivering relevant online advertising to a global audience; and designing and selling devices. Our most significant expenses are related to compensating employees; supporting and investing in our cloud-based services, including datacenter operations; designing, manufacturing, marketing, and selling our other products and services; and income taxes. \n Highlights from the third quarter of fiscal year 2026 compared with the third quarter of fiscal year 2025 included: \n \u2022 Microsoft Cloud revenue increased 29% to $54.5 billion. \n \u2022 Commercial remaining performance obligation increased 99% to $627 billion. \n \u2022 Microsoft 365 Commercial cloud revenue increased 19%. \n \u2022 Microsoft 365 Consumer cloud revenue increased 33%. \n \u2022 LinkedIn revenue increased 12%. \n \u2022 Dynamics 365 revenue increased 22%. \n \u2022 Azure and other cloud services revenue increased 40%. \n \u2022 Windows OEM and Devices revenue decreased 2%. \n \u2022 Xbox content and services revenue decreased 5%. \n \u2022 Search advertising (formerly Search and news advertising) revenue excluding traffic acquisition costs increased 12%. \n 31 \n PART I \n Item 2 \n Industry Trends and Opportunities \n Our industry is dynamic and highly competitive, with frequent changes in both technologies and business models. Each industry shift is an opportunity to conceive new products, new technologies, or new ideas that can further transform the industry and our business. At Microsoft, we push the boundaries of what is possible through a broad range of research and development activities that seek to identify and address the changing demands of customers and users, industry trends, and competitive forces. \n We have a long-term strategic partnership with OpenAI which was originally established in 2019. In October 2025 and April 2026, we extended this partnership and continue to build on our shared vision to advance artificial intelligence responsibly and make its benefits broadly accessible. Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments. We hold rights to OpenAI\u2019s intellectual property, including models and infrastructure, for integration into our products. \n Economic Conditions, Challenges, and Risks \n The markets for software, devices, and cloud-based services are dynamic and highly competitive. Our competitors are developing new software and devices, while also deploying competing cloud-based services for consumers and businesses. The devices and form factors customers prefer evolve rapidly, influencing how users access services in the cloud and, in some cases, the user\u2019s choice of which suite of cloud-based services to use. Aggregate demand for our software, services, and devices is also correlated to global macroeconomic and geopolitical factors, which remain dynamic. We must continue to evolve and adapt over an extended time in pace with this changing environment. \n The investments we are making in cloud and AI infrastructure and devices will continue to increase our operating costs and may decrease our operating margins. We continue to identify and evaluate opportunities to expand our datacenter locations and increase our server capacity to meet the evolving needs of our customers, particularly given the growing demand for AI services. Our datacenters depend on the availability of permitted and buildable land, predictable energy, networking supplies, and servers, including graphics processing units and other components. Our devices are primarily manufactured by third-party contract manufacturers. For the majority of our products, we have the ability to use other manufacturers if a current vendor becomes unavailable or unable to meet our requirements. However, some of our products contain certain components for which there are very few qualified suppliers. Extended disruptions at these suppliers could impact our ability to manufacture devices on time to meet consumer demand. \n Our success is highly dependent on our ability to attract and retain qualified employees. We hire a mix of university and industry talent worldwide. We compete for talented individuals globally by offering an exceptional working environment, broad customer reach, scale in resources, the ability to grow one\u2019s career across many different products and businesses, and competitive compensation and benefits. \n Our international operations provide a significant portion of our total revenue and expenses. Many of these revenue and expenses are denominated in currencies other than the U.S. dollar. As a result, changes in foreign exchange rates may significantly affect revenue and expenses. Fluctuations in the U.S. dollar relative to certain foreign currencies increased reported revenue and expenses from our international operations for the three and nine months ended March 31, 2026. \n Further, global, regional, and local economic developments and changes in global trade policies such as restrictions on international trade, including tariffs and other controls on imports or exports, could result in increased supply chain challenges, cost volatility, and consumer and economic uncertainty which may adversely affect our results of operations. \n Refer to Risk Factors (Part II, Item 1A of this Form 10-Q) for a discussion of these factors and other risks. \n Seasona",
+   "data": {
+    "form": "10-Q",
+    "section": "mdna",
+    "chars": 8000
+   }
+  },
+  {
+   "source_id": "quant:v0.1",
+   "kind": "derived",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T03:51:51.624780+00:00) from yf:hist:MSFT, yf:info:MSFT, yf:financials:MSFT",
+   "url": null,
+   "accession": null,
+   "retrieved_at": "2026-09-24T03:51:51.624830Z",
+   "excerpt": null,
+   "data": {
+    "quant_score": 11,
+    "quant_band": "fair",
+    "components": [
+     {
+      "name": "valuation",
+      "value": 0.0,
+      "note": "P/E 27.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.86\u00d7 its own median \u2192 +0.00"
+     },
+     {
+      "name": "momentum",
+      "value": 0.45260280794859925,
+      "note": "6m return +34.8% \u2192 +1.00; 12m\u22121m -3.8% \u2192 -0.09"
+     },
+     {
+      "name": "risk",
+      "value": -0.280398756862397,
+      "note": "1y drawdown 34% \u2192 -0.42; 60d vol 40% ann. \u2192 -0.14"
+     },
+     {
+      "name": "balance_sheet",
+      "value": 0.26666666666666666,
+      "note": "D/E 29% \u2192 +0.5; current ratio 1.23 \u2192 +0.0; FCF positive \u2192 +0.3"
+     },
+     {
+      "name": "macro",
+      "value": null,
+      "note": "no FRED data (optional)"
+     }
+    ]
+   }
+  }
+ ],
+ "quant": {
+  "ticker": "MSFT",
+  "quant_score": 11,
+  "quant_band": "fair",
+  "components": [
+   {
+    "name": "valuation",
+    "value": 0.0,
+    "weight": 0.35,
+    "inputs_used": {
+     "trailing_pe": 27.779688,
+     "ps_vs_own_median": 0.86
+    },
+    "note": "P/E 27.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.86\u00d7 its own median \u2192 +0.00"
+   },
+   {
+    "name": "momentum",
+    "value": 0.45260280794859925,
+    "weight": 0.25,
+    "inputs_used": {
+     "ret_6m": 34.84429922216403,
+     "ret_12m_minus_1m": -3.79
+    },
+    "note": "6m return +34.8% \u2192 +1.00; 12m\u22121m -3.8% \u2192 -0.09"
+   },
+   {
+    "name": "risk",
+    "value": -0.280398756862397,
+    "weight": 0.2,
+    "inputs_used": {
+     "max_drawdown_1y": -34.498397568158836,
+     "vol_60d_ann": 40.11208409624744
+    },
+    "note": "1y drawdown 34% \u2192 -0.42; 60d vol 40% ann. \u2192 -0.14"
+   },
+   {
+    "name": "balance_sheet",
+    "value": 0.26666666666666666,
+    "weight": 0.2,
+    "inputs_used": {
+     "debt_to_equity": 29.118,
+     "current_ratio": 1.23,
+     "free_cash_flow_positive": true
+    },
+    "note": "D/E 29% \u2192 +0.5; current ratio 1.23 \u2192 +0.0; FCF positive \u2192 +0.3"
+   },
+   {
+    "name": "macro",
+    "value": null,
+    "weight": 0.1,
+    "inputs_used": {},
+    "note": "no FRED data (optional)"
+   }
+  ],
+  "quant_inputs": {
+   "ticker": "MSFT",
+   "as_of": "2026-09-24T03:51:27.460529Z",
+   "price": 500.5899963378906,
+   "high_52w": 537.6464233398438,
+   "low_52w": 352.1670227050781,
+   "ret_1m": 2.7251644427221278,
+   "ret_3m": 37.233173360890405,
+   "ret_6m": 34.84429922216403,
+   "ret_12m": -1.0666109213899322,
+   "vol_60d_ann": 40.11208409624744,
+   "max_drawdown_1y": -34.498397568158836,
+   "trailing_pe": 27.779688,
+   "forward_pe": 21.14346,
+   "price_to_sales": 11.201678,
+   "ps_hist_median": 12.982162059836712,
+   "ev_to_ebitda": 19.405,
+   "debt_to_equity": 29.118,
+   "current_ratio": 1.23,
+   "free_cash_flow": 16545500160.0,
+   "revenue_growth": 17.7,
+   "profit_margin": 40.305,
+   "fred_10y_change_3m": null,
+   "data_age_days": 0.9940678301967593,
+   "source_ids": [
+    "yf:hist:MSFT",
+    "yf:info:MSFT",
+    "yf:financials:MSFT"
+   ]
+  },
+  "quant_version": "v0.1",
+  "computed_at": "2026-09-24T03:51:51.624780Z",
+  "freshness_flags": [],
+  "drivers": [
+   "momentum: 6m return +34.8% \u2192 +1.00; 12m\u22121m -3.8% \u2192 -0.09",
+   "risk: 1y drawdown 34% \u2192 -0.42; 60d vol 40% ann. \u2192 -0.14",
+   "balance_sheet: D/E 29% \u2192 +0.5; current ratio 1.23 \u2192 +0.0; FCF positive \u2192 +0.3",
+   "valuation: P/E 27.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.86\u00d7 its own median \u2192 +0.00"
+  ]
+ },
+ "bull": {
+  "side": "bull",
+  "summary": "Microsoft Corporation (MSFT) presents a compelling bull case over the next three months, driven by strong revenue growth, particularly in its cloud services, and a solid balance sheet. The company's cloud revenue increased by 29% to $54.5 billion, and its commercial remaining performance obligation surged by 99% to $627 billion, indicating robust demand and future revenue visibility. Additionally, MSFT's current ratio of 1.23 and low debt-to-equity ratio of 29% reflect financial stability, while recent momentum with a 6-month return of 34.8% suggests positive market sentiment.",
+  "claims": [
+   {
+    "claim_id": "bull-1",
+    "text": "Microsoft's cloud revenue increased by 29% to $54.5 billion in the most recent quarter.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0001193125-26-191507#mdna"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-2",
+    "text": "The commercial remaining performance obligation increased by 99% to $627 billion.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0001193125-26-191507#mdna"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-3",
+    "text": "Microsoft's current ratio is 1.23 and its debt-to-equity ratio is 29%, indicating a strong balance sheet.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:MSFT"
+    ],
+    "confidence": 0.85
+   },
+   {
+    "claim_id": "bull-4",
+    "text": "The stock has shown a 6-month return of 34.8%, indicating strong momentum.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   }
+  ],
+  "steelman_of_other_side": "The bear case for Microsoft centers on potential risks associated with its high valuation metrics, particularly a trailing P/E ratio of 27.8, which may be viewed as stretched compared to historical averages. Additionally, the company faces significant competition in the cloud space, which could impact its market share and growth rates. Concerns about macroeconomic conditions and potential regulatory scrutiny could also weigh on investor sentiment.",
+  "missing_data": [
+   "Detailed forward-looking guidance or projections for revenue growth in the upcoming quarters",
+   "Information on competitive pressures and market share dynamics in the cloud sector"
+  ],
+  "model": "gpt-4o-mini-2024-07-18",
+  "provider": null,
+  "is_stub": false
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "The bear case for Microsoft Corporation (MSFT) over the next three months centers on potential risks related to its high valuation, declining momentum, and significant drawdown in stock performance. Despite strong revenue growth in its cloud segment, the overall market sentiment may shift due to macroeconomic factors and competitive pressures. Additionally, the company's reliance on cloud services could expose it to volatility if growth slows or if operational challenges arise.",
+  "claims": [
+   {
+    "claim_id": "bear-1",
+    "text": "Microsoft's trailing P/E ratio is 27.8, which is at the high end of its historical valuation range, suggesting potential overvaluation.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:MSFT"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "The company's 1-year drawdown is approximately 34%, indicating significant volatility and potential investor concern.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "Microsoft's 12-month return is down 1.07%, which may indicate a loss of momentum and investor confidence.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:MSFT"
+    ],
+    "confidence": 0.85
+   },
+   {
+    "claim_id": "bear-4",
+    "text": "The company's revenue growth, while strong at 17.7%, may not be sufficient to justify its current valuation given the competitive landscape in cloud services.",
+    "stance": "bear",
+    "support": "inference",
+    "source_ids": [
+     "yf:info:MSFT"
+    ],
+    "confidence": 0.75
+   },
+   {
+    "claim_id": "bear-5",
+    "text": "There are risks associated with the company's reliance on cloud services, which could be impacted by economic downturns or increased competition.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0001193125-26-191507#risk-factors"
+    ],
+    "confidence": 0.85
+   }
+  ],
+  "steelman_of_other_side": "The bull case for Microsoft emphasizes its strong position in the cloud market, with a 29% increase in cloud revenue and a substantial commercial remaining performance obligation of $627 billion. The company's diverse product offerings and commitment to AI innovation position it well for future growth. Additionally, its solid balance sheet and positive free cash flow provide a buffer against market volatility.",
+  "missing_data": [
+   "Specific competitive threats in the cloud market and their potential impact on revenue.",
+   "Detailed macroeconomic indicators that could affect Microsoft's performance in the near term."
+  ],
+  "model": "gpt-4o-mini-2024-07-18",
+  "provider": null,
+  "is_stub": false
+ },
+ "brief": {
+  "ticker": "MSFT",
+  "one_view": "The bull case for Microsoft highlights strong revenue growth in its cloud services, with a 29% increase to $54.5 billion, and a significant commercial remaining performance obligation of $627 billion, indicating future revenue visibility. The company's solid balance sheet, characterized by a current ratio of 1.23 and a low debt-to-equity ratio of 29%, supports its financial stability. Conversely, the bear case raises concerns about Microsoft's high trailing P/E ratio of 27.8, suggesting potential overvaluation, and a significant 1-year drawdown of approximately 34%, indicating volatility. To settle the debate, clearer forward-looking guidance and insights into competitive pressures in the cloud market would be essential. The quant score aligns with the bear case on valuation concerns but acknowledges strong momentum, which the narrative suggests may be waning.",
+  "narrative_lean": "mixed",
+  "claims": [
+   {
+    "claim_id": "syn-1",
+    "text": "Microsoft's cloud revenue increased by 29% to $54.5 billion in the most recent quarter.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0001193125-26-191507#mdna"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-2",
+    "text": "The commercial remaining performance obligation increased by 99% to $627 billion.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "edgar:0001193125-26-191507#mdna"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-3",
+    "text": "Microsoft's trailing P/E ratio is 27.8, which is at the high end of its historical valuation range, suggesting potential overvaluation.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:MSFT"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-4",
+    "text": "The company's 1-year drawdown is approximately 34%, indicating significant volatility and potential investor concern.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "The stock has shown a 6-month return of 34.8%, indicating strong momentum.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   }
+  ],
+  "kill_criteria": [
+   "A significant decline in cloud revenue growth or a drop in commercial remaining performance obligation",
+   "A substantial increase in competitive pressures leading to market share loss",
+   "A marked increase in the trailing P/E ratio beyond current levels without corresponding earnings growth",
+   "A further decline in stock performance or increased volatility beyond the current drawdown"
+  ],
+  "disagreement": {
+   "quant_band": "fair",
+   "quant_score": 11,
+   "narrative_lean": "mixed",
+   "agree": true,
+   "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
+   "quant_may_be_wrong_because": [
+    "The quant score may not fully capture qualitative factors such as competitive dynamics or macroeconomic conditions that could impact future performance."
+   ],
+   "narrative_may_be_wrong_because": [
+    "The memos may overstate the strength of Microsoft's current momentum or underappreciate the risks associated with high valuation and market volatility."
+   ]
+  },
+  "model": "gpt-4o-mini-2024-07-18",
+  "provider": null,
+  "is_stub": false
+ },
+ "critic": {
+  "flags": [],
+  "unsupported_claim_ids": [],
+  "dangling_source_ids": [],
+  "sourced_share_high_conf": 0.9285714285714286
+ },
+ "models": {
+  "bull": "gpt-4o-mini-2024-07-18",
+  "bear": "gpt-4o-mini-2024-07-18",
+  "synthesis": "gpt-4o-mini-2024-07-18",
+  "quant": "code:v0.1"
+ },
+ "is_prototype": true
+}

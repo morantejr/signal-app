@@ -102,21 +102,24 @@ Model: `OPENROUTER_MODEL` defaults to `google/gemma-4-31b-it:free`, taken from O
 | piece | status | notes |
 |---|---|---|
 | yfinance prices, stats, annual revenue | real | unofficial API; can be flaky, errors are noted in `bundle.notes` |
-| SEC EDGAR filings index + XBRL facts | real | needs `EDGAR_USER_AGENT`; filing *text* is not yet pulled into evidence |
+| SEC EDGAR filings index + XBRL facts | real | needs `EDGAR_USER_AGENT` |
+| Filing text: risk factors + MD&A from the latest 10-K and 10-Q | real | section extraction is regex-based and skips the table of contents; ~8k chars per section, 3.5k shown to the model |
 | FRED macro overlay | real, optional | skipped without `FRED_API_KEY` |
 | Quant v0.1 | real | pure code, versioned, persisted with inputs |
 | OpenRouter client | real | mocked transport in tests; retries, JSON repair, attribution headers |
 | Bull / Bear / Synthesis agents | real when `OPENROUTER_API_KEY` is set, otherwise labelled stubs built from quant components | prompts enforce citations, no price targets, steelmanning |
 | Disagreement object | real | computed in code every run |
-| Critic | real, code-only | LLM critic pass not built |
+| Critic | real, code-only | citation backing, dangling ids, zero confidences, numbers in quant-citing claims checked against the quant, one-sided synthesis |
+| Prediction log + calibration | real | `runs/predictions.jsonl`; `make calibrate` reports hit rates by band and lean once horizons mature |
+| API + static export | real | `make api` (FastAPI, cached per ticker per day), `make export` writes `public/runs/*.json` for the web app |
 | Langfuse tracing | real when configured; local JSONL always | Langfuse calls guarded so they can never break a run |
 | Evals | real | 13 cases, `make eval` |
-| Evidence retrieval from filing text / user PDFs / URLs | not built | Phase 2 |
+| User PDFs / URLs as evidence | not built | |
 | LangGraph orchestration | not built | pipeline is a plain, ordered Python function; LangGraph adds value only when steps need branching or retries as a graph |
-| UI for this backend | not built | the React prototype in the parent folder still runs on its own client-side engine; wiring it to `RunResult` is the next interface step |
+| UI for this backend | real | the React app renders `RunResult` (disagreement card, memos with labelled claims, quant components, critic) from the static export or the local API; its own client-side check is labelled "quick read" |
 
 ## 6. What shipped in Phase 1, and next decisions
 
-Shipped: data sources, quant v0.1, OpenRouter client with mocked tests, the full ordered pipeline with stub fallbacks, code-side disagreement, critic, SQLite store, local tracing with Langfuse hooks, 13 evals. `make test` proves the LLM path cannot mutate the score.
+Shipped: data sources including filing text, quant v0.1, OpenRouter client with fallbacks and mocked tests, the pipeline with parallel memos and stub fallbacks, code-side disagreement, critic with quant-claim and one-sidedness rules, prediction log and calibration report, SQLite store, FastAPI service, static export consumed by the web app, local tracing with Langfuse hooks, 16 evals. `make test` proves the LLM path cannot mutate the score.
 
-Decide next: (a) demo tickers for the eval fixtures beyond ZETA / AAPL; (b) score lean (v0.1 is balanced across value, momentum, risk, balance sheet; a momentum-tilted variant is a weight change and a version bump); (c) horizon default (3m); (d) whether to serve `RunResult` to the React app through a small FastAPI endpoint or a static JSON export.
+Decide next: (a) demo tickers for the eval fixtures beyond ZETA / AAPL; (b) score lean (v0.1 is balanced across value, momentum, risk, balance sheet; a momentum-tilted variant is a weight change and a version bump); (c) horizon default (3m); (d) where to host the API if you want fresh runs for arbitrary tickers on the public site (the static export covers the default watchlist).

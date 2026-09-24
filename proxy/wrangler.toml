@@ -1,0 +1,7 @@
+name = "signal-finnhub-proxy"
+main = "finnhub-worker.js"
+compatibility_date = "2026-09-01"
+
+[vars]
+# Comma-separated. Leave empty to allow any origin (not recommended on a public key).
+ALLOWED_ORIGINS = "https://morantejr.github.io,http://localhost:5173"

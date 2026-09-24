@@ -28,6 +28,10 @@ def gather(ticker: str, settings: Settings, tracer: Tracer | None = None, *, edg
         sources.extend(filings)
         if facts_src:
             sources.append(facts_src)
+        excerpts = ed.filing_excerpts(filings)
+        sources.extend(excerpts)
+        if not excerpts:
+            notes.append("no risk-factor / MD&A sections could be extracted from recent filings")
     except Exception as exc:  # noqa: BLE001
         notes.append(f"EDGAR unavailable: {exc}")
 

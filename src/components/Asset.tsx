@@ -4,6 +4,8 @@ import type { Settings, SubTab, AskError } from '../App'
 import type { Analysis } from '../analysis'
 import { fmtPrice, fmtPct } from '../format'
 import KeyPrompt from './KeyPrompt'
+import FullResearch, { ResearchCard } from './FullResearch'
+import type { RunResult } from '../api/research'
 
 const SUBTABS: Array<[SubTab, string]> = [
   ['overview', 'Overview'],
@@ -14,6 +16,8 @@ const SUBTABS: Array<[SubTab, string]> = [
 
 interface Props {
   a: Analysis | null
+  run: RunResult | null
+  runLoading: boolean
   error: AskError | null
   askedQ: string
   retry: () => void
@@ -23,7 +27,7 @@ interface Props {
   openAdvanced: () => void
 }
 
-export default function Asset({ a, error, askedQ, retry, sub, setSub, settings, openAdvanced }: Props) {
+export default function Asset({ a, run, runLoading, error, askedQ, retry, sub, setSub, settings, openAdvanced }: Props) {
   const subStyle = (on: boolean): React.CSSProperties => ({
     ...font(400, 15),
     color: on ? INK : FAINT,
@@ -69,15 +73,15 @@ export default function Asset({ a, error, askedQ, retry, sub, setSub, settings, 
         ))}
       </div>
 
-      {sub === 'overview' && <Overview a={a} settings={settings} setSub={setSub} />}
+      {sub === 'overview' && <Overview a={a} run={run} runLoading={runLoading} settings={settings} setSub={setSub} />}
       {sub === 'why' && <Why a={a} />}
       {sub === 'risks' && <Risks a={a} />}
-      {sub === 'research' && <ResearchTab a={a} openAdvanced={openAdvanced} />}
+      {sub === 'research' && <ResearchTab a={a} run={run} runLoading={runLoading} openAdvanced={openAdvanced} />}
     </div>
   )
 }
 
-function Overview({ a, settings, setSub }: { a: Analysis; settings: Settings; setSub: (s: SubTab) => void }) {
+function Overview({ a, run, runLoading, settings, setSub }: { a: Analysis; run: RunResult | null; runLoading: boolean; settings: Settings; setSub: (s: SubTab) => void }) {
   const deep = settings.answerDepth === 'full'
   const allReasons = deep && a.deepReason ? [...a.reasons, a.deepReason] : a.reasons
   const allRisks = deep && a.deepRisk ? [...a.risks, a.deepRisk] : a.risks
@@ -88,16 +92,16 @@ function Overview({ a, settings, setSub }: { a: Analysis; settings: Settings; se
   return (
     <div style={{ animation: 'sIn .3s ease both' }}>
       <div style={{ ...card, padding: 32, marginTop: 26, boxShadow: '0 1px 2px rgba(20,22,26,.04)' }}>
-        <div style={{ ...font(400, 13), letterSpacing: '.06em', color: FAINT }}>SIGNAL VIEW</div>
+        <div style={{ ...font(400, 13), letterSpacing: '.06em', color: FAINT }}>QUICK READ · LIVE MARKET DATA</div>
         <div style={{ ...font(400, 40, 1.1), letterSpacing: '-.02em', color: a.color, marginTop: 14 }}>{a.stance}</div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 44, marginTop: 26 }}>
           <div>
-            <div style={{ ...font(400, 13), color: FAINT, marginBottom: 9 }}>Confidence</div>
+            <div style={{ ...font(400, 13), color: FAINT, marginBottom: 9 }}>Checks in agreement</div>
             <div style={font(400, 26)}>{a.confidence}%</div>
           </div>
           {settings.showExpectedReturn && a.er != null && (
             <div>
-              <div style={{ ...font(400, 13), color: FAINT, marginBottom: 9 }}>Expected over 3 months</div>
+              <div style={{ ...font(400, 13), color: FAINT, marginBottom: 9 }}>Rough 3-month expectation</div>
               <div style={{ ...font(400, 26), color: a.er > 0 ? GREEN : a.er < 0 ? RED : AMBER }}>{fmtPct(a.er, 0)}</div>
             </div>
           )}
@@ -113,6 +117,8 @@ function Overview({ a, settings, setSub }: { a: Analysis; settings: Settings; se
         </div>
         <div style={{ ...font(400, 19, 1.55), color: '#2c2f35', marginTop: 30, textWrap: 'pretty' }}>{a.headline}</div>
       </div>
+
+      <FullResearch run={run} loading={runLoading} sym={a.sym} onReadMemos={() => setSub('research')} />
 
       <div style={{ ...font(400, 22, 1.2), letterSpacing: '-.01em', margin: '44px 0 6px' }}>Why</div>
       {allReasons.map(r => (
@@ -253,11 +259,13 @@ function Risks({ a }: { a: Analysis }) {
   )
 }
 
-function ResearchTab({ a, openAdvanced }: { a: Analysis; openAdvanced: () => void }) {
+function ResearchTab({ a, run, runLoading, openAdvanced }: { a: Analysis; run: RunResult | null; runLoading: boolean; openAdvanced: () => void }) {
   return (
     <div style={{ animation: 'sIn .3s ease both', marginTop: 26 }}>
+      <ResearchCard run={run} loading={runLoading} sym={a.sym} />
+      <div style={{ ...font(400, 22, 1.2), letterSpacing: '-.01em', margin: '40px 0 14px' }}>Quick read checks</div>
       <div style={{ ...card, padding: '30px 30px' }}>
-        <div style={{ ...font(400, 24, 1.25), letterSpacing: '-.01em' }}>The work behind the answer</div>
+        <div style={{ ...font(400, 24, 1.25), letterSpacing: '-.01em' }}>The work behind the quick read</div>
         <div style={{ ...font(400, 16, 1.6), color: MUTED, marginTop: 12, maxWidth: 540, textWrap: 'pretty' }}>
           SIGNAL read the live price, the company's fundamentals, analyst ratings, its recent results and the news, then ran six independent checks and weighed them against each other. You don't need any of it. It's here if you want it.
         </div>

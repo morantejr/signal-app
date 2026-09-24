@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import uuid
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
@@ -15,6 +16,7 @@ from .agents.critic import critique
 from .agents.evidence import gather
 from .agents.memo import write_memo
 from .agents.synthesis import synthesise
+from .calibration import log_prediction
 from .config import Settings
 from .evidence.store import EvidenceStore
 from .llm.openrouter import OpenRouterClient
@@ -52,13 +54,13 @@ def run(
     # The quant result is a code artifact derived from listed sources; make it citable.
     bundle.sources.append(Source(source_id=f"quant:{quant.quant_version}", kind="derived", title=f"SIGNAL quant {quant.quant_version} (code, computed {quant.computed_at.isoformat()}) from {', '.join(quant.quant_inputs.source_ids)}", data={"quant_score": quant.quant_score, "quant_band": quant.quant_band, "components": [{"name": c.name, "value": c.value, "note": c.note} for c in quant.components]}))
 
-    with tracer.span("bull_memo", input={"model": settings.model_bull}) as sp:
-        bull = write_memo("bull", bundle, quant, client=client, model=settings.model_bull, thesis=thesis, horizon=horizon, tracer=tracer)
-        sp.set_output({"claims": len(bull.claims), "stub": bull.is_stub})
-
-    with tracer.span("bear_memo", input={"model": settings.model_bear}) as sp:
-        bear = write_memo("bear", bundle, quant, client=client, model=settings.model_bear, thesis=thesis, horizon=horizon, tracer=tracer)
-        sp.set_output({"claims": len(bear.claims), "stub": bear.is_stub})
+    # Bull and bear are independent first-class artifacts; build them in parallel.
+    with tracer.span("memos", input={"bull_model": settings.model_bull, "bear_model": settings.model_bear}) as sp:
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            fb = pool.submit(write_memo, "bull", bundle, quant, client=client, model=settings.model_bull, thesis=thesis, horizon=horizon, tracer=tracer)
+            fr = pool.submit(write_memo, "bear", bundle, quant, client=client, model=settings.model_bear, thesis=thesis, horizon=horizon, tracer=tracer)
+            bull, bear = fb.result(), fr.result()
+        sp.set_output({"bull_claims": len(bull.claims), "bear_claims": len(bear.claims), "stub": bull.is_stub or bear.is_stub})
 
     with tracer.span("synthesis", input={"model": settings.model_synthesis}) as sp:
         brief = synthesise(bundle, quant, bull, bear, client=client, model=settings.model_synthesis, thesis=thesis, horizon=horizon, tracer=tracer)
@@ -83,6 +85,7 @@ def run(
         models={"bull": bull.model or "stub", "bear": bear.model or "stub", "synthesis": brief.model or "stub", "quant": f"code:{quant.quant_version}"},
     )
     (tracer.dir / "result.json").write_text(json.dumps(result.model_dump(mode="json"), indent=2))
+    log_prediction(result, tracer.dir.parent / "predictions.jsonl")
     if store is not None:
         store.save_run(result)
     tracer.flush()
