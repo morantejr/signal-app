@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{{const n=new URLSearchParams(location.search).get("theme");if(n==="light"||n==="dark"){document.documentElement.dataset.theme=n}}{if(new URLSearchParams(location.search).get("_omthumb")==="1"){const n=(f)=>{const g=f.focus;if(!g)return;f.focus=function(h){g.call(this,{...h,preventScroll:true})}};n(HTMLElement.prototype);n(SVGElement.prototype);if(typeof MathMLElement!=="undefined"){n(MathMLElement.prototype)}const d=(f)=>{f.removeAttribute("autofocus");f.inert=true;if(!(f instanceof HTMLElement))f.removeAttribute("tabindex")};const p=(f)=>{if(f.hasAttribute("autofocus"))d(f);for(const g of f.querySelectorAll("[autofocus]")){d(g)}};p(document.documentElement);new MutationObserver((f)=>{for(const g of f){for(const h of g.addedNodes){if(h.nodeType===1)p(h)}}}).observe(document,{childList:true,subtree:true})}}{const n=()=>{try{if(document.querySelector('meta[name="color-scheme"]'))return;const d=getComputedStyle(document.documentElement).getPropertyValue("color-scheme").trim();if(d&&d!=="normal")return;const p=(y)=>{if(!y)return null;const m=getComputedStyle(y).backgroundColor.match(/^rgba?\(\s*(\d+)[,\s]+(\d+)[,\s]+(\d+)(?:[,\s/]+([\d.]+%?))?\s*\)$/);if(!m)return null;const w=m[4]==null?1:parseFloat(m[4])/(m[4].endsWith("%")?100:1);if(w<0.99)return null;return[+m[1],+m[2],+m[3]]};const f=p(document.body)||p(document.documentElement);if(!f)return;const g=(y)=>{const m=y/255;return m<=0.04045?m/12.92:((m+0.055)/1.055)**2.4};const h=0.2126*g(f[0])+0.7152*g(f[1])+0.0722*g(f[2]);document.documentElement.style.setProperty("color-scheme",h<0.4?"dark":"light")}catch{}};if(document.readyState==="complete")n();else window.addEventListener("load",n)}var I=[];var B=false;var K=false;var C=()=>{};if(K===true){try{const n=setTimeout.bind(window);const d=1e4;const p=15;const f=1e4;const g=120000;const h=200;const y=(o)=>{try{let r;if(typeof o==="string")r=o;else if(o instanceof URL)r=o.href;else if(typeof Request!=="undefined"&&o instanceof Request)r=o.url;else return null;if(!r)return null;const l=document.baseURI;const i=new URL(r,l);if(i.protocol!=="http:"&&i.protocol!=="https:")return null;if(i.origin!==new URL(l).origin)return null;return i.origin+i.pathname}catch{return null}};const m=new Map;const w=(o)=>{let r=m.get(o);if(!r){if(m.size>=h){const l=m.keys().next().value;if(l!==undefined)m.delete(l)}r={fails:[],until:0,cooldown:f,hard:false};m.set(o,r)}return r};const R=(o)=>{const r=m.get(o);return r!==undefined&&r.until>Date.now()};const O=(o,r)=>{const l=Date.now();const i=w(o);if(r)i.hard=true;if(i.until>l)return;i.fails.push(l);while(i.fails.length>0&&i.fails[0]<=l-d)i.fails.shift();if(i.fails.length>=p){i.until=l+i.cooldown;if(i.hard)i.cooldown=Math.min(i.cooldown*2,g);i.fails.length=0;try{n(()=>{try{S(true)}catch{}},i.until-l+100)}catch{}console.warn("[omelette] asset circuit breaker: pausing requests to "+o+" for "+Math.round((i.until-l)/1000)+"s after "+p+" failures in "+d/1000+"s")}};const e=(o)=>{m.delete(o)};const t=100;const a=new WeakMap;const u=new Set;let s=null;const S=(o)=>{for(const r of Array.from(u)){try{const l=a.get(r);if(l===undefined){u.delete(r);continue}if(o){const i=y(l);if(i!==null&&R(i))continue}a.delete(r);u.delete(r);if(s!==null)s.call(r,l)}catch{}}};C=()=>{try{m.clear();S(false)}catch{}};document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")C()});const _=window.fetch;if(typeof _==="function"){const o=function(...r){let l=null;try{l=y(r[0])}catch{}if(l!==null&&R(l)){let c;try{if(r[1]&&r[1].signal!==undefined){c=r[1].signal||undefined}else if(typeof Request!=="undefined"&&r[0]instanceof Request){c=r[0].signal||undefined}}catch{c=undefined}return new Promise((k,b)=>{const E=()=>{try{return c.reason!==undefined?c.reason:new DOMException("The operation was aborted.","AbortError")}catch{return new DOMException("The operation was aborted.","AbortError")}};try{if(c&&c.aborted){b(E());return}}catch{}let T=false;const j=()=>{if(T)return;T=true;b(E())};try{if(c)c.addEventListener("abort",j,{once:true})}catch{}n(()=>{if(T)return;T=true;try{if(c)c.removeEventListener("abort",j)}catch{}let L;try{L=new Response(null,{status:429,statusText:"Too Many Requests",headers:{"Retry-After":"10"}})}catch{L={ok:false,status:429}}k(L)},250)})}const i=_.apply(window,r);if(l!==null){const c=l;i.then((k)=>{try{if(k.ok)e(c);else if(k.status===401||k.status===403||k.status===404||k.status===429){O(c,k.status!==404)}}catch{}},()=>{})}return i};window.fetch=o}const v=Object.getOwnPropertyDescriptor(HTMLImageElement.prototype,"src");if(v!==undefined&&v.set!==undefined&&v.get!==undefined){const o=v.set;s=o;Object.defineProperty(HTMLImageElement.prototype,"src",{configurable:true,enumerable:v.enumerable,get:v.get,set(r){const l=`${r}`;try{const i=y(l);if(i!==null&&R(i)){a.set(this,l);if(u.size<t)u.add(this);return}}catch{}try{a.delete(this);u.delete(this)}catch{}o.call(this,l)}})}try{const o=HTMLImageElement.prototype.setAttribute;HTMLImageElement.prototype.setAttribute=function(r,l){if(arguments.length<2){o.apply(this,arguments);return}if(typeof r==="string"&&r.toLowerCase()==="src"){const i=`${l}`;try{const c=y(i);if(c!==null&&R(c)){a.set(this,i);if(u.size<t)u.add(this);return}a.delete(this);u.delete(this)}catch{}o.call(this,r,i);return}o.call(this,r,l)}}catch{}window.addEventListener("error",(o)=>{try{const r=o.target;if(r instanceof HTMLImageElement){const l=y(r.currentSrc||r.src||"");if(l!==null)O(l,true)}}catch{}},true);window.addEventListener("load",(o)=>{try{const r=o.target;if(r instanceof HTMLImageElement){const l=y(r.currentSrc||r.src||"");if(l!==null)e(l);const i=a.get(r);if(i!==undefined){let c=false;try{c=new URL(i,document.baseURI).href===new URL(r.currentSrc||r.src||"",document.baseURI).href}catch{c=false}if(c){a.delete(r);u.delete(r)}}}}catch{}},true)}catch{}}var J=30000;var G=3000;document.addEventListener("DOMContentLoaded",()=>{const n=window.Babel;const d="om-src-id";if(n&&n.registerPlugin&&!(n.availablePlugins&&n.availablePlugins[d])){n.registerPlugin(d,({types:h})=>({visitor:{JSXOpeningElement(y,m){const w=y.node;if(w.name&&w.name.type==="JSXMemberExpression")return;for(let t=0;t<w.attributes.length;t++){const a=w.attributes[t];if(a.type==="JSXAttribute"&&a.name&&a.name.name==="data-om-id")return}const R=m.file&&m.file.opts&&m.file.opts.filename||"?";const O=w.loc&&w.loc.start;const e=`jsx:${R}:${w.start??0}:${O?O.line:0}:${O?O.column+1:0}`;w.attributes.push(h.jsxAttribute(h.jsxIdentifier("data-om-id"),h.stringLiteral(e)))}}}))}const p="om-text-extract";let f=false;if(B&&n&&n.registerPlugin&&!(n.availablePlugins&&n.availablePlugins[p])){const h=window.React;if(h&&h.useSyncExternalStore&&h.createElement){f=true;const y={};const m=new Set;let w=0;window.__omTextO=y;window.__omTextSet=(e)=>{for(const t in e){const a=e[t];if(a==null)delete y[t];else y[t]=a}w++;m.forEach((t)=>t())};const R=(e)=>{m.add(e);return()=>m.delete(e)};const O=()=>w;window.__OmT=function e(t){h.useSyncExternalStore(R,O,O);return h.createElement("span",{"data-om-text":t.i,className:"__om-t"},t.i in y?y[t.i]:t.children)};n.registerPlugin(p,({types:e})=>{const t={style:1,script:1,noscript:1,textarea:1,title:1,option:1,text:1,tspan:1,textPath:1};const a={placeholder:1,alt:1,title:1,label:1,"aria-label":1,"aria-description":1,"aria-placeholder":1};const u=(o,r)=>e.logicalExpression("??",e.memberExpression(e.logicalExpression("||",e.memberExpression(e.identifier("window"),e.identifier("__omTextO")),e.objectExpression([])),e.stringLiteral(o),true),r);const s=(o)=>o.file&&o.file.opts&&o.file.opts.filename||"?";const S=(o)=>o.file&&o.file.code||"";const _=(o,r)=>{const l=(c)=>c&&c.start!=null&&c.end!=null&&(c.type==="StringLiteral"||c.type==="TemplateLiteral"&&c.expressions.length===0)?[c.start,c.end]:null;const i=l(r);if(i)return i;if(r&&r.type==="Identifier"){const c=o.scope.getBinding(r.name);if(c&&c.constant&&c.path.node.type==="VariableDeclarator"){return l(c.path.node.init)}}return null};const v=(o,r,l)=>{const i=o.node;let c=false;const k=(E,T)=>{c=true;return e.jsxElement(e.jsxOpeningElement(e.jsxIdentifier("__OmT"),[e.jsxAttribute(e.jsxIdentifier("i"),e.stringLiteral(E))],false),e.jsxClosingElement(e.jsxIdentifier("__OmT")),[T],false)};const b=i.children.map((E)=>{if(E.type==="JSXText"){if(E.start==null||E.end==null)return E;const T=l.slice(E.start,E.end);const j=T.length-T.trimStart().length;const L=T.length-T.trimEnd().length;if(j+L>=T.length)return E;return k(`txt:${r}:${E.start+j}:${E.end-L}`,E)}if(E.type==="JSXExpressionContainer"){const T=_(o,E.expression);if(T)return k(`str:${r}:${T[0]}:${T[1]}`,E)}return E});if(c)i.children=b};return{visitor:{JSXOpeningElement(o,r){const l=o.node;const i=s(r);const c={};for(let k=0;k<l.attributes.length;k++){const b=l.attributes[k];if(b.type!=="JSXAttribute"||!b.name)continue;const E=b.name.name;if(!a[E])continue;if(!b.value||b.value.type!=="StringLiteral")continue;if(b.value.start==null||b.value.end==null)continue;const T=`txt:${i}:${b.value.start}:${b.value.end}`;c[E]=T;b.value=e.jsxExpressionContainer(u(T,e.stringLiteral(b.value.value)))}if(Object.keys(c).length){l.attributes.push(e.jsxAttribute(e.jsxIdentifier("data-om-text-attrs"),e.stringLiteral(JSON.stringify(c))))}},JSXElement(o,r){const l=o.node.openingElement;const i=l&&l.name&&l.name.name;if(i==="__OmT")return;if(typeof i==="string"&&t[i])return;v(o,s(r),S(r))},JSXFragment(o,r){v(o,s(r),S(r))}}}})}}const g=f?["transform-react-jsx-source",d,p]:["transform-react-jsx-source",d];document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((h,y)=>{const m=h.getAttribute("data-plugins")||"";const w=g.filter((R)=>m.indexOf(R)<0);if(w.length){h.setAttribute("data-plugins",m?`${m},${w.join(",")}`:w.join(","))}if(!h.hasAttribute("data-filename")){h.setAttribute("data-filename",h.getAttribute("src")||`inline-${y}`)}})});var A=window.parent;var U="not editable here — open the project in the Claude Design editor to save";var W=()=>Promise.resolve({persisted:false,noHost:true,reason:U});var H=W;var M="data/storage.json";var z=()=>{try{const n=new URL(document.baseURI);const d=n.pathname.match(/\/projects\/([^/]+)\/serve\//);if(d)return d[1];return n.hostname.split(".")[0]||""}catch{return location.hostname.split(".")[0]||""}};var Z=()=>{try{const n=new URL(document.baseURI);const d=n.pathname.indexOf("/serve/");if(d>=0)return n.origin+n.pathname.slice(0,d+"/serve/".length)+M}catch{}return"./"+M};var x=null;var N=()=>{if(!x){x=fetch(Z(),{cache:"no-store"}).then((n)=>{if(n.ok)return n.text();return n.status===404?"":null}).catch(()=>null).then((n)=>{if(n===null){x=null;return null}const d=new Map;if(!n)return d;let p;try{p=JSON.parse(n)}catch{console.warn("[omelette.storage] "+M+" is not valid JSON; treating the store as unreadable so a save cannot overwrite the "+"hand-edited bytes. Fix the JSON (or delete the file) to re-enable persistence.");x=null;return null}if(p===null||typeof p!=="object"||Array.isArray(p)){console.warn("[omelette.storage] "+M+" doesn't hold a JSON object; treating the store as unreadable so a save cannot "+"overwrite the hand-edited bytes. Make the top level a JSON object to re-enable persistence.");x=null;return null}const f=p;if("data"in f){const g=f.data;if(g===null||typeof g!=="object"||Array.isArray(g)){console.warn("[omelette.storage] "+M+' has a "data" field that is not a JSON object; treating the store as unreadable so a '+'save cannot overwrite the hand-edited bytes. Make "data" a JSON object to re-enable persistence.');x=null;return null}const h=f._meta;const y=h!==null&&typeof h==="object"?h.project:undefined;if(typeof y==="string"&&y!==""&&y!==z())return d;for(const m of Object.keys(g))d.set(m,g[m]);return d}for(const g of Object.keys(f)){if(g!=="_meta")d.set(g,f[g])}return d})}return x};var F=(n)=>H(M,JSON.stringify({_meta:{project:z(),version:1},data:Object.fromEntries(n)},null,2));var D=Promise.resolve();var $=(n)=>{const d=D.then(n);D=d.then(()=>{return},()=>{return});return d};var V=/sk-(?:ant-)?[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{20,}|xox[a-z]-[A-Za-z0-9][A-Za-z0-9-]{9,}|AIza[0-9A-Za-z_-]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----/;var Y=/password|passwd|secret|api[_-]?key|access[_-]?token|auth[_-]?token|credential/i;var Q=(n,d,p)=>{if(V.test(d)||Y.test(n)&&typeof p==="string"&&p.length>=8){console.warn('[omelette.storage] the value for "'+n+'" looks like a credential. The storage file is a plaintext project file — visible to '+"everyone with project access and copied when the project is duplicated. Do not store secrets here.")}};var q={persisted:false,reason:"could not load the existing store — not overwriting it"};var X={persisted:false,reason:"stored value changed since a failed read — re-read this key before saving"};var P=new Set;var ee={get:(n)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.get: key must be a string"))}return $(N).then((d)=>{if(d===null){P.add(n);return null}P.delete(n);if(!d.has(n))return null;const p=d.get(n);return p==null?null:JSON.parse(JSON.stringify(p))})},set:(n,d)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.set: key must be a string"))}let p;try{p=JSON.stringify(d)}catch(g){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable ("+String(g)+")"))}if(p===undefined){return Promise.reject(new TypeError("storage.set: value must be JSON-serializable"))}Q(n,p,d);const f=JSON.parse(p);return $(()=>N().then((g)=>{if(g===null)return q;if(P.has(n)){if(g.has(n))return X;P.delete(n)}g.set(n,f);return F(g)}))},delete:(n)=>{if(typeof n!=="string"){return Promise.reject(new TypeError("storage.delete: key must be a string"))}return $(()=>N().then((d)=>{if(d===null)return q;if(P.has(n)){if(d.has(n))return X;P.delete(n)}d.delete(n);return F(d)}))},keys:()=>$(N).then((n)=>n===null?[]:Array.from(n.keys()))};window.omelette={writeFile:(n,d)=>H(n,d).then((p)=>{if(!p.persisted&&!p.noHost){throw new Error(p.reason||"write failed")}}),storage:ee};if(A&&A!==window){const n=(e,t)=>{try{A.postMessage({__omelette_log:true,type:e,data:t},"*")}catch{}};["log","warn","error"].forEach((e)=>{const t=console[e];console[e]=(...a)=>{const u=a.map((s)=>{try{return typeof s==="object"?JSON.stringify(s):String(s)}catch{try{return String(s)}catch{return"[unstringifiable]"}}}).join(" ");n(e,u);t.apply(console,a)}});window.addEventListener("error",(e)=>{const t=e.target;if(t&&t!==window&&t.tagName){const a=t.src||t.href||"";n("resource_error",`${t.tagName} failed to load: ${a}`)}else{n("error",`${e.message||"Unknown error"} at ${e.filename||"?"}:${e.lineno||0}:${e.colno||0}`)}},true);window.addEventListener("unhandledrejection",(e)=>{const t=e.reason;const a=t instanceof Error?`${t.message} ${t.stack}`:String(t);n("error",`Unhandled rejection: ${a}`)});window.addEventListener("click",(e)=>{if(e.defaultPrevented||e.button!==0)return;if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;const t=e.composedPath?e.composedPath():[];const a=["button","input","select","textarea","summary","label"];let u=null;for(const v of t){if(!(v instanceof Element))continue;if(v.localName==="a"){if(!(v instanceof HTMLAnchorElement))return;u=v;break}if(a.indexOf(v.localName)!==-1)return}if(!u)return;if(u.isContentEditable)return;const s=u.closest("[contenteditable]");if(s&&s.getAttribute("contenteditable")!=="false")return;const S=(u.getAttribute("target")||"_self").toLowerCase();if(S!=="_self"&&S!=="_top"&&S!=="_parent")return;let _;try{_=new URL(u.href)}catch{return}if(_.protocol!=="http:"&&_.protocol!=="https:")return;if(location.origin==="null")return;if(_.origin===location.origin)return;e.preventDefault();window.open(_.href,"_blank","noopener,noreferrer")});const d=()=>{try{A.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(window.ResizeObserver)new ResizeObserver(d).observe(document.documentElement);const p=()=>{d();if(!document.querySelector('script[type="text/babel"],script[type="text/jsx"]'))return;const e=()=>document.getElementById("root")||document.querySelector("body > div[id]");const t=e()?.firstElementChild??null;let a=0;const u=()=>{const s=e();if(s&&s.firstElementChild!==t||++a>30){d();return}setTimeout(u,100)};setTimeout(u,100)};if(document.readyState==="complete")p();else window.addEventListener("load",p);const f={};let g=0;const h=(e)=>new Promise((t,a)=>{if(!I.length){a(new Error("claude.complete: no parent origin"));return}const u=`c${++g}`;const s=()=>setTimeout(()=>{delete f[u];a(new Error(`claude.complete: no data for ${J/1000}s`))},J);const S=s();f[u]={resolve:t,reject:a,text:"",t:S,arm:s};try{for(const _ of I){A.postMessage({__om_api:true,id:u,body:e},_)}}catch(_){clearTimeout(S);delete f[u];a(_)}});const y=8;const m=async(e,t)=>{if(!Array.isArray(e.messages)){throw new Error("claude.complete: tools require a messages array")}const a=e.messages.slice();const u={...e,tools:e.tools.map((_)=>{if(_===null||typeof _!=="object")return _;const v={};for(const o of Object.keys(_)){if(typeof _[o]!=="function")v[o]=_[o]}return v})};const s=u.tool_choice;const S=s!=null&&(s.type==="any"||s.type==="tool")?{...u,tool_choice:s.disable_parallel_tool_use!==undefined?{type:"auto",disable_parallel_tool_use:s.disable_parallel_tool_use}:{type:"auto"}}:u;for(let _=0;_<y;_++){const v=await h({..._===0?u:S,messages:a});const o=v.message;const r=o&&Array.isArray(o.content)?o.content:null;const l=r?r.filter((c)=>c?.type==="tool_use"):[];if(o?.stop_reason!=="tool_use"||l.length===0){return v.text}const i=[];for(const c of l){const k=t.get(c.name);if(!k){i.push({type:"tool_result",tool_use_id:c.id,content:`no handler for tool "${c.name}"`,is_error:true});continue}try{const b=await k(c.input);const E=typeof b==="string"?b:O(b)??"";i.push({type:"tool_result",tool_use_id:c.id,content:E})}catch(b){i.push({type:"tool_result",tool_use_id:c.id,content:String(b?.message??b??"tool handler failed"),is_error:true})}}a.push({role:"assistant",content:r},{role:"user",content:i})}throw new Error(`claude.complete: exceeded ${y} tool turns`)};window.claude={complete(e){const t=e;if(t!==null&&typeof t==="object"&&Array.isArray(t.tools)&&t.tools.some((a)=>a!==null&&typeof a==="object"&&typeof a.run==="function")){const a=new Map;for(const u of t.tools){if(u!==null&&typeof u==="object"&&typeof u.run==="function"){a.set(String(u.name),u.run)}}return m(t,a)}return h(e).then((a)=>a.text)}};const w={};let R=0;H=(e,t)=>new Promise((a)=>{if(!I.length){a({persisted:false,noHost:true,reason:U});return}const u=`f${++R}`;const s=setTimeout(()=>{delete w[u];a({persisted:false,noHost:true,reason:U})},G);w[u]={settle:a,t:s};try{for(const S of I){A.postMessage({__om_file:true,id:u,op:"write",path:e,content:t},S)}}catch{clearTimeout(s);delete w[u];a({persisted:false,noHost:true,reason:U})}});const O=(e)=>{try{return JSON.stringify(e)}catch{return JSON.stringify(String(e))}};window.addEventListener("message",(e)=>{if(I.indexOf(e.origin)<0)return;if(e.source!==A)return;const t=e.data;if(!t)return;if(t.type==="omelette-preview-refresh"){if(typeof t.token!=="string"||!/^[0-9a-f.-]+(\.(rc|pr-[0-9]+))?(\.[0-9]+\.[0-9a-f]{16})?$/.test(t.token))return;const s=Math.max(1,Math.floor((t.expiresAt||0)-Date.now()/1000));document.cookie="__Host-omelette-preview="+t.token+"; Path=/; Secure; SameSite=None; Partitioned; Max-Age="+s;C();return}if(t.__om_file_r){const s=w[t.id];if(!s)return;clearTimeout(s.t);delete w[t.id];s.settle(t.ok?{persisted:true}:{persisted:false,reason:t.error||"write failed"});return}if(t.__om_api_r){const s=f[t.id];if(!s)return;if(t.error!=null){clearTimeout(s.t);delete f[t.id];s.reject(new Error(t.error));return}if(t.chunk!=null){clearTimeout(s.t);s.t=s.arm();s.text+=t.chunk;return}if(t.done){clearTimeout(s.t);delete f[t.id];s.resolve({text:t.text!=null?t.text:s.text,message:t.message});return}return}if(!t.__om_eval)return;const a=t;const u=(s)=>{e.source.postMessage({...s,__om_eval_r:1,id:a.id},e.origin)};try{const s=(0,eval)(a.code);if(s&&typeof s.then==="function"){s.then((S)=>u({ok:1,v:O(S)}),(S)=>u({ok:0,e:String(S)}))}else{u({ok:1,v:O(s)})}}catch(s){u({ok:0,e:String(s)})}})}})();
-</script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -38,8 +35,8 @@
     </div>
     <div style="flex:1;display:flex;align-items:center;gap:10px;max-width:720px;background:#111417;border:1px solid #222a30;border-radius:3px;padding:0 12px;height:32px" style-focus="border-color:#3c4a52">
       <span style="font:500 10px/1 'IBM Plex Mono',monospace;color:#63a8c9">?</span>
-      <input value="{{ q }}" onChange="{{ onQ }}" onKeyDown="{{ onQKey }}" placeholder="Ask a research question…" style="flex:1;background:transparent;border:0;outline:0;color:#e6e8ea;font:400 12px/1 'IBM Plex Sans',sans-serif" />
-      <button onClick="{{ run }}" style="background:#1a2226;border:1px solid #2c3740;color:#9fd0e4;font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:6px 9px;border-radius:2px;cursor:pointer" style-hover="background:#222d33;color:#cfe9f5">INVESTIGATE ?</button>
+      <input value="{{ q }}" onChange="{{ onQ }}" onKeyDown="{{ onQKey }}" placeholder="Ask a research question‚Ä¶" style="flex:1;background:transparent;border:0;outline:0;color:#e6e8ea;font:400 12px/1 'IBM Plex Sans',sans-serif" />
+      <button onClick="{{ run }}" style="background:#1a2226;border:1px solid #2c3740;color:#9fd0e4;font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:6px 9px;border-radius:2px;cursor:pointer" style-hover="background:#222d33;color:#cfe9f5">INVESTIGATE ‚èé</button>
     </div>
     <div style="display:flex;align-items:center;gap:16px;font:400 10px/1 'IBM Plex Mono',monospace;color:#5b636b">
       <sc-if value="{{ showAgentTrace }}" hint-placeholder-val="{{ true }}">
@@ -49,7 +46,7 @@
         </span>
       </sc-if>
       <span>ZETA 18.42 <span style="color:#4ec99a">+2.14%</span></span>
-      <span>13 AUG 2026 · 16:04 ET</span>
+      <span>13 AUG 2026 ¬∑ 16:04 ET</span>
     </div>
   </div>
 
@@ -98,7 +95,7 @@
             <div style="height:4px;background:#171b1f;border-radius:3px;margin-top:20px;overflow:hidden">
               <div style="{{ confBar }}"></div>
             </div>
-            <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#5b636b;margin-top:9px">Confidence is a function of evidence agreement (5 signals), data recency and model calibration — not of language fluency.</div>
+            <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#5b636b;margin-top:9px">Confidence is a function of evidence agreement (5 signals), data recency and model calibration ‚Äî not of language fluency.</div>
           </div>
 
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
@@ -125,7 +122,7 @@
               </sc-for>
             </div>
             <div style="display:flex;justify-content:space-between;font:400 10px/1 'IBM Plex Mono',monospace;color:#5b636b;margin-top:14px;border-top:1px solid #171b1f;padding-top:11px">
-              <span>DISPERSION ? 24.1</span><span>CONFLICT 1 OF 5</span>
+              <span>DISPERSION œÉ 24.1</span><span>CONFLICT 1 OF 5</span>
             </div>
           </div>
         </div>
@@ -134,7 +131,7 @@
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
             <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
               <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">INDEPENDENT SIGNAL CATEGORIES</span>
-              <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">?100 BEARISH · 0 NEUTRAL · +100 BULLISH</span>
+              <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">‚àí100 BEARISH ¬∑ 0 NEUTRAL ¬∑ +100 BULLISH</span>
             </div>
             <sc-for list="{{ signals }}" as="s" hint-placeholder-count="5">
               <div style="border-top:1px solid #171b1f">
@@ -160,7 +157,7 @@
                         </div>
                       </sc-for>
                     </div>
-                    <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#5b636b;margin-top:9px">{{ s.note }} · <a href="#" onClick="{{ s.openClaim }}">inspect evidence chain ?</a></div>
+                    <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#5b636b;margin-top:9px">{{ s.note }} ¬∑ <a href="#" onClick="{{ s.openClaim }}">inspect evidence chain ‚Üí</a></div>
                   </div>
                 </sc-if>
               </div>
@@ -168,7 +165,7 @@
           </div>
 
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
-            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:6px">CLAIM ? EVIDENCE ? SOURCE ? CONFIDENCE</div>
+            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:6px">CLAIM ‚Üí EVIDENCE ‚Üí SOURCE ‚Üí CONFIDENCE</div>
             <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin-bottom:14px">Select a claim to inspect what it rests on.</div>
             <sc-for list="{{ claims }}" as="c" hint-placeholder-count="4">
               <div onClick="{{ c.select }}" style="{{ c.style }}" style-hover="border-color:#2f3941">
@@ -202,7 +199,7 @@
       <div style="animation:sigIn .28s ease both">
         <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px">
           <div>
-            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:8px">AI RESEARCH AGENT · INVESTIGATION 4417</div>
+            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:8px">AI RESEARCH AGENT ¬∑ INVESTIGATION 4417</div>
             <div style="font:400 16px/1.3 'IBM Plex Sans',sans-serif;color:#d5dade">{{ q }}</div>
           </div>
           <div style="display:flex;align-items:center;gap:12px">
@@ -213,8 +210,8 @@
 
         <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px;margin-bottom:14px">
           <div style="display:flex;justify-content:space-between;margin-bottom:14px">
-            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">RESEARCH PLANNER · QUESTION DECOMPOSITION</span>
-            <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">10 SUB-QUESTIONS · 6 AGENTS · 41 SOURCES</span>
+            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">RESEARCH PLANNER ¬∑ QUESTION DECOMPOSITION</span>
+            <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">10 SUB-QUESTIONS ¬∑ 6 AGENTS ¬∑ 41 SOURCES</span>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:6px">
             <sc-for list="{{ plan }}" as="p" hint-placeholder-count="10">
@@ -247,7 +244,7 @@
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px">
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
-            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:14px">PREDICTION MARKET AGENT · TRANSLATED EXPOSURES</div>
+            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:14px">PREDICTION MARKET AGENT ¬∑ TRANSLATED EXPOSURES</div>
             <sc-for list="{{ pmarkets }}" as="m" hint-placeholder-count="4">
               <div style="display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid #171b1f">
                 <span style="width:52px;font:500 13px/1 'IBM Plex Mono',monospace;color:#e6e8ea">{{ m.p }}</span>
@@ -258,7 +255,7 @@
             <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin-top:12px">Market-implied probabilities are mapped to company-level effects through documented transmission channels, then weighted by channel strength.</div>
           </div>
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
-            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:14px">CRITIC / VERIFICATION AGENT · LOG</div>
+            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:14px">CRITIC / VERIFICATION AGENT ¬∑ LOG</div>
             <sc-for list="{{ critic }}" as="c" hint-placeholder-count="5">
               <div style="display:flex;gap:10px;padding:7px 0;border-top:1px solid #171b1f">
                 <span style="{{ c.tagStyle }}">{{ c.tag }}</span>
@@ -274,7 +271,7 @@
       <div style="animation:sigIn .28s ease both;display:grid;grid-template-columns:1fr 300px;gap:14px">
         <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
           <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">EVIDENCE GRAPH · COMPETING HYPOTHESES</span>
+            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">EVIDENCE GRAPH ¬∑ COMPETING HYPOTHESES</span>
             <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">CLICK A NODE TO TRACE ITS PATH</span>
           </div>
           <div style="overflow-x:auto;margin-top:10px"><div style="position:relative;height:540px;width:1160px;min-width:1160px">
@@ -314,7 +311,7 @@
           </div>
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
             <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:12px">UNRESOLVED TENSION</div>
-            <div style="font:400 11px/1.55 'IBM Plex Sans',sans-serif;color:#a8b0b7">Demand evidence and valuation evidence are both strong and point in opposite directions. The graph does not resolve this — it prices it: the bear branch carries 36% of total edge weight and caps stance confidence at {{ conf }}.</div>
+            <div style="font:400 11px/1.55 'IBM Plex Sans',sans-serif;color:#a8b0b7">Demand evidence and valuation evidence are both strong and point in opposite directions. The graph does not resolve this ‚Äî it prices it: the bear branch carries 36% of total edge weight and caps stance confidence at {{ conf }}.</div>
             <div style="display:flex;gap:1px;margin-top:14px;height:8px;border-radius:2px;overflow:hidden">
               <div style="flex:64;background:#4ec99a"></div>
               <div style="flex:36;background:#e0645c"></div>
@@ -337,7 +334,7 @@
             </div>
             <sc-for list="{{ bullArgs }}" as="a" hint-placeholder-count="5">
               <div style="display:flex;gap:11px;align-items:baseline;padding:9px 0;border-top:1px solid #171b1f">
-                <span style="font:400 9px/1.4 'IBM Plex Mono',monospace;color:#4ec99a">?</span>
+                <span style="font:400 9px/1.4 'IBM Plex Mono',monospace;color:#4ec99a">‚ñ≤</span>
                 <span style="flex:1;font:400 12px/1.4 'IBM Plex Sans',sans-serif;color:#c3c9ce">{{ a.t }}</span>
                 <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#5b636b">{{ a.w }}</span>
               </div>
@@ -354,23 +351,23 @@
             </div>
             <sc-for list="{{ bearArgs }}" as="a" hint-placeholder-count="5">
               <div style="display:flex;gap:11px;align-items:baseline;padding:9px 0;border-top:1px solid #171b1f">
-                <span style="font:400 9px/1.4 'IBM Plex Mono',monospace;color:#e0645c">?</span>
+                <span style="font:400 9px/1.4 'IBM Plex Mono',monospace;color:#e0645c">‚ñº</span>
                 <span style="flex:1;font:400 12px/1.4 'IBM Plex Sans',sans-serif;color:#c3c9ce">{{ a.t }}</span>
                 <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#5b636b">{{ a.w }}</span>
               </div>
             </sc-for>
             <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:18px;padding-top:14px;border-top:1px solid #34231f">
               <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">EXPECTED SCENARIO</span>
-              <span style="font:500 26px/1 'IBM Plex Mono',monospace;color:#e0645c">?21%</span>
+              <span style="font:500 26px/1 'IBM Plex Mono',monospace;color:#e0645c">‚àí21%</span>
             </div>
           </div>
         </div>
-        <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin:10px 0 14px">The system is required to construct the strongest available opposing case, sourced from the same evidence store — not a weakened straw man.</div>
+        <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin:10px 0 14px">The system is required to construct the strongest available opposing case, sourced from the same evidence store ‚Äî not a weakened straw man.</div>
 
         <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
           <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
-            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">SCENARIO ENGINE · 90 DAY</span>
-            <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">DRAG PROBABILITIES TO STRESS THE ENGINE · {{ normNote }}</span>
+            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">SCENARIO ENGINE ¬∑ 90 DAY</span>
+            <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">DRAG PROBABILITIES TO STRESS THE ENGINE ¬∑ {{ normNote }}</span>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr) 260px;gap:14px;align-items:stretch;margin-top:14px">
             <sc-for list="{{ scenarios }}" as="s" hint-placeholder-count="3">
@@ -400,7 +397,7 @@
                   <div style="{{ x.style }}"></div>
                 </sc-for>
               </div>
-              <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#5b636b;margin-top:12px">? {{ evVol }} · downside capture {{ evDown }} · skew {{ evSkew }}</div>
+              <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#5b636b;margin-top:12px">œÉ {{ evVol }} ¬∑ downside capture {{ evDown }} ¬∑ skew {{ evSkew }}</div>
             </div>
           </div>
         </div>
@@ -411,13 +408,13 @@
       <div style="animation:sigIn .28s ease both;display:grid;grid-template-columns:1fr 1fr;gap:14px">
         <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
           <div style="display:flex;justify-content:space-between;margin-bottom:16px">
-            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">PREDICTION ENGINE · GRADIENT-BOOSTED ENSEMBLE</span>
-            <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">NON-LLM · 9 FEATURE BLOCKS</span>
+            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">PREDICTION ENGINE ¬∑ GRADIENT-BOOSTED ENSEMBLE</span>
+            <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">NON-LLM ¬∑ 9 FEATURE BLOCKS</span>
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
             <sc-for list="{{ horizons }}" as="h" hint-placeholder-count="3">
               <div style="background:#0b0d0f;border:1px solid #1e2328;border-radius:3px;padding:14px">
-                <div style="font:400 9px/1 'IBM Plex Mono',monospace;color:#5b636b;margin-bottom:9px">P(HIGHER) · {{ h.label }}</div>
+                <div style="font:400 9px/1 'IBM Plex Mono',monospace;color:#5b636b;margin-bottom:9px">P(HIGHER) ¬∑ {{ h.label }}</div>
                 <div style="font:500 26px/1 'IBM Plex Mono',monospace;color:#e6e8ea">{{ h.p }}</div>
                 <div style="height:3px;background:#171b1f;border-radius:2px;margin-top:12px;overflow:hidden">
                   <div style="{{ h.bar }}"></div>
@@ -436,13 +433,13 @@
             </sc-for>
           </div>
           <div style="display:flex;justify-content:space-between;font:400 10px/1 'IBM Plex Mono',monospace;color:#5b636b;margin-top:14px;border-top:1px solid #171b1f;padding-top:12px">
-            <span>MEDIAN +9.4%</span><span>P5 ?24.1%</span><span>P95 +41.8%</span>
+            <span>MEDIAN +9.4%</span><span>P5 ‚àí24.1%</span><span>P95 +41.8%</span>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:14px">
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
-            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:6px">CALIBRATION · 5-YEAR OUT-OF-SAMPLE</div>
-            <div style="font:400 11px/1.5 'IBM Plex Sans',sans-serif;color:#a8b0b7;margin-bottom:14px">When the model predicted 60–70% probability, the event occurred 64% of the time.</div>
+            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:6px">CALIBRATION ¬∑ 5-YEAR OUT-OF-SAMPLE</div>
+            <div style="font:400 11px/1.5 'IBM Plex Sans',sans-serif;color:#a8b0b7;margin-bottom:14px">When the model predicted 60‚Äì70% probability, the event occurred 64% of the time.</div>
             <sc-for list="{{ calib }}" as="c" hint-placeholder-count="5">
               <div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid #171b1f">
                 <span style="width:74px;font:400 10px/1 'IBM Plex Mono',monospace;color:#8b949c">{{ c.band }}</span>
@@ -459,7 +456,7 @@
             </div>
           </div>
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
-            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:14px">FEATURE ATTRIBUTION · SHAP</div>
+            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:14px">FEATURE ATTRIBUTION ¬∑ SHAP</div>
             <sc-for list="{{ shap }}" as="f" hint-placeholder-count="9">
               <div style="display:flex;align-items:center;gap:10px;padding:5px 0">
                 <span style="width:132px;font:400 10px/1 'IBM Plex Mono',monospace;color:#8b949c">{{ f.k }}</span>
@@ -479,8 +476,8 @@
     <sc-if value="{{ isAnalogy }}" hint-placeholder-val="{{ false }}">
       <div style="animation:sigIn .28s ease both">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
-          <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">HISTORICAL ANALOGY ENGINE · 61 REGIMES MATCHED ON 14 STATE VARIABLES</span>
-          <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#d9a53f">ANALOGIES — NOT PREDICTIONS</span>
+          <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">HISTORICAL ANALOGY ENGINE ¬∑ 61 REGIMES MATCHED ON 14 STATE VARIABLES</span>
+          <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#d9a53f">ANALOGIES ‚Äî NOT PREDICTIONS</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
           <sc-for list="{{ analogies }}" as="a" hint-placeholder-count="3">
@@ -526,8 +523,8 @@
     <sc-if value="{{ isCommittee }}" hint-placeholder-val="{{ false }}">
       <div style="animation:sigIn .28s ease both">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
-          <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">INVESTMENT COMMITTEE · INDEPENDENT EVALUATIONS, NO SHARED CONTEXT</span>
-          <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#d9a53f">DISAGREEMENT INDEX 0.41 — HIGH</span>
+          <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">INVESTMENT COMMITTEE ¬∑ INDEPENDENT EVALUATIONS, NO SHARED CONTEXT</span>
+          <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#d9a53f">DISAGREEMENT INDEX 0.41 ‚Äî HIGH</span>
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
           <sc-for list="{{ committee }}" as="m" hint-placeholder-count="3">
@@ -545,14 +542,14 @@
               </div>
               <div style="margin-top:16px">
                 <sc-for list="{{ m.args }}" as="a" hint-placeholder-count="3">
-                  <div style="font:400 11px/1.55 'IBM Plex Sans',sans-serif;color:#a8b0b7;padding:4px 0">— {{ a }}</div>
+                  <div style="font:400 11px/1.55 'IBM Plex Sans',sans-serif;color:#a8b0b7;padding:4px 0">‚Äî {{ a }}</div>
                 </sc-for>
               </div>
               <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
                 <div style="margin-top:14px;padding-top:12px;border-top:1px solid #1e2328;animation:sigIn .2s ease both">
                   <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#5b636b;margin-bottom:8px">DISSENT FROM COMMITTEE</div>
                   <div style="font:400 11px/1.55 'IBM Plex Sans',sans-serif;color:#c3c9ce">{{ m.dissent }}</div>
-                  <div style="font:400 9px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin-top:10px">WEIGHT IN SYNTHESIS {{ m.weight }} · EVIDENCE OVERLAP {{ m.overlap }}</div>
+                  <div style="font:400 9px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin-top:10px">WEIGHT IN SYNTHESIS {{ m.weight }} ¬∑ EVIDENCE OVERLAP {{ m.overlap }}</div>
                 </div>
               </sc-if>
             </div>
@@ -560,7 +557,7 @@
         </div>
         <div style="background:#0e1012;border:1px solid #232c33;border-radius:4px;padding:18px 20px;margin-top:14px">
           <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">PORTFOLIO MANAGER AGENT · FINAL SYNTHESIS</span>
+            <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">PORTFOLIO MANAGER AGENT ¬∑ FINAL SYNTHESIS</span>
             <button onClick="{{ togglePM }}" style="background:#1a2226;border:1px solid #2c3740;color:#9fd0e4;font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:8px 11px;border-radius:2px;cursor:pointer" style-hover="background:#222d33">{{ pmLabel }}</button>
           </div>
           <sc-if value="{{ pmOpen }}" hint-placeholder-val="{{ true }}">
@@ -590,7 +587,7 @@
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
             <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px">
               <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">WHAT WOULD CHANGE MY MIND?</span>
-              <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">THESIS: <span style="color:#4ec99a">BULLISH</span> · 5 FALSIFICATION TRIGGERS ARMED</span>
+              <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">THESIS: <span style="color:#4ec99a">BULLISH</span> ¬∑ 5 FALSIFICATION TRIGGERS ARMED</span>
             </div>
             <div style="font:400 11px/1.55 'IBM Plex Sans',sans-serif;color:#a8b0b7;margin:10px 0 6px">Each trigger is a measurable threshold monitored continuously. If breached, the stance is re-derived automatically and the breach is logged against the original claim.</div>
             <sc-for list="{{ triggers }}" as="t" hint-placeholder-count="5">
@@ -646,7 +643,7 @@
         <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:14px">
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
             <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
-              <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">PORTFOLIO · 5 POSITIONS · $2.41M</span>
+              <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">PORTFOLIO ¬∑ 5 POSITIONS ¬∑ $2.41M</span>
               <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">90-DAY LOOKTHROUGH</span>
             </div>
             <div style="display:flex;gap:14px;padding:0 0 11px;font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#454d54;border-bottom:1px solid #1e2328">
@@ -662,7 +659,7 @@
                 <span style="flex:1;font:400 10px/1 'IBM Plex Mono',monospace;color:#8b949c">{{ p.factor }}</span>
               </div>
             </sc-for>
-            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin:22px 0 12px">CORRELATION MATRIX · 90D</div>
+            <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin:22px 0 12px">CORRELATION MATRIX ¬∑ 90D</div>
             <div style="display:grid;grid-template-columns:44px repeat(5,1fr);gap:2px">
               <span></span>
               <sc-for list="{{ symbols }}" as="s" hint-placeholder-count="5">
@@ -693,10 +690,10 @@
                 <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">HIDDEN RISK QUERY</span>
                 <button onClick="{{ askRisk }}" style="background:#1a2226;border:1px solid #2c3740;color:#9fd0e4;font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:8px 11px;border-radius:2px;cursor:pointer" style-hover="background:#222d33">{{ riskLabel }}</button>
               </div>
-              <div style="font:400 12px/1.4 'IBM Plex Sans',sans-serif;color:#d5dade">“What hidden risks exist in my portfolio?”</div>
+              <div style="font:400 12px/1.4 'IBM Plex Sans',sans-serif;color:#d5dade">‚ÄúWhat hidden risks exist in my portfolio?‚Äù</div>
               <sc-if value="{{ riskOpen }}" hint-placeholder-val="{{ true }}">
                 <div style="margin-top:16px;animation:sigIn .24s ease both">
-                  <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#5b636b;margin-bottom:8px">DETECTED · SINGLE LATENT EXPOSURE</div>
+                  <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#5b636b;margin-bottom:8px">DETECTED ¬∑ SINGLE LATENT EXPOSURE</div>
                   <div style="font:600 17px/1.25 'IBM Plex Sans',sans-serif;color:#d9a53f;margin-bottom:12px">AI-driven digital advertising spend</div>
                   <div style="font:400 11px/1.6 'IBM Plex Sans',sans-serif;color:#a8b0b7">Four of five positions load on the same driver. ZETA monetises AI-driven marketing spend, MSFT and META own the platforms and budgets it depends on, and SPY carries 34% index weight in the same complex. BTC adds liquidity beta that co-moves with the same risk appetite. Nominal diversification across 5 tickers; effective diversification of roughly 1.8 independent bets.</div>
                   <div style="display:flex;align-items:center;gap:10px;margin-top:14px">
@@ -716,7 +713,7 @@
     <sc-if value="{{ isBacktest }}" hint-placeholder-val="{{ false }}">
       <div style="animation:sigIn .28s ease both">
         <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px;margin-bottom:14px">
-          <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:12px">BACKTESTING LAB · NATURAL-LANGUAGE HYPOTHESIS</div>
+          <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin-bottom:12px">BACKTESTING LAB ¬∑ NATURAL-LANGUAGE HYPOTHESIS</div>
           <div style="display:flex;gap:12px;align-items:stretch">
             <textarea value="{{ btQuery }}" onChange="{{ onBt }}" style="flex:1;min-height:62px;resize:vertical;background:#0b0d0f;border:1px solid #222a30;border-radius:3px;color:#d5dade;font:400 12px/1.55 'IBM Plex Sans',sans-serif;padding:11px 13px;outline:0"></textarea>
             <button onClick="{{ runBt }}" style="background:#1a2226;border:1px solid #2c3740;color:#9fd0e4;font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;padding:0 16px;border-radius:2px;cursor:pointer;white-space:nowrap" style-hover="background:#222d33">{{ btLabel }}</button>
@@ -735,7 +732,7 @@
           <div style="display:flex;flex-direction:column;gap:14px">
             <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
               <div style="display:flex;justify-content:space-between;margin-bottom:14px">
-                <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">RESULTS · 2009–2026 · OUT-OF-SAMPLE FROM 2019</span>
+                <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">RESULTS ¬∑ 2009‚Äì2026 ¬∑ OUT-OF-SAMPLE FROM 2019</span>
                 <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">{{ btStatus }}</span>
               </div>
               <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:#171b1f;border:1px solid #171b1f;border-radius:3px;overflow:hidden">
@@ -757,7 +754,7 @@
               </div>
             </div>
             <div style="background:#0e1012;border:1px solid #34291f;border-radius:4px;padding:18px 20px">
-              <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#d9a53f;margin-bottom:12px">BIAS AUDIT · READ BEFORE TRUSTING THESE NUMBERS</div>
+              <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#d9a53f;margin-bottom:12px">BIAS AUDIT ¬∑ READ BEFORE TRUSTING THESE NUMBERS</div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
                 <sc-for list="{{ btBias }}" as="b" hint-placeholder-count="4">
                   <div style="display:flex;gap:9px;align-items:baseline">
@@ -775,7 +772,7 @@
     <sc-if value="{{ isArch }}" hint-placeholder-val="{{ false }}">
       <div style="animation:sigIn .28s ease both">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
-          <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">AGENT ARCHITECTURE · RUNTIME TOPOLOGY</span>
+          <span style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b">AGENT ARCHITECTURE ¬∑ RUNTIME TOPOLOGY</span>
           <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#454d54">EVERY CONCLUSION IS TRACEABLE TO A SOURCE ROW IN THE EVIDENCE STORE</span>
         </div>
         <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:26px 20px">
@@ -884,8 +881,8 @@ class Component extends DCLogic {
     }));
 
     const traces = [
-      'news agent · 14 filings parsed', 'critic agent · 2 claims flagged', 'market agent · vol surface refreshed',
-      'macro agent · CPI print ingested', 'prediction market agent · 6 markets mapped'
+      'news agent ¬∑ 14 filings parsed', 'critic agent ¬∑ 2 claims flagged', 'market agent ¬∑ vol surface refreshed',
+      'macro agent ¬∑ CPI print ingested', 'prediction market agent ¬∑ 6 markets mapped'
     ];
 
     const bar = (score, color) => {
@@ -898,24 +895,24 @@ class Component extends DCLogic {
       { k: 'fundamental', name: 'Fundamental', score: 78, note: 'Revenue and margin trajectory exceed consensus on 6 of 7 inputs',
         inputs: [['Revenue growth YoY', '+38.4%', '+94'], ['EPS vs consensus', '+8.4%', '+81'], ['Gross margin', '62.4%', '+76'], ['Free cash flow TTM', '$118M', '+88'], ['Fwd guidance delta', '+5.1%', '+70'], ['Est. revisions 90d', '+11 up / 2 dn', '+72']] },
       { k: 'market', name: 'Market Structure', score: 55, note: 'Trend intact, but breadth of participation narrowing',
-        inputs: [['3M momentum', '+14.8%', '+68'], ['Realized vol 30d', '41.2%', '?22'], ['Price vs 200DMA', '+18.4%', '+74'], ['Max drawdown 90d', '?12.1%', '+40'], ['Rel. strength vs IGV', '+6.2%', '+61'], ['Options skew 25?', '?3.1 vol', '+34']] },
+        inputs: [['3M momentum', '+14.8%', '+68'], ['Realized vol 30d', '41.2%', '‚àí22'], ['Price vs 200DMA', '+18.4%', '+74'], ['Max drawdown 90d', '‚àí12.1%', '+40'], ['Rel. strength vs IGV', '+6.2%', '+61'], ['Options skew 25Œî', '‚àí3.1 vol', '+34']] },
       { k: 'macro', name: 'Macro', score: 12, note: 'Rate path and liquidity roughly neutral; dollar a mild headwind',
-        inputs: [['Real 10Y yield', '1.84%', '?18'], ['CPI core YoY', '2.6%', '+22'], ['Net liquidity 13w', '+$118B', '+38'], ['DXY 3M', '+2.1%', '?26'], ['ISM new orders', '51.4', '+14'], ['Ad sector cond.', 'Expanding', '+31']] },
-      { k: 'sentiment', name: 'Sentiment', score: 67, note: 'Positive but crowded — sentiment is a contrarian risk at this level',
-        inputs: [['News tone 30d', '+0.62', '+71'], ['Earnings call tone', '+0.48', '+64'], ['Analyst language shift', 'Hawkish?Bullish', '+69'], ['Retail flow', '+2.4?', '+58'], ['Short interest', '1.1% float', '+66'], ['Positioning percentile', '88th', '?31']] },
+        inputs: [['Real 10Y yield', '1.84%', '‚àí18'], ['CPI core YoY', '2.6%', '+22'], ['Net liquidity 13w', '+$118B', '+38'], ['DXY 3M', '+2.1%', '‚àí26'], ['ISM new orders', '51.4', '+14'], ['Ad sector cond.', 'Expanding', '+31']] },
+      { k: 'sentiment', name: 'Sentiment', score: 67, note: 'Positive but crowded ‚Äî sentiment is a contrarian risk at this level',
+        inputs: [['News tone 30d', '+0.62', '+71'], ['Earnings call tone', '+0.48', '+64'], ['Analyst language shift', 'Hawkish‚ÜíBullish', '+69'], ['Retail flow', '+2.4œÉ', '+58'], ['Short interest', '1.1% float', '+66'], ['Positioning percentile', '88th', '‚àí31']] },
       { k: 'alt', name: 'Alternative Data', score: 46, note: 'Physical supply-chain and hiring data corroborate demand claims',
         inputs: [['Ad impression ledger', '+24% QoQ', '+62'], ['Retail-media integrations', '+31 partners', '+58'], ['Hiring reqs (AI / ML)', '+180', '+44'], ['App SDK telemetry', '+7%', '+31'], ['Web traffic (product docs)', '+22%', '+40'], ['Agency RFP wins', '4 new', '+49']] }
     ];
 
     const signals = sigs.map(s => ({
-      name: s.name + ' Signal', open: D.openSignal === s.k, note: s.note, caret: D.openSignal === s.k ? '? CLOSE' : '? INPUTS',
+      name: s.name + ' Signal', open: D.openSignal === s.k, note: s.note, caret: D.openSignal === s.k ? '‚ñ≤ CLOSE' : '‚ñº INPUTS',
       toggle: () => this.setState(st => ({ openSignal: st.openSignal === s.k ? null : s.k })),
       openClaim: (e) => { e.preventDefault(); this.setState({ view: 'graph' }); },
       rowStyle: `display:flex;align-items:center;gap:14px;padding:${dense ? '9px 6px' : '14px 6px'};cursor:pointer;border-radius:3px`,
       bar: bar(s.score, s.score > 40 ? BULL : s.score > 0 ? AMBER : BEAR),
       scoreLabel: (s.score > 0 ? '+' : '') + s.score,
       scoreStyle: `width:52px;text-align:right;font:500 14px/1 ${MONO};color:${s.score > 40 ? BULL : s.score > 0 ? AMBER : BEAR}`,
-      inputs: s.inputs.map(([l, v, sc]) => ({ l, v, s: sc, sStyle: `font:400 9px/1 ${MONO};color:${sc.startsWith('?') ? BEAR : BULL}` }))
+      inputs: s.inputs.map(([l, v, sc]) => ({ l, v, s: sc, sStyle: `font:400 9px/1 ${MONO};color:${sc.startsWith('‚àí') ? BEAR : BULL}` }))
     }));
 
     const agree = sigs.map(s => ({
@@ -926,16 +923,16 @@ class Component extends DCLogic {
     const claimData = [
       { claim: 'Enterprise AI marketing spend remains structurally strong.', conf: 87,
         evidence: 'The three largest digital ad platforms each guided ad revenue higher in their most recent filings, with combined guidance up 19% YoY. Two independently corroborated by agency booking data.',
-        sources: ['10-Q · META Q2', '10-Q · GOOGL Q2', 'Earnings call · AMZN', 'IAB quarterly spend'], stamp: '4 SOURCES · 2 INDEPENDENT' },
+        sources: ['10-Q ¬∑ META Q2', '10-Q ¬∑ GOOGL Q2', 'Earnings call ¬∑ AMZN', 'IAB quarterly spend'], stamp: '4 SOURCES ¬∑ 2 INDEPENDENT' },
       { claim: 'Direct-platform revenue growth exceeds consensus.', conf: 81,
         evidence: 'Reported segment revenue beat the sell-side mean by 8.4%, the fifth consecutive beat. Dispersion of estimates narrowing, which historically precedes smaller beats.',
-        sources: ['Company report', 'Consensus panel (34 est.)', 'Segment history 20q'], stamp: '3 SOURCES · 1 CAVEAT' },
+        sources: ['Company report', 'Consensus panel (34 est.)', 'Segment history 20q'], stamp: '3 SOURCES ¬∑ 1 CAVEAT' },
       { claim: 'Valuation is historically elevated versus its own history.', conf: 91,
         evidence: 'Forward P/E sits in the 88th percentile of the last ten years; EV/S in the 93rd. Multiple has expanded faster than forward estimates in 3 of the last 4 quarters.',
-        sources: ['Percentile study 10y', 'Estimate revisions series'], stamp: '2 SOURCES · HIGH AGREEMENT' },
+        sources: ['Percentile study 10y', 'Estimate revisions series'], stamp: '2 SOURCES ¬∑ HIGH AGREEMENT' },
       { claim: 'Sentiment is a contrarian risk, not a support.', conf: 58,
-        evidence: 'Positioning sits at the 88th percentile while news tone is at +0.62. Historically, this combination has preceded below-median 90-day returns — but the relationship is weak (R? 0.14).',
-        sources: ['Positioning survey', 'News tone series', 'Conditional return study'], stamp: '3 SOURCES · LOW CONFIDENCE FLAGGED' }
+        evidence: 'Positioning sits at the 88th percentile while news tone is at +0.62. Historically, this combination has preceded below-median 90-day returns ‚Äî but the relationship is weak (R¬≤ 0.14).',
+        sources: ['Positioning survey', 'News tone series', 'Conditional return study'], stamp: '3 SOURCES ¬∑ LOW CONFIDENCE FLAGGED' }
     ];
     const claims = claimData.map((c, i) => ({
       ...c, open: D.claim === i, select: () => this.setState(s => ({ claim: s.claim === i ? null : i })),
@@ -946,9 +943,9 @@ class Component extends DCLogic {
 
     const synth = [
       ['5 evidence streams', 'independent', '41 sources'], ['Quant model', 'non-LLM ensemble', 'P 68%'],
-      ['LLM reasoning layer', 'structures, never scores', '—'], ['Critic + committee', '3 dissents logged', 'conf 72%']
+      ['LLM reasoning layer', 'structures, never scores', '‚Äî'], ['Critic + committee', '3 dissents logged', 'conf 72%']
     ].map(([label, meta, m2], i) => ({
-      label, meta: m2 === '—' ? meta : meta + ' · ' + m2, n: String(i + 1),
+      label, meta: m2 === '‚Äî' ? meta : meta + ' ¬∑ ' + m2, n: String(i + 1),
       chip: `width:20px;height:20px;border-radius:2px;border:1px solid #232c33;color:#8b949c;font:500 9px/20px ${MONO};text-align:center`
     }));
 
@@ -964,14 +961,14 @@ class Component extends DCLogic {
       const done = stage >= i + 2, active = stage === i + 1;
       const p = done ? 100 : active ? 46 : 0;
       return {
-        name, finding: done ? finding : active ? 'streaming…' : 'awaiting planner dispatch',
-        status: done ? 'COMPLETE · ' + tasks.length + ' PROBES' : active ? 'RUNNING' : 'QUEUED',
+        name, finding: done ? finding : active ? 'streaming‚Ä¶' : 'awaiting planner dispatch',
+        status: done ? 'COMPLETE ¬∑ ' + tasks.length + ' PROBES' : active ? 'RUNNING' : 'QUEUED',
         card: `background:#0e1012;border:1px solid ${active ? '#2c3740' : '#1e2328'};border-radius:4px;padding:16px 16px;transition:border-color .3s`,
         dot: `width:6px;height:6px;border-radius:50%;background:${done ? BULL : active ? CY : '#2a3138'};${active ? 'animation:sigPulse 1.2s infinite' : ''}`,
         prog: `width:${p}%;height:100%;background:${done ? BULL : CY};transition:width .5s`,
         tasks: tasks.map((t, j) => {
           const tDone = done || (active && j < 3);
-          return { label: t, glyph: tDone ? '?' : '·', mark: `font:400 9px/1.4 ${MONO};color:${tDone ? BULL : '#3f474d'};width:8px`, text: `font:400 10px/1.4 ${MONO};color:${tDone ? '#a8b0b7' : '#454d54'}` };
+          return { label: t, glyph: tDone ? '‚úì' : '¬∑', mark: `font:400 9px/1.4 ${MONO};color:${tDone ? BULL : '#3f474d'};width:8px`, text: `font:400 10px/1.4 ${MONO};color:${tDone ? '#a8b0b7' : '#454d54'}` };
         })
       };
     });
@@ -983,16 +980,16 @@ class Component extends DCLogic {
 
     const pmarkets = [
       ['71%', 'Fed cuts at least 50bp by Q1 2027', '+ multiple support', 1],
-      ['34%', 'US federal privacy legislation enacted before 2028', '? 6 to 10% of addressable data', 0],
+      ['34%', 'US federal privacy legislation enacted before 2028', '‚àí 6 to 10% of addressable data', 0],
       ['58%', 'US core CPI below 2.5% in Q4', '+ discount-rate tailwind', 1],
-      ['22%', 'US ad spend growth below 3% in 2027', '? direct demand hit', 0]
+      ['22%', 'US ad spend growth below 3% in 2027', '‚àí direct demand hit', 0]
     ].map(([p, market, eff, good]) => ({ p, market, eff, effStyle: `width:190px;text-align:right;font:400 10px/1.3 ${MONO};color:${good ? BULL : BEAR}` }));
 
     const critic = [
-      ['FLAG', 'Sentiment claim rests on a weak historical relationship (R? 0.14) — confidence capped at 58%.'],
+      ['FLAG', 'Sentiment claim rests on a weak historical relationship (R¬≤ 0.14) ‚Äî confidence capped at 58%.'],
       ['CUT', 'Discarded 3 sources citing the same wire story; kept the primary filing.'],
       ['PASS', 'Ad-platform spend claim verified against two independent booking datasets.'],
-      ['FLAG', 'Analogy to The Trade Desk 2021 differs materially on current earnings base — labelled non-predictive.'],
+      ['FLAG', 'Analogy to The Trade Desk 2021 differs materially on current earnings base ‚Äî labelled non-predictive.'],
       ['PASS', 'No look-ahead detected in the momentum feature window.']
     ].map(([tag, text]) => ({ tag, text, tagStyle: `width:38px;font:500 9px/1.5 ${MONO};color:${tag === 'FLAG' ? AMBER : tag === 'CUT' ? BEAR : BULL}` }));
 
@@ -1000,7 +997,7 @@ class Component extends DCLogic {
       ['n1', 'Enterprise AI marketing spend accelerating', 20, 30, 'EVIDENCE', '0.91', 'platform filings'],
       ['n2', 'Direct-platform revenue growth', 320, 30, 'EVIDENCE', '0.84', 'segment report'],
       ['n3', 'Revenue above consensus', 620, 30, 'EVIDENCE', '0.81', 'consensus panel'],
-      ['n4', 'Agency budgets shifting to AI platforms', 20, 148, 'EVIDENCE', '0.87', '10-Q ?3'],
+      ['n4', 'Agency budgets shifting to AI platforms', 20, 148, 'EVIDENCE', '0.87', '10-Q √ó3'],
       ['nb', 'BULLISH ZETA', 900, 88, 'HYPOTHESIS', '0.64', 'edge weight'],
       ['n5', 'Valuation historically elevated', 20, 300, 'EVIDENCE', '0.91', 'percentile study'],
       ['n6', 'Multiple compression risk', 320, 300, 'INFERENCE', '0.72', 'regression'],
@@ -1042,7 +1039,7 @@ class Component extends DCLogic {
     const selNode = nodeDefs.find(d => d[0] === D.node) || nodeDefs[0];
     const selNotes = {
       n1: 'Strongest node in the graph. Also the node that most weakens the bear branch, which is why it carries a dashed inhibiting edge to BEARISH.',
-      nb: 'Hypothesis node. Its weight is the sum of supporting edge weights minus inhibiting edges — not a model opinion.',
+      nb: 'Hypothesis node. Its weight is the sum of supporting edge weights minus inhibiting edges ‚Äî not a model opinion.',
       nr: 'Hypothesis node held deliberately alive at 36%. The system does not collapse to a single answer while opposing evidence is this strong.',
       n5: 'Highest-confidence evidence node in the graph, and it argues against the prevailing stance.'
     };
@@ -1079,7 +1076,7 @@ class Component extends DCLogic {
     const triggers = trigDefs.map(([label, threshold, current, headroom, detail], i) => {
       const br = !!D.breached[i];
       return {
-        label, threshold, current, detail, state: br ? 'BREACHED' : 'CLEAR · ' + Math.round(headroom * 100) + '% HEADROOM',
+        label, threshold, current, detail, state: br ? 'BREACHED' : 'CLEAR ¬∑ ' + Math.round(headroom * 100) + '% HEADROOM',
         toggle: () => this.setState(s => ({ breached: { ...s.breached, [i]: !s.breached[i] } })),
         row: `padding:${dense ? '10px 8px' : '15px 8px'};border-top:1px solid #171b1f;cursor:pointer;border-radius:3px;background:${br ? '#140f0f' : 'transparent'}`,
         stateStyle: `font:500 9px/1 ${MONO};letter-spacing:.1em;color:${br ? BEAR : BULL};white-space:nowrap`,
@@ -1092,8 +1089,8 @@ class Component extends DCLogic {
     const fs = stances[Math.min(nBreach, 5)];
 
     const positions = [
-      ['ZETA', 32, '+10.4%', '46%', '1.74', 'AI ad spend · adtech'],
-      ['MSFT', 24, '+7.1%', '24%', '0.98', 'AI platform · software'],
+      ['ZETA', 32, '+10.4%', '46%', '1.74', 'AI ad spend ¬∑ adtech'],
+      ['MSFT', 24, '+7.1%', '24%', '0.98', 'AI platform ¬∑ software'],
       ['META', 16, '+8.8%', '33%', '1.21', 'AI ad platform'],
       ['BTC', 12, '+12.6%', '58%', '1.42', 'Liquidity beta'],
       ['SPY', 16, '+5.2%', '15%', '1.00', 'Broad equity (34% tech)']
@@ -1114,7 +1111,7 @@ class Component extends DCLogic {
     const pStats = [
       ['EXPECTED RETURN 90D', '+8.6%', BULL], ['PORTFOLIO VOL', '31.4%', '#e6e8ea'],
       ['EFFECTIVE BETS', '1.8', AMBER], ['CONCENTRATION HHI', '0.24', AMBER],
-      ['SCENARIO RISK (BEAR)', '?28.1%', BEAR], ['FACTOR: AI AD SPEND', '71% of var', AMBER]
+      ['SCENARIO RISK (BEAR)', '‚àí28.1%', BEAR], ['FACTOR: AI AD SPEND', '71% of var', AMBER]
     ].map(([k, v, c]) => ({ k, v, vStyle: `font:500 15px/1 ${MONO};color:${c}` }));
 
     const btRules = [
@@ -1125,38 +1122,38 @@ class Component extends DCLogic {
       ['COSTS', '9bp commission + modelled slippage (5% ADV participation)'],
       ['DATA VINTAGE', 'As-reported estimates with revision timestamps; no restated fundamentals']
     ].map(([k, v]) => ({ k, v }));
-    const btMetrics = [['CAGR', '19.4%', BULL, 'OOS 13.1%'], ['SHARPE', '1.12', '#e6e8ea', 'OOS 0.79'], ['MAX DRAWDOWN', '?31.2%', BEAR, 'OOS ?28.4%'], ['WIN RATE', '57%', '#e6e8ea', 'OOS 54%'], ['TURNOVER', '240%', '#e6e8ea', 'ANNUALISED']]
+    const btMetrics = [['CAGR', '19.4%', BULL, 'OOS 13.1%'], ['SHARPE', '1.12', '#e6e8ea', 'OOS 0.79'], ['MAX DRAWDOWN', '‚àí31.2%', BEAR, 'OOS ‚àí28.4%'], ['WIN RATE', '57%', '#e6e8ea', 'OOS 54%'], ['TURNOVER', '240%', '#e6e8ea', 'ANNUALISED']]
       .map(([k, v, c, oos]) => ({ k, v, oos, vStyle: `font:500 18px/1 ${MONO};color:${c}` }));
     const eq = [8, 14, 11, 22, 30, 26, 38, 47, 42, 55, 63, 58, 70, 66, 78, 84, 72, 88, 95, 83, 91, 97, 89, 100];
     const btEquity = eq.map((h, i) => ({ bar: `flex:1;height:${D.btRan ? h : 2}%;background:${i > 13 ? CY : '#2c3740'};border-radius:1px 1px 0 0;transition:height .5s;transition-delay:${i * 18}ms` }));
     const btBias = [
-      ['Point-in-time constituents used — but delisted-name fills are modelled, not observed.', AMBER],
+      ['Point-in-time constituents used ‚Äî but delisted-name fills are modelled, not observed.', AMBER],
       ['Revision timestamps prevent look-ahead; earnings dates verified against filings.', BULL],
-      ['6 parameters tested across 41 configurations — deflated Sharpe is 0.61, not 1.12.', BEAR],
+      ['6 parameters tested across 41 configurations ‚Äî deflated Sharpe is 0.61, not 1.12.', BEAR],
       ['Costs assume no market impact above 5% ADV; small caps likely optimistic.', AMBER]
     ].map(([text, c]) => ({ text, dot: `width:5px;height:5px;border-radius:50%;background:${c};margin-top:5px;flex:none` }));
 
     const arch = [
       { isBox: 1, label: 'User Question', meta: 'natural language', arrow: 1, big: 0 },
-      { isBox: 1, label: 'AI Research Planner', meta: 'decomposition · 10 sub-questions', arrow: 1, big: 1 },
-      { isRow: 1, arrow: 1, cells: [['Financial Data', 'filings · XBRL'], ['Market Data', 'ticks · vol surface'], ['News', '2.4k sources'], ['SEC Filings', 'full text'], ['Macro Data', '61 series'], ['Prediction Markets', '6 venues']].map(([label, meta]) => ({ label, meta })) },
-      { isBox: 1, label: 'Structured Evidence Store', meta: 'typed claims · provenance · timestamps', arrow: 1, big: 1 },
-      { isBox: 1, label: 'Quant Models', meta: 'non-LLM ensemble · calibrated probabilities', arrow: 1, big: 0 },
-      { isBox: 1, label: 'LLM Reasoning Layer', meta: 'structures evidence · never scores it', arrow: 1, big: 0 },
-      { isBox: 1, label: 'Critic / Verification Agent', meta: 'source dedup · claim falsification · confidence caps', arrow: 1, big: 0 },
+      { isBox: 1, label: 'AI Research Planner', meta: 'decomposition ¬∑ 10 sub-questions', arrow: 1, big: 1 },
+      { isRow: 1, arrow: 1, cells: [['Financial Data', 'filings ¬∑ XBRL'], ['Market Data', 'ticks ¬∑ vol surface'], ['News', '2.4k sources'], ['SEC Filings', 'full text'], ['Macro Data', '61 series'], ['Prediction Markets', '6 venues']].map(([label, meta]) => ({ label, meta })) },
+      { isBox: 1, label: 'Structured Evidence Store', meta: 'typed claims ¬∑ provenance ¬∑ timestamps', arrow: 1, big: 1 },
+      { isBox: 1, label: 'Quant Models', meta: 'non-LLM ensemble ¬∑ calibrated probabilities', arrow: 1, big: 0 },
+      { isBox: 1, label: 'LLM Reasoning Layer', meta: 'structures evidence ¬∑ never scores it', arrow: 1, big: 0 },
+      { isBox: 1, label: 'Critic / Verification Agent', meta: 'source dedup ¬∑ claim falsification ¬∑ confidence caps', arrow: 1, big: 0 },
       { isBox: 1, label: 'Investment Committee', meta: '3 independent evaluations + PM synthesis', arrow: 1, big: 1 },
       { isBox: 1, label: 'Final Research Report', meta: 'for human decision', arrow: 1, big: 0 },
-      { isBox: 1, label: 'Continuous Monitoring', meta: 'falsification triggers armed · re-derive on breach', arrow: 0, big: 0 }
+      { isBox: 1, label: 'Continuous Monitoring', meta: 'falsification triggers armed ¬∑ re-derive on breach', arrow: 0, big: 0 }
     ].map(a => ({
       ...a, isRow: !!a.isRow, isBox: !!a.isBox, arrow: !!a.arrow,
       box: `display:flex;flex-direction:column;align-items:center;gap:6px;padding:${a.big ? '15px 26px' : '12px 22px'};border-radius:3px;background:${a.big ? '#111417' : '#0b0d0f'};border:1px solid ${a.big ? '#2c3740' : '#232c33'};min-width:300px;text-align:center`,
       labelStyle: `font:${a.big ? '500 14px' : '400 13px'}/1.2 'IBM Plex Sans',sans-serif;color:#e6e8ea`
     }));
     const archStats = [
-      ['MEDIAN INVESTIGATION', '3m 41s', 'p95 8m 12s · 6 agents in parallel'],
+      ['MEDIAN INVESTIGATION', '3m 41s', 'p95 8m 12s ¬∑ 6 agents in parallel'],
       ['EVIDENCE ROWS', '1.24M', 'every row addressable and timestamped'],
       ['CLAIMS REJECTED BY CRITIC', '18%', 'unsourced, duplicated or stale'],
-      ['HUMAN DECISION POINTS', '4', 'stance accept · sizing · triggers · re-underwrite']
+      ['HUMAN DECISION POINTS', '4', 'stance accept ¬∑ sizing ¬∑ triggers ¬∑ re-underwrite']
     ].map(([k, v, note]) => ({ k, v, note }));
 
     return {
@@ -1173,19 +1170,19 @@ class Component extends DCLogic {
       evBig: `font:500 40px/1 ${MONO};color:${evNum >= 0 ? BULL : BEAR};margin-top:12px;transition:color .3s`,
       evVol: '19.8%', evDown: '0.62', evSkew: tot === 100 ? '+0.31' : '+0.28',
       normNote: tot === 100 ? 'SUMS TO 100' : 'NORMALISED FROM ' + tot,
-      runLabel: stage >= 6 ? 'COMPLETE · 41 SOURCES · 3m 41s' : 'RUNNING · STAGE ' + stage + ' OF 6',
+      runLabel: stage >= 6 ? 'COMPLETE ¬∑ 41 SOURCES ¬∑ 3m 41s' : 'RUNNING ¬∑ STAGE ' + stage + ' OF 6',
       plan, agents, pmarkets, critic,
       nodes, edges, edgeLabels, sel,
       bullP: this.pct(64), bearP: this.pct(36),
       bullArgs: [['AI-driven marketing spend remains strong', 'w 0.24'], ['Revenue growth exceeds expectations', 'w 0.21'], ['Margins remain resilient', 'w 0.17'], ['Data moat improves targeting yield', 'w 0.20'], ['Retail-media expansion widens the moat', 'w 0.18']].map(([t, w]) => ({ t, w })),
       bearArgs: [['Valuation compression from 88th percentile', 'w 0.28'], ['Ad budget slowdown', 'w 0.24'], ['Walled-garden platform competition', 'w 0.19'], ['Privacy regulation restricts data', 'w 0.16'], ['Macro deterioration', 'w 0.13']].map(([t, w]) => ({ t, w })),
       scenarios, evSplit,
-      horizons: [['7 DAYS', 54, '48–60%'], ['30 DAYS', 61, '54–68%'], ['90 DAYS', 68, '59–76%']].map(([label, p, ci]) => ({ label, p: this.pct(p), ci, bar: `width:${p}%;height:100%;background:${CY}` })),
+      horizons: [['7 DAYS', 54, '48‚Äì60%'], ['30 DAYS', 61, '54‚Äì68%'], ['90 DAYS', 68, '59‚Äì76%']].map(([label, p, ci]) => ({ label, p: this.pct(p), ci, bar: `width:${p}%;height:100%;background:${CY}` })),
       dist: [-40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80].map((v, i) => {
         const h = [4, 9, 17, 31, 52, 78, 100, 84, 61, 38, 21, 11, 5][i];
         return { label: (v > 0 ? '+' : '') + v, bar: `width:100%;height:${h}%;background:${v < 0 ? 'rgba(224,100,92,.55)' : v === 0 ? '#5b636b' : 'rgba(78,201,154,.55)'};border-radius:1px 1px 0 0` };
       }),
-      calib: [['20–30%', 25, 23, 318], ['30–40%', 35, 31, 402], ['40–50%', 45, 47, 511], ['50–60%', 55, 53, 604], ['60–70%', 65, 64, 412], ['70–80%', 75, 71, 208]].map(([band, pred, actual, n]) => ({
+      calib: [['20‚Äì30%', 25, 23, 318], ['30‚Äì40%', 35, 31, 402], ['40‚Äì50%', 45, 47, 511], ['50‚Äì60%', 55, 53, 604], ['60‚Äì70%', 65, 64, 412], ['70‚Äì80%', 75, 71, 208]].map(([band, pred, actual, n]) => ({
         band, n, actual: 'actual ' + actual + '%',
         predBar: `position:absolute;left:0;top:0;bottom:0;width:${pred}%;background:#1e2a30;border-radius:2px`,
         actMark: `position:absolute;top:-2px;bottom:-2px;left:${actual}%;width:2px;background:${Math.abs(pred - actual) <= 3 ? BULL : AMBER}`
@@ -1195,19 +1192,19 @@ class Component extends DCLogic {
         bar: `position:absolute;top:2px;height:6px;${v >= 0 ? 'left:50%' : 'right:50%'};width:${Math.abs(v) * 300}%;max-width:50%;background:${v >= 0 ? BULL : BEAR};border-radius:1px`
       })),
       analogies: [
-        { name: 'ZETA · AI re-rating', period: 'Q1 2024 – Q3 2024', sim: '84%', simN: 84, o90: '+41%', o24: '+112%', note: 'Same demand-shock structure and estimate-revision pattern; started from a far lower multiple.', diverge: 'entry valuation, ownership breadth' },
-        { name: 'The Trade Desk · CTV re-rating', period: '2020 – 2022', sim: '61%', simN: 61, o90: '+28%', o24: '?74%', note: 'Similar narrative and budget-shift thesis. Ended in a multi-year drawdown once ad budgets normalised.', diverge: 'earnings base, customer concentration' },
-        { name: 'Adtech budget cycle', period: '2022 – 2023', sim: '53%', simN: 53, o90: '?19%', o24: '+34%', note: 'Budget-led downturn after a spend peak; recovered once the cycle cleared.', diverge: 'end-market mix, secular demand' }
+        { name: 'ZETA ¬∑ AI re-rating', period: 'Q1 2024 ‚Äì Q3 2024', sim: '84%', simN: 84, o90: '+41%', o24: '+112%', note: 'Same demand-shock structure and estimate-revision pattern; started from a far lower multiple.', diverge: 'entry valuation, ownership breadth' },
+        { name: 'The Trade Desk ¬∑ CTV re-rating', period: '2020 ‚Äì 2022', sim: '61%', simN: 61, o90: '+28%', o24: '‚àí74%', note: 'Similar narrative and budget-shift thesis. Ended in a multi-year drawdown once ad budgets normalised.', diverge: 'earnings base, customer concentration' },
+        { name: 'Adtech budget cycle', period: '2022 ‚Äì 2023', sim: '53%', simN: 53, o90: '‚àí19%', o24: '+34%', note: 'Budget-led downturn after a spend peak; recovered once the cycle cleared.', diverge: 'end-market mix, secular demand' }
       ].map(a => ({
         ...a, simBar: `width:${a.simN}%;height:100%;background:${a.simN > 75 ? BULL : AMBER}`,
-        o90Style: `font:500 20px/1 ${MONO};color:${a.o90.startsWith('?') ? BEAR : BULL}`,
-        o24Style: `font:500 20px/1 ${MONO};color:${a.o24.startsWith('?') ? BEAR : BULL}`
+        o90Style: `font:500 20px/1 ${MONO};color:${a.o90.startsWith('‚àí') ? BEAR : BULL}`,
+        o24Style: `font:500 20px/1 ${MONO};color:${a.o24.startsWith('‚àí') ? BEAR : BULL}`
       })),
       stateVars: [['FWD P/E PCTL', '88th'], ['REV GROWTH', '+62%'], ['EST REVISIONS', '+9 net'], ['REAL 10Y', '1.84%'], ['CURVE', '+42bp'], ['VOL REGIME', 'ELEVATED'], ['BREADTH', 'NARROW'], ['AD CYCLE', 'EXPANDING'], ['NET CHURN', 'LOW'], ['POSITIONING', '88th'], ['CREDIT SPREADS', '94bp'], ['DOLLAR 3M', '+2.1%'], ['SECTOR CORR', '0.74'], ['NEWS TONE', '+0.62']].map(([k, v]) => ({ k, v })),
       committee: [
         { id: 'f', role: 'Fundamental Analyst', vote: 'BUY', conf: 78, c: BULL, args: ['Estimate revisions still rising into the next two quarters', 'Margin structure defends a premium multiple', 'Retail-media expansion is a pricing tailwind, not a cap'], dissent: 'Disagrees with the risk officer on the horizon, not the facts: valuation risk is real beyond 12 months, immaterial within 3.', weight: '0.38', overlap: '61%' },
-        { id: 'q', role: 'Quant Analyst', vote: 'HOLD', conf: 61, c: AMBER, args: ['Momentum and revision factors both positive', 'Valuation factor is a ?0.13 drag on the ensemble', 'Calibrated 90d P(higher) 68%, but payoff skew is unattractive'], dissent: 'Rejects narrative inputs entirely. Notes that the fundamental case is already inside the price factor.', weight: '0.34', overlap: '44%' },
-        { id: 'r', role: 'Risk Officer', vote: 'REDUCE', conf: 66, c: BEAR, args: ['Position vol contributes 46% of portfolio variance', 'Portfolio already 71% exposed to AI ad spend', 'A single privacy ruling carries 6–10% revenue risk'], dissent: 'Does not contest the thesis. Contests the size — the same thesis at half the weight survives being wrong.', weight: '0.28', overlap: '52%' }
+        { id: 'q', role: 'Quant Analyst', vote: 'HOLD', conf: 61, c: AMBER, args: ['Momentum and revision factors both positive', 'Valuation factor is a ‚àí0.13 drag on the ensemble', 'Calibrated 90d P(higher) 68%, but payoff skew is unattractive'], dissent: 'Rejects narrative inputs entirely. Notes that the fundamental case is already inside the price factor.', weight: '0.34', overlap: '44%' },
+        { id: 'r', role: 'Risk Officer', vote: 'REDUCE', conf: 66, c: BEAR, args: ['Position vol contributes 46% of portfolio variance', 'Portfolio already 71% exposed to AI ad spend', 'A single privacy ruling carries 6‚Äì10% revenue risk'], dissent: 'Does not contest the thesis. Contests the size ‚Äî the same thesis at half the weight survives being wrong.', weight: '0.28', overlap: '52%' }
       ].map(m => ({
         ...m, conf: this.pct(m.conf), open: D.member === m.id,
         select: () => this.setState(s => ({ member: s.member === m.id ? null : m.id })),
@@ -1226,7 +1223,7 @@ class Component extends DCLogic {
       riskLabel: D.riskOpen ? 'COLLAPSE' : 'ASK SIGNAL',
       btQuery: D.btQuery, onBt: e => this.setState({ btQuery: e.target.value }),
       runBt: () => { this.setState({ btRan: false }); setTimeout(() => this.setState({ btRan: true }), 260); },
-      btLabel: 'TRANSLATE & RUN', btStatus: D.btRan ? '4,182 TRADES · 17.2 YEARS' : 'COMPILING…',
+      btLabel: 'TRANSLATE & RUN', btStatus: D.btRan ? '4,182 TRADES ¬∑ 17.2 YEARS' : 'COMPILING‚Ä¶',
       btRules, btMetrics, btEquity, btBias,
       arch, archStats
     };
