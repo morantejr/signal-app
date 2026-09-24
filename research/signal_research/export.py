@@ -15,6 +15,7 @@ from pathlib import Path
 from .config import load_settings
 from .calibration import log_prediction
 from .evidence.store import EvidenceStore
+from .llm.openrouter import LLMError
 from .pipeline import run
 
 
@@ -64,7 +65,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{t}: {r.quant.quant_band} ({r.quant.quant_score}) vs {r.brief.narrative_lean} agree={r.brief.disagreement.agree} stub={r.brief.is_stub}")
     store.close()
     index_path.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).isoformat(), "runs": sorted(index.values(), key=lambda e: e["ticker"])}, indent=1))
-    return 1 if failures and failures == len(index) else 0
+    return 1 if failures and not index else 0
 
 
 if __name__ == "__main__":

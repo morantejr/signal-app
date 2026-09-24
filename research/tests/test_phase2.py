@@ -137,3 +137,29 @@ def test_export_logs_predictions_and_reads_ticker_file(no_llm_settings, runs_roo
     idx = json.loads((out / "index.json").read_text())
     assert sorted(e["ticker"] for e in idx["runs"]) == ["AAPL", "NVDA", "ZETA"]
     assert len((out / "predictions.jsonl").read_text().splitlines()) == 3
+
+
+def test_export_falls_back_to_stubs_when_the_daily_cap_is_hit(no_llm_settings, runs_root, tmp_path, monkeypatch):
+    import httpx
+
+    from signal_research import export
+    from signal_research.config import load_settings
+
+    llm_settings = load_settings({"OPENROUTER_API_KEY": "test-key", "OPENROUTER_FALLBACK_MODELS": ""})
+    monkeypatch.setattr(export, "load_settings", lambda: llm_settings)
+    calls: list[str] = []
+
+    def fake_run(ticker, *, settings, **kw):
+        calls.append(f"{ticker}:{'llm' if settings.llm_enabled else 'stub'}")
+        if settings.llm_enabled:
+            capped = fake_client([httpx.Response(429, json={"error": {"message": "Rate limit exceeded: free-models-per-day"}})] * 6)  # bull + bear, 3 attempts each
+            return run(ticker, settings=settings, client=capped, evidence_fn=lambda t, s, tr: bundle_for("growth"), runs_root=runs_root, **kw)
+        return run(ticker, settings=settings, evidence_fn=lambda t, s, tr: bundle_for("growth"), runs_root=runs_root, **kw)
+
+    monkeypatch.setattr(export, "run", fake_run)
+    out = tmp_path / "out"
+    assert export.main(["--tickers", "ZETA,NVDA", "--out", str(out), "--db", str(tmp_path / "db.sqlite")]) == 0
+    assert calls == ["ZETA:llm", "ZETA:stub", "NVDA:stub"]  # cap detected once, never retried
+    idx = json.loads((out / "index.json").read_text())
+    assert [e["ticker"] for e in idx["runs"]] == ["NVDA", "ZETA"] and all(e["is_stub"] for e in idx["runs"])
+    assert json.loads((out / "ZETA.json").read_text())["quant"]["quant_version"] == "v0.1"
