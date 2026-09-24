@@ -6,7 +6,9 @@ import re
 
 from ..schemas import Brief, Claim, CriticReport, Memo, QuantResult, Source
 
-_NUM = re.compile(r"(?<![\w.-])-?\d+(?:\.\d+)?(?![\w-])")
+# Numbers not glued to a word or any kind of dash ("60-day", "60‑day", "10‑year" are labels, not metrics).
+_DASH = "\\-\u2010\u2011\u2012\u2013\u2014"
+_NUM = re.compile(rf"(?<![\w.{_DASH}])-?\d+(?:\.\d+)?(?![\w{_DASH}])")
 
 
 def _quant_numbers(q: QuantResult) -> list[float]:

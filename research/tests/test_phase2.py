@@ -46,7 +46,8 @@ def test_quant_claim_mismatch_rule():
     ok = Claim(claim_id="a", text="The 6-month return is 22.0% and the 1-year drawdown was 28%.", stance="bull", support="sourced", source_ids=["quant:v0.1"], confidence=0.9)
     bad = Claim(claim_id="b", text="The quant shows a forward P/E of 24.65 driving the score.", stance="bear", support="sourced", source_ids=["quant:v0.1"], confidence=0.9)
     unrelated = Claim(claim_id="c", text="Revenue was $1,234.5 million.", stance="bull", support="sourced", source_ids=["yf:info:ZETA"], confidence=0.9)
-    assert quant_claim_mismatches([ok, bad, unrelated], q) == ["b"]
+    labels = Claim(claim_id="d", text="Its 60\u2011day annualized volatility is roughly 55% and the 12\u2013month return minus 1-month is 44%.", stance="bear", support="sourced", source_ids=["quant:v0.1"], confidence=0.9)
+    assert quant_claim_mismatches([ok, bad, unrelated, labels], q) == ["b"]
 
 
 def test_one_sided_synthesis_and_mismatch_are_flagged(no_llm_settings, runs_root):
