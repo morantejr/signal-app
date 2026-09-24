@@ -293,9 +293,8 @@ function ResearchTab({ a, run, runLoading, openAdvanced }: { a: Analysis; run: R
             </div>
           ))}
         </div>
-        <button onClick={openAdvanced} style={btnPrimary}>Open Advanced Research</button>
-        <div style={{ ...font(400, 13, 1.55), color: FAINTER, marginTop: 14 }}>
-          Built for professionals: agents, evidence graph, model calibration, historical analogies, committee debate and system architecture. The terminal is a design prototype with illustrative numbers; the agents behind it are not public yet.
+        <div style={{ ...font(400, 13, 1.55), color: FAINTER, marginTop: 18, textWrap: 'pretty' }}>
+          The full research above comes from the research system. A separate <a href="#" onClick={e => { e.preventDefault(); openAdvanced() }}>design prototype of a professional terminal</a> exists with illustrative numbers only.
         </div>
       </div>
       {a.research.claims.map(g => (
