@@ -1,0 +1,16 @@
+# Tickers the nightly export researches. One per line. Edit and push; the next run picks it up.
+ZETA
+NVDA
+AAPL
+META
+MSFT
+GOOGL
+AMZN
+TSLA
+AMD
+AVGO
+NFLX
+JPM
+XOM
+COST
+PLTR

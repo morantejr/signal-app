@@ -105,3 +105,35 @@ def test_api_serves_cached_and_fresh_runs(no_llm_settings, runs_root, tmp_path, 
     assert c.get("/research/ZETA?refresh=1").json()["run_id"] != first["run_id"]
     assert len(c.get("/runs").json()) == 2 and c.get(f"/runs/{first['run_id']}").json()["run_id"] == first["run_id"]
     assert c.get("/runs/nope").status_code == 404
+
+
+def test_quant_structure_flags():
+    from signal_research.agents.critic import quant_structure_flags
+
+    q = compute_quant(load_inputs("megacap"))  # uses trailing_pe, ps history, returns, drawdown, vol, D/E, CR, FCF; no macro
+    texts = [
+        "Equal weighting of the five factors may misrepresent value.",
+        "The model treats forward P/E as a valuation input despite negative earnings.",
+        "The score relies on drawdown and volatility, which is fine.",
+        "The quant compares the multiple to peers.",
+        "Revenue growth was 4% last year.",  # mentions an unused input without a structure verb: not a claim about the quant
+    ]
+    flags = quant_structure_flags(texts, q)
+    assert "quant_structure:equal_weighting_claimed" in flags
+    assert "quant_structure:claims_use_of_forward_pe" in flags
+    assert "quant_structure:claims_use_of_peers" in flags
+    assert not any("drawdown" in f or "vol_60d" in f or "revenue_growth" in f for f in flags)
+
+
+def test_export_logs_predictions_and_reads_ticker_file(no_llm_settings, runs_root, tmp_path, monkeypatch):
+    from signal_research import export
+
+    monkeypatch.setattr(export, "load_settings", lambda: no_llm_settings)
+    monkeypatch.setattr(export, "run", lambda ticker, **kw: run(ticker, evidence_fn=lambda t, s, tr: bundle_for("growth"), runs_root=runs_root, **kw))
+    tf = tmp_path / "tickers.txt"
+    tf.write_text("# comment\nzeta\nNVDA # trailing\n")
+    out = tmp_path / "out"
+    assert export.main(["--tickers", "AAPL", "--tickers-file", str(tf), "--out", str(out), "--db", str(tmp_path / "db.sqlite")]) == 0
+    idx = json.loads((out / "index.json").read_text())
+    assert sorted(e["ticker"] for e in idx["runs"]) == ["AAPL", "NVDA", "ZETA"]
+    assert len((out / "predictions.jsonl").read_text().splitlines()) == 3

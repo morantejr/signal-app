@@ -9,7 +9,7 @@ on:
     - cron: "30 22 * * 1-5"
 
 permissions:
-  contents: read
+  contents: write   # the export commits refreshed research + the prediction log back to main
   pages: write
   id-token: write
 
@@ -33,14 +33,24 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - name: Research export (quant always; real memos only when OPENROUTER_API_KEY is set)
         working-directory: research
-        timeout-minutes: 20
+        timeout-minutes: 45
         continue-on-error: true
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           EDGAR_USER_AGENT: SIGNAL research github-actions ${{ github.repository_owner }}
-        run: uv sync --no-dev && uv run python -m signal_research.export --tickers ZETA,NVDA,AAPL,META,MSFT --out ../public/runs
+        run: uv sync --no-dev && uv run python -m signal_research.export --tickers-file tickers.txt --out ../public/runs
+      - name: Commit refreshed research and prediction log back to main
+        # Pushes made with GITHUB_TOKEN do not trigger another workflow run, so this cannot loop.
+        run: |
+          git config user.name "signal-research-bot"
+          git config user.email "signal-research-bot@users.noreply.github.com"
+          git add public/runs
+          if git diff --cached --quiet; then echo "nothing new"; exit 0; fi
+          git commit -m "research: refresh export and prediction log ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git pull --rebase origin main
+          git push origin HEAD:main
       - run: npm run build
         env:
           # FINNHUB_PROXY (see proxy/README.md) keeps the Finnhub key server side.

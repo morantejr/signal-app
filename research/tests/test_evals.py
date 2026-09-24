@@ -173,6 +173,13 @@ def eval_predictions_logged(no_llm_settings, runs_root):
     test_prediction_logged_and_calibration_report(no_llm_settings, runs_root)
 
 
+@case("quant_structure_statements_checked")
+def eval_quant_structure():
+    from tests.test_phase2 import test_quant_structure_flags
+
+    test_quant_structure_flags()
+
+
 def test_every_eval_case_has_a_check():
     assert set(CASES) == set(CHECKS), f"cases without checks: {set(CASES) - set(CHECKS)}; checks without cases: {set(CHECKS) - set(CASES)}"
     assert len(CASES) >= 10

@@ -1,19 +1,87 @@
 [
-  {"id": "quant_unchanged_when_prompts_change", "principle": 2, "check": "Same inputs, different bull/bear prompt text → identical quant_score, quant_band, quant_inputs."},
-  {"id": "quant_unchanged_when_models_change", "principle": 2, "check": "Same inputs, different MODEL_BULL/MODEL_BEAR ids → identical quant_score."},
-  {"id": "llm_cannot_set_or_adjust_score", "principle": 2, "check": "Memo and synthesis JSON containing quant_score/quant_band fields are ignored; persisted quant matches code."},
-  {"id": "bull_and_bear_exist_before_synthesis", "principle": 1, "check": "Synthesis raises PipelineOrderError if either memo is missing; both memos are generated (in parallel) before synthesis starts."},
-  {"id": "high_confidence_claims_mostly_sourced", "principle": 4, "check": "Critic computes the sourced share of claims with confidence ≥ 0.7 and flags below 0.8."},
-  {"id": "disagreement_card_when_bands_conflict", "principle": 3, "check": "Quant 'expensive' + narrative 'bullish' → agree=false, summary and both may-be-wrong lists populated."},
-  {"id": "agreement_when_aligned", "principle": 3, "check": "Quant 'attractive' + narrative 'bullish' → agree=true, still carries both may-be-wrong lists."},
-  {"id": "cited_source_ids_exist_in_store", "principle": 4, "check": "Every source_id cited by a sourced claim exists in the evidence store for that run; dangling ids are reported."},
-  {"id": "unsupported_claims_are_labelled", "principle": 4, "check": "A claim with no valid source_ids is labelled unsupported (or inference when the model says so), never sourced."},
-  {"id": "quant_deterministic_and_persisted", "principle": 2, "check": "quant_score, quant_inputs, quant_version, computed_at are persisted and recomputable."},
-  {"id": "missing_data_gives_unknown_band", "principle": 2, "check": "Fewer than two components → quant_score null, band unknown, missing flags set."},
-  {"id": "free_model_json_is_repaired", "principle": 6, "check": "Fenced / trailing-comma JSON from free models parses; schema failures get one repair round."},
-  {"id": "unknown_quant_never_agrees", "principle": 3, "check": "quant band unknown → agree=false with an explicit 'unanchored' summary."}
-,
-  {"id": "quant_claims_match_quant_numbers", "principle": 4, "check": "A claim citing quant:<version> may only carry numbers the quant actually produced; others are flagged quant_claim_mismatch."},
-  {"id": "synthesis_not_one_sided", "principle": 1, "check": "A synthesis whose claims are all one stance is flagged synthesis_one_sided."},
-  {"id": "predictions_are_logged_for_calibration", "principle": 5, "check": "Every run appends ticker, date, price, band, lean and horizon end to predictions.jsonl so calibration can be measured later."}
+  {
+    "id": "quant_unchanged_when_prompts_change",
+    "principle": 2,
+    "check": "Same inputs, different bull/bear prompt text \u2192 identical quant_score, quant_band, quant_inputs."
+  },
+  {
+    "id": "quant_unchanged_when_models_change",
+    "principle": 2,
+    "check": "Same inputs, different MODEL_BULL/MODEL_BEAR ids \u2192 identical quant_score."
+  },
+  {
+    "id": "llm_cannot_set_or_adjust_score",
+    "principle": 2,
+    "check": "Memo and synthesis JSON containing quant_score/quant_band fields are ignored; persisted quant matches code."
+  },
+  {
+    "id": "bull_and_bear_exist_before_synthesis",
+    "principle": 1,
+    "check": "Synthesis raises PipelineOrderError if either memo is missing; both memos are generated (in parallel) before synthesis starts."
+  },
+  {
+    "id": "high_confidence_claims_mostly_sourced",
+    "principle": 4,
+    "check": "Critic computes the sourced share of claims with confidence \u2265 0.7 and flags below 0.8."
+  },
+  {
+    "id": "disagreement_card_when_bands_conflict",
+    "principle": 3,
+    "check": "Quant 'expensive' + narrative 'bullish' \u2192 agree=false, summary and both may-be-wrong lists populated."
+  },
+  {
+    "id": "agreement_when_aligned",
+    "principle": 3,
+    "check": "Quant 'attractive' + narrative 'bullish' \u2192 agree=true, still carries both may-be-wrong lists."
+  },
+  {
+    "id": "cited_source_ids_exist_in_store",
+    "principle": 4,
+    "check": "Every source_id cited by a sourced claim exists in the evidence store for that run; dangling ids are reported."
+  },
+  {
+    "id": "unsupported_claims_are_labelled",
+    "principle": 4,
+    "check": "A claim with no valid source_ids is labelled unsupported (or inference when the model says so), never sourced."
+  },
+  {
+    "id": "quant_deterministic_and_persisted",
+    "principle": 2,
+    "check": "quant_score, quant_inputs, quant_version, computed_at are persisted and recomputable."
+  },
+  {
+    "id": "missing_data_gives_unknown_band",
+    "principle": 2,
+    "check": "Fewer than two components \u2192 quant_score null, band unknown, missing flags set."
+  },
+  {
+    "id": "free_model_json_is_repaired",
+    "principle": 6,
+    "check": "Fenced / trailing-comma JSON from free models parses; schema failures get one repair round."
+  },
+  {
+    "id": "unknown_quant_never_agrees",
+    "principle": 3,
+    "check": "quant band unknown \u2192 agree=false with an explicit 'unanchored' summary."
+  },
+  {
+    "id": "quant_claims_match_quant_numbers",
+    "principle": 4,
+    "check": "A claim citing quant:<version> may only carry numbers the quant actually produced; others are flagged quant_claim_mismatch."
+  },
+  {
+    "id": "synthesis_not_one_sided",
+    "principle": 1,
+    "check": "A synthesis whose claims are all one stance is flagged synthesis_one_sided."
+  },
+  {
+    "id": "predictions_are_logged_for_calibration",
+    "principle": 5,
+    "check": "Every run appends ticker, date, price, band, lean and horizon end to predictions.jsonl so calibration can be measured later."
+  },
+  {
+    "id": "quant_structure_statements_checked",
+    "principle": 3,
+    "check": "Statements about how the quant works (equal weighting, use of forward P/E, peers) are checked against the real weights and inputs and flagged quant_structure:*."
+  }
 ]

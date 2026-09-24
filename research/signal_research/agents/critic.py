@@ -28,6 +28,50 @@ def _quant_numbers(q: QuantResult) -> list[float]:
     return nums
 
 
+# Phrases that describe an input; flagged when the quant did not actually use that input.
+_INPUT_PHRASES = {
+    "forward_pe": r"forward\s*p/?e",
+    "ev_to_ebitda": r"ev\s*/\s*ebitda|enterprise value",
+    "revenue_growth": r"revenue growth|sales growth",
+    "profit_margin": r"profit margin|net margin",
+    "trailing_pe": r"trailing\s*p/?e|price[- ]to[- ]earnings",
+    "price_to_sales": r"price[- ]to[- ]sales|p/s\b",
+    "debt_to_equity": r"debt[- ]to[- ]equity|leverage",
+    "current_ratio": r"current ratio|liquidity",
+    "free_cash_flow": r"free cash flow|fcf",
+    "max_drawdown_1y": r"drawdown",
+    "vol_60d_ann": r"volatility",
+    "fred_10y_change_3m": r"treasury|10[- ]year yield|interest rate|macro",
+}
+_STRUCTURE_VERBS = r"(uses|relies|relying|treats|includes|weights|weighting|incorporates|based on|accounts for|considers|penali[sz]es|rewards|inputs?)"
+_UNUSED_CONCEPTS = {"peers": r"\bpeers?\b|sector comparison|relative to (the )?sector", "sharpe": r"sharpe", "earnings quality": r"earnings quality|accruals", "sentiment": r"sentiment"}
+
+
+def quant_structure_flags(texts: list[str], quant: QuantResult) -> list[str]:
+    """Statements about how the quant works must match how it actually works.
+
+    Checks: "equal weighting" against the real weights; "the quant uses X" against the
+    inputs each component recorded; concepts v0 does not model at all."""
+    flags: list[str] = []
+    weights = {round(c.weight, 4) for c in quant.components}
+    used_inputs = {k for c in quant.components for k in c.inputs_used}
+    # inputs_used keys are not always the raw field name; map the common aliases
+    alias = {"ps_vs_own_median": "price_to_sales", "ret_12m_minus_1m": "ret_12m", "free_cash_flow_positive": "free_cash_flow"}
+    used_inputs = {alias.get(k, k) for k in used_inputs}
+    for text in texts:
+        t = text.lower()
+        if re.search(r"equal(ly)?[- ]weight", t) and len(weights) > 1:
+            flags.append("quant_structure:equal_weighting_claimed")
+        if re.search(_STRUCTURE_VERBS, t):
+            for field, pat in _INPUT_PHRASES.items():
+                if re.search(pat, t) and field not in used_inputs:
+                    flags.append(f"quant_structure:claims_use_of_{field}")
+        for name, pat in _UNUSED_CONCEPTS.items():
+            if re.search(rf"(uses|includes|incorporates|based on|considers|compares?|relative to|against).{{0,40}}({pat})", t):
+                flags.append(f"quant_structure:claims_use_of_{name}")
+    return sorted(set(flags))
+
+
 def quant_claim_mismatches(claims: list[Claim], quant: QuantResult) -> list[str]:
     """A claim that cites the quant result must not carry numbers the quant never produced."""
     known = _quant_numbers(quant)
@@ -65,6 +109,8 @@ def critique(sources: list[Source], quant: QuantResult, bull: Memo, bear: Memo, 
     mismatched = quant_claim_mismatches(all_claims, quant)
     if mismatched:
         flags.append(f"quant_claim_mismatch:{','.join(mismatched)}")
+    quant_texts = [c.text for c in all_claims if any(s.startswith("quant:") for s in c.source_ids)] + list(brief.disagreement.quant_may_be_wrong_because)
+    flags.extend(quant_structure_flags(quant_texts, quant))
     stances = {c.stance for c in brief.claims if c.stance in ("bull", "bear")}
     if brief.claims and not brief.is_stub and len(stances) == 1:
         flags.append("synthesis_one_sided")

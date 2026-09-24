@@ -20,10 +20,12 @@ api:
 # Static export the web app can read without a server (public/runs/<SYM>.json)
 # Usage: make export TICKERS=ZETA,NVDA,AAPL,META,MSFT
 export:
-	uv run python -m signal_research.export --tickers $(or $(TICKERS),ZETA,NVDA,AAPL,META,MSFT) --out ../public/runs
+	uv run python -m signal_research.export --tickers "$(TICKERS)" --tickers-file tickers.txt --out ../public/runs
 
+# Local runs log to runs/predictions.jsonl; CI exports log to ../public/runs/predictions.jsonl (committed back).
 calibrate:
 	uv run python -m signal_research.calibration runs/predictions.jsonl
+	@[ -f ../public/runs/predictions.jsonl ] && uv run python -m signal_research.calibration ../public/runs/predictions.jsonl || true
 
 # Self-hosted Langfuse (open source). Downloads the official compose file
 # rather than shipping a stale copy; needs Docker.
