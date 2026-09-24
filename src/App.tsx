@@ -12,6 +12,7 @@ import { ApiError, type ErrorKind } from './api/finnhub'
 import type { Analysis } from './analysis'
 import { loadHistory, pushHistory, type HistoryRow } from './store'
 import { fetchRun, type RunResult } from './api/research'
+import { candidates } from './parse'
 
 export type Screen = 'home' | 'thinking' | 'asset' | 'watchlist' | 'portfolio' | 'research'
 export type SubTab = 'overview' | 'why' | 'risks' | 'research'
@@ -63,6 +64,12 @@ export default function App() {
       if (runId.current !== id) return
       setAnalysis(null)
       setError(e instanceof ApiError ? { kind: e.kind, message: e.message } : { kind: 'network', message: 'Something went wrong while researching. Try again.' })
+      // No live data, but a research run may still exist for a ticker named in the question.
+      const sym = candidates(asked).tickers[0]
+      if (sym) {
+        setRunLoading(true)
+        fetchRun(sym).then(r => { if (runId.current === id) { setRun(r); setRunLoading(false) } })
+      }
     }
     setScreen('asset')
   }

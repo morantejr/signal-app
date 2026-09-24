@@ -36,6 +36,22 @@ export default function Asset({ a, run, runLoading, error, askedQ, retry, sub, s
     boxShadow: on ? `inset 0 -2px 0 ${INK}` : 'none',
   })
 
+  if (!a && run) {
+    // No live quick read (usually no key), but full research exists for this ticker.
+    return (
+      <div style={{ maxWidth: 720, width: '100%', margin: '0 auto', padding: '44px 24px 120px', animation: 'sIn .4s ease both' }}>
+        <div style={{ ...font(400, 15, 1.4), color: FAINT }}>{askedQ}</div>
+        <div style={{ ...font(400, 34), letterSpacing: '-.01em', marginTop: 14 }}>{run.ticker}</div>
+        <div style={{ ...font(400, 14, 1.5), color: MUTED, marginTop: 8 }}>{error?.kind === 'nokey' ? 'The live quick read needs a market data key. The full research below does not.' : error?.message}</div>
+        <FullResearch run={run} loading={false} sym={run.ticker} onReadMemos={() => setSub('research')} />
+        <div style={{ marginTop: 28 }}>
+          <ResearchCard run={run} loading={false} sym={run.ticker} />
+        </div>
+        {error?.kind === 'nokey' && <KeyPrompt onSaved={retry} />}
+      </div>
+    )
+  }
+
   if (!a) {
     return (
       <div style={{ maxWidth: 720, width: '100%', margin: '0 auto', padding: '44px 24px 120px', animation: 'sIn .4s ease both' }}>
