@@ -11,6 +11,8 @@ load_dotenv()
 # Pinned from https://openrouter.ai/api/v1/models on 2026-09-23 (ids ending in ":free").
 DEFAULT_FREE_MODEL = "google/gemma-4-31b-it:free"
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
+# Tried in order when the requested model is rate-limited or empty. All free on 2026-09-23.
+DEFAULT_FALLBACK_MODELS = ["nvidia/nemotron-3-super-120b-a12b:free", "qwen/qwen3.8-27b:free", "nex-agi/nex-n2.5-pro:free", "google/gemma-4-26b-a4b-it:free"]
 
 
 @dataclass(frozen=True)
@@ -23,6 +25,7 @@ class Settings:
     model_bear: str
     model_synthesis: str
     model_critic: str
+    fallback_models: tuple[str, ...]
     app_referer: str
     app_title: str
     langfuse_host: str | None
@@ -57,6 +60,7 @@ def load_settings(env: Mapping[str, str] | None = None) -> Settings:
         model_bear=model("MODEL_BEAR"),
         model_synthesis=model("MODEL_SYNTHESIS"),
         model_critic=model("MODEL_CRITIC"),
+        fallback_models=tuple(m.strip() for m in e.get("OPENROUTER_FALLBACK_MODELS", ",".join(DEFAULT_FALLBACK_MODELS)).split(",") if m.strip()),
         app_referer=e.get("APP_REFERER", "https://morantejr.github.io/signal-app/"),
         app_title=e.get("APP_TITLE", "SIGNAL research"),
         langfuse_host=e.get("LANGFUSE_HOST") or None,

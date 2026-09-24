@@ -95,7 +95,7 @@ make langfuse                   # downloads the official docker-compose.yml and 
 
 Without Langfuse keys the same spans and generations are written to `runs/<run_id>/trace.jsonl`, including model id, provider, token usage and latency for every OpenRouter call.
 
-Model: `OPENROUTER_MODEL` defaults to `google/gemma-4-31b-it:free`, taken from OpenRouter's free list on 2026-09-23 (262k context, JSON mode). Other free ids seen that day: `nvidia/nemotron-3-super-120b-a12b:free`, `qwen/qwen3.8-27b:free`, `nex-agi/nex-n2.5-pro:free`. Free models rate-limit and sometimes return empty completions; the client retries with backoff and then fails with a message that says so.
+Model: `OPENROUTER_MODEL` defaults to `google/gemma-4-31b-it:free`, taken from OpenRouter's free list on 2026-09-23 (262k context, JSON mode). Other free ids seen that day: `nvidia/nemotron-3-super-120b-a12b:free`, `qwen/qwen3.8-27b:free`, `nex-agi/nex-n2.5-pro:free`. Free models share an upstream pool and are often rate-limited or return empty completions. The client retries with backoff, then walks `OPENROUTER_FALLBACK_MODELS` in order (each fallback is logged as a `model_fallback` trace event and the generation records both the requested and the tried model id), and only then fails with a message that says so.
 
 ## 5. Stub vs real
 

@@ -76,11 +76,25 @@ class OpenRouterClient:
         temperature: float = 0.2,
         response_format: dict | None = None,
         max_tokens: int | None = None,
-        retries: int = 3,
+        retries: int = 2,
         tracer: Tracer | None = None,
         name: str = "chat",
     ) -> ChatResult:
-        model = model or self.settings.openrouter_model
+        """Try the requested model, then each fallback in order. Free models are
+        frequently rate-limited upstream, so a single id is not a reliable path."""
+        requested = model or self.settings.openrouter_model
+        chain = [requested] + [m for m in self.settings.fallback_models if m != requested]
+        errors: list[str] = []
+        for candidate in chain:
+            try:
+                return self._chat_one(messages, model=candidate, temperature=temperature, response_format=response_format, max_tokens=max_tokens, retries=retries, tracer=tracer, name=name, requested=requested)
+            except LLMError as exc:
+                errors.append(f"{candidate}: {exc}")
+                if tracer:
+                    tracer.event("model_fallback", {"from": candidate, "error": str(exc)[:300]})
+        raise LLMError("No model in the chain gave a usable completion. " + " | ".join(errors) + " — free models are rate-limited; wait a minute, set OPENROUTER_MODEL / OPENROUTER_FALLBACK_MODELS to other ids, or add a provider key at openrouter.ai/settings/integrations.")
+
+    def _chat_one(self, messages: list[dict[str, str]], *, model: str, temperature: float, response_format: dict | None, max_tokens: int | None, retries: int, tracer: Tracer | None, name: str, requested: str) -> ChatResult:
         last_error: str = ""
         use_format = response_format
         for attempt in range(retries + 1):
@@ -98,7 +112,7 @@ class OpenRouterClient:
                     continue
                 raise LLMError(f"OpenRouter rejected the request: {exc}") from exc
             except (RateLimitError, APIConnectionError) as exc:
-                last_error = f"{type(exc).__name__}: {exc}"
+                last_error = f"{type(exc).__name__}: {str(exc)[:200]}"
                 self._backoff(attempt)
                 continue
             except APIStatusError as exc:
@@ -125,9 +139,9 @@ class OpenRouterClient:
                 finish_reason=choice.finish_reason if choice else None,
             )
             if tracer:
-                tracer.generation(name=name, model=result.model, provider=result.provider, input=messages, output=content, usage={"input": result.prompt_tokens, "output": result.completion_tokens}, latency_ms=latency_ms, metadata={"requested_model": model, "attempt": attempt})
+                tracer.generation(name=name, model=result.model, provider=result.provider, input=messages, output=content, usage={"input": result.prompt_tokens, "output": result.completion_tokens}, latency_ms=latency_ms, metadata={"requested_model": requested, "tried_model": model, "attempt": attempt})
             return result
-        raise LLMError(f"OpenRouter gave no usable completion after {retries + 1} attempts ({last_error}). Free models are rate-limited; wait a minute or set OPENROUTER_MODEL to another id.")
+        raise LLMError(f"no usable completion after {retries + 1} attempts ({last_error})")
 
     def chat_json(self, messages: list[dict[str, str]], schema: type[T], *, tracer: Tracer | None = None, name: str = "chat_json", **kw: Any) -> tuple[T, ChatResult]:
         result = self.chat(messages, response_format={"type": "json_object"}, tracer=tracer, name=name, **kw)
@@ -145,4 +159,4 @@ class OpenRouterClient:
                 raise LLMError(f"Model output could not be parsed into {schema.__name__}: {exc2}") from exc2
 
     def _backoff(self, attempt: int) -> None:
-        self._sleep(min(2.0**attempt, 20.0))
+        self._sleep(min(1.5**attempt, 8.0))

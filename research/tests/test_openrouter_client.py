@@ -37,10 +37,18 @@ def test_empty_completion_is_retried():
     assert c.chat([{"role": "user", "content": "x"}]).content == "second"
 
 
-def test_gives_clear_error_after_retries():
-    c = fake_client([httpx.Response(429, json={}), httpx.Response(429, json={}), httpx.Response(429, json={}), httpx.Response(429, json={})])
+def test_gives_clear_error_after_retries_across_the_chain():
+    c = fake_client([httpx.Response(429, json={})] * 6, env={"OPENROUTER_FALLBACK_MODELS": "b/model:free"})
     with pytest.raises(LLMError, match="rate-limited"):
         c.chat([{"role": "user", "content": "x"}])
+
+
+def test_falls_back_to_next_free_model_when_rate_limited():
+    seen: list[httpx.Request] = []
+    c = fake_client([httpx.Response(429, json={})] * 3 + [completion("from fallback", model="b/model:free")], env={"OPENROUTER_FALLBACK_MODELS": "b/model:free,c/model:free"}, record=seen)
+    r = c.chat([{"role": "user", "content": "x"}])
+    assert r.content == "from fallback" and r.model == "b/model:free"
+    assert [json.loads(q.content)["model"] for q in seen] == ["google/gemma-4-31b-it:free"] * 3 + ["b/model:free"]
 
 
 def test_repair_json_handles_fences_and_trailing_commas():
