@@ -7,6 +7,7 @@ import json
 import sys
 
 from .config import load_settings
+from .llm.openrouter import LLMError
 from .evidence.store import EvidenceStore
 from .pipeline import run
 from .schemas import RunResult
@@ -47,6 +48,9 @@ def main(argv: list[str] | None = None) -> int:
     store = EvidenceStore(a.db)
     try:
         r = run(a.ticker, settings=s, thesis=a.thesis, horizon=a.horizon, store=store)
+    except LLMError as exc:
+        print(f"LLM step failed: {exc}\nRe-run with --no-llm for data + quant + stub memos.", file=sys.stderr)
+        return 2
     finally:
         store.close()
     print(json.dumps(r.model_dump(mode="json"), indent=2) if a.json else report(r))

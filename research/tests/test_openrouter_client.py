@@ -68,3 +68,11 @@ def test_json_mode_fallback_when_model_rejects_response_format():
     out, _ = c.chat_json([{"role": "user", "content": "x"}], Out)
     assert out.n == 1
     assert "response_format" in json.loads(seen[0].content) and "response_format" not in json.loads(seen[1].content)
+
+
+def test_bad_key_stops_the_chain_immediately():
+    seen: list[httpx.Request] = []
+    c = fake_client([httpx.Response(401, json={"error": {"message": "Incorrect API key"}})], env={"OPENROUTER_FALLBACK_MODELS": "b/model:free,c/model:free"}, record=seen)
+    with pytest.raises(LLMError, match="key was rejected") as ei:
+        c.chat([{"role": "user", "content": "x"}])
+    assert ei.value.fatal and len(seen) == 1

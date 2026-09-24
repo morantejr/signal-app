@@ -24,7 +24,11 @@ T = TypeVar("T", bound=BaseModel)
 
 
 class LLMError(RuntimeError):
-    pass
+    """`fatal` errors (bad key, forbidden) stop the fallback chain immediately."""
+
+    def __init__(self, message: str, *, fatal: bool = False):
+        super().__init__(message)
+        self.fatal = fatal
 
 
 @dataclass
@@ -89,10 +93,13 @@ class OpenRouterClient:
             try:
                 return self._chat_one(messages, model=candidate, temperature=temperature, response_format=response_format, max_tokens=max_tokens, retries=retries, tracer=tracer, name=name, requested=requested)
             except LLMError as exc:
+                if exc.fatal:
+                    raise
                 errors.append(f"{candidate}: {exc}")
                 if tracer:
                     tracer.event("model_fallback", {"from": candidate, "error": str(exc)[:300]})
-        raise LLMError("No model in the chain gave a usable completion. " + " | ".join(errors) + " — free models are rate-limited; wait a minute, set OPENROUTER_MODEL / OPENROUTER_FALLBACK_MODELS to other ids, or add a provider key at openrouter.ai/settings/integrations.")
+        hint = " Free models are rate-limited; wait a minute, set OPENROUTER_MODEL / OPENROUTER_FALLBACK_MODELS to other ids, or add a provider key at openrouter.ai/settings/integrations." if "openrouter.ai" in self.settings.openrouter_base_url else f" Check that every model id in the chain exists at {self.settings.openrouter_base_url}."
+        raise LLMError("No model in the chain gave a usable completion. " + " | ".join(errors) + hint)
 
     def _chat_one(self, messages: list[dict[str, str]], *, model: str, temperature: float, response_format: dict | None, max_tokens: int | None, retries: int, tracer: Tracer | None, name: str, requested: str) -> ChatResult:
         last_error: str = ""
@@ -120,7 +127,9 @@ class OpenRouterClient:
                     last_error = f"upstream {exc.status_code}"
                     self._backoff(attempt)
                     continue
-                raise LLMError(f"OpenRouter error {exc.status_code}: {exc}") from exc
+                if exc.status_code in (401, 403):
+                    raise LLMError(f"The API key was rejected by {self.settings.openrouter_base_url} ({exc.status_code}). Check OPENROUTER_API_KEY in research/.env.", fatal=True) from exc
+                raise LLMError(f"LLM gateway error {exc.status_code}: {exc}") from exc
             latency_ms = round((time.time() - t0) * 1000)
             choice = resp.choices[0] if resp.choices else None
             content = (choice.message.content or "") if choice else ""
