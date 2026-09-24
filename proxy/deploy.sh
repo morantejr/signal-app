@@ -18,7 +18,13 @@ URL="$(npx --yes wrangler deploy 2>&1 | tee /dev/stderr | grep -oE 'https://[a-z
 
 echo
 echo "Worker: $URL"
-echo "Smoke test:"; curl -s -o /dev/null -w '  quote -> HTTP %{http_code}\n' "$URL/quote?symbol=AAPL"
+echo "Smoke test (DNS for a new workers.dev subdomain can take a few minutes):"
+for i in $(seq 1 20); do
+  code="$(curl -s -o /dev/null -w '%{http_code}' -H 'Origin: https://morantejr.github.io' "$URL/quote?symbol=AAPL" || true)"
+  echo "  quote -> HTTP $code"
+  [ "$code" = "200" ] && break
+  sleep 15
+done
 
 # Point the deployed site and local dev at the proxy.
 ( cd .. && printf '%s' "$URL" | gh secret set FINNHUB_PROXY && gh workflow run "Deploy to GitHub Pages" )
