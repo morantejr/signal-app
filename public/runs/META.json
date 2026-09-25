@@ -1,9 +1,9 @@
 {
- "run_id": "meta-20260924T035108-0bdc8a",
+ "run_id": "meta-20260925T005936-e55dc9",
  "ticker": "META",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-24T03:51:27.446392Z",
+ "created_at": "2026-09-25T01:01:46.060084Z",
  "sources": [
   {
    "source_id": "yf:hist:META",
@@ -11,10 +11,10 @@
    "title": "Yahoo Finance daily prices, 1y (META)",
    "url": "https://finance.yahoo.com/quote/META/history",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:51:08.443710Z",
+   "retrieved_at": "2026-09-25T00:59:36.165028Z",
    "excerpt": null,
    "data": {
-    "rows": 251,
+    "rows": 250,
     "last": "2026-09-23T00:00:00-04:00"
    }
   },
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (META)",
    "url": "https://finance.yahoo.com/quote/META/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:51:08.443710Z",
+   "retrieved_at": "2026-09-25T00:59:36.165028Z",
    "excerpt": null,
    "data": {
     "longName": "Meta Platforms, Inc.",
     "sector": "Communication Services",
     "industry": "Internet Content & Information",
-    "marketCap": 1895599308800,
-    "trailingPE": 27.775288,
-    "forwardPE": 21.35783,
-    "priceToSalesTrailing12Months": 8.305036,
-    "enterpriseToEbitda": 17.488,
+    "marketCap": 1980915384320,
+    "trailingPE": 29.276733,
+    "forwardPE": 22.262783,
+    "priceToSalesTrailing12Months": 8.678823,
+    "enterpriseToEbitda": 18.266,
     "debtToEquity": 42.997,
     "currentRatio": 2.226,
     "freeCashflow": 21553625088,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (META), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/META/financials",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:51:08.443710Z",
+   "retrieved_at": "2026-09-25T00:59:36.165028Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -60,292 +60,46 @@
    }
   },
   {
-   "source_id": "edgar:0001628280-26-050705",
-   "kind": "filing",
-   "title": "10-Q filed 2026-07-30",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
-   "accession": "0001628280-26-050705",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "10-Q",
-    "filed": "2026-07-30"
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-050596",
-   "kind": "filing",
-   "title": "8-K filed 2026-07-29",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050596/meta-20260729.htm",
-   "accession": "0001628280-26-050596",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-07-29"
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-039193",
-   "kind": "filing",
-   "title": "8-K filed 2026-05-29",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026039193/meta-20260527.htm",
-   "accession": "0001628280-26-039193",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-05-29"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-204128",
-   "kind": "filing",
-   "title": "8-K filed 2026-05-04",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526204128/d134616d8k.htm",
-   "accession": "0001193125-26-204128",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-05-04"
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-028526",
-   "kind": "filing",
-   "title": "10-Q filed 2026-04-30",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028526/meta-20260331.htm",
-   "accession": "0001628280-26-028526",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "10-Q",
-    "filed": "2026-04-30"
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-028364",
-   "kind": "filing",
-   "title": "8-K filed 2026-04-29",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026028364/meta-20260429.htm",
-   "accession": "0001628280-26-028364",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-04-29"
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-025108",
-   "kind": "filing",
-   "title": "8-K filed 2026-04-14",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026025108/meta-20260408.htm",
-   "accession": "0001628280-26-025108",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-04-14"
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-003942",
-   "kind": "filing",
-   "title": "10-K filed 2026-01-29",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
-   "accession": "0001628280-26-003942",
-   "retrieved_at": "2026-09-24T03:51:13.457848Z",
-   "excerpt": null,
-   "data": {
-    "form": "10-K",
-    "filed": "2026-01-29"
-   }
-  },
-  {
-   "source_id": "edgar:facts:0001326801",
-   "kind": "facts",
-   "title": "SEC XBRL company facts (CIK 0001326801)",
-   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001326801.json",
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:51:13.891720Z",
+   "retrieved_at": "2026-09-25T00:59:37.118340Z",
    "excerpt": null,
    "data": {
-    "revenue": [
-     {
-      "fy": 2017,
-      "end": "2015-12-31",
-      "value": 17928000000,
-      "accession": "0001326801-18-000009"
-     },
-     {
-      "fy": 2016,
-      "end": "2016-12-31",
-      "value": 27638000000,
-      "accession": "0001326801-17-000007"
-     },
-     {
-      "fy": 2017,
-      "end": "2016-12-31",
-      "value": 27638000000,
-      "accession": "0001326801-18-000009"
-     },
-     {
-      "fy": 2017,
-      "end": "2017-12-31",
-      "value": 40653000000,
-      "accession": "0001326801-18-000009"
-     }
-    ],
-    "net_income": [
-     {
-      "fy": 2025,
-      "end": "2023-12-31",
-      "value": 39098000000,
-      "accession": "0001628280-26-003942"
-     },
-     {
-      "fy": 2024,
-      "end": "2024-12-31",
-      "value": 62360000000,
-      "accession": "0001326801-25-000017"
-     },
-     {
-      "fy": 2025,
-      "end": "2024-12-31",
-      "value": 62360000000,
-      "accession": "0001628280-26-003942"
-     },
-     {
-      "fy": 2025,
-      "end": "2025-12-31",
-      "value": 60458000000,
-      "accession": "0001628280-26-003942"
-     }
-    ],
-    "long_term_debt": [
-     {
-      "fy": 2024,
-      "end": "2023-12-31",
-      "value": 18385000000,
-      "accession": "0001326801-25-000017"
-     },
-     {
-      "fy": 2024,
-      "end": "2024-12-31",
-      "value": 28826000000,
-      "accession": "0001326801-25-000017"
-     },
-     {
-      "fy": 2025,
-      "end": "2024-12-31",
-      "value": 28826000000,
-      "accession": "0001628280-26-003942"
-     },
-     {
-      "fy": 2025,
-      "end": "2025-12-31",
-      "value": 58744000000,
-      "accession": "0001628280-26-003942"
-     }
-    ],
-    "cash": [
-     {
-      "fy": 2025,
-      "end": "2023-12-31",
-      "value": 41862000000,
-      "accession": "0001628280-26-003942"
-     },
-     {
-      "fy": 2024,
-      "end": "2024-12-31",
-      "value": 43889000000,
-      "accession": "0001326801-25-000017"
-     },
-     {
-      "fy": 2025,
-      "end": "2024-12-31",
-      "value": 43889000000,
-      "accession": "0001628280-26-003942"
-     },
-     {
-      "fy": 2025,
-      "end": "2025-12-31",
-      "value": 35873000000,
-      "accession": "0001628280-26-003942"
-     }
-    ]
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-050705#risk-factors",
-   "kind": "filing",
-   "title": "10-Q filed 2026-07-30 \u2014 Risk factors",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
-   "accession": "0001628280-26-050705",
-   "retrieved_at": "2026-09-24T03:51:14.307633Z",
-   "excerpt": "Item 1A. Risk Factors \n Certain factors may have a material adverse effect on our business, financial condition, and results of operations. You should consider carefully the risks and uncertainties described below, in addition to other information contained in this Quarterly Report on Form 10-Q, including our condensed consolidated financial statements and related notes. The risks and uncertainties described below are not the only ones we face. Additional risks and uncertainties that we are unaware of, or that we currently believe are not material, may also become important factors that adversely affect our business. If any of the following risks actually occurs, our business, financial condition, results of operations, and future prospects could be materially and adversely affected. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. \n Summary Risk Factors \n Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may adversely affect our business, financial condition, results of operations, cash flows, and prospects. These risks are discussed more fully below and include, but are not limited to, risks related to: \n Risks Related to Our Product Offerings \n \u2022 our ability to add and retain users and maintain levels of user engagement with our products; \n \u2022 the loss of, or reduction in spending by, our marketers; \n \u2022 reduced availability of data signals used by our ad targeting and measurement tools; \n \u2022 ineffective operation with mobile operating systems or changes in our relationships with mobile operating system partners; \n \u2022 failure of our new products, or changes to our existing products, to attract or retain users or generate revenue; \n Risks Related to Our Business Operations and Financial Results \n \u2022 our ability to compete effectively; \n \u2022 fluctuations in our financial results; \n \u2022 unfavorable media coverage and other risks affecting our ability to maintain and enhance our brands; \n \u2022 our ability to build, maintain, and scale our technical infrastructure, and risks associated with disruptions in our service, catastrophic events, and crises; \n \u2022 operating our business in multiple countries around the world; \n \u2022 litigation, including class action lawsuits; \n \u2022 acquisitions and our ability to successfully integrate our acquisitions; \n Risks Related to Government Regulation and Enforcement \n \u2022 government restrictions on access to Facebook or our other products, or other actions that impair our ability to sell or deliver advertising, in their countries; \n \u2022 complex and evolving U.S. and foreign privacy, data use, data combination, data protection, content and content moderation, competition, youth, safety, consumer protection, advertising, and other laws and regulations, including the General Data Protection Regulation (GDPR), Digital Markets Act (DMA), Digital Services Act (DSA), UK Online Safety Act (OSA), Artificial Intelligence Act (EU AI Act), and the UK Digital Markets, Competition and Consumer Act (DMCC); \n \u2022 the impact of government investigations, enforcement actions, and settlements, including litigation and investigations by privacy, consumer protection, and competition authorities, among others; \n 57 \n Table of Contents \n \u2022 our ability to comply with regulatory and legislative privacy requirements, including our consent order with the Federal Trade Commission (FTC); \n Risks Related to Data, Security, Platform Integrity, and Intellectual Property \n \u2022 the occurrence of security breaches, improper access to or disclosure of our data or user data, and other cyber incidents, as well as intentional misuse of our services and other undesirable activity on our platform; \n \u2022 our ability to obtain, maintain, protect, and enforce our intellectual property rights; and \n Risks Related to Ownership of Our Class A Common Stock \n \u2022 limitations on the ability of holders of our Class A Common Stock to influence corporate matters due to the dual class structure of our common stock and the control of a majority of the voting power of our outstanding capital stock by our founder, Chairman, and Chief Executive Officer (CEO). \n Risks Related to Our Product Offerings \n If we fail to retain existing users or add new users, or if our users decrease their level of engagement with our products, our revenue, financial results, and business may be significantly harmed. \n The size of our active user base and our users' level of engagement across our products are critical to our success. Our financial performance has been and will continue to be significantly determined by our success in adding, retaining, and engaging active users of our products that deliver ad impressions, particularly for Facebook and Instagram. We have experienced, and expect to continue to experience, fluctuations and declines in the size of our active user base in one or more markets from time to time, particularly in markets where we have achieved higher penetration rates. User growth and engagement are also impacted by a number of other factors, including competitive products and services, such as TikTok, that have reduced some users' engagement with our products and services, as well as global and regional business, macroeconomic, and geopolitical conditions. For example, in the first quarter of 2026, we experienced a slight decline on a quarter-over-quarter basis in the total number of Family daily active people that was driven by internet disruptions in Iran, as well as a restriction on access to WhatsApp in Russia. Any future declines in the size of our active user base may adversely impact our ability to deliver ad impressions and, in turn, our financial performance. \n If people do not perceive our products to be useful, reliable, and trustworthy, we may not be able to attract or retain users or otherwise maintain or increase the frequency and duration of their engagement. A number of other social networking companies that achieved early popularity have since seen their active user bases or levels of engagement decline, in some cases precipitously. There is no guarantee that we will not experience a similar erosion of our active user base or engagement levels. Our user engagement patterns have changed over time, and user engagement can be difficult to measure, particularly as we and our competitors introduce new and different products and services. Any number of factors can negatively affect user retention, growth, and engagement, including if: \n \u2022 users increasingly engage with other competitive products or services; \n \u2022 we fail to introduce new features, products, or services that users find engaging or if we introduce new products or services, or make changes to existing products and services, that are not favorably received; \n \u2022 users feel that their experience is diminished as a result of the decisions we make with respect to the frequency, prominence, format, size, and quality of ads that we display; \n \u2022 users have difficulty installing, updating, or otherwise accessing our products on mobile devices as a result of actions by us or third parties that we rely on to distribute our products and deliver our services; \n \u2022 user behavior on any of our products changes, including decreases in the quality and frequency of content shared on our products and services; \n \u2022 we are unable to continue to develop products for mobile devices that users find engaging, that work with a variety of mobile operating systems and networks, and that achieve a high level of market acceptance; \n \u2022 there are decreases in user sentiment due to questions about the quality or usefulness of our products or our user data practices, concerns about the nature of content made available on our products, or concerns related to privacy, safety, security, well-being, or other factors; \n 58 \n Table of Contents \n \u2022 we are unable to manage and prioritize information to ensure users a",
-   "data": {
-    "form": "10-Q",
-    "section": "risk-factors",
-    "chars": 8000
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-050705#mdna",
-   "kind": "filing",
-   "title": "10-Q filed 2026-07-30 \u2014 MD&A",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
-   "accession": "0001628280-26-050705",
-   "retrieved_at": "2026-09-24T03:51:14.310862Z",
-   "excerpt": "Item 2. Management's Discussion and Analysis of Financial Condition and Results of Operations \n You should read the following discussion of our financial condition and results of operations in conjunction with our condensed consolidated financial statements and the related notes included elsewhere in this Quarterly Report on Form 10-Q and with our audited consolidated financial statements included in our Annual Report on Form 10-K for the year ended December 31, 2025, as filed with the Securities and Exchange Commission. In addition to our historical condensed consolidated financial information, the following discussion contains forward-looking statements that reflect our plans, estimates, and beliefs. Our actual results could differ materially from those discussed in the forward-looking statements. Factors that could cause or contribute to these differences include those discussed below and elsewhere in this Quarterly Report on Form 10-Q, particularly in Part II, Item 1A, \"Risk Factors.\" For a discussion of limitations in the measurement of our Family metrics, see the section entitled \"Limitations of Key Metrics and Other Data\" in this Quarterly Report on Form 10-Q. \n To supplement our condensed consolidated financial statements, which are prepared and presented in accordance with generally accepted accounting principles in the United States (GAAP), we present revenue on a constant currency basis, which is a non-GAAP financial measure. Revenue on a constant currency basis is presented in the section entitled \"\u2014Revenue\u2014Foreign Exchange Impact on Revenue.\" To calculate revenue on a constant currency basis, we translated revenue for the three and six months ended June 30, 2026 using the prior year's monthly exchange rates for our settlement or billing currencies other than the U.S. dollar. \n This non-GAAP financial measure is not intended to be considered in isolation or as a substitute for, or superior to, financial information prepared and presented in accordance with GAAP. This measure may be different from non-GAAP financial measures used by other companies, limiting its usefulness for comparison purposes. Moreover, presentation of revenue on a constant currency basis is provided for year-over-year comparison purposes, and investors should be cautioned that the effect of changing foreign currency exchange rates has an actual effect on our operating results. We believe this non-GAAP financial measure provides investors with useful supplemental information about the financial performance of our business, enables comparison of financial results between periods where certain items may vary independent of business performance, and allows for greater transparency with respect to key metrics used by management in operating our business. \n Executive Overview of Second Quarter Results \n Our mission is to build the future of human connection and the technology that makes it possible. \n Our financial results and key Family metrics for the second quarter of 2026 are set forth below. Total revenue for the second quarter of 2026 was $60.80 billion, an increase of 28% compared to the second quarter of 2025, due to an increase in advertising revenue. Revenue on a constant currency basis would have increased 27% compared to the second quarter of 2025. Ad impressions delivered across our Family of Apps in the second quarter of 2026 increased 14% year-over-year, and our average price per ad in the second quarter of 2026 increased 12% year-over-year. \n Income from operations for the second quarter of 2026 was $18.78 billion, a decrease of $1.67 billion, or 8%, compared to the second quarter of 2025, driven by higher costs and expenses. The increase in costs and expenses was primarily due to increases in employee compensation, including severance expenses; infrastructure expenses related to our data centers, technical infrastructure, and third-party cloud services; legal-related costs; and third-party AI token costs. \n 31 \n Table of Contents \n Consolidated and Segment Results \n We report our financial results for our two reportable segments: Family of Apps (FoA) and Reality Labs (RL). FoA includes Facebook, Instagram, Messenger, WhatsApp, and other services. RL includes our virtual and augmented reality related consumer hardware, software, and content. \n Family of Apps Reality Labs Total \n Three Months Ended June 30, % change Three Months Ended June 30, % change Three Months Ended June 30, % change \n 2026 2025 2026 2025 2026 2025 \n (in millions, except percentages) \n Revenue $ 60,370 $ 47,146 28% $ 431 $ 370 16% $ 60,801 $ 47,516 28% \n Costs and expenses 36,976 22,175 67% 5,050 4,900 3% 42,026 27,075 55% \n Income (loss) from operations $ 23,394 $ 24,971 (6)% $ (4,619) $ (4,530) (2)% $ 18,775 $ 20,441 (8)% \n Operating margin 39 % 53 % (1,072) % (1,224) % 31 % 43 % \n \u2022 Net income was $15.85 billion, with diluted earnings per share (EPS) of $6.18 for the three months ended June 30, 2026. \n \u2022 Capital expenditures, including principal payments on finance leases, were $31.08 billion for the three months ended June 30, 2026. \n \u2022 Dividend and dividend equivalent payments were $1.35 billion for the three months ended June 30, 2026. \n \u2022 Cash, cash equivalents, and marketable securities were $90.26 billion as of June 30, 2026. \n \u2022 Long-term debt was $83.66 billion as of June 30, 2026. \n \u2022 Effective tax rate was 16% for the three months ended June 30, 2026. \n \u2022 Headcount was 75,472 as of June 30, 2026, a decrease of 1% year-over-year. Our reported headcount includes approximately 8,000 employees impacted by the May 2026 headcount reduction, the majority of whom will no longer be reflected in our headcount by the end of the third quarter of 2026. \n Family of Apps Metrics \n \u2022 Family daily active people (DAP) was 3.60 billion on average for June 2026, an increase of 3% year-over-year. \n \u2022 Ad impressions delivered across our Family of Apps in the second quarter of 2026 increased by 14% year-over-year. \n \u2022 Average price per ad in the second quarter of 2026 increased by 12% year-over-year. \n Developments in Advertising \n Substantially all of our revenue is currently generated from advertising on Facebook and Instagram. We rely on targeting and measurement tools that incorporate data signals from user activity on websites and services that we do not control, as well as signals generated within our products, in order to deliver relevant and effective ads to our users. Our advertising revenue has been, and we expect will continue to be, adversely affected by reduced marketer spending as a result of limitations on our ad targeting and measurement tools arising from changes to the regulatory environment and third-party mobile operating systems and browsers. \n In particular, legislative and regulatory developments such as the General Data Protection Regulation, including its evolving interpretation through decisions of the Court of Justice of the European Union, ePrivacy Directive, European Digital Services Act, Digital Markets Act, and U.S. state privacy laws have impacted our ability to use data signals in our ad products, and an increasing number of laws have been introduced limiting or prohibiting the provision of our services to younger users. We expect these and other developments will have further impact in the future. As a result, we have implemented, and we will continue to implement, whether voluntarily or otherwise, changes to our products and user data practices, which reduce our ability to effectively target and measure ads and may negatively impact our advertising revenue and user engagement. For example, in response to regulatory developments in Europe, we announced our plans to change the legal basis for behavioral advertising on Facebook and Instagram in the European Union, European Economic Area, and Switzerland from \"legitimate interests\" to \"consent,\" and began offering users in the region a \"subscription for no ads\" alternative. We subsequently began offering users in t",
-   "data": {
-    "form": "10-Q",
-    "section": "mdna",
-    "chars": 8000
-   }
-  },
-  {
-   "source_id": "edgar:0001628280-26-003942#risk-factors",
-   "kind": "filing",
-   "title": "10-K filed 2026-01-29 \u2014 Risk factors",
-   "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
-   "accession": "0001628280-26-003942",
-   "retrieved_at": "2026-09-24T03:51:14.552554Z",
-   "excerpt": "Item 1A. Risk Factors \n Certain factors may have a material adverse effect on our business, financial condition, and results of operations. You should consider carefully the risks and uncertainties described below, in addition to other information contained in this Annual Report on Form 10-K, including our consolidated financial statements and related notes. The risks and uncertainties described below are not the only ones we face. Additional risks and uncertainties that we are unaware of, or that we currently believe are not material, may also become important factors that adversely affect our business. If any of the following risks actually occurs, our business, financial condition, results of operations, and future prospects could be materially and adversely affected. In that event, the trading price of our Class A common stock could decline, and you could lose part or all of your investment. \n Summary Risk Factors \n Our business is subject to a number of risks, including risks that may prevent us from achieving our business objectives or may adversely affect our business, financial condition, results of operations, cash flows, and prospects. These risks are discussed more fully below and include, but are not limited to, risks related to: \n Risks Related to Our Product Offerings \n \u2022 our ability to add and retain users and maintain levels of user engagement with our products; \n \u2022 the loss of, or reduction in spending by, our marketers; \n \u2022 reduced availability of data signals used by our ad targeting and measurement tools; \n \u2022 ineffective operation with mobile operating systems or changes in our relationships with mobile operating system partners; \n \u2022 failure of our new products, or changes to our existing products, to attract or retain users or generate revenue; \n Risks Related to Our Business Operations and Financial Results \n \u2022 our ability to compete effectively; \n \u2022 fluctuations in our financial results; \n \u2022 unfavorable media coverage and other risks affecting our ability to maintain and enhance our brands; \n \u2022 our ability to build, maintain, and scale our technical infrastructure, and risks associated with disruptions in our service, catastrophic events, and crises; \n \u2022 operating our business in multiple countries around the world; \n \u2022 litigation, including class action lawsuits; \n \u2022 acquisitions and our ability to successfully integrate our acquisitions; \n Risks Related to Government Regulation and Enforcement \n \u2022 government restrictions on access to Facebook or our other products, or other actions that impair our ability to sell or deliver advertising, in their countries; \n \u2022 complex and evolving U.S. and foreign privacy, data use, data combination, data protection, content and content moderation, competition, youth, safety, consumer protection, advertising, and other laws and regulations, including the General Data Protection Regulation (GDPR), Digital Markets Act (DMA), Digital Services Act (DSA), UK Online Safety Act (OSA), Artificial Intelligence Act (EU AI Act), and the UK Digital Markets, Competition and Consumer Act (DMCC); \n \u2022 the impact of government investigations, enforcement actions, and settlements, including litigation and investigations by privacy, consumer protection, and competition authorities, among others; \n 12 \n Table of Contents \n \u2022 our ability to comply with regulatory and legislative privacy requirements, including our consent order with the Federal Trade Commission (FTC); \n Risks Related to Data, Security, Platform Integrity, and Intellectual Property \n \u2022 the occurrence of security breaches, improper access to or disclosure of our data or user data, and other cyber incidents, as well as intentional misuse of our services and other undesirable activity on our platform; \n \u2022 our ability to obtain, maintain, protect, and enforce our intellectual property rights; and \n Risks Related to Ownership of Our Class A Common Stock \n \u2022 limitations on the ability of holders of our Class A Common Stock to influence corporate matters due to the dual class structure of our common stock and the control of a majority of the voting power of our outstanding capital stock by our founder, Chairman, and Chief Executive Officer (CEO). \n Risks Related to Our Product Offerings \n If we fail to retain existing users or add new users, or if our users decrease their level of engagement with our products, our revenue, financial results, and business may be significantly harmed. \n The size of our active user base and our users' level of engagement across our products are critical to our success. Our financial performance has been and will continue to be significantly determined by our success in adding, retaining, and engaging active users of our products that deliver ad impressions, particularly for Facebook and Instagram. We have experienced, and expect to continue to experience, fluctuations and declines in the size of our active user base in one or more markets from time to time, particularly in markets where we have achieved higher penetration rates. User growth and engagement are also impacted by a number of other factors, including competitive products and services, such as TikTok, that have reduced some users' engagement with our products and services, as well as global and regional business, macroeconomic, and geopolitical conditions. For example, in connection with the war in Ukraine, access to Facebook and Instagram was restricted in Russia and these services were then prohibited by the Russian government, which contributed to slight decreases in the size of our active user base following the onset of the war. Any future declines in the size of our active user base may adversely impact our ability to deliver ad impressions and, in turn, our financial performance. \n If people do not perceive our products to be useful, reliable, and trustworthy, we may not be able to attract or retain users or otherwise maintain or increase the frequency and duration of their engagement. A number of other social networking companies that achieved early popularity have since seen their active user bases or levels of engagement decline, in some cases precipitously. There is no guarantee that we will not experience a similar erosion of our active user base or engagement levels. Our user engagement patterns have changed over time, and user engagement can be difficult to measure, particularly as we and our competitors introduce new and different products and services. Any number of factors can negatively affect user retention, growth, and engagement, including if: \n \u2022 users increasingly engage with other competitive products or services; \n \u2022 we fail to introduce new features, products, or services that users find engaging or if we introduce new products or services, or make changes to existing products and services, that are not favorably received; \n \u2022 users feel that their experience is diminished as a result of the decisions we make with respect to the frequency, prominence, format, size, and quality of ads that we display; \n \u2022 users have difficulty installing, updating, or otherwise accessing our products on mobile devices as a result of actions by us or third parties that we rely on to distribute our products and deliver our services; \n \u2022 user behavior on any of our products changes, including decreases in the quality and frequency of content shared on our products and services; \n \u2022 we are unable to continue to develop products for mobile devices that users find engaging, that work with a variety of mobile operating systems and networks, and that achieve a high level of market acceptance; \n 13 \n Table of Contents \n \u2022 there are decreases in user sentiment due to questions about the quality or usefulness of our products or our user data practices, concerns about the nature of content made available on our products, or concerns related to privacy, safety, security, well-being, or other factors; \n \u2022 we are unable to manage and prioritize information to ensure u",
-   "data": {
-    "form": "10-K",
-    "section": "risk-factors",
-    "chars": 8000
+    "from": "2026-06-17",
+    "to": "2026-09-23",
+    "first": 4.49,
+    "last": 5.11
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T03:51:14.556283+00:00) from yf:hist:META, yf:info:META, yf:financials:META",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-25T00:59:37.118685+00:00) from yf:hist:META, yf:info:META, yf:financials:META, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-24T03:51:14.556310Z",
+   "retrieved_at": "2026-09-25T00:59:37.118736Z",
    "excerpt": null,
    "data": {
-    "quant_score": 0,
+    "quant_score": -15,
     "quant_band": "fair",
     "components": [
      {
       "name": "valuation",
-      "value": 0.0,
-      "note": "P/E 27.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.15\u00d7 its own median \u2192 +0.00"
+      "value": -0.35,
+      "note": "P/E 29.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.20\u00d7 its own median \u2192 -0.30"
      },
      {
       "name": "momentum",
-      "value": -0.009677869414485785,
-      "note": "6m return +25.7% \u2192 +0.86; 12m\u22121m -35.1% \u2192 -0.88"
+      "value": 0.00957206537443872,
+      "note": "6m return +25.7% \u2192 +0.86; 12m\u22121m -33.5% \u2192 -0.84"
      },
      {
       "name": "risk",
-      "value": -0.3624436524469789,
-      "note": "1y drawdown 31% \u2192 -0.29; 60d vol 51% ann. \u2192 -0.44"
+      "value": -0.3470670781487146,
+      "note": "1y drawdown 30% \u2192 -0.26; 60d vol 51% ann. \u2192 -0.44"
      },
      {
       "name": "balance_sheet",
@@ -354,8 +108,8 @@
      },
      {
       "name": "macro",
-      "value": null,
-      "note": "no FRED data (optional)"
+      "value": -0.5,
+      "note": "10y yield +0.62pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -363,38 +117,38 @@
  ],
  "quant": {
   "ticker": "META",
-  "quant_score": 0,
+  "quant_score": -15,
   "quant_band": "fair",
   "components": [
    {
     "name": "valuation",
-    "value": 0.0,
+    "value": -0.35,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 27.775288,
-     "ps_vs_own_median": 1.15
+     "trailing_pe": 29.276733,
+     "ps_vs_own_median": 1.2
     },
-    "note": "P/E 27.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.15\u00d7 its own median \u2192 +0.00"
+    "note": "P/E 29.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.20\u00d7 its own median \u2192 -0.30"
    },
    {
     "name": "momentum",
-    "value": -0.009677869414485785,
+    "value": 0.00957206537443872,
     "weight": 0.25,
     "inputs_used": {
      "ret_6m": 25.71297701642845,
-     "ret_12m_minus_1m": -35.06
+     "ret_12m_minus_1m": -33.52
     },
-    "note": "6m return +25.7% \u2192 +0.86; 12m\u22121m -35.1% \u2192 -0.88"
+    "note": "6m return +25.7% \u2192 +0.86; 12m\u22121m -33.5% \u2192 -0.84"
    },
    {
     "name": "risk",
-    "value": -0.3624436524469789,
+    "value": -0.3470670781487146,
     "weight": 0.2,
     "inputs_used": {
-     "max_drawdown_1y": -30.770738200112536,
+     "max_drawdown_1y": -29.942768814821385,
      "vol_60d_ann": 50.5848202308
     },
-    "note": "1y drawdown 31% \u2192 -0.29; 60d vol 51% ann. \u2192 -0.44"
+    "note": "1y drawdown 30% \u2192 -0.26; 60d vol 51% ann. \u2192 -0.44"
    },
    {
     "name": "balance_sheet",
@@ -409,69 +163,73 @@
    },
    {
     "name": "macro",
-    "value": null,
+    "value": -0.5,
     "weight": 0.1,
-    "inputs_used": {},
-    "note": "no FRED data (optional)"
+    "inputs_used": {
+     "fred_10y_change_3m": 0.6200000000000001
+    },
+    "note": "10y yield +0.62pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "META",
-   "as_of": "2026-09-24T03:51:08.443710Z",
+   "as_of": "2026-09-25T00:59:36.165028Z",
    "price": 744.0999755859375,
-   "high_52w": 758.0884399414062,
-   "low_52w": 524.8190307617188,
+   "high_52w": 749.12890625,
+   "low_52w": 524.8189697265625,
    "ret_1m": 33.21297035477977,
    "ret_3m": 33.5354657238057,
    "ret_6m": 25.71297701642845,
-   "ret_12m": -1.8452285536170288,
+   "ret_12m": -0.3052337705030661,
    "vol_60d_ann": 50.5848202308,
-   "max_drawdown_1y": -30.770738200112536,
-   "trailing_pe": 27.775288,
-   "forward_pe": 21.35783,
-   "price_to_sales": 8.305036,
+   "max_drawdown_1y": -29.942768814821385,
+   "trailing_pe": 29.276733,
+   "forward_pe": 22.262783,
+   "price_to_sales": 8.678823,
    "ps_hist_median": 7.224334602629157,
-   "ev_to_ebitda": 17.488,
+   "ev_to_ebitda": 18.266,
    "debt_to_equity": 42.997,
    "current_ratio": 2.226,
    "free_cash_flow": 21553625088.0,
    "revenue_growth": 28.000000000000004,
    "profit_margin": 29.834998000000002,
-   "fred_10y_change_3m": null,
-   "data_age_days": 0.9938477281250001,
+   "fred_10y_change_3m": 0.6200000000000001,
+   "data_age_days": 1.8747241322685184,
    "source_ids": [
     "yf:hist:META",
     "yf:info:META",
-    "yf:financials:META"
+    "yf:financials:META",
+    "fred:DGS10"
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-24T03:51:14.556283Z",
+  "computed_at": "2026-09-25T00:59:37.118685Z",
   "freshness_flags": [],
   "drivers": [
+   "valuation: P/E 29.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.20\u00d7 its own median \u2192 -0.30",
    "balance_sheet: D/E 43% \u2192 +0.5; current ratio 2.23 \u2192 +0.3; FCF positive \u2192 +0.3",
-   "risk: 1y drawdown 31% \u2192 -0.29; 60d vol 51% ann. \u2192 -0.44",
-   "momentum: 6m return +25.7% \u2192 +0.86; 12m\u22121m -35.1% \u2192 -0.88",
-   "valuation: P/E 27.8 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.15\u00d7 its own median \u2192 +0.00"
+   "risk: 1y drawdown 30% \u2192 -0.26; 60d vol 51% ann. \u2192 -0.44",
+   "macro: 10y yield +0.62pp over 3m \u2192 -0.50",
+   "momentum: 6m return +25.7% \u2192 +0.86; 12m\u22121m -33.5% \u2192 -0.84"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Meta Platforms, Inc. has demonstrated strong revenue growth, with a reported 28% increase in Q2 2026 compared to the previous year, driven by a rise in advertising revenue and user engagement across its platforms. The company maintains a solid balance sheet, with a current ratio of 2.23 and positive free cash flow of approximately $21.55 billion. Additionally, the stock has shown positive momentum in the short term, with a 33.5% return over the past three months, suggesting investor confidence. Despite regulatory risks, Meta's robust financial performance and strategic focus on enhancing user engagement position it well for continued growth over the next three months.",
+  "summary": "Meta Platforms shows strong fundamentals with 28% YoY revenue growth, ~30% profit margins, and $21.5B of free cash flow, supported by a low debt\u2011to\u2011equity ratio of 43% and a current ratio above 2. Its forward P/E of 22.3 suggests earnings expectations are improving relative to the trailing multiple of 29.3, and the stock has posted a +25.7% six\u2011month price return, indicating positive short\u2011term momentum. While the P/S ratio is above its historical median, it remains within a reasonable range given the company\u2019s growth profile. These factors together provide a bullish outlook for the next three months.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "Meta reported total revenue of $60.80 billion for Q2 2026, an increase of 28% compared to Q2 2025, driven by an increase in advertising revenue.",
+    "text": "Meta\u2019s revenue grew 28% year\u2011over\u2011year in the most recent period.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001628280-26-050705#mdna"
+     "yf:info:META"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bull-2",
-    "text": "The company has a current ratio of 2.23 and positive free cash flow of approximately $21.55 billion.",
+    "text": "Meta\u2019s profit margin is approximately 30%.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -481,99 +239,168 @@
    },
    {
     "claim_id": "bull-3",
-    "text": "Meta's stock has returned 33.5% over the past three months, indicating positive momentum.",
+    "text": "Meta generated free cash flow of $21.55\u202fbillion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:META"
+     "yf:info:META"
     ],
     "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-4",
+    "text": "Meta\u2019s debt\u2011to\u2011equity ratio is 43%, indicating low leverage.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-5",
+    "text": "Meta\u2019s current ratio is 2.23, reflecting strong short\u2011term liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-6",
+    "text": "Meta\u2019s forward P/E of 22.26 suggests expected earnings improvement relative to its trailing P/E of 29.28.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-7",
+    "text": "Meta\u2019s price\u2011to\u2011sales ratio of 8.68 exceeds its historical median of roughly 7.2, but remains within a reasonable range given its growth.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "yf:info:META",
+     "yf:financials:META"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "bull-8",
+    "text": "Meta\u2019s six\u2011month price return is +25.7%, indicating positive short\u2011term momentum.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "yf:hist:META"
+    ],
+    "confidence": 0.8
    }
   ],
-  "steelman_of_other_side": "Bears argue that Meta faces significant regulatory risks, including evolving privacy laws and potential government restrictions that could impact its advertising revenue. Additionally, there are concerns about user engagement and retention, which are critical for sustaining revenue growth. The company's high valuation multiples relative to historical averages may also deter some investors, especially in a volatile market environment.",
+  "steelman_of_other_side": "Despite strong fundamentals, Meta's trailing P/E of 29.3 sits above the 18\u201128\u00d7 range that historically marked fair value, suggesting the stock may be priced for perfection. The 10\u2011year Treasury yield has risen 0.62\u202fpp over the past three months, increasing the discount rate for growth equities and pressuring valuation multiples. Moreover, the stock exhibits high volatility (\u224851% annualized) and a 1\u2011year drawdown near 30%, indicating significant downside risk, while ongoing regulatory scrutiny and Reality Labs losses remain overhangs.",
   "missing_data": [
-   "Detailed breakdown of user engagement metrics and retention rates",
-   "Future guidance on revenue growth and advertising trends",
-   "Specifics on regulatory challenges and their potential financial impact"
+   "Detailed operating loss breakdown for Reality Labs",
+   "Advertising revenue growth by geography and ad format",
+   "Recent regulatory developments or potential fines",
+   "Forward\u2011looking guidance for revenue and expenses",
+   "Quarterly segment\u2011level free cash flow"
   ],
-  "model": "gpt-4o-mini-2024-07-18",
-  "provider": null,
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
   "is_stub": false
  },
  "bear": {
   "side": "bear",
-  "summary": "The bear case for Meta Platforms, Inc. (META) over the next three months hinges on several key risks that could adversely affect its business and financial performance. These include challenges in user engagement, potential reductions in advertising spending, and increasing regulatory pressures that could impact operations and profitability. Additionally, the company's high valuation multiples, particularly in relation to its historical performance, raise concerns about sustainability amid a volatile market environment. The combination of these factors suggests a potential for significant downside risk in the near term.",
+  "summary": "Meta's valuation appears stretched relative to its historical earnings and sales multiples, while recent momentum shows signs of weakening and the stock exhibits considerable downside volatility. Rising Treasury yields add a macro headwind that could pressure high\u2011growth, high\u2011multiple names. Together, these factors suggest near\u2011term downside risk over a three\u2011month horizon.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Meta faces risks related to user engagement and retention, which could adversely affect its revenue growth.",
+    "text": "Meta's trailing P/E of 29.3\u00d7 exceeds the 18\u201328\u00d7 range considered neutral for the stock, indicating a premium valuation.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001628280-26-050705#risk-factors"
+     "yf:info:META",
+     "quant:v0.1"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "bear-2",
-    "text": "The company is experiencing a significant decline in its 12-month return, which raises concerns about its momentum.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1",
-     "yf:hist:META"
-    ],
-    "confidence": 0.85
-   },
-   {
-    "claim_id": "bear-3",
-    "text": "Meta's current valuation multiples, such as a P/E ratio of 27.8, are at the high end of the neutral band, suggesting limited upside potential.",
+    "text": "The price-to-sales ratio of 8.68\u00d7 is about 1.20\u00d7 the company's historical median P/S, suggesting the stock is expensive relative to its own sales multiple history.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "quant:v0.1"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
    },
    {
-    "claim_id": "bear-4",
-    "text": "Regulatory pressures, including compliance with evolving privacy laws, pose a significant risk to Meta's operations and advertising revenue.",
+    "claim_id": "bear-3",
+    "text": "While the 6\u2011month return is +25.7%, the 12\u2011month minus 1\u2011month return is \u201333.5%, indicating recent momentum deterioration.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001628280-26-050705#risk-factors"
+     "yf:hist:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-4",
+    "text": "The stock experienced a ~30% one\u2011year max drawdown and shows ~50% annualized 60\u2011day volatility, reflecting substantial downside risk.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bear-5",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.62 percentage points over the past three months, increasing discount rates and pressuring high\u2011valuation growth equities.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10",
+     "quant:v0.1"
     ],
     "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "The bull case for Meta emphasizes its strong revenue growth, with a reported 28% increase in total revenue year-over-year, driven by advertising revenue. The company's robust balance sheet, characterized by a positive free cash flow and a manageable debt-to-equity ratio, supports its ability to invest in future growth initiatives. Additionally, Meta's large user base across its platforms provides a significant competitive advantage in the digital advertising space.",
+  "steelman_of_other_side": "Meta delivers robust top\u2011line growth (\u224828% YoY) with high profitability (\u224830% net margin) and generates over $21\u202fbn of free cash flow, while maintaining a conservative debt\u2011to\u2011equity ratio of ~43% and a current ratio above 2. These financial strengths provide a cushion against valuation concerns and support continued investment in AI and the Family of Apps.",
   "missing_data": [
-   "Specific metrics on user engagement trends and advertising spending forecasts",
-   "Detailed breakdown of regulatory impacts on revenue projections",
-   "Historical context for valuation multiples beyond the current snapshot"
+   "Quarterly revenue growth trend to assess deceleration",
+   "Reality Labs segment operating loss and cash burn",
+   "User engagement metrics (DAU/MAU) for Family of Apps",
+   "Advertising pricing/CPM trends",
+   "Regulatory developments (antitrust, privacy, content moderation)",
+   "Forward-looking guidance from management"
   ],
-  "model": "gpt-4o-mini-2024-07-18",
-  "provider": null,
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
   "is_stub": false
  },
  "brief": {
   "ticker": "META",
-  "one_view": "The bull memo highlights Meta's strong revenue growth of 28% year-over-year, driven by advertising revenue, and a solid balance sheet with a current ratio of 2.23 and positive free cash flow. In contrast, the bear memo emphasizes significant risks, including challenges in user engagement and high valuation multiples, which may limit upside potential. To settle the debate, clearer metrics on user engagement and future advertising trends would be critical. The quant analysis indicates a fair valuation but raises concerns about momentum and risk, particularly with a significant 12-month drawdown, which aligns with the bear perspective.",
+  "one_view": "Meta Platforms exhibits strong fundamental momentum with 28% YoY revenue growth, ~30% profit margins and over $21\u202fbn of free cash flow, supported by a low debt\u2011to\u2011equity ratio (\u224843%) and a current ratio above 2. These bullish factors are offset by a stretched valuation: the trailing P/E of 29.3\u00d7 sits above the historical 18\u201128\u00d7 range considered fair and the price\u2011to\u2011sales ratio is about 1.2\u00d7 its own median, while momentum shows mixed signals (strong 6\u2011month gain but deteriorating 12\u2011month\u2011minus\u20111\u2011month return) and risk metrics remain elevated (\u224830% 1\u2011year drawdown and ~50% annualized 60\u2011day volatility). Rising Treasury yields add a macro headwind that could pressure high\u2011multiple growth stocks. Consequently, the near\u2011term outlook hinges on whether Meta can translate its AI investments into accelerated advertising revenue that justifies the premium multiples, or whether valuation compression and macro pressures dominate.",
   "narrative_lean": "mixed",
   "claims": [
    {
     "claim_id": "syn-1",
-    "text": "Meta reported total revenue of $60.80 billion for Q2 2026, an increase of 28% compared to Q2 2025, driven by an increase in advertising revenue.",
+    "text": "Meta\u2019s revenue grew 28% year\u2011over\u2011year in the most recent period.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001628280-26-050705#mdna"
+     "yf:info:META"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-2",
-    "text": "The company has a current ratio of 2.23 and positive free cash flow of approximately $21.55 billion.",
+    "text": "Meta\u2019s profit margin is approximately 30%.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -583,90 +410,166 @@
    },
    {
     "claim_id": "syn-3",
-    "text": "Meta's stock has returned 33.5% over the past three months, indicating positive momentum.",
+    "text": "Meta generated free cash flow of $21.55\u202fbillion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:META"
+     "yf:info:META"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-4",
-    "text": "Meta faces risks related to user engagement and retention, which could adversely affect its revenue growth.",
-    "stance": "bear",
+    "text": "Meta\u2019s debt\u2011to\u2011equity ratio is 43%, indicating low leverage.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001628280-26-050705#risk-factors"
+     "yf:info:META"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-5",
-    "text": "The company is experiencing a significant decline in its 12-month return, which raises concerns about its momentum.",
-    "stance": "bear",
+    "text": "Meta\u2019s current ratio is 2.23, reflecting strong short\u2011term liquidity.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1",
-     "yf:hist:META"
+     "yf:info:META"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-6",
-    "text": "Meta's current valuation multiples, such as a P/E ratio of 27.8, are at the high end of the neutral band, suggesting limited upside potential.",
-    "stance": "bear",
+    "text": "Meta\u2019s forward P/E of 22.26 suggests expected earnings improvement relative to its trailing P/E of 29.28.",
+    "stance": "context",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1"
+     "yf:info:META"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-7",
-    "text": "Regulatory pressures, including compliance with evolving privacy laws, pose a significant risk to Meta's operations and advertising revenue.",
+    "text": "Meta\u2019s price\u2011to\u2011sales ratio of 8.68 exceeds its historical median of roughly 7.2, but remains within a reasonable range given its growth.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "yf:info:META",
+     "yf:financials:META"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "syn-8",
+    "text": "Meta\u2019s six\u2011month price return is +25.7%, indicating positive short\u2011term momentum.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "yf:hist:META"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "syn-9",
+    "text": "Meta's trailing P/E of 29.3\u00d7 exceeds the 18\u201328\u00d7 range considered neutral for the stock, indicating a premium valuation.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001628280-26-050705#risk-factors"
+     "yf:info:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-10",
+    "text": "The price-to-sales ratio of 8.68\u00d7 is about 1.20\u00d7 the company's historical median P/S, suggesting the stock is expensive relative to its own sales multiple history.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META",
+     "yf:financials:META"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-11",
+    "text": "While the 6\u2011month return is +25.7%, the 12\u2011month minus 1\u2011month return is \u201333.5%, indicating recent momentum deterioration.",
+    "stance": "bear",
+    "support": "inference",
+    "source_ids": [
+     "yf:hist:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-12",
+    "text": "The stock experienced a ~30% one\u2011year max drawdown and shows ~50% annualized 60\u2011day volatility, reflecting substantial downside risk.",
+    "stance": "bear",
+    "support": "inference",
+    "source_ids": [
+     "yf:hist:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-13",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.62 percentage points over the past three months, increasing discount rates and pressuring high\u2011valuation growth equities.",
+    "stance": "bear",
+    "support": "inference",
+    "source_ids": [
+     "fred:DGS10",
+     "quant:v0.1"
     ],
     "confidence": 0.9
    }
   ],
   "kill_criteria": [
-   "A significant decline in user engagement metrics or advertising revenue forecasts",
-   "New regulatory actions that severely impact Meta's operations or advertising capabilities",
-   "A substantial increase in the company's valuation multiples beyond historical norms without corresponding growth"
+   "Quarterly revenue growth falls below 15% YoY or profit margin drops under 20%, weakening the bull case.",
+   "Free cash flow turns negative or debt\u2011to\u2011equity rises above 60%, strengthening the bear case.",
+   "Trailing P/E falls below 22\u00d7 or price\u2011to\u2011sales declines to \u22641\u00d7 its historical median, favoring the bull case.",
+   "Six\u2011month return remains positive and the 12\u2011month\u2011minus\u20111\u2011month return turns positive, indicating improving momentum for the bull case.",
+   "One\u2011year drawdown narrows below 15% and 60\u2011day volatility falls below 35% annualized, reducing risk and supporting the bull case.",
+   "10\u2011year Treasury yield declines by more than 0.3\u202fpp over the next quarter, easing the macro headwind and favoring the bull case."
   ],
   "disagreement": {
    "quant_band": "fair",
-   "quant_score": 0,
+   "quant_score": -15,
    "narrative_lean": "mixed",
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The quant score may not fully capture qualitative factors such as user sentiment and engagement trends, which are critical for Meta's advertising revenue.",
-    "Market conditions can change rapidly, affecting momentum and risk assessments that are based on historical data."
+    "The historical P/S median is based on only four annual points, which may not reflect the evolving mix of advertising and AI services.",
+    "60\u2011day volatility may be inflated by short\u2011term event\u2011specific noise rather than structural risk.",
+    "The macro component treats the Treasury yield change as a linear discount\u2011rate proxy, ignoring possible offsetting effects from inflation expectations or currency movements.",
+    "The score does not incorporate forward\u2011looking AI monetization expectations that could justify higher multiples.",
+    "The fixed 18\u201128\u00d7 P/E band used in the valuation component may be outdated for a company shifting toward higher\u2011margin AI\u2011driven revenue."
    ],
    "narrative_may_be_wrong_because": [
-    "The bull case may overestimate the sustainability of revenue growth without considering potential regulatory impacts and user engagement challenges.",
-    "The bear case may underestimate Meta's ability to adapt and innovate in response to market and regulatory pressures."
+    "Both memos rely on trailing fundamentals and may not capture the near\u2011term impact of recent AI product launches on revenue growth.",
+    "The bull memo\u2019s inference that an elevated P/S remains \u201creasonable given growth\u201d lacks quantitative thresholds and could be overly optimistic.",
+    "The bear memo\u2019s focus on historical multiples may ignore a structural re\u2011rating of the sector as AI\u2011driven advertising scales.",
+    "Neither memo provides quarterly segment\u2011level Reality Labs cash burn, a key driver of near\u2011term earnings volatility.",
+    "Regulatory developments (antitrust, privacy, content moderation) are only mentioned qualitatively, leaving potential financial impacts unquantified."
    ]
   },
-  "model": "gpt-4o-mini-2024-07-18",
-  "provider": null,
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
   "is_stub": false
  },
  "critic": {
-  "flags": [],
+  "flags": [
+   "high_confidence_claims_undersourced:0.73"
+  ],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 1.0
+  "sourced_share_high_conf": 0.7307692307692307
  },
  "models": {
-  "bull": "gpt-4o-mini-2024-07-18",
-  "bear": "gpt-4o-mini-2024-07-18",
-  "synthesis": "gpt-4o-mini-2024-07-18",
+  "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+  "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+  "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
   "quant": "code:v0.1"
  },
  "is_prototype": true

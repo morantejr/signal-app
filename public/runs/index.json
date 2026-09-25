@@ -1,131 +1,131 @@
 {
- "generated_at": "2026-09-24T21:03:58.616913+00:00",
+ "generated_at": "2026-09-25T01:07:56.861909+00:00",
  "runs": [
   {
    "ticker": "AAPL",
-   "run_id": "aapl-20260924T035045-ff5f80",
-   "created_at": "2026-09-24T03:51:08.428162+00:00",
+   "run_id": "aapl-20260925T005834-9fb89a",
+   "created_at": "2026-09-25T00:59:36.159420+00:00",
+   "quant_score": 10,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "AMZN",
+   "run_id": "amzn-20260925T010510-2e4567",
+   "created_at": "2026-09-25T01:06:22.400453+00:00",
+   "quant_score": 12,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "GOOGL",
+   "run_id": "googl-20260925T010353-ed73c7",
+   "created_at": "2026-09-25T01:05:10.826000+00:00",
+   "quant_score": 17,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "META",
+   "run_id": "meta-20260925T005936-e55dc9",
+   "created_at": "2026-09-25T01:01:46.060084+00:00",
+   "quant_score": -15,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "MSFT",
+   "run_id": "msft-20260925T010146-01cf6a",
+   "created_at": "2026-09-25T01:03:53.430273+00:00",
+   "quant_score": 6,
+   "quant_band": "fair",
+   "narrative_lean": "mixed",
+   "agree": true,
+   "is_stub": false,
+   "models": {
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
+    "quant": "code:v0.1"
+   }
+  },
+  {
+   "ticker": "NVDA",
+   "run_id": "nvda-20260925T004004-83cba0",
+   "created_at": "2026-09-25T00:58:34.788860+00:00",
    "quant_score": 16,
    "quant_band": "fair",
    "narrative_lean": "mixed",
    "agree": true,
    "is_stub": false,
    "models": {
-    "bull": "gpt-4o-mini-2024-07-18",
-    "bear": "gpt-4o-mini-2024-07-18",
-    "synthesis": "gpt-4o-mini-2024-07-18",
-    "quant": "code:v0.1"
-   }
-  },
-  {
-   "ticker": "AMZN",
-   "run_id": "amzn-20260924T210356-5dbff8",
-   "created_at": "2026-09-24T21:03:57.447570+00:00",
-   "quant_score": 11,
-   "quant_band": "fair",
-   "narrative_lean": "mixed",
-   "agree": true,
-   "is_stub": true,
-   "models": {
-    "bull": "stub",
-    "bear": "stub",
-    "synthesis": "stub",
-    "quant": "code:v0.1"
-   }
-  },
-  {
-   "ticker": "GOOGL",
-   "run_id": "googl-20260924T210355-db30d2",
-   "created_at": "2026-09-24T21:03:56.675814+00:00",
-   "quant_score": 18,
-   "quant_band": "fair",
-   "narrative_lean": "mixed",
-   "agree": true,
-   "is_stub": true,
-   "models": {
-    "bull": "stub",
-    "bear": "stub",
-    "synthesis": "stub",
-    "quant": "code:v0.1"
-   }
-  },
-  {
-   "ticker": "META",
-   "run_id": "meta-20260924T035108-0bdc8a",
-   "created_at": "2026-09-24T03:51:27.446392+00:00",
-   "quant_score": 0,
-   "quant_band": "fair",
-   "narrative_lean": "mixed",
-   "agree": true,
-   "is_stub": false,
-   "models": {
-    "bull": "gpt-4o-mini-2024-07-18",
-    "bear": "gpt-4o-mini-2024-07-18",
-    "synthesis": "gpt-4o-mini-2024-07-18",
-    "quant": "code:v0.1"
-   }
-  },
-  {
-   "ticker": "MSFT",
-   "run_id": "msft-20260924T035127-4532a0",
-   "created_at": "2026-09-24T03:52:03.355838+00:00",
-   "quant_score": 11,
-   "quant_band": "fair",
-   "narrative_lean": "mixed",
-   "agree": true,
-   "is_stub": false,
-   "models": {
-    "bull": "gpt-4o-mini-2024-07-18",
-    "bear": "gpt-4o-mini-2024-07-18",
-    "synthesis": "gpt-4o-mini-2024-07-18",
-    "quant": "code:v0.1"
-   }
-  },
-  {
-   "ticker": "NVDA",
-   "run_id": "nvda-20260924T035024-fd9725",
-   "created_at": "2026-09-24T03:50:45.383170+00:00",
-   "quant_score": 23,
-   "quant_band": "attractive",
-   "narrative_lean": "mixed",
-   "agree": false,
-   "is_stub": false,
-   "models": {
-    "bull": "gpt-4o-mini-2024-07-18",
-    "bear": "gpt-4o-mini-2024-07-18",
-    "synthesis": "gpt-4o-mini-2024-07-18",
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nex-agi/nex-n2.5-pro:free",
     "quant": "code:v0.1"
    }
   },
   {
    "ticker": "TSLA",
-   "run_id": "tsla-20260924T210357-dac359",
-   "created_at": "2026-09-24T21:03:58.613820+00:00",
+   "run_id": "tsla-20260925T010622-038707",
+   "created_at": "2026-09-25T01:07:56.857565+00:00",
    "quant_score": -30,
    "quant_band": "expensive",
    "narrative_lean": "mixed",
    "agree": false,
-   "is_stub": true,
+   "is_stub": false,
    "models": {
-    "bull": "stub",
-    "bear": "stub",
-    "synthesis": "stub",
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
     "quant": "code:v0.1"
    }
   },
   {
    "ticker": "ZETA",
-   "run_id": "zeta-20260924T034957-078e31",
-   "created_at": "2026-09-24T03:50:24.195341+00:00",
-   "quant_score": 14,
+   "run_id": "zeta-20260925T003816-03d7be",
+   "created_at": "2026-09-25T00:40:04.626626+00:00",
+   "quant_score": 8,
    "quant_band": "fair",
    "narrative_lean": "mixed",
    "agree": true,
    "is_stub": false,
    "models": {
-    "bull": "gpt-4o-mini-2024-07-18",
-    "bear": "gpt-4o-mini-2024-07-18",
-    "synthesis": "gpt-4o-mini-2024-07-18",
+    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
     "quant": "code:v0.1"
    }
   }

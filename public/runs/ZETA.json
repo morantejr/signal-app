@@ -1,9 +1,9 @@
 {
- "run_id": "zeta-20260924T034957-078e31",
+ "run_id": "zeta-20260925T003816-03d7be",
  "ticker": "ZETA",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-24T03:50:24.195341Z",
+ "created_at": "2026-09-25T00:40:04.626626Z",
  "sources": [
   {
    "source_id": "yf:hist:ZETA",
@@ -11,10 +11,10 @@
    "title": "Yahoo Finance daily prices, 1y (ZETA)",
    "url": "https://finance.yahoo.com/quote/ZETA/history",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:49:58.110222Z",
+   "retrieved_at": "2026-09-25T00:38:17.671171Z",
    "excerpt": null,
    "data": {
-    "rows": 251,
+    "rows": 250,
     "last": "2026-09-23T00:00:00-04:00"
    }
   },
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (ZETA)",
    "url": "https://finance.yahoo.com/quote/ZETA/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:49:58.110222Z",
+   "retrieved_at": "2026-09-25T00:38:17.671171Z",
    "excerpt": null,
    "data": {
     "longName": "Zeta Global Holdings Corp.",
     "sector": "Technology",
     "industry": "Software - Infrastructure",
-    "marketCap": 7425384448,
+    "marketCap": 7370547712,
     "trailingPE": "Infinity",
-    "forwardPE": 24.645092,
-    "priceToSalesTrailing12Months": 4.7269034,
-    "enterpriseToEbitda": 63.723,
+    "forwardPE": 24.463085,
+    "priceToSalesTrailing12Months": 4.691995,
+    "enterpriseToEbitda": 63.246,
     "debtToEquity": 23.772,
     "currentRatio": 2.382,
     "freeCashflow": 252155632,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (ZETA), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/ZETA/financials",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:49:58.110222Z",
+   "retrieved_at": "2026-09-25T00:38:17.671171Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -60,273 +60,41 @@
    }
   },
   {
-   "source_id": "edgar:0001193125-26-333902",
-   "kind": "filing",
-   "title": "10-Q filed 2026-08-05",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526333902/zeta-20260630.htm",
-   "accession": "0001193125-26-333902",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "10-Q",
-    "filed": "2026-08-05"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-332770",
-   "kind": "filing",
-   "title": "8-K filed 2026-08-04",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526332770/zeta-20260804.htm",
-   "accession": "0001193125-26-332770",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-08-04"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-318057",
-   "kind": "filing",
-   "title": "8-K filed 2026-07-27",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526318057/zeta-20260724.htm",
-   "accession": "0001193125-26-318057",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-07-27"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-272699",
-   "kind": "filing",
-   "title": "8-K filed 2026-06-16",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526272699/zeta-20260616.htm",
-   "accession": "0001193125-26-272699",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-06-16"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-199156",
-   "kind": "filing",
-   "title": "10-Q filed 2026-05-01",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526199156/zeta-20260331.htm",
-   "accession": "0001193125-26-199156",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "10-Q",
-    "filed": "2026-05-01"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-197172",
-   "kind": "filing",
-   "title": "8-K filed 2026-04-30",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526197172/zeta-20260430.htm",
-   "accession": "0001193125-26-197172",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-04-30"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-068598",
-   "kind": "filing",
-   "title": "10-K filed 2026-02-25",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526068598/zeta-20251231.htm",
-   "accession": "0001193125-26-068598",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "10-K",
-    "filed": "2026-02-25"
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-066951",
-   "kind": "filing",
-   "title": "8-K filed 2026-02-24",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526066951/zeta-20260224.htm",
-   "accession": "0001193125-26-066951",
-   "retrieved_at": "2026-09-24T03:50:06.079495Z",
-   "excerpt": null,
-   "data": {
-    "form": "8-K",
-    "filed": "2026-02-24"
-   }
-  },
-  {
-   "source_id": "edgar:facts:0001851003",
-   "kind": "facts",
-   "title": "SEC XBRL company facts (CIK 0001851003)",
-   "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001851003.json",
+   "source_id": "fred:DGS10",
+   "kind": "macro",
+   "title": "FRED DGS10, 10-year Treasury yield",
+   "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-24T03:50:06.521922Z",
+   "retrieved_at": "2026-09-25T00:38:18.896138Z",
    "excerpt": null,
    "data": {
-    "revenue": [
-     {
-      "fy": 2025,
-      "end": "2023-12-31",
-      "value": 728723000,
-      "accession": "0001193125-26-068598"
-     },
-     {
-      "fy": 2024,
-      "end": "2024-12-31",
-      "value": 1005754000,
-      "accession": "0000950170-25-027338"
-     },
-     {
-      "fy": 2025,
-      "end": "2024-12-31",
-      "value": 1005754000,
-      "accession": "0001193125-26-068598"
-     },
-     {
-      "fy": 2025,
-      "end": "2025-12-31",
-      "value": 1304668000,
-      "accession": "0001193125-26-068598"
-     }
-    ],
-    "net_income": [
-     {
-      "fy": 2025,
-      "end": "2023-12-31",
-      "value": -187481000,
-      "accession": "0001193125-26-068598"
-     },
-     {
-      "fy": 2024,
-      "end": "2024-12-31",
-      "value": -69771000,
-      "accession": "0000950170-25-027338"
-     },
-     {
-      "fy": 2025,
-      "end": "2024-12-31",
-      "value": -69771000,
-      "accession": "0001193125-26-068598"
-     },
-     {
-      "fy": 2025,
-      "end": "2025-12-31",
-      "value": -31509000,
-      "accession": "0001193125-26-068598"
-     }
-    ],
-    "long_term_debt": [
-     {
-      "fy": 2024,
-      "end": "2023-12-31",
-      "value": 184147000,
-      "accession": "0000950170-25-027338"
-     },
-     {
-      "fy": 2024,
-      "end": "2024-12-31",
-      "value": 196288000,
-      "accession": "0000950170-25-027338"
-     },
-     {
-      "fy": 2025,
-      "end": "2024-12-31",
-      "value": 196288000,
-      "accession": "0001193125-26-068598"
-     },
-     {
-      "fy": 2025,
-      "end": "2025-12-31",
-      "value": 197083000,
-      "accession": "0001193125-26-068598"
-     }
-    ],
-    "cash": [
-     {
-      "fy": 2024,
-      "end": "2023-12-31",
-      "value": 131732000,
-      "accession": "0000950170-25-027338"
-     },
-     {
-      "fy": 2024,
-      "end": "2024-12-31",
-      "value": 366157000,
-      "accession": "0000950170-25-027338"
-     },
-     {
-      "fy": 2025,
-      "end": "2024-12-31",
-      "value": 366157000,
-      "accession": "0001193125-26-068598"
-     },
-     {
-      "fy": 2025,
-      "end": "2025-12-31",
-      "value": 319764000,
-      "accession": "0001193125-26-068598"
-     }
-    ]
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-333902#mdna",
-   "kind": "filing",
-   "title": "10-Q filed 2026-08-05 \u2014 MD&A",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526333902/zeta-20260630.htm",
-   "accession": "0001193125-26-333902",
-   "retrieved_at": "2026-09-24T03:50:07.452577Z",
-   "excerpt": "Item 2. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations \n The following discussion and analysis of our financial condition and results of operations should be read in conjunction with our condensed unaudited consolidated financial statements and related notes included elsewhere in this Quarterly Report on Form 10-Q. In addition to historical financial information, the following discussion contains forward-looking statements that are based upon current plans, expectations and beliefs that involve risks and uncertainties. Our actual results and the timing of events may differ materially from those anticipated and discussed in the forward-looking statements as a result of various factors, including those set forth in Part I, Item 1A \u201cRisk Factors\u201d in the Company\u2019s Annual Report on Form 10-K for the year ended December 31, 2025 (\u201c2025 Annual Report\u201d) filed on February 25, 2026, and in Part II, Item 1A \u201cRisk Factors\u201d included in this Quarterly Report on Form 10-Q. \n Overview \n Zeta is a leading AI-powered omnichannel data-driven cloud platform that provides enterprises with consumer intelligence and marketing automation software. We empower our customers to target, connect and engage consumers through software that delivers personalized marketing across all addressable channels, including email, social media, web, chat, Connected TV (\u201cCTV\u201d) and video, among others. Our Generative AI (GenAI)-driven marketing solutions enable brands to personalize experiences at scale, measure impact with precision and optimize marketing spend to increase return on investment (\u201cROI\u201d). \n Our Zeta Marketing Platform, or ZMP, is an AI-powered marketing platform with identity data at its core. Leveraging GenAI and machine learning, the ZMP processes billions of structured and unstructured data signals to predict consumer intent, optimize messaging and drive personalized messaging across all channels. The ZMP enables brands to connect with consumers through native integration of marketing channels and application programming interface (\u201cAPI\u201d) integration with third parties. The ZMP\u2019s data-driven algorithms and processes learn and optimize each customer\u2019s marketing program in real time, producing a \u2018flywheel effect\u2019 that enables our customers to test, learn and improve their marketing programs in real time. \n The ZMP enhances our customers\u2019 ability to personalize consumer experiences at scale across multiple touchpoints. With AI-driven automation, brands can orchestrate highly effective programs through intuitive workflows and real-time intelligence. Our Zeta SuperGraph\u2122 improves identity resolution while maintaining compliance with evolving privacy standards. Zeta Answers, our intelligence suite, synthesizes Zeta\u2019s proprietary data and data generated by our customers to uncover consumer insights that are translated into marketing programs designed for highly targeted audiences across digital channels, including email, SMS, websites, applications, social media, CTV and chat. \n Macroeconomic trends \n Our business and the operations of our customers depend on the overall state of the economy, and we and they could be negatively impacted by slower economic growth and the potential for a recession. While core inflation has remained relatively steady for the first six months of the year, the economy continues to be impacted by the looming potential of increased inflation rates and faces further inflation risk. To date, the effects of tariffs and changes in global trade policies on the overall state of the economy and on our business have not materially impacted our costs or operations. However, the evolving tariffs and changes in global trade policies continue to cause overall economic uncertainty and may increase our costs and adversely impact our operations as well as customers\u2019 businesses and operations. Additionally, other potentially challenging macroeconomic conditions, and the resulting impact on the economy and consumer spending, could negatively impact our and our customers\u2019 businesses and operations. \n Factors Affecting Results of Operations \n For a discussion of the factors affecting our results of operations, please see \u201cFactors Affecting Results of Operations\u201d in Part II, Item 7 \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d and Part 1, Item 1A \u201cRisk Factors\u201d of our 2025 Annual Report, as well as in Part II, Item 1A \u201cRisk Factors\u201d included in this Quarterly Report on Form 10-Q. \n Key Performance Metrics \n We review key performance metrics, discussed below, to evaluate our business, track performance, identify trends, formulate plans and make strategic decisions. We believe that the presentation of such metrics provides investors with effective ways to measure and model the performance of companies such as ours, with recurring revenue streams. \n Super-scaled customers increased 17% to 197 as of June 30, 2026, compared to 168 as of June 30, 2025, primarily due to higher usage of our platform among our customers and new additions to our super-scaled customer base. \n Super-scaled customer Average Revenue Per User (\u201cARPU\u201d) increased 17% to $1.8 million (across 197 customers) for the three months ended June 30, 2026, compared to $1.6 million (across 168 customers) for the three months ended June 30, 2025. \n 22 \n Description of Certain Components of Financial Data \n Revenues \n Our revenue primarily arises from use of our technology platform via subscription fees, volume-based utilization fees and fees for professional services. Our platform revenue is comprised of a mix of direct platform revenue and integrated platform revenue, which leverages API integrations with third parties. For the six months ended June 30, 2026 and 2025, we derived 73% and 74% of our revenues from direct platforms, respectively, and 27% and 26% of our revenues from integrated platforms, respectively. Revenues are recognized when control of these services is transferred to our customers, in an amount that reflects the consideration we expect to be entitled to in exchange for those services. Sales and other taxes collected by us are excluded from revenue. Our revenue recognition policies are discussed in more detail below under \u201cCritical Accounting Estimates.\u201d \n Cost of revenues (excluding depreciation and amortization) \n Cost of revenues excludes depreciation and amortization and consists primarily of media and marketing costs and certain employee-related costs. Media and marketing costs consist primarily of fees paid to third-party publishers, media owners or managers, and strategic partners that are directly related to revenue-generating events. We pay these third-party publishers, media owners or managers and strategic partners on revenue-share, a cost-per-lead, cost-per-click, or cost-per-thousand-impressions basis. Expenses related to \u201cinternet traffic\u201d associated with the viewing of available impressions or queries per second and costs of providing support to our customers are also included in the cost of revenues (excluding depreciation and amortization). Employee-related costs included in cost of revenues (excluding depreciation and amortization) include salaries, bonuses, commissions, stock-based compensation and employee benefit costs primarily related to individuals directly associated with providing services to our customers. Our cost of revenues (excluding depreciation and amortization) are dependent on the revenue mix and therefore can slightly increase or decrease in the future as a percentage of revenue over the long term. \n General and administrative expenses \n General and administrative expenses primarily consist of technology and infrastructure costs, employee-related costs, including salaries, bonuses, stock-based compensation and employee benefits costs associated with our executives, finance, legal, human resources and other administrative personnel, as well as accounting and legal professional services",
-   "data": {
-    "form": "10-Q",
-    "section": "mdna",
-    "chars": 7999
-   }
-  },
-  {
-   "source_id": "edgar:0001193125-26-068598#mdna",
-   "kind": "filing",
-   "title": "10-K filed 2026-02-25 \u2014 MD&A",
-   "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526068598/zeta-20251231.htm",
-   "accession": "0001193125-26-068598",
-   "retrieved_at": "2026-09-24T03:50:08.372412Z",
-   "excerpt": "Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations. \n The following discussion and analysis provides information which management believes is relevant to an assessment and understanding of our consolidated results of operations and financial condition. The discussion should be read in conjunction with our consolidated financial statements and notes thereto included elsewhere in this Annual Report on Form 10-K. This discussion contains forward-looking statements and involves numerous risks and uncertainties, including, but not limited to, those described under the heading \u201cRisk Factors.\u201d Actual results may differ materially from those contained in any forward-looking statements. Additionally, our historical results are not necessarily indicative of the results that may be expected for any period in the future. Our management \u2019 s discussion and analysis of financial condition and results of operations included in this document generally discusses 2025 and 2024 items and year-to-year comparisons between 2025 and 2024. Discussions of 2023 items and year-to-year comparisons between 2024 and 2023 that are not included in this document can be found in \u201cManagement \u2019 s Discussion and Analysis of Financial Condition and Results of Operations\u201d in Part II, Item 7 of our Annual Report on Form 10-K for the fiscal year ended December 31, 2024, filed with the SEC on February 26, 2025. \n Overview \n Zeta is a leading AI-powered omnichannel data-driven cloud platform that provides enterprises with consumer intelligence and marketing automation software. We empower our customers to target, connect and engage consumers through software that delivers personalized marketing across all addressable channels, including email, social media, web, chat, Connected TV (\u201cCTV\u201d) and video, among others. Our Generative AI (GenAI)-driven marketing solutions enable brands to personalize experiences at scale, measure impact with precision and optimize marketing spend to increase return on investment (\u201cROI\u201d). \n Our Zeta Marketing Platform, or ZMP, is an AI-powered marketing platform with identity data at its core. Leveraging GenAI and machine learning, the ZMP processes billions of structured and unstructured data signals to predict consumer intent, optimize messaging and drive personalized messaging across all channels. The ZMP enables brands to connect with consumers through native integration of marketing channels and application programming interface (\u201cAPI\u201d) integration with third parties. The ZMP\u2019s data-driven algorithms and processes learn and optimize each customer\u2019s marketing program in real time, producing a \u2018flywheel effect\u2019 that enables our customers to test, learn and improve their marketing programs in real time. \n The ZMP enhances our customers\u2019 ability to personalize consumer experiences at scale across multiple touchpoints. With AI-driven automation, brands can orchestrate highly effective programs through intuitive workflows and real-time intelligence. Our Zeta SuperGraph\u2122 improves identity resolution while maintaining compliance with evolving privacy standards. Zeta Answers, our intelligence suite, synthesizes Zeta\u2019s proprietary data and data generated by our customers to uncover consumer insights that are translated into marketing programs designed for highly targeted audiences across digital channels, including email, SMS, websites, applications, social media, CTV and chat. \n Macroeconomic trends \n Our business and the operations of our customers depend on the overall state of the economy, and we and they could be negatively impacted by slower economic growth and the potential for a recession. While core inflation has remained relatively steady for the last year, the economy continues to be impacted by the looming potential of increased inflation rates and faces further inflation risk. To date, the effects of tariffs and changes in global trade policies on the overall state of the economy and on our business have not materially impacted our costs or operations. However, the evolving tariffs and changes in global trade policies continue to cause overall economic uncertainty and may increase our costs and adversely impact our operations as well as customers\u2019 businesses and operations. Additionally, other potentially challenging macroeconomic conditions, and the resulting impact on the economy and consumer spending, could negatively impact our and our customers\u2019 businesses and operations. \n 38 \n Factors Affecting Results of Operations \n The following factors have been important to our business, and we expect them to impact our results of operations and financial condition in future periods: \n New Super-Scaled Customer Acquisition \n We are focused on increasing the number of super-scaled customers that adopt the ZMP in their enterprises. We define \u201csuper-scaled customers\u201d as customers from which we generated at least $1,000,000 in revenues in the trailing twelve months. Our long-term growth and operating results will depend on our ability to attract more super-scaled customers as we address their most pressing marketing automation needs. We will continue to focus on enterprises across multiple geographies. Between January 1, 2025 and December 31, 2025, our sales team increased by 36 sales employees, and we expect to continue to invest in our go-to-market efforts in 2026. We have significantly enhanced our sales techniques in order to build a collaborative environment that encourages cross-selling and implemented a new learning and development program for our sales team. Our sales team productivity increases with tenure and our current management system gives us confidence that we are well positioned for sustainable growth. Our Zeta Answers suite is a module that provides actionable insights to our customers and serves as an entry point into the ZMP. Zeta Answers suite has been a proven way to land scaled customers, with minimal cost of implementation and high value adoption. \n Drive Increase to Average Revenue Per User \n During the year ended December 31, 2025, we experienced an increase in our scaled and super-scaled customer Average Revenue Per User (\u201cARPU\u201d), which resulted in our revenues increasing for the year compared to the prior-year period. Our scaled customer ARPU growth resulted primarily from the effects of transitioning our sales team model to focus a dedicated team on new business development and a separate team on training and educating new and existing users on our platform capabilities. Our transition to this hunter/farmer sales model has included focusing more of our sales team on growth of existing scaled customers and aligning scaled customers with sellers that have specific industry expertise. \n Expand Sales to Existing Customers \n We adhere to a \u201cland, expand, extend\u201d sales model. After prospecting and landing new customers, we focus on expanding sales to such customers. This includes increasing their use of one product and/or embedding multiple products within an enterprise with our Zeta Answers suite serving as the connective tissue across multiple products. We have super-scaled customers both in the U.S. and internationally, and we believe we can achieve growth by cross-selling our existing solutions and introducing new features and functionalities within the platform. We expect that our ability to increase adoption of our products within existing customers increases our future opportunities through additional sales. As part of this strategy, we expect to drive expansion in the number of channels per super-scaled customer. During both the years ended December 31, 2025 and 2024, our channels per scaled customer were 2.3. During the years ended December 31, 2025 and 2024, our channels per super-scaled customer were 3.3 and 3.0, respectively. \n We use an annual net revenue retention (\u201cNRR\u201d) rate as a measure of our ability to retain and expand business generated from our existing customers base. We believe",
-   "data": {
-    "form": "10-K",
-    "section": "mdna",
-    "chars": 7999
+    "from": "2026-06-17",
+    "to": "2026-09-23",
+    "first": 4.49,
+    "last": 5.11
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T03:50:08.373682+00:00) from yf:hist:ZETA, yf:info:ZETA, yf:financials:ZETA",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-25T00:38:18.896541+00:00) from yf:hist:ZETA, yf:info:ZETA, yf:financials:ZETA, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-24T03:50:08.373886Z",
+   "retrieved_at": "2026-09-25T00:38:18.896616Z",
    "excerpt": null,
    "data": {
-    "quant_score": 14,
+    "quant_score": 8,
     "quant_band": "fair",
     "components": [
      {
       "name": "valuation",
       "value": -0.15,
-      "note": "no positive earnings; P/S 4.7 \u2192 +0.0; P/S is 1.34\u00d7 its own median \u2192 -0.30"
+      "note": "no positive earnings; P/S 4.7 \u2192 +0.0; P/S is 1.33\u00d7 its own median \u2192 -0.30"
      },
      {
       "name": "momentum",
       "value": 1.0,
-      "note": "6m return +84.5% \u2192 +1.00; 12m\u22121m +40.2% \u2192 +1.00"
+      "note": "6m return +84.5% \u2192 +1.00; 12m\u22121m +42.0% \u2192 +1.00"
      },
      {
       "name": "risk",
@@ -340,8 +108,8 @@
      },
      {
       "name": "macro",
-      "value": null,
-      "note": "no FRED data (optional)"
+      "value": -0.5,
+      "note": "10y yield +0.62pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -349,7 +117,7 @@
  ],
  "quant": {
   "ticker": "ZETA",
-  "quant_score": 14,
+  "quant_score": 8,
   "quant_band": "fair",
   "components": [
    {
@@ -357,10 +125,10 @@
     "value": -0.15,
     "weight": 0.35,
     "inputs_used": {
-     "price_to_sales": 4.7269034,
-     "ps_vs_own_median": 1.34
+     "price_to_sales": 4.691995,
+     "ps_vs_own_median": 1.33
     },
-    "note": "no positive earnings; P/S 4.7 \u2192 +0.0; P/S is 1.34\u00d7 its own median \u2192 -0.30"
+    "note": "no positive earnings; P/S 4.7 \u2192 +0.0; P/S is 1.33\u00d7 its own median \u2192 -0.30"
    },
    {
     "name": "momentum",
@@ -368,9 +136,9 @@
     "weight": 0.25,
     "inputs_used": {
      "ret_6m": 84.45821436024514,
-     "ret_12m_minus_1m": 40.19
+     "ret_12m_minus_1m": 42.04
     },
-    "note": "6m return +84.5% \u2192 +1.00; 12m\u22121m +40.2% \u2192 +1.00"
+    "note": "6m return +84.5% \u2192 +1.00; 12m\u22121m +42.0% \u2192 +1.00"
    },
    {
     "name": "risk",
@@ -395,173 +163,204 @@
    },
    {
     "name": "macro",
-    "value": null,
+    "value": -0.5,
     "weight": 0.1,
-    "inputs_used": {},
-    "note": "no FRED data (optional)"
+    "inputs_used": {
+     "fred_10y_change_3m": 0.6200000000000001
+    },
+    "note": "10y yield +0.62pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "ZETA",
-   "as_of": "2026-09-24T03:49:58.110222Z",
+   "as_of": "2026-09-25T00:38:17.671171Z",
    "price": 29.790000915527344,
    "high_52w": 32.68000030517578,
    "low_52w": 14.550000190734863,
    "ret_1m": 4.636465170386139,
    "ret_3m": 58.121022687122135,
    "ret_6m": 84.45821436024514,
-   "ret_12m": 44.82256372139395,
+   "ret_12m": 46.67652239716635,
    "vol_60d_ann": 57.80234940420037,
    "max_drawdown_1y": -40.36885074504244,
    "trailing_pe": null,
-   "forward_pe": 24.645092,
-   "price_to_sales": 4.7269034,
+   "forward_pe": 24.463085,
+   "price_to_sales": 4.691995,
    "ps_hist_median": 3.5191717006295034,
-   "ev_to_ebitda": 63.723,
+   "ev_to_ebitda": 63.246,
    "debt_to_equity": 23.772,
    "current_ratio": 2.382,
    "free_cash_flow": 252155632.0,
    "revenue_growth": 43.5,
    "profit_margin": -0.13799999,
-   "fred_10y_change_3m": null,
-   "data_age_days": 0.9930336831250001,
+   "fred_10y_change_3m": 0.6200000000000001,
+   "data_age_days": 1.859926749664352,
    "source_ids": [
     "yf:hist:ZETA",
     "yf:info:ZETA",
-    "yf:financials:ZETA"
+    "yf:financials:ZETA",
+    "fred:DGS10"
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-24T03:50:08.373682Z",
+  "computed_at": "2026-09-25T00:38:18.896541Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +84.5% \u2192 +1.00; 12m\u22121m +40.2% \u2192 +1.00",
+   "momentum: 6m return +84.5% \u2192 +1.00; 12m\u22121m +42.0% \u2192 +1.00",
    "risk: 1y drawdown 40% \u2192 -0.64; 60d vol 58% ann. \u2192 -0.65",
    "balance_sheet: D/E 24% \u2192 +0.5; current ratio 2.38 \u2192 +0.3; FCF positive \u2192 +0.3",
-   "valuation: no positive earnings; P/S 4.7 \u2192 +0.0; P/S is 1.34\u00d7 its own median \u2192 -0.30"
+   "valuation: no positive earnings; P/S 4.7 \u2192 +0.0; P/S is 1.33\u00d7 its own median \u2192 -0.30",
+   "macro: 10y yield +0.62pp over 3m \u2192 -0.50"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Zeta Global Holdings Corp. is positioned for significant growth due to its innovative AI-powered marketing platform, which enhances customer engagement and personalization across multiple channels. The company has demonstrated impressive momentum, with a 6-month return of 84.5%, indicating strong market interest. Additionally, Zeta's balance sheet shows a healthy current ratio of 2.38 and positive free cash flow, suggesting financial stability. The ongoing demand for data-driven marketing solutions, particularly in the context of increasing digital advertising, further supports a bullish outlook for Zeta over the next three months.",
+  "summary": "Zeta Global shows strong price momentum with 6\u2011month returns of +84.5% and a 12\u2011month\u2011minus\u20111\u2011month gain of +42%, supporting near\u2011term upside. Revenue is growing at 43.5% year\u2011over\u2011year, and the firm generates positive free cash flow of $252\u202fM while maintaining a low debt\u2011to\u2011equity ratio of 24% and a healthy current ratio of 2.38. Although its price\u2011to\u2011sales multiple is above its historical median, the premium may be justified by rapid growth and an expected earnings turnaround, as indicated by a forward P/E of roughly 24.5\u00d7. The stock remains volatile, with a one\u2011year drawdown near 40% and 60\u2011day annualized volatility around 58%, which presents downside risk. Rising 10\u2011year Treasury yields (+0.62\u202fpp over the past three months) add a macro headwind for growth\u2011oriented names.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "Zeta's marketing platform leverages AI to enhance customer engagement and personalization, which is increasingly in demand as businesses seek to optimize their marketing strategies.",
+    "text": "ZETA's price has risen 84.5% over the past six months and 42% over the 12\u2011month minus one\u2011month period, indicating strong upward momentum.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001193125-26-333902#mdna",
-     "edgar:0001193125-26-068598#mdna"
+     "quant:v0.1",
+     "yf:hist:ZETA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bull-2",
-    "text": "The company has achieved a 6-month return of 84.5%, indicating strong momentum and market interest.",
+    "text": "The company reported revenue growth of 43.5% year\u2011over\u2011year, reflecting robust top\u2011line expansion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1",
-     "yf:hist:ZETA"
+     "yf:info:ZETA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bull-3",
-    "text": "Zeta has a current ratio of 2.38 and positive free cash flow of $252 million, indicating financial stability.",
+    "text": "ZETA generated positive free cash flow of $252\u202fmillion, maintains a low debt\u2011to\u2011equity ratio of 24%, and a current ratio of 2.38, indicating a solid financial position.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:ZETA"
     ],
     "confidence": 0.9
-   }
-  ],
-  "steelman_of_other_side": "The bear case for Zeta Global Holdings Corp. centers around its high valuation metrics, including a price-to-sales ratio of 4.7, which is significantly above its historical median. Additionally, the company has not yet achieved positive earnings, and its stock has experienced a 1-year drawdown of 40%, raising concerns about its volatility and long-term sustainability in a competitive market.",
-  "missing_data": [
-   "Detailed revenue projections for the next quarter",
-   "Specific competitive analysis against peers in the AI marketing space"
-  ],
-  "model": "gpt-4o-mini-2024-07-18",
-  "provider": null,
-  "is_stub": false
- },
- "bear": {
-  "side": "bear",
-  "summary": "Zeta Global Holdings Corp. faces significant risks that could hinder its performance over the next three months. The company's high valuation, as indicated by a price-to-sales ratio of 4.7, is concerning given its lack of positive earnings and the fact that this multiple is 1.34 times its historical median. Additionally, the company has experienced a substantial 40% drawdown over the past year, reflecting volatility and potential investor skepticism. Furthermore, macroeconomic uncertainties, including inflation risks, could negatively impact Zeta's growth prospects and customer spending on marketing solutions.",
-  "claims": [
+   },
    {
-    "claim_id": "bear-1",
-    "text": "Zeta Global has a price-to-sales ratio of 4.7, which is 1.34 times its historical median, indicating overvaluation.",
-    "stance": "bear",
-    "support": "sourced",
+    "claim_id": "bull-4",
+    "text": "Although ZETA's price\u2011to\u2011sales ratio of 4.69 is 1.33 times its historical median, the premium may be justified by its high growth rate and expected earnings turnaround, as reflected by a forward P/E of 24.5\u00d7.",
+    "stance": "bull",
+    "support": "inference",
     "source_ids": [
      "yf:info:ZETA",
      "yf:financials:ZETA"
     ],
-    "confidence": 0.9
+    "confidence": 0.6
    },
    {
-    "claim_id": "bear-2",
-    "text": "The company has not reported positive earnings, which raises concerns about its profitability.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:ZETA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bear-3",
-    "text": "Zeta has experienced a 40% drawdown over the past year, indicating significant volatility and potential investor concerns.",
-    "stance": "bear",
+    "claim_id": "bull-5",
+    "text": "The stock experienced a one\u2011year drawdown of approximately 40% and exhibits 60\u2011day annualized volatility of about 58%, highlighting significant price risk.",
+    "stance": "neutral",
     "support": "sourced",
     "source_ids": [
      "quant:v0.1"
     ],
     "confidence": 0.9
-   },
+   }
+  ],
+  "steelman_of_other_side": "The primary bear case centers on Zeta's elevated valuation relative to earnings: the firm currently has no positive earnings, relying on a high forward P/E and a price\u2011to\u2011sales multiple well above its own historical median, which leaves little margin for error if growth slows. Additionally, the stock's pronounced volatility and recent 40% drawdown suggest that market sentiment can shift quickly, especially in an environment of rising interest rates that disproportionately affect high\u2011growth, unprofitable tech companies. Without sustained profitability or clear near\u2011term earnings catalysts, the premium multiple could compress, exposing investors to downside risk.",
+  "missing_data": [
+   "Quarterly earnings guidance and forward revenue estimates to assess near\u2011term earnings trajectory.",
+   "Customer concentration data (e.g., % of revenue from top clients) to gauge business model stability.",
+   "Detailed competitive landscape analysis, including market share and differentiation versus rivals in marketing automation.",
+   "Insider ownership and recent transaction activity to evaluate alignment of interests.",
+   "Scenario analysis of how further increases in 10\u2011year Treasury yields might impact valuation multiples for growth stocks like Zeta."
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
+  "is_stub": false
+ },
+ "bear": {
+  "side": "bear",
+  "summary": "Zeta Global's valuation appears rich relative to its historical price-to-sales multiple while the company remains unprofitable, exposing it to downside risk if growth slows. The stock has exhibited significant volatility and a ~40% drawdown over the past year, and rising Treasury yields add a macro headwind for growth stocks. Although revenue growth is strong at 43.5%, the high valuation leaves little margin for error, and any deceleration could trigger a sharp price correction.",
+  "claims": [
    {
-    "claim_id": "bear-4",
-    "text": "Macroeconomic trends, including inflation risks, could negatively impact Zeta's business and customer spending.",
+    "claim_id": "bear-1",
+    "text": "Zeta's price-to-sales ratio of 4.69 is about 1.33 times its historical median, indicating a rich valuation despite lack of profitability.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "edgar:0001193125-26-333902#mdna"
-    ],
-    "confidence": 0.85
-   }
-  ],
-  "steelman_of_other_side": "Proponents of Zeta Global argue that the company's recent momentum, with a 6-month return of 84.5%, demonstrates strong market interest and growth potential. Additionally, Zeta's AI-driven marketing solutions are positioned to capitalize on the increasing demand for personalized marketing, which could lead to significant revenue growth in the future.",
-  "missing_data": [
-   "Detailed financial projections for the next quarter",
-   "Specific customer retention rates or churn data",
-   "Insights into competitive positioning and market share"
-  ],
-  "model": "gpt-4o-mini-2024-07-18",
-  "provider": null,
-  "is_stub": false
- },
- "brief": {
-  "ticker": "ZETA",
-  "one_view": "Zeta Global Holdings Corp. presents a complex investment case. The bullish perspective highlights the company's strong momentum, evidenced by an impressive 6-month return of 84.5%, and a solid balance sheet with a current ratio of 2.38 and positive free cash flow. In contrast, the bearish view raises valid concerns regarding Zeta's high valuation, with a price-to-sales ratio of 4.7, which is significantly above its historical median, and the absence of positive earnings. The quant analysis aligns with the bearish stance on valuation and risk, indicating a substantial 40% drawdown over the past year. A clearer outlook could emerge from detailed revenue projections and competitive analysis, which are currently missing from both narratives.",
-  "narrative_lean": "mixed",
-  "claims": [
-   {
-    "claim_id": "syn-1",
-    "text": "Zeta's marketing platform leverages AI to enhance customer engagement and personalization, which is increasingly in demand as businesses seek to optimize their marketing strategies.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "edgar:0001193125-26-333902#mdna",
-     "edgar:0001193125-26-068598#mdna"
+     "yf:info:ZETA",
+     "yf:financials:ZETA",
+     "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-2",
-    "text": "The company has achieved a 6-month return of 84.5%, indicating strong momentum and market interest.",
+    "claim_id": "bear-2",
+    "text": "Zeta reports negative profit margins, indicating it has not yet achieved positive earnings.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:ZETA",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "Over the past year, Zeta's stock suffered a maximum drawdown of roughly 40% and exhibits 60\u2011day annualized volatility of about 58%, reflecting elevated risk.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-4",
+    "text": "The 10\u2011year Treasury yield increased by 0.62 percentage points over the last three months, creating a headwind for growth\u2011oriented stocks like Zeta.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-5",
+    "text": "Zeta's revenue growth of 43.5% is strong, but the high valuation leaves little room for error; any slowdown in growth could sharply affect the stock.",
+    "stance": "bear",
+    "support": "inference",
+    "source_ids": [
+     "yf:info:ZETA",
+     "quant:v0.1"
+    ],
+    "confidence": 0.7
+   }
+  ],
+  "steelman_of_other_side": "Bulls point to Zeta's robust 43.5% revenue growth, improving free cash flow generation, low leverage (debt\u2011to\u2011equity ~24%) and a solid current ratio of 2.38, which together suggest a financially healthy business capable of funding expansion. The stock's strong momentum\u20146\u2011month return of +84.5% and 12\u2011month\u20111\u2011month return of +42.0%\u2014reflects market confidence in its growth trajectory, and the omnichannel data\u2011driven platform may continue to gain share in the expanding marketing\u2011automation market.",
+  "missing_data": [
+   "SEC filings (10\u2011K, 10\u2011Q) for detailed risk factors, MD&A, and forward\u2011looking guidance",
+   "Analyst earnings estimates and consensus forward PE multiples",
+   "Peer\u2011group valuation multiples (e.g., median P/S of comparable SaaS/marketing\u2011tech firms)",
+   "Segment\u2011level revenue breakdown and customer concentration data",
+   "Quarterly trends in operating margins and cash conversion"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
+  "is_stub": false
+ },
+ "brief": {
+  "ticker": "ZETA",
+  "one_view": "Zeta Global exhibits strong price momentum and robust top\u2011line growth, backed by positive free cash flow and a conservative balance sheet, which supports the bullish case for near\u2011term upside. However, the stock trades at a price\u2011to\u2011sales multiple well above its historical median while the company remains unprofitable, exposing it to valuation risk if growth slows, a point emphasized by the bearish narrative. The quant model assigns a \u201cfair\u201d score of 8, reflecting offsetting strengths in momentum and balance sheet against weaknesses in valuation, risk, and macro headwinds. Ultimately, the outlook hinges on whether the firm can convert its revenue expansion into sustained profitability before rising interest rates and market volatility erode the premium multiple.",
+  "narrative_lean": "mixed",
+  "claims": [
+   {
+    "claim_id": "syn-1",
+    "text": "ZETA's price rose 84.5% over the past six months and 42% over the 12\u2011month minus one\u2011month period, indicating strong upward momentum.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -571,8 +370,18 @@
     "confidence": 0.9
    },
    {
+    "claim_id": "syn-2",
+    "text": "The company reported revenue growth of 43.5% year\u2011over\u2011year.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
     "claim_id": "syn-3",
-    "text": "Zeta has a current ratio of 2.38 and positive free cash flow of $252 million, indicating financial stability.",
+    "text": "ZETA generated positive free cash flow of $252\u202fmillion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -582,8 +391,18 @@
    },
    {
     "claim_id": "syn-4",
-    "text": "Zeta Global has a price-to-sales ratio of 4.7, which is 1.34 times its historical median, indicating overvaluation.",
-    "stance": "bear",
+    "text": "ZETA's debt\u2011to\u2011equity ratio is 24% and its current ratio is 2.38, indicating low leverage and solid liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "ZETA's price\u2011to\u2011sales ratio of 4.69 is 1.33\u00d7 its historical median (approximately 3.52).",
+    "stance": "context",
     "support": "sourced",
     "source_ids": [
      "yf:info:ZETA",
@@ -592,8 +411,40 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-5",
-    "text": "The company has not reported positive earnings, which raises concerns about its profitability.",
+    "claim_id": "syn-6",
+    "text": "The lack of positive earnings (negative profit margin) makes the high P/S multiple risky.",
+    "stance": "bear",
+    "support": "inference",
+    "source_ids": [
+     "yf:info:ZETA",
+     "quant:v0.1"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "syn-7",
+    "text": "Over the past year, ZETA's stock suffered a maximum drawdown of roughly 40% and exhibits 60\u2011day annualized volatility of about 58%, reflecting elevated price risk.",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:hist:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-8",
+    "text": "The 10\u2011year Treasury yield increased by 0.62 percentage points over the last three months, creating a headwind for growth\u2011oriented stocks.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-9",
+    "text": "ZETA reports negative profit margins, indicating it has not yet achieved positive earnings.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -602,61 +453,60 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-6",
-    "text": "Zeta has experienced a 40% drawdown over the past year, indicating significant volatility and potential investor concerns.",
-    "stance": "bear",
-    "support": "sourced",
+    "claim_id": "syn-10",
+    "text": "The forward P/E of roughly 24.5\u00d7 suggests the market expects an earnings turnaround.",
+    "stance": "bull",
+    "support": "inference",
     "source_ids": [
-     "quant:v0.1"
+     "yf:info:ZETA"
     ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-7",
-    "text": "Macroeconomic trends, including inflation risks, could negatively impact Zeta's business and customer spending.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "edgar:0001193125-26-333902#mdna"
-    ],
-    "confidence": 0.85
+    "confidence": 0.6
    }
   ],
   "kill_criteria": [
-   "Positive earnings reported in the next quarter",
-   "A significant reduction in the price-to-sales ratio",
-   "Evidence of improved customer retention rates or reduced churn",
-   "A notable increase in revenue projections or guidance"
+   "Revenue growth falls below 20% YoY for two consecutive quarters",
+   "Free cash flow turns negative for two consecutive quarters",
+   "Price\u2011to\u2011sales ratio drops to 1.0\u00d7 or below its historical median",
+   "10\u2011year Treasury yield increases by more than 1.0 percentage point over a three\u2011month period",
+   "Maximum one\u2011year drawdown exceeds 50%"
   ],
   "disagreement": {
    "quant_band": "fair",
-   "quant_score": 14,
+   "quant_score": 8,
    "narrative_lean": "mixed",
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The quant score may not fully account for qualitative factors such as management effectiveness or market positioning.",
-    "Recent market trends could change rapidly, affecting momentum and risk assessments."
+    "The quant score uses a fixed weighting scheme that may undervalue the premium investors place on rapid revenue growth in the marketing\u2011automation sector.",
+    "It relies on historical median P/S, which may not be appropriate if the company's business model or profitability profile has structurally changed.",
+    "The model does not incorporate forward earnings estimates or analyst expectations, which could materially affect valuation.",
+    "Risk components are based solely on drawdown and volatility, ignoring company\u2011specific risks such as customer concentration or competitive threats.",
+    "Macro input only captures 10\u2011year yield change, omitting other factors like credit spreads or dollar strength that could affect the stock."
    ],
    "narrative_may_be_wrong_because": [
-    "The bullish narrative may overestimate the sustainability of recent momentum without considering potential market corrections.",
-    "The bearish narrative may underestimate the company's ability to innovate and capture market share in a growing sector."
+    "Bull memo leans heavily on recent price momentum, which may not persist if growth decelerates or market sentiment shifts.",
+    "Bull case assumes the forward P/E of 24.5\u00d7 is justified, but this multiple is based on uncertain earnings forecasts.",
+    "Bear memo emphasizes valuation relative to historical P/S median without considering that the firm's growth rate now exceeds its historical average.",
+    "Both memos give limited attention to potential dilution from equity\u2011based compensation or future financing needs.",
+    "Neither memo provides concrete data on customer concentration, which could materially affect the sustainability of the 43.5% revenue growth."
    ]
   },
-  "model": "gpt-4o-mini-2024-07-18",
-  "provider": null,
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
   "is_stub": false
  },
  "critic": {
-  "flags": [],
+  "flags": [
+   "quant_structure:claims_use_of_revenue_growth"
+  ],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 1.0
+  "sourced_share_high_conf": 0.8888888888888888
  },
  "models": {
-  "bull": "gpt-4o-mini-2024-07-18",
-  "bear": "gpt-4o-mini-2024-07-18",
-  "synthesis": "gpt-4o-mini-2024-07-18",
+  "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+  "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+  "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
   "quant": "code:v0.1"
  },
  "is_prototype": true

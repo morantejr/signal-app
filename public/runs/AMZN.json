@@ -1,9 +1,9 @@
 {
- "run_id": "amzn-20260924T210356-5dbff8",
+ "run_id": "amzn-20260925T010510-2e4567",
  "ticker": "AMZN",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-24T21:03:57.447570Z",
+ "created_at": "2026-09-25T01:06:22.400453Z",
  "sources": [
   {
    "source_id": "yf:hist:AMZN",
@@ -11,11 +11,11 @@
    "title": "Yahoo Finance daily prices, 1y (AMZN)",
    "url": "https://finance.yahoo.com/quote/AMZN/history",
    "accession": null,
-   "retrieved_at": "2026-09-24T21:03:56.679085Z",
+   "retrieved_at": "2026-09-25T01:05:10.831200Z",
    "excerpt": null,
    "data": {
-    "rows": 251,
-    "last": "2026-09-24T00:00:00-04:00"
+    "rows": 250,
+    "last": "2026-09-23T00:00:00-04:00"
    }
   },
   {
@@ -24,7 +24,7 @@
    "title": "Yahoo Finance key statistics (AMZN)",
    "url": "https://finance.yahoo.com/quote/AMZN/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-24T21:03:56.679085Z",
+   "retrieved_at": "2026-09-25T01:05:10.831200Z",
    "excerpt": null,
    "data": {
     "longName": "Amazon.com, Inc.",
@@ -34,7 +34,7 @@
     "trailingPE": 20.046625,
     "forwardPE": 24.005484,
     "priceToSalesTrailing12Months": 3.467784,
-    "enterpriseToEbitda": 16.679,
+    "enterpriseToEbitda": 16.686,
     "debtToEquity": 45.617,
     "currentRatio": 1.033,
     "freeCashflow": 3219124992,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (AMZN), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/AMZN/financials",
    "accession": null,
-   "retrieved_at": "2026-09-24T21:03:56.679085Z",
+   "retrieved_at": "2026-09-25T01:05:10.831200Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,25 +65,25 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-24T21:03:57.446389Z",
+   "retrieved_at": "2026-09-25T01:05:11.680666Z",
    "excerpt": null,
    "data": {
-    "from": "2026-06-16",
+    "from": "2026-06-17",
     "to": "2026-09-23",
-    "first": 4.43,
+    "first": 4.49,
     "last": 5.11
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-24T21:03:57.446745+00:00) from yf:hist:AMZN, yf:info:AMZN, yf:financials:AMZN, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-25T01:05:11.681065+00:00) from yf:hist:AMZN, yf:info:AMZN, yf:financials:AMZN, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-24T21:03:57.446816Z",
+   "retrieved_at": "2026-09-25T01:05:11.681115Z",
    "excerpt": null,
    "data": {
-    "quant_score": 11,
+    "quant_score": 12,
     "quant_band": "fair",
     "components": [
      {
@@ -93,12 +93,12 @@
      },
      {
       "name": "momentum",
-      "value": 0.5314272834706544,
-      "note": "6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47"
+      "value": 0.5773840173573868,
+      "note": "6m return +20.3% \u2192 +0.68; 12m\u22121m +19.1% \u2192 +0.48"
      },
      {
       "name": "risk",
-      "value": -0.07112946868554426,
+      "value": -0.07165844256607973,
       "note": "1y drawdown 22% \u2192 +0.05; 60d vol 42% ann. \u2192 -0.19"
      },
      {
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.68pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.62pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -117,7 +117,7 @@
  ],
  "quant": {
   "ticker": "AMZN",
-  "quant_score": 11,
+  "quant_score": 12,
   "quant_band": "fair",
   "components": [
    {
@@ -132,21 +132,21 @@
    },
    {
     "name": "momentum",
-    "value": 0.5314272834706544,
+    "value": 0.5773840173573868,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": 17.793206260607942,
-     "ret_12m_minus_1m": 18.79
+     "ret_6m": 20.280832689267257,
+     "ret_12m_minus_1m": 19.15
     },
-    "note": "6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47"
+    "note": "6m return +20.3% \u2192 +0.68; 12m\u22121m +19.1% \u2192 +0.48"
    },
    {
     "name": "risk",
-    "value": -0.07112946868554426,
+    "value": -0.07165844256607973,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -21.73622311569574,
-     "vol_60d_ann": 42.0327203096981
+     "vol_60d_ann": 42.06934157835055
     },
     "note": "1y drawdown 22% \u2192 +0.05; 60d vol 42% ann. \u2192 -0.19"
    },
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.6800000000000006
+     "fred_10y_change_3m": 0.6200000000000001
     },
-    "note": "10y yield +0.68pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.62pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "AMZN",
-   "as_of": "2026-09-24T21:03:56.679085Z",
-   "price": 249.3800048828125,
+   "as_of": "2026-09-25T01:05:10.831200Z",
+   "price": 249.27000427246094,
    "high_52w": 284.0199890136719,
    "low_52w": 198.7899932861328,
-   "ret_1m": -4.474064500502317,
-   "ret_3m": 9.854196254475012,
-   "ret_6m": 17.793206260607942,
-   "ret_12m": 14.315843163006114,
-   "vol_60d_ann": 42.0327203096981,
+   "ret_1m": -4.884192274594145,
+   "ret_3m": 6.402868368310055,
+   "ret_6m": 20.280832689267257,
+   "ret_12m": 14.265418861640455,
+   "vol_60d_ann": 42.06934157835055,
    "max_drawdown_1y": -21.73622311569574,
    "trailing_pe": 20.046625,
    "forward_pe": 24.005484,
    "price_to_sales": 3.467784,
    "ps_hist_median": 3.4727488237112447,
-   "ev_to_ebitda": 16.679,
+   "ev_to_ebitda": 16.686,
    "debt_to_equity": 45.617,
    "current_ratio": 1.033,
    "free_cash_flow": 3219124992.0,
    "revenue_growth": 19.6,
    "profit_margin": 17.44,
-   "fred_10y_change_3m": 0.6800000000000006,
-   "data_age_days": 0.7110726745949074,
+   "fred_10y_change_3m": 0.6200000000000001,
+   "data_age_days": 1.8785975833333333,
    "source_ids": [
     "yf:hist:AMZN",
     "yf:info:AMZN",
@@ -203,118 +203,305 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-24T21:03:57.446745Z",
+  "computed_at": "2026-09-25T01:05:11.681065Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47",
+   "momentum: 6m return +20.3% \u2192 +0.68; 12m\u22121m +19.1% \u2192 +0.48",
    "balance_sheet: D/E 46% \u2192 +0.5; current ratio 1.03 \u2192 +0.0; FCF positive \u2192 +0.3",
-   "macro: 10y yield +0.68pp over 3m \u2192 -0.50",
+   "macro: 10y yield +0.62pp over 3m \u2192 -0.50",
    "risk: 1y drawdown 22% \u2192 +0.05; 60d vol 42% ann. \u2192 -0.19",
    "valuation: P/E 20.0 \u2192 +0.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.00\u00d7 its own median \u2192 +0.00"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bull case assembled from quant components only. Set a key to get a sourced memo.",
+  "summary": "Over the past six months Amazon's stock has risen about 20%, trading at a P/E near its historical median and a price\u2011to\u2011sales ratio in line with its own average, while generating robust free cash flow and maintaining a conservative balance sheet. Momentum indicators are positive, and the company's profit margins remain healthy. These factors suggest near\u2011term upside potential, though rising long\u2011term interest rates pose a headwind.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "momentum: 6m return +17.8% \u2192 +0.59; 12m\u22121m +18.8% \u2192 +0.47",
+    "text": "Amazon's trailing P/E is 20.0, which falls within the 18\u201128\u00d7 reference band considered neutral.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:AMZN",
-     "yf:info:AMZN",
-     "yf:financials:AMZN",
-     "fred:DGS10"
+     "yf:info:AMZN"
     ],
-    "confidence": 0.5
+    "confidence": 0.9
    },
    {
     "claim_id": "bull-2",
-    "text": "balance_sheet: D/E 46% \u2192 +0.5; current ratio 1.03 \u2192 +0.0; FCF positive \u2192 +0.3",
+    "text": "Amazon's price\u2011to\u2011sales ratio is 3.47, essentially equal to its historical median of 3.47, indicating valuation is in line with its own history.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN",
+     "yf:financials:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-3",
+    "text": "Free cash flow was $3.22\u202fbn in the most recent period, providing internal liquidity for investments or shareholder returns.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-4",
+    "text": "Over the past six months Amazon's stock returned approximately +20.3%, and the 12\u2011month minus 1\u2011month return was +19.1%, indicating positive momentum.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:hist:AMZN",
-     "yf:info:AMZN",
-     "yf:financials:AMZN",
-     "fred:DGS10"
+     "quant:v0.1"
     ],
-    "confidence": 0.5
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-5",
+    "text": "Amazon's debt\u2011to\u2011equity ratio is 45.6% and current ratio is 1.03, indicating a conservative leverage position and adequate short\u2011term liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-6",
+    "text": "Amazon's profit margin is 17.44%, showing strong profitability.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN"
+    ],
+    "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "(stub)",
+  "steelman_of_other_side": "The 10\u2011year Treasury yield has risen by 0.62 percentage points over the past three months, increasing the discount rate applied to future earnings. This upward pressure on yields can compress valuation multiples, especially for growth\u2011oriented stocks like Amazon, and may reflect broader monetary tightening that could weigh on consumer spending.",
   "missing_data": [
-   "LLM memo not generated"
+   "Segment\u2011level revenue growth (especially AWS) to assess the durability of high\u2011margin earnings",
+   "Capital expenditure trends and return on invested capital",
+   "Inventory turnover and working\u2011capital efficiency metrics",
+   "Forward\u2011looking guidance or management commentary on demand outlook"
   ],
-  "model": null,
-  "provider": null,
-  "is_stub": true
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
+  "is_stub": false
  },
  "bear": {
   "side": "bear",
-  "summary": "[STUB \u2014 no OPENROUTER_API_KEY] Bear case assembled from quant components only. Set a key to get a sourced memo.",
+  "summary": "Amazon's recent price action shows weakening short-term momentum despite medium-term gains, its valuation offers no discount relative to historical P/S levels, and rising Treasury yields increase the discount rate. The stock also exhibits notable drawdown and volatility, and its liquidity position is thin. Together, these factors suggest downside risk over the next three months.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "macro: 10y yield +0.68pp over 3m \u2192 -0.50",
+    "text": "Amazon's 1-month price return was -4.9% while its 6-month return was +20.3%, indicating recent momentum weakening despite medium-term strength.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:hist:AMZN",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "AMZN's price-to-sales ratio of 3.47x equals its own historical median, offering no valuation discount, while the 10-year Treasury yield rose 0.62 percentage points over the past three months, increasing the discount rate applied to future earnings.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
      "yf:info:AMZN",
      "yf:financials:AMZN",
-     "fred:DGS10"
+     "fred:DGS10",
+     "quant:v0.1"
     ],
-    "confidence": 0.5
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "The stock experienced a 1-year maximum drawdown of -21.7% and 60-day annualized volatility of 42%, reflecting elevated risk that is captured by a negative risk component in the quant model.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMZN",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-4",
+    "text": "Amazon's current ratio is just above 1.0 at 1.03, indicating limited short-term liquidity buffer, while its debt-to-equity ratio of 45.6% shows moderate leverage.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-5",
+    "text": "Rising macroeconomic headwinds, specifically the increase in the 10-year Treasury yield, contributed a -0.50 macro component to the quant score, suggesting higher cost of capital could pressure valuations.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "(stub)",
+  "steelman_of_other_side": "Amazon continues to generate strong cash flow, with free cash flow of $3.2\u202fbn, revenue growth of 19.6% and profit margins of 17.4%, underscoring the durability of its core businesses. AWS remains a high\u2011margin growth engine, while advertising and international retail are expanding, providing multiple avenues for earnings expansion. The stock\u2019s P/E of 20\u00d7 and P/S in line with its own median suggest the valuation is not extreme relative to its historical range, leaving room for upside if execution remains solid.",
   "missing_data": [
-   "LLM memo not generated"
+   "Forward-looking guidance for revenue and operating income by segment",
+   "Detailed capex and investment plans for AWS and logistics",
+   "Quarterly segment revenue breakdown to assess geographic mix",
+   "Any upcoming regulatory or antitrust developments that could affect operating model"
   ],
-  "model": null,
-  "provider": null,
-  "is_stub": true
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
+  "is_stub": false
  },
  "brief": {
   "ticker": "AMZN",
-  "one_view": "[STUB \u2014 no OPENROUTER_API_KEY] Bull and bear memos were built from quant components only. The disagreement object below is computed by code against the quant band.",
+  "one_view": "Amazon's valuation sits near its historical median, with a P/E of about 20\u00d7 and a price\u2011to\u2011sales ratio in line with its own average, while the company generates solid free cash flow and maintains a moderate leverage profile. Medium\u2011term momentum remains positive, as the six\u2011month return is roughly +20\u202f% and the 12\u2011month minus one\u2011month return is +19\u202f%, but the most recent month shows a \u20134.9\u202f% pullback, indicating weakening short\u2011term strength. Risk metrics reveal a one\u2011year drawdown of about \u201322\u202f% and 60\u2011day annualized volatility around 42\u202f%, and the 10\u2011year Treasury yield has risen 0.62\u202fpp over the past three months, raising the discount rate. The quant model scores the stock as \u201cfair\u201d (12/100), reflecting offsetting positives from valuation, momentum, and balance\u2011sheet strength against negatives from risk and macro headwinds. Consequently, the bull case highlights cash flow, profitability, and constructive technicals, whereas the bear case stresses recent momentum decay, elevated volatility, and higher discount rates, leaving the outlook mixed.",
   "narrative_lean": "mixed",
-  "claims": [],
+  "claims": [
+   {
+    "claim_id": "syn-1",
+    "text": "Amazon's trailing P/E is 20.05, which lies within the 18\u201128\u00d7 reference band considered neutral.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-2",
+    "text": "Amazon's price\u2011to\u2011sales ratio is 3.4678, essentially equal to its historical median of 3.4727, indicating valuation in line with its own history.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN",
+     "yf:financials:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-3",
+    "text": "Free cash flow was $3.22\u202fbn in the most recent period, providing internal liquidity for investments or shareholder returns.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-4",
+    "text": "Over the past six months Amazon's stock returned approximately +20.3%, and the 12\u2011month minus 1\u2011month return was +19.1%, indicating positive medium\u2011term momentum.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMZN",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "Amazon's debt\u2011to\u2011equity ratio is 45.6% and current ratio is 1.03, indicating moderate leverage and adequate short\u2011term liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-6",
+    "text": "Amazon's profit margin is 17.44%, showing strong profitability.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-7",
+    "text": "The 1\u2011month price return was -4.9% while the 6\u2011month return was +20.3%, indicating recent momentum weakening despite medium\u2011term strength.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-8",
+    "text": "The stock experienced a 1\u2011year maximum drawdown of -21.7% and 60\u2011day annualized volatility of 42%, reflecting elevated risk.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AMZN"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-9",
+    "text": "The 10\u2011year Treasury yield rose by 0.62 percentage points over the past three months, increasing the discount rate applied to future earnings.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10"
+    ],
+    "confidence": 0.9
+   }
+  ],
   "kill_criteria": [
-   "Set a key to get model-written kill criteria"
+   "Trailing P/E moves outside the 18\u201128\u00d7 band (e.g., >28\u00d7 or <18\u00d7) sustained for at least one month",
+   "Six\u2011month price return turns negative (\u22640\u202f%)",
+   "One\u2011year maximum drawdown worsens to \u2264\u201130\u202f%",
+   "Current ratio falls below 0.90",
+   "10\u2011year Treasury yield rises an additional \u22650.5\u202fpp over the next three months"
   ],
   "disagreement": {
    "quant_band": "fair",
-   "quant_score": 11,
+   "quant_score": 12,
    "narrative_lean": "mixed",
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "v0 formula uses fixed reference bands rather than sector peers"
+    "The model uses fixed weights and simple thresholds that may not capture the changing mix of Amazon's high\u2011margin AWS business versus lower\u2011margin retail.",
+    "It relies on historical median P/S as a valuation anchor, which may be less relevant if the company's growth profile or profitability structure has shifted.",
+    "The macro component only incorporates the 10\u2011year Treasury change, omitting other factors such as credit spreads, currency movements, or consumer\u2011spending indicators that could affect Amazon's outlook.",
+    "Momentum is measured solely by price returns, ignoring earnings revisions or analyst sentiment shifts that could lead to divergence between price and fundamentals."
    ],
    "narrative_may_be_wrong_because": [
-    "No LLM synthesis was run (stub); the narrative lean is a placeholder"
+    "Both memos emphasize short\u2011term price movements (e.g., 1\u2011month return) which can be noisy and may not reflect underlying business trends.",
+    "The bull memo highlights free cash flow and profit margins but does not address the level of capital expenditures required to sustain AWS growth, which could pressure future cash generation.",
+    "The bear memo focuses on drawdown and volatility without considering that such metrics can be elevated during periods of strategic investment and may not persist if execution improves.",
+    "Both sides rely on the same publicly available pricing data and may be missing material non\u2011public information such as upcoming product launches, regulatory decisions, or supply\u2011chain developments."
    ]
   },
-  "model": null,
-  "provider": null,
-  "is_stub": true
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
+  "is_stub": false
  },
  "critic": {
-  "flags": [
-   "stub_outputs_present"
-  ],
+  "flags": [],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": null
+  "sourced_share_high_conf": 1.0
  },
  "models": {
-  "bull": "stub",
-  "bear": "stub",
-  "synthesis": "stub",
+  "bull": "nvidia/nemotron-3-super-120b-a12b:free",
+  "bear": "nvidia/nemotron-3-super-120b-a12b:free",
+  "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
   "quant": "code:v0.1"
  },
  "is_prototype": true
