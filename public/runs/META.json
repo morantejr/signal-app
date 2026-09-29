@@ -1,9 +1,9 @@
 {
- "run_id": "meta-20260926T004502-61f9f4",
+ "run_id": "meta-20260929T021139-61b794",
  "ticker": "META",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-26T00:49:07.352977Z",
+ "created_at": "2026-09-29T02:13:17.324251Z",
  "sources": [
   {
    "source_id": "yf:hist:META",
@@ -11,11 +11,11 @@
    "title": "Yahoo Finance daily prices, 1y (META)",
    "url": "https://finance.yahoo.com/quote/META/history",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:45:02.470288Z",
+   "retrieved_at": "2026-09-29T02:11:39.476192Z",
    "excerpt": null,
    "data": {
-    "rows": 250,
-    "last": "2026-09-24T00:00:00-04:00"
+    "rows": 251,
+    "last": "2026-09-28T00:00:00-04:00"
    }
   },
   {
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (META)",
    "url": "https://finance.yahoo.com/quote/META/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:45:02.470288Z",
+   "retrieved_at": "2026-09-29T02:11:39.476192Z",
    "excerpt": null,
    "data": {
     "longName": "Meta Platforms, Inc.",
     "sector": "Communication Services",
     "industry": "Internet Content & Information",
-    "marketCap": 1914858373120,
-    "trailingPE": 28.343136,
-    "forwardPE": 21.496538,
-    "priceToSalesTrailing12Months": 8.389413,
-    "enterpriseToEbitda": 17.664,
+    "marketCap": 1823046369280,
+    "trailingPE": 28.330166,
+    "forwardPE": 20.547644,
+    "priceToSalesTrailing12Months": 7.987165,
+    "enterpriseToEbitda": 16.826,
     "debtToEquity": 42.997,
     "currentRatio": 2.226,
     "freeCashflow": 21553625088,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (META), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/META/financials",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:45:02.470288Z",
+   "retrieved_at": "2026-09-29T02:11:39.476192Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,41 +65,41 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:45:03.751761Z",
+   "retrieved_at": "2026-09-29T02:11:40.557305Z",
    "excerpt": null,
    "data": {
-    "from": "2026-06-18",
-    "to": "2026-09-24",
-    "first": 4.46,
-    "last": 5.18
+    "from": "2026-06-22",
+    "to": "2026-09-25",
+    "first": 4.51,
+    "last": 5.17
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-26T00:45:03.752073+00:00) from yf:hist:META, yf:info:META, yf:financials:META, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-29T02:11:40.557621+00:00) from yf:hist:META, yf:info:META, yf:financials:META, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-26T00:45:03.752123Z",
+   "retrieved_at": "2026-09-29T02:11:40.557670Z",
    "excerpt": null,
    "data": {
-    "quant_score": -8,
+    "quant_score": -7,
     "quant_band": "fair",
     "components": [
      {
       "name": "valuation",
       "value": -0.2,
-      "note": "P/E 28.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.16\u00d7 its own median \u2192 +0.00"
+      "note": "P/E 28.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.11\u00d7 its own median \u2192 +0.00"
      },
      {
       "name": "momentum",
-      "value": 0.10486953193075665,
-      "note": "6m return +30.9% \u2192 +1.00; 12m\u22121m -31.6% \u2192 -0.79"
+      "value": 0.1398149669543683,
+      "note": "6m return +36.4% \u2192 +1.00; 12m\u22121m -28.8% \u2192 -0.72"
      },
      {
       "name": "risk",
-      "value": -0.3563932475440593,
-      "note": "1y drawdown 30% \u2192 -0.26; 60d vol 51% ann. \u2192 -0.46"
+      "value": -0.32208386760642277,
+      "note": "1y drawdown 30% \u2192 -0.26; 60d vol 49% ann. \u2192 -0.39"
      },
      {
       "name": "balance_sheet",
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.72pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.66pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -117,7 +117,7 @@
  ],
  "quant": {
   "ticker": "META",
-  "quant_score": -8,
+  "quant_score": -7,
   "quant_band": "fair",
   "components": [
    {
@@ -125,30 +125,30 @@
     "value": -0.2,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 28.343136,
-     "ps_vs_own_median": 1.16
+     "trailing_pe": 28.330166,
+     "ps_vs_own_median": 1.11
     },
-    "note": "P/E 28.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.16\u00d7 its own median \u2192 +0.00"
+    "note": "P/E 28.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.11\u00d7 its own median \u2192 +0.00"
    },
    {
     "name": "momentum",
-    "value": 0.10486953193075665,
+    "value": 0.1398149669543683,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": 30.935961391058186,
-     "ret_12m_minus_1m": -31.61
+     "ret_6m": 36.35558857371996,
+     "ret_12m_minus_1m": -28.81
     },
-    "note": "6m return +30.9% \u2192 +1.00; 12m\u22121m -31.6% \u2192 -0.79"
+    "note": "6m return +36.4% \u2192 +1.00; 12m\u22121m -28.8% \u2192 -0.72"
    },
    {
     "name": "risk",
-    "value": -0.3563932475440593,
+    "value": -0.32208386760642277,
     "weight": 0.2,
     "inputs_used": {
-     "max_drawdown_1y": -29.942760667337588,
-     "vol_60d_ann": 51.23048858735248
+     "max_drawdown_1y": -29.942768814821385,
+     "vol_60d_ann": 48.855213347102875
     },
-    "note": "1y drawdown 30% \u2192 -0.26; 60d vol 51% ann. \u2192 -0.46"
+    "note": "1y drawdown 30% \u2192 -0.26; 60d vol 49% ann. \u2192 -0.39"
    },
    {
     "name": "balance_sheet",
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.7199999999999998
+     "fred_10y_change_3m": 0.6600000000000001
     },
-    "note": "10y yield +0.72pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.66pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "META",
-   "as_of": "2026-09-26T00:45:02.470288Z",
-   "price": 777.5900268554688,
+   "as_of": "2026-09-29T02:11:39.476192Z",
+   "price": 715.6199951171875,
    "high_52w": 777.5900268554688,
-   "low_52w": 524.8190307617188,
-   "ret_1m": 36.514991855199355,
-   "ret_3m": 43.34992092146965,
-   "ret_6m": 30.935961391058186,
-   "ret_12m": 4.904554409659889,
-   "vol_60d_ann": 51.23048858735248,
-   "max_drawdown_1y": -29.942760667337588,
-   "trailing_pe": 28.343136,
-   "forward_pe": 21.496538,
-   "price_to_sales": 8.389413,
+   "low_52w": 524.8189697265625,
+   "ret_1m": 25.4044511147788,
+   "ret_3m": 27.299112554556725,
+   "ret_6m": 36.35558857371996,
+   "ret_12m": -3.4103515288717356,
+   "vol_60d_ann": 48.855213347102875,
+   "max_drawdown_1y": -29.942768814821385,
+   "trailing_pe": 28.330166,
+   "forward_pe": 20.547644,
+   "price_to_sales": 7.987165,
    "ps_hist_median": 7.224334602629157,
-   "ev_to_ebitda": 17.664,
+   "ev_to_ebitda": 16.826,
    "debt_to_equity": 42.997,
    "current_ratio": 2.226,
    "free_cash_flow": 21553625088.0,
    "revenue_growth": 28.000000000000004,
    "profit_margin": 29.834998000000002,
-   "fred_10y_change_3m": 0.7199999999999998,
-   "data_age_days": 1.8646119246296298,
+   "fred_10y_change_3m": 0.6600000000000001,
+   "data_age_days": 0.924762455925926,
    "source_ids": [
     "yf:hist:META",
     "yf:info:META",
@@ -203,91 +203,90 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-26T00:45:03.752073Z",
+  "computed_at": "2026-09-29T02:11:40.557621Z",
   "freshness_flags": [],
   "drivers": [
    "balance_sheet: D/E 43% \u2192 +0.5; current ratio 2.23 \u2192 +0.3; FCF positive \u2192 +0.3",
-   "risk: 1y drawdown 30% \u2192 -0.26; 60d vol 51% ann. \u2192 -0.46",
-   "valuation: P/E 28.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.16\u00d7 its own median \u2192 +0.00",
-   "macro: 10y yield +0.72pp over 3m \u2192 -0.50",
-   "momentum: 6m return +30.9% \u2192 +1.00; 12m\u22121m -31.6% \u2192 -0.79"
+   "valuation: P/E 28.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.11\u00d7 its own median \u2192 +0.00",
+   "risk: 1y drawdown 30% \u2192 -0.26; 60d vol 49% ann. \u2192 -0.39",
+   "macro: 10y yield +0.66pp over 3m \u2192 -0.50",
+   "momentum: 6m return +36.4% \u2192 +1.00; 12m\u22121m -28.8% \u2192 -0.72"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Meta Platforms shows strong fundamentals with 28% year-over-year revenue growth and $21.5bn of free cash flow, underpinning its ability to invest and return capital. The balance sheet is conservative, with debt-to-equity of only 43% and a current ratio above 2, providing liquidity resilience. While the trailing P/E of 28.3x appears elevated, the forward P/E of 21.5x and a modestly negative valuation component (-0.2) in the quant model suggest the stock is not excessively priced relative to expected earnings growth. Medium-term momentum remains positive, with a 6\u2011month return of +30.9% contributing to a small positive momentum score (+0.105). Risk metrics indicate heightened volatility and a ~30% 1\u2011year drawdown, but the quant risk component (-0.36) reflects moderate rather than extreme risk, leaving room for upside if execution continues.",
+  "summary": "Meta's stock has shown strong short\u2011term momentum, with 3\u2011 and 6\u2011month returns of +27.3% and +36.4% respectively, while maintaining a solid balance sheet (low debt, high current ratio) and generating over $21\u202fbillion of free cash flow. Revenue is growing at 28% year\u2011over\u2011year and profit margins remain near 30%, and the price\u2011to\u2011sales ratio is only slightly above its own historical median, suggesting the valuation is not stretched relative to its history. These fundamentals support a bullish outlook for the next three months, although rising interest rates and elevated valuation multiples pose notable headwinds.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "Meta's trailing twelve\u2011month revenue grew 28% year\u2011over\u2011year as of the latest data.",
+    "text": "Meta's 6\u2011month total return is +36.4% and its 3\u2011month total return is +27.3%.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:info:META"
+     "yf:hist:META"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-2",
-    "text": "Meta generated free cash flow of $21.55\u202fbn, indicating strong cash generation.",
+    "text": "The stock\u2019s recent price momentum is a positive signal for near\u2011term performance.",
     "stance": "bull",
-    "support": "sourced",
+    "support": "inference",
     "source_ids": [
-     "yf:info:META"
+     "yf:hist:META",
+     "quant:v0.1"
     ],
-    "confidence": 0.9
+    "confidence": 0.7
    },
    {
     "claim_id": "bull-3",
-    "text": "Meta's balance sheet shows low leverage with a debt\u2011to\u2011equity ratio of 43% and a current ratio of 2.23, reflecting solid liquidity.",
+    "text": "Meta\u2019s balance sheet shows low leverage with a debt\u2011to\u2011equity ratio of 43% and a current ratio of 2.23.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:META"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-4",
-    "text": "Although the trailing P/E is 28.3\u00d7, the forward P/E of 21.5\u00d7 and a valuation component of \u20130.2 in the quant model suggest the stock is not severely overvalued relative to its earnings outlook.",
+    "text": "Free cash flow was $21.55\u202fbillion in the latest reported period.",
     "stance": "bull",
-    "support": "inference",
+    "support": "sourced",
     "source_ids": [
-     "yf:info:META",
-     "quant:v0.1"
+     "yf:info:META"
     ],
-    "confidence": 0.8
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-5",
-    "text": "The 6\u2011month price return of +30.9% contributes to a positive momentum score of +0.105 in the quant model, supporting near\u2011term price strength.",
+    "text": "Revenue grew 28% year\u2011over\u2011year and the profit margin is approximately 30%.",
     "stance": "bull",
-    "support": "inference",
+    "support": "sourced",
     "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
+     "yf:info:META"
     ],
-    "confidence": 0.8
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-6",
-    "text": "Risk metrics show a 1\u2011year drawdown of ~30% and 60\u2011day annualized volatility of 51%, but the quant risk component is \u20130.36, indicating moderate rather than extreme risk.",
+    "text": "The price\u2011to\u2011sales ratio is 1.11\u00d7 its own historical median, indicating the stock is not expensive relative to its own history.",
     "stance": "bull",
-    "support": "inference",
+    "support": "sourced",
     "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
+     "yf:info:META",
+     "yf:financials:META"
     ],
-    "confidence": 0.8
+    "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "Meta faces significant headwinds from rising long\u2011term interest rates, which have increased by 72\u202fbps over the past three months and could pressure high\u2011multiple growth stocks. The company's Reality Labs segment continues to generate large operating losses, and its heavy AI and metaverse investments may not translate into near\u2011term profitability, potentially weighing on earnings. Additionally, regulatory scrutiny over data privacy, antitrust, and content moderation remains a persistent risk that could lead to fines or operational constraints.",
+  "steelman_of_other_side": "Despite strong momentum, Meta\u2019s valuation remains elevated with a trailing P/E of 28.3, above the 18\u201128\u00d7 neutral band, and the quant model assigns a negative valuation component. Rising Treasury yields (+0.66\u202fpp over three months) increase the discount rate, pressuring equity prices. The stock also exhibits significant downside risk, having suffered a ~30% one\u2011year drawdown and showing 60\u2011day annualized volatility near 49%, suggesting potential for further pull\u2011backs if macro conditions worsen.",
   "missing_data": [
-   "SEC filings (10\u2011K/10\u2011Q) for detailed segment revenue, user growth metrics, and capital expenditure breakdown",
-   "Guidance for upcoming quarters on ad revenue growth and AI investment ROI",
-   "Breakdown of revenue by geography and by ad format to assess diversification",
-   "More granular data on Reality Labs operating losses and timelines to profitability",
-   "Analyst estimates for forward earnings to compare with the forward P/E implied by market price"
+   "SEC 10\u2011K MD&A discussion of Reality Labs investment returns and AI monetization metrics",
+   "Forward revenue and earnings guidance from management",
+   "Breakdown of capital expenditures by segment (Family of Apps vs Reality Labs)",
+   "Short interest and institutional ownership trends",
+   "Detailed user engagement and advertising pricing data"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -295,83 +294,93 @@
  },
  "bear": {
   "side": "bear",
-  "summary": "Meta's valuation appears stretched relative to its own history, with a trailing P/E of 28.3x above the 18\u201128x neutral band and a price\u2011to\u2011sales ratio 1.16x its historical median. Recent price momentum shows a strong six\u2011month gain but a negative 12\u2011month\u2011minus\u2011one\u2011month shift, suggesting the rally may be losing steam. Risk metrics are elevated, featuring roughly a 30% one\u2011year drawdown and about 51% annualized 60\u2011day volatility, while rising Treasury yields add a macro headwind. The balance sheet remains solid, with low debt, ample liquidity, and sizable free cash flow, offering some downside protection. Overall, the combination of high valuation, mixed momentum, heightened risk, and higher discount rates supports a bearish outlook over the next three months.",
+  "summary": "Meta's valuation appears stretched with a trailing P/E of 28.3x, above the 18\u201128x neutral band, while rising long\u2011term interest rates and high short\u2011term volatility create macro and risk headwinds. The stock has shown strong six\u2011month price momentum but a weak 12\u2011month\u2011minus\u2011one\u2011month return, resulting in only a modestly positive momentum score. On the positive side, Meta maintains robust revenue growth (~28%), high profit margins (~30%), strong free cash flow, and a conservative balance sheet with low debt and ample liquidity. These opposing forces leave the overall risk\u2011return profile balanced, as reflected in the quant score of \u20137 (fair band).",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Meta's trailing P/E of 28.3x is above the historical neutral band of 18\u201128x, indicating a relatively expensive valuation.",
+    "text": "Meta's trailing P/E ratio is 28.33, which exceeds the 18\u201128\u00d7 range considered neutral in the quant valuation model, contributing \u20130.4 to the valuation component.",
     "stance": "bear",
-    "support": "inference",
-    "source_ids": [
-     "yf:info:META",
-     "quant:v0.1"
-    ],
-    "confidence": 0.7
-   },
-   {
-    "claim_id": "bear-2",
-    "text": "The price\u2011to\u2011sales ratio of 8.39x is 1.16x the company's own historical median, showing a premium to its past levels.",
-    "stance": "bear",
-    "support": "inference",
-    "source_ids": [
-     "yf:info:META",
-     "yf:financials:META",
-     "quant:v0.1"
-    ],
-    "confidence": 0.7
-   },
-   {
-    "claim_id": "bear-3",
-    "text": "Six\u2011month price return is +30.9% but the 12\u2011month\u2011minus\u2011one\u2011month change is -31.6%, signaling recent gains may be reversing.",
-    "stance": "bear",
-    "support": "inference",
-    "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
-    ],
-    "confidence": 0.7
-   },
-   {
-    "claim_id": "bear-4",
-    "text": "One\u2011year drawdown is approximately -30% and 60\u2011day annualized volatility is about 51%, reflecting elevated downside risk.",
-    "stance": "bear",
-    "support": "inference",
-    "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
-    ],
-    "confidence": 0.7
-   },
-   {
-    "claim_id": "bear-5",
-    "text": "The 10\u2011year Treasury yield rose roughly 0.72 percentage points over the past three months, increasing equity discount rates.",
-    "stance": "bear",
-    "support": "inference",
-    "source_ids": [
-     "fred:DGS10",
-     "quant:v0.1"
-    ],
-    "confidence": 0.7
-   },
-   {
-    "claim_id": "bear-6",
-    "text": "Meta's balance sheet shows low debt\u2011to\u2011equity (43%), a strong current ratio (2.23), and positive free cash flow ($21.6\u202fB), providing a financial cushion.",
-    "stance": "context",
     "support": "sourced",
     "source_ids": [
      "yf:info:META",
      "quant:v0.1"
     ],
     "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "The price\u2011to\u2011sales ratio is 7.99\u00d7, about 1.11\u00d7 its own historical median, which the quant model treats as neutral (0.00 contribution).",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META",
+     "yf:financials:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "Six\u2011month total return is +36.4% while the 12\u2011month\u2011minus\u2011one\u2011month return is \u201328.8%, yielding a modestly positive momentum score of +0.14.",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-4",
+    "text": "Over the past year Meta suffered a maximum drawdown of roughly \u201330% and exhibits 60\u2011day annualized volatility of about 49%, leading to a negative risk score of \u20130.32.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-5",
+    "text": "The 10\u2011year Treasury yield rose 0.66 percentage points over the last three months, producing a macro score of \u20130.5 in the quant model.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-6",
+    "text": "Meta\u2019s balance sheet shows a debt\u2011to\u2011equity ratio of 43%, a current ratio of 2.23, and positive free cash flow of $21.55\u202fB, giving a balance\u2011sheet score of +0.37.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-7",
+    "text": "Revenue grew 28% year\u2011over\u2011year and profit margin remains near 29.8%, indicating strong top\u2011line and profitability trends.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META"
+    ],
+    "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "Meta delivers robust top\u2011line growth (28% revenue increase) and high profitability (~30% margin), generating substantial free cash flow (>$21\u202fB) that funds AI investments and shareholder returns while maintaining a conservative leverage profile (debt\u2011to\u2011equity 43%) and ample liquidity (current ratio 2.23). These financial strengths give the company flexibility to navigate market volatility and continue investing in its Family of Apps and emerging Reality Labs initiatives.",
+  "steelman_of_other_side": "Despite near\u2011term headwinds, Meta\u2019s fundamentals remain compelling: revenue is expanding at a 28% clip, profit margins are near 30%, and the company generates over $21\u202fB of annual free cash flow while carrying modest debt (D/E \u2248\u202f43%) and maintaining a current ratio above 2. The forward P/E of 20.5x reflects expectations of continued earnings growth, and the price\u2011to\u2011sales multiple is only slightly above its own historical median. These strengths could support further upside if ad\u2011market trends stabilize and Reality Labs losses continue to narrow.",
   "missing_data": [
-   "Segment\u2011level revenue and earnings breakdown (Family of Apps vs. Reality Labs) to assess the drag from loss\u2011making units.",
-   "Forward guidance or management commentary on ad pricing trends and user engagement metrics.",
-   "Detailed risk\u2011factor disclosures from recent SEC filings (e.g., regulatory, privacy, or competition risks).",
-   "Quarterly operating expense breakdown to evaluate the trajectory of Reality Labs investments.",
-   "Analyst estimates for forward earnings to compare with current valuation multiples."
+   "SEC 10\u2011K/10\u2011Q filings (MD&A, risk factors, segment revenue breakdown)",
+   "Reality Labs operating loss and cash\u2011burn details",
+   "Detailed user\u2011growth and engagement metrics (DAU/MAU trends)",
+   "Advertising pricing and CPM trends by geography",
+   "Regulatory developments (e.g., antitrust, data\u2011privacy) that could affect future earnings"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -379,166 +388,189 @@
  },
  "brief": {
   "ticker": "META",
-  "one_view": "Meta Platforms delivers strong top\u2011line growth and cash generation, with 28% year\u2011over\u2011year revenue growth and roughly $21.5\u202fbn of free cash flow, underpinning its ability to invest and return capital. Its balance sheet remains conservative, showing a debt\u2011to\u2011equity ratio near 43% and a current ratio above 2, which provides liquidity resilience. Valuation appears stretched relative to its own history, as the trailing P/E of 28.3\u00d7 sits above the 18\u201128\u00d7 neutral band and the price\u2011to\u2011sales ratio is 1.16\u00d7 its historical median, although the forward P/E of 21.5\u00d7 suggests expectations of earnings growth. Momentum is mixed: a robust six\u2011month gain of +30.9% is offset by a negative 12\u2011month\u2011minus\u2011one\u2011month shift of \u201331.6%, indicating the rally may be losing steam. Risk metrics show elevated volatility (~51% annualized 60\u2011day) and a ~30% one\u2011year drawdown, while rising 10\u2011year Treasury yields (+0.72\u202fpp) add a macro headwind, though the quant risk component rates risk as moderate. Overall, the combination of solid fundamentals and elevated valuation/macro pressures yields a mixed outlook for the next three months.",
+  "one_view": "Meta\u2019s short\u2011term price momentum is strong, with 3\u2011 and 6\u2011month returns of +27.3% and +36.4%, and its balance sheet remains conservative (D/E\u224843%, current ratio\u22482.2, $21.5\u202fB FCF). Revenue is growing ~28% YoY and profit margins hover near 30%, while the price\u2011to\u2011sales multiple is only slightly above its own historical median. However, the trailing P/E of 28.3\u00d7 sits above the 18\u201128\u00d7 neutral band, rising 10\u2011year Treasury yields (+0.66\u202fpp) add macro headwinds, and the stock has experienced a ~30% one\u2011year drawdown with 60\u2011day volatility near 49%. These opposing forces leave the risk\u2011return profile balanced, as reflected in the quant score of \u20137 (fair band).",
   "narrative_lean": "mixed",
   "claims": [
    {
     "claim_id": "syn-1",
-    "text": "Meta's trailing twelve\u2011month revenue grew 28% year\u2011over\u2011year as of the latest data.",
+    "text": "Meta's 6\u2011month total return is +36.4% and its 3\u2011month total return is +27.3%.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:info:META"
+     "yf:hist:META"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "syn-2",
-    "text": "Meta generated free cash flow of $21.55\u202fbn, indicating strong cash generation.",
+    "text": "Meta\u2019s balance sheet shows low leverage with a debt\u2011to\u2011equity ratio of 43% and a current ratio of 2.23.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:META"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "syn-3",
-    "text": "Meta's balance sheet shows low leverage with a debt\u2011to\u2011equity ratio of 43% and a current ratio of 2.23, reflecting solid liquidity.",
+    "text": "Free cash flow was $21.55\u202fbillion in the latest reported period.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:META"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-4",
+    "text": "Revenue grew 28% year\u2011over\u2011year and the profit margin is approximately 30%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "The price\u2011to\u2011sales ratio is 1.11\u00d7 its own historical median, indicating the stock is not expensive relative to its own history.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:META",
+     "yf:financials:META"
     ],
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-4",
-    "text": "Although the trailing P/E is 28.3\u00d7, the forward P/E of 21.5\u00d7 and a valuation component of \u20130.2 in the quant model suggest the stock is not severely overvalued relative to its earnings outlook.",
-    "stance": "bull",
-    "support": "inference",
+    "claim_id": "syn-6",
+    "text": "Meta's trailing P/E ratio is 28.33, which exceeds the 18\u201128\u00d7 range considered neutral in the quant valuation model.",
+    "stance": "bear",
+    "support": "sourced",
     "source_ids": [
      "yf:info:META",
      "quant:v0.1"
     ],
-    "confidence": 0.8
-   },
-   {
-    "claim_id": "syn-5",
-    "text": "The 6\u2011month price return of +30.9% contributes to a positive momentum score of +0.105 in the quant model, supporting near\u2011term price strength.",
-    "stance": "bull",
-    "support": "inference",
-    "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
-    ],
-    "confidence": 0.8
-   },
-   {
-    "claim_id": "syn-6",
-    "text": "Risk metrics show a 1\u2011year drawdown of ~30% and 60\u2011day annualized volatility of 51%, but the quant risk component is \u20130.36, indicating moderate rather than extreme risk.",
-    "stance": "bull",
-    "support": "inference",
-    "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
-    ],
-    "confidence": 0.8
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-7",
-    "text": "Meta's trailing P/E of 28.3\u00d7 is above the historical neutral band of 18\u201128\u00d7, indicating a relatively expensive valuation.",
-    "stance": "bear",
-    "support": "inference",
+    "text": "The 12\u2011month\u2011minus\u20111\u2011month return is \u201328.8%.",
+    "stance": "neutral",
+    "support": "sourced",
     "source_ids": [
-     "yf:info:META",
-     "quant:v0.1"
+     "yf:hist:META"
     ],
-    "confidence": 0.7
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-8",
-    "text": "The price\u2011to\u2011sales ratio of 8.39\u00d7 is 1.16\u00d7 the company's own historical median, showing a premium to its past levels.",
+    "text": "Over the past year Meta suffered a maximum drawdown of roughly \u201330%.",
     "stance": "bear",
-    "support": "inference",
+    "support": "sourced",
     "source_ids": [
-     "yf:info:META",
-     "yf:financials:META",
-     "quant:v0.1"
+     "yf:hist:META"
     ],
-    "confidence": 0.7
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-9",
-    "text": "Six\u2011month price return is +30.9% but the 12\u2011month\u2011minus\u2011one\u2011month change is -31.6%, signaling recent gains may be reversing.",
+    "text": "Meta exhibits 60\u2011day annualized volatility of about 49%.",
     "stance": "bear",
-    "support": "inference",
+    "support": "sourced",
     "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
+     "yf:hist:META"
     ],
-    "confidence": 0.7
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-10",
-    "text": "One\u2011year drawdown is approximately -30% and 60\u2011day annualized volatility is about 51%, reflecting elevated downside risk.",
+    "text": "The 10\u2011year Treasury yield rose 0.66 percentage points over the last three months.",
     "stance": "bear",
-    "support": "inference",
+    "support": "sourced",
     "source_ids": [
-     "yf:hist:META",
-     "quant:v0.1"
+     "fred:DGS10"
     ],
-    "confidence": 0.7
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-11",
-    "text": "The 10\u2011year Treasury yield rose roughly 0.72 percentage points over the past three months, increasing equity discount rates.",
+    "text": "Quant valuation component contributes \u20130.2 to the overall score.",
     "stance": "bear",
-    "support": "inference",
+    "support": "sourced",
     "source_ids": [
-     "fred:DGS10",
      "quant:v0.1"
     ],
-    "confidence": 0.7
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-12",
-    "text": "Meta's balance sheet shows low debt\u2011to\u2011equity (43%), a strong current ratio (2.23), and positive free cash flow ($21.6\u202fB), providing a financial cushion.",
-    "stance": "context",
+    "text": "Quant momentum component contributes +0.14 to the overall score.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:info:META"
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-13",
+    "text": "Quant risk component contributes \u20130.32 to the overall score.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-14",
+    "text": "Quant macro component contributes \u20130.5 to the overall score.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-15",
+    "text": "Quant balance\u2011sheet component contributes +0.37 to the overall score.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
     ],
     "confidence": 0.9
    }
   ],
   "kill_criteria": [
-   "Revenue growth falls below 15% YoY in the next reported quarter.",
-   "Free cash flow turns negative or declines by more than 30% quarter\u2011over\u2011quarter.",
-   "Trailing P/E drops below 18\u00d7 or rises above 35\u00d7.",
-   "Six\u2011month price return turns negative while the 12\u2011month\u2011minus\u2011one\u2011month remains positive.",
-   "One\u2011year drawdown exceeds 40% or 60\u2011day annualized volatility rises above 70%.",
-   "10\u2011year Treasury yield increases an additional 50 basis points over the next three months."
+   "Trailing P/E falls below 20\u00d7 (or forward P/E below 18\u00d7) while revenue growth stays \u226520% YoY \u2013 would favor the bull case.",
+   "Trailing P/E rises above 35\u00d7 with revenue growth \u226415% YoY \u2013 would favor the bear case.",
+   "6\u2011month momentum reverses and 1\u2011month return drops below \u201310% with 60\u2011day annualized volatility >60% \u2013 would favor the bear case.",
+   "Free cash flow declines below $15\u202fB or revenue growth falls below 15% YoY \u2013 would favor the bear case.",
+   "10\u2011year Treasury yield drops >0.5\u202fpp or credit spreads tighten significantly \u2013 would reduce macro headwinds and favor the bull case.",
+   "Reality Labs quarterly operating loss narrows to <$1\u202fB or AI\u2011related ad\u2011pricing shows >20% YoY lift \u2013 would favor the bull case."
   ],
   "disagreement": {
    "quant_band": "fair",
-   "quant_score": -8,
+   "quant_score": -7,
    "narrative_lean": "mixed",
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The valuation component uses a static 18\u201128\u00d7 P/E band that may not reflect Meta's evolving growth profile or the premium investors place on its AI and metaverse initiatives.",
-    "Momentum scoring relies on a simple 6\u2011month return versus a 12\u2011month\u2011minus\u2011one\u2011month shift, which can be distorted by short\u2011term sentiment swings and does not capture fundamentals\u2011driven trends.",
-    "Risk component combines drawdown and volatility with fixed weights, ignoring tail\u2011risk factors such as regulatory fines or segment\u2011specific losses (e.g., Reality Labs).",
-    "The macro component assumes a linear impact of 10\u2011year yield changes on equity discount rates, overlooking possible offsetting effects from inflation expectations or currency movements.",
-    "Balance\u2011sheet credit for positive free cash flow does not differentiate between recurring operating cash flow and one\u2011time gains, potentially overstating financial flexibility."
+    "The quant model uses a historical P/S median that may not reflect Meta\u2019s shifting mix toward higher\u2011margin AI and Reality Labs businesses.",
+    "Momentum weighting may overstate persistence after a strong 6\u2011month rally, ignoring mean\u2011reversion tendencies.",
+    "Risk component relies on 60\u2011day volatility and 1\u2011year drawdown, omitting company\u2011specific tail risks such as regulatory fines or litigation.",
+    "Macro component only captures the change in the 10\u2011year Treasury yield, neglecting credit\u2011spread moves, dollar strength, or ad\u2011market sensitivity.",
+    "The model does not incorporate forward earnings estimates or segment\u2011level cash\u2011burn, which could materially affect valuation."
    ],
    "narrative_may_be_wrong_because": [
-    "Yahoo\u2011Finance\u2011derived numbers may be subject to adjustments or delays, especially for free cash flow and revenue growth figures.",
-    "Both memos rely heavily on aggregate metrics and give limited visibility into the Reality Labs segment, which continues to incur large operating losses that could drag on consolidated profitability.",
-    "The bull case assumes forward P/E of 21.5\u00d7 reflects consensus earnings estimates, but those estimates may be overly optimistic if ad\u2011market growth slows.",
-    "The bear case emphasizes valuation multiples without fully accounting for Meta's dominant network effects and its ability to monetize new AI\u2011driven products.",
-    "Both memos understate potential regulatory risks (antitrust, privacy, content moderation) that could result in fines, forced product changes, or restrictions on data usage."
+    "Bull memo may overstate the predictive power of short\u2011term price momentum and ignore mean\u2011reversion.",
+    "Bear memo may overemphasize a static trailing P/E without considering forward earnings growth or AI\u2011driven margin expansion.",
+    "Both memos rely on trailing metrics and lack forward guidance or segment breakdown (e.g., Reality Labs losses, Family of Apps monetization).",
+    "Neither memo discusses regulatory risks (antitrust, data\u2011privacy) that could affect future earnings.",
+    "Both assume current balance\u2011sheet strength will persist, ignoring potential increased capex for AI infrastructure."
    ]
   },
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -547,11 +579,11 @@
  },
  "critic": {
   "flags": [
-   "high_confidence_claims_undersourced:0.33"
+   "quant_claim_mismatch:bear-6"
   ],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 0.3333333333333333
+  "sourced_share_high_conf": 0.9642857142857143
  },
  "models": {
   "bull": "nvidia/nemotron-3-super-120b-a12b:free",

@@ -1,9 +1,9 @@
 {
- "run_id": "tsla-20260926T005211-7816aa",
+ "run_id": "tsla-20260929T021827-bec7a1",
  "ticker": "TSLA",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-26T00:55:37.236888Z",
+ "created_at": "2026-09-29T02:20:08.607552Z",
  "sources": [
   {
    "source_id": "yf:hist:TSLA",
@@ -11,11 +11,11 @@
    "title": "Yahoo Finance daily prices, 1y (TSLA)",
    "url": "https://finance.yahoo.com/quote/TSLA/history",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:52:11.929014Z",
+   "retrieved_at": "2026-09-29T02:18:27.883188Z",
    "excerpt": null,
    "data": {
-    "rows": 250,
-    "last": "2026-09-24T00:00:00-04:00"
+    "rows": 251,
+    "last": "2026-09-28T00:00:00-04:00"
    }
   },
   {
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (TSLA)",
    "url": "https://finance.yahoo.com/quote/TSLA/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:52:11.929014Z",
+   "retrieved_at": "2026-09-29T02:18:27.883188Z",
    "excerpt": null,
    "data": {
     "longName": "Tesla, Inc.",
     "sector": "Consumer Cyclical",
     "industry": "Auto Manufacturers",
-    "marketCap": 1469666033664,
-    "trailingPE": 338.2818,
-    "forwardPE": 171.25119,
-    "priceToSalesTrailing12Months": 14.183364,
-    "enterpriseToEbitda": 134.159,
+    "marketCap": 1411765764096,
+    "trailingPE": 330.97223,
+    "forwardPE": 164.50443,
+    "priceToSalesTrailing12Months": 13.624583,
+    "enterpriseToEbitda": 128.776,
     "debtToEquity": 18.373,
     "currentRatio": 1.941,
     "freeCashflow": 4835999744,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (TSLA), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/TSLA/financials",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:52:11.929014Z",
+   "retrieved_at": "2026-09-29T02:18:27.883188Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,41 +65,41 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-26T00:52:13.033143Z",
+   "retrieved_at": "2026-09-29T02:18:28.641783Z",
    "excerpt": null,
    "data": {
-    "from": "2026-06-18",
-    "to": "2026-09-24",
-    "first": 4.46,
-    "last": 5.18
+    "from": "2026-06-22",
+    "to": "2026-09-25",
+    "first": 4.51,
+    "last": 5.17
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-26T00:52:13.033460+00:00) from yf:hist:TSLA, yf:info:TSLA, yf:financials:TSLA, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-09-29T02:18:28.642156+00:00) from yf:hist:TSLA, yf:info:TSLA, yf:financials:TSLA, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-26T00:52:13.033510Z",
+   "retrieved_at": "2026-09-29T02:18:28.642205Z",
    "excerpt": null,
    "data": {
-    "quant_score": -31,
+    "quant_score": -26,
     "quant_band": "expensive",
     "components": [
      {
       "name": "valuation",
-      "value": -0.5,
-      "note": "P/E 338.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.87\u00d7 its own median \u2192 +0.00"
+      "value": -0.375,
+      "note": "P/E 331.0 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.83\u00d7 its own median \u2192 +0.25"
      },
      {
       "name": "momentum",
-      "value": -0.3106942869445428,
-      "note": "6m return -2.1% \u2192 -0.07; 12m\u22121m -22.1% \u2192 -0.55"
+      "value": -0.2713476523201766,
+      "note": "6m return -1.2% \u2192 -0.04; 12m\u22121m -20.1% \u2192 -0.50"
      },
      {
       "name": "risk",
-      "value": -0.557957934594784,
-      "note": "1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52"
+      "value": -0.534956603051395,
+      "note": "1y drawdown 39% \u2192 -0.60; 60d vol 52% ann. \u2192 -0.47"
      },
      {
       "name": "balance_sheet",
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.72pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.66pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -117,38 +117,38 @@
  ],
  "quant": {
   "ticker": "TSLA",
-  "quant_score": -31,
+  "quant_score": -26,
   "quant_band": "expensive",
   "components": [
    {
     "name": "valuation",
-    "value": -0.5,
+    "value": -0.375,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 338.2818,
-     "ps_vs_own_median": 0.87
+     "trailing_pe": 330.97223,
+     "ps_vs_own_median": 0.83
     },
-    "note": "P/E 338.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.87\u00d7 its own median \u2192 +0.00"
+    "note": "P/E 331.0 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.83\u00d7 its own median \u2192 +0.25"
    },
    {
     "name": "momentum",
-    "value": -0.3106942869445428,
+    "value": -0.2713476523201766,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": -2.0754008323047524,
-     "ret_12m_minus_1m": -22.09
+     "ret_6m": -1.2105061846109821,
+     "ret_12m_minus_1m": -20.09
     },
-    "note": "6m return -2.1% \u2192 -0.07; 12m\u22121m -22.1% \u2192 -0.55"
+    "note": "6m return -1.2% \u2192 -0.04; 12m\u22121m -20.1% \u2192 -0.50"
    },
    {
     "name": "risk",
-    "value": -0.557957934594784,
+    "value": -0.534956603051395,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -39.10345301895269,
-     "vol_60d_ann": 53.406933898128294
+     "vol_60d_ann": 51.81453402204751
     },
-    "note": "1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52"
+    "note": "1y drawdown 39% \u2192 -0.60; 60d vol 52% ann. \u2192 -0.47"
    },
    {
     "name": "balance_sheet",
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.7199999999999998
+     "fred_10y_change_3m": 0.6600000000000001
     },
-    "note": "10y yield +0.72pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.66pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "TSLA",
-   "as_of": "2026-09-26T00:52:11.929014Z",
-   "price": 377.94000244140625,
+   "as_of": "2026-09-29T02:18:27.883188Z",
+   "price": 357.45001220703125,
    "high_52w": 489.8800048828125,
    "low_52w": 298.32000732421875,
-   "ret_1m": 7.905782281629192,
-   "ret_3m": 0.7517613992658045,
-   "ret_6m": -2.0754008323047524,
-   "ret_12m": -14.182559564194563,
-   "vol_60d_ann": 53.406933898128294,
+   "ret_1m": 0.7440643348843423,
+   "ret_3m": -13.206581345789347,
+   "ret_6m": -1.2105061846109821,
+   "ret_12m": -19.349739604581806,
+   "vol_60d_ann": 51.81453402204751,
    "max_drawdown_1y": -39.10345301895269,
-   "trailing_pe": 338.2818,
-   "forward_pe": 171.25119,
-   "price_to_sales": 14.183364,
+   "trailing_pe": 330.97223,
+   "forward_pe": 164.50443,
+   "price_to_sales": 13.624583,
    "ps_hist_median": 16.327005887289236,
-   "ev_to_ebitda": 134.159,
+   "ev_to_ebitda": 128.776,
    "debt_to_equity": 18.373,
    "current_ratio": 1.941,
    "free_cash_flow": 4835999744.0,
    "revenue_growth": 25.5,
    "profit_margin": 3.671,
-   "fred_10y_change_3m": 0.7199999999999998,
-   "data_age_days": 1.8695825117361111,
+   "fred_10y_change_3m": 0.6600000000000001,
+   "data_age_days": 0.9294893887500001,
    "source_ids": [
     "yf:hist:TSLA",
     "yf:info:TSLA",
@@ -203,89 +203,109 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-26T00:52:13.033460Z",
+  "computed_at": "2026-09-29T02:18:28.642156Z",
   "freshness_flags": [],
   "drivers": [
-   "valuation: P/E 338.3 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.87\u00d7 its own median \u2192 +0.00",
-   "risk: 1y drawdown 39% \u2192 -0.60; 60d vol 53% ann. \u2192 -0.52",
-   "momentum: 6m return -2.1% \u2192 -0.07; 12m\u22121m -22.1% \u2192 -0.55",
+   "valuation: P/E 331.0 \u2192 -1.0 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.83\u00d7 its own median \u2192 +0.25",
+   "risk: 1y drawdown 39% \u2192 -0.60; 60d vol 52% ann. \u2192 -0.47",
    "balance_sheet: D/E 18% \u2192 +0.5; current ratio 1.94 \u2192 +0.3; FCF positive \u2192 +0.3",
-   "macro: 10y yield +0.72pp over 3m \u2192 -0.50"
+   "momentum: 6m return -1.2% \u2192 -0.04; 12m\u22121m -20.1% \u2192 -0.50",
+   "macro: 10y yield +0.66pp over 3m \u2192 -0.50"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Tesla's balance sheet remains solid with low leverage and ample liquidity, while the company continues to generate positive free cash flow and deliver double\u2011digit revenue growth. Its price\u2011to\u2011sales multiple is below its own historical median, suggesting the stock is not overvalued on a sales basis, and short\u2011term price momentum has turned positive. Together, these factors support a bullish outlook for the next three months, although valuation remains stretched on earnings\u2011based measures and macro\u2011economic headwinds persist.",
+  "summary": "Tesla's balance sheet shows low leverage and solid liquidity, while the company continues to generate positive free cash flow and deliver strong revenue growth. Its price-to-sales multiple sits below its historical median, offering a relative valuation cushion despite elevated P/E ratios. However, the stock faces near-term headwinds from rising Treasury yields, negative price momentum, and high volatility/drawdown levels, which together keep the overall quantitative signal in the expensive band.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "Tesla's debt\u2011to\u2011equity ratio is 18.4% and its current ratio is 1.94, indicating a strong balance sheet with low leverage and good liquidity.",
+    "text": "Tesla's debt-to-equity ratio is 18.4% and current ratio is 1.94, indicating a conservative capital structure and healthy short-term liquidity.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-2",
-    "text": "Free cash flow was approximately $4.84\u202fbn in the most recent period, providing internal funding for growth and capex.",
+    "text": "Tesla produced $4.84\u202fbillion of free cash flow over the trailing twelve months, demonstrating cash\u2011generation ability.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-3",
-    "text": "Year\u2011over\u2011year revenue growth was 25.5%, reflecting robust top\u2011line expansion despite a cyclical auto environment.",
+    "text": "Year\u2011over\u2011year revenue growth stands at 25.5%, reflecting robust top\u2011line expansion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-4",
-    "text": "Tesla's price\u2011to\u2011sales ratio is 0.87\u00d7 its own historical median, suggesting the stock is not expensive relative to its own sales\u2011based valuation history.",
+    "text": "The trailing price\u2011to\u2011sales ratio of 13.6\u00d7 is below the company\u2019s historical median of 16.3\u00d7, suggesting the stock is not expensive on a sales basis.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1",
+     "yf:info:TSLA",
      "yf:financials:TSLA"
     ],
-    "confidence": 0.85
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-5",
-    "text": "The stock posted a +7.9% return over the past month, indicating recent positive short\u2011term momentum.",
+    "text": "Forward P/E of 164.5\u00d7 is markedly lower than the trailing P/E of 331.\u00d7, implying market expectations of earnings growth.",
     "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:TSLA"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bull-6",
+    "text": "The 10\u2011year Treasury yield increased 0.66 percentage points over the past three months, raising discount\u2011rate pressure on growth\u2011oriented stocks.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bull-7",
+    "text": "Tesla\u2019s stock declined 13.2% over the last three months and 19.3% over the last twelve months, showing negative momentum.",
+    "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:hist:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
-    "claim_id": "bull-6",
-    "text": "Tesla maintains a profit margin of 3.7%, showing it can convert sales into earnings.",
-    "stance": "bull",
+    "claim_id": "bull-8",
+    "text": "Annualized 60\u2011day volatility is 51.8% and the one\u2011year maximum drawdown is \u201339.1%, indicating elevated risk.",
+    "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:info:TSLA"
+     "yf:hist:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    }
   ],
-  "steelman_of_other_side": "Despite the balance\u2011sheet strengths, Tesla carries an extremely high trailing P/E of 338\u00d7, which the quant model flags as expensive (\u20110.5 valuation contribution). The stock has suffered a ~39% 1\u2011year drawdown and exhibits elevated 60\u2011day annualized volatility of 53%, reflecting significant risk. Moreover, the 10\u2011year Treasury yield has risen 0.72 percentage points over the past three months, increasing the discount rate applied to future earnings and pressuring growth\u2011oriented valuations.",
+  "steelman_of_other_side": "Even with a strong balance sheet and positive cash flow, Tesla\u2019s valuation remains stretched: the trailing P/E exceeds 300\u00d7, far above historical auto\u2011industry norms, and the forward P/E still implies very high growth expectations that may not materialize if demand softens or competition intensifies. Combined with rising interest rates that depress present\u2011value of future earnings and the stock\u2019s recent negative momentum, these factors create a substantial downside risk that could outweigh the company\u2019s fundamental strengths over a three\u2011month horizon.",
   "missing_data": [
-   "Quarterly vehicle delivery and production numbers to assess near\u2011term demand trends.",
-   "Detailed breakdown of automotive regulatory credit revenue and its sustainability.",
-   "Segment\u2011level profitability for the Energy Generation and Storage business.",
-   "Forward-looking guidance or management commentary on pricing, cost reductions, and capacity utilization.",
-   "Broader macro indicators such as consumer confidence and interest\u2011rate forecasts beyond the 10\u2011year yield change."
+   "SEC filings (10\u2011K, 10\u2011Q) for detailed risk factors, MD&A commentary, and segment\u2011level revenue breakdowns",
+   "Quarterly vehicle delivery and production numbers to assess demand trends",
+   "Guidance or management outlook for earnings and cash flow",
+   "Detailed energy\u2011generation\u2011and\u2011storage segment financials to gauge diversification progress",
+   "Analyst estimates and consensus forecasts for forward earnings"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -293,77 +313,82 @@
  },
  "bear": {
   "side": "bear",
-  "summary": "Tesla's valuation remains extremely elevated with a trailing P/E of 338\u00d7 and forward P/E of 171\u00d7, far above historical auto\u2011industry ranges. Price momentum has turned negative, showing a ~2% six\u2011month decline and a -22% 12\u2011month\u2011minus\u20111\u2011month return, while risk metrics reveal a ~39% one\u2011year drawdown and 53% annualized volatility. Rising 10\u2011year Treasury yields (+0.72\u202fpp over three months) add a macro headwind for growth stocks. Although the balance sheet is solid (low debt, positive free cash flow), these factors collectively suggest downside pressure over the next three months.",
+  "summary": "Tesla's valuation remains extremely elevated relative to earnings and its own historical sales multiple, signaling an expensive stock. Recent price momentum is negative, with a modest 6\u2011month loss and a larger 12\u2011month versus 1\u2011month decline, while risk metrics show a deep 1\u2011year drawdown and high volatility. Macro headwinds from a rising 10\u2011year Treasury yield increase discount\u2011rate pressure on growth\u2011oriented shares. Although the balance sheet shows modest leverage, strong liquidity and positive free cash flow provide some cushion, and the company continues to deliver solid revenue growth and improving margins. These factors together suggest a bearish outlook over the next three months, though underlying business strength offers a counterweight.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Tesla's trailing P/E ratio is 338.3, well above the typical auto\u2011industry range of 18\u201128\u00d7, indicating extreme valuation.",
+    "text": "Tesla's trailing P/E of ~331\u00d7 is far above the historical neutral band of 18\u201128\u00d7, and its price\u2011to\u2011sales ratio is 0.83\u00d7 its own median, indicating an expensive valuation relative to earnings and sales history.",
     "stance": "bear",
-    "support": "sourced",
+    "support": "inference",
     "source_ids": [
-     "yf:info:TSLA"
+     "quant:v0.1",
+     "yf:info:TSLA",
+     "yf:financials:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.88
    },
    {
     "claim_id": "bear-2",
-    "text": "Tesla's forward P/E ratio is 171.3, still far above historical norms, suggesting lofty growth expectations are already priced in.",
+    "text": "Over the past six months Tesla's price has fallen about 1.2%, and the 12\u2011month return minus the most recent month is roughly -20%, showing negative short\u2011term momentum.",
     "stance": "bear",
-    "support": "sourced",
+    "support": "inference",
     "source_ids": [
-     "yf:info:TSLA"
+     "quant:v0.1",
+     "yf:hist:TSLA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-3",
-    "text": "Tesla's price\u2011to\u2011sales ratio is 14.2\u00d7, which, while slightly below its own historical median of ~16.3\u00d7, remains elevated relative to peers and implies high growth priced in.",
+    "text": "The stock experienced a 1\u2011year drawdown of approximately 39% and its 60\u2011day annualized volatility is around 52%, reflecting elevated downside risk.",
     "stance": "bear",
-    "support": "sourced",
+    "support": "inference",
     "source_ids": [
-     "yf:info:TSLA",
-     "yf:financials:TSLA"
+     "quant:v0.1",
+     "yf:hist:TSLA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-4",
-    "text": "Over the past six months Tesla's stock price has fallen approximately 2.1%, and the 12\u2011month minus 1\u2011month return is -22.1%, showing negative momentum.",
-    "stance": "bear",
+    "text": "Tesla's balance sheet shows modest leverage (debt\u2011to\u2011equity ~18%), a healthy current ratio of 1.94, and positive free cash flow of about $4.8\u202fbn, providing liquidity support.",
+    "stance": "neutral",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1"
+     "quant:v0.1",
+     "yf:info:TSLA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-5",
-    "text": "Tesla experienced a one\u2011year maximum drawdown of about 39% and exhibits 60\u2011day annualized volatility of roughly 53%, indicating high risk.",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.66 percentage points over the last three months, increasing the discount rate applied to Tesla's future cash flows.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1"
+     "quant:v0.1",
+     "fred:DGS10"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-6",
-    "text": "The 10\u2011year Treasury yield has risen by about 0.72 percentage points over the last three months, increasing the discount rate and posing a headwind for growth\u2011oriented stocks like Tesla.",
-    "stance": "bear",
+    "text": "Revenue grew 25.5% year\u2011over\u2011year and profit margin improved to 3.67%, indicating ongoing expansion of the core automotive and energy businesses.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "fred:DGS10",
-     "quant:v0.1"
+     "yf:info:TSLA"
     ],
     "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "Tesla maintains a strong balance sheet with debt\u2011to\u2011equity of only 18%, a current ratio of 1.94, and positive free cash flow of $4.8\u202fbn, providing financial flexibility. Revenue continues to grow at 25.5% year\u2011over\u2011year and profit margins are 3.7%, reflecting scalable operations in both automotive and energy segments. The company\u2019s leadership in EV technology, expanding Supercharger network, and potential upside from regulatory credit sales could support future earnings growth that justifies current valuations.",
+  "steelman_of_other_side": "Despite the high valuation, Tesla continues to grow its top line at a robust pace, driven by expanding vehicle deliveries, scaling of its energy storage and solar businesses, and ongoing cost reductions from gigafactory efficiencies. The company's strong brand, technological lead in battery and autonomous\u2011driving software, and a solid balance sheet with ample liquidity and positive free cash flow give it flexibility to invest in future growth cycles and weather short\u2011term market volatility.",
   "missing_data": [
-   "SEC filing excerpts (risk factors, MD&A) to assess management commentary and contingent liabilities",
-   "Detailed segment\u2011level revenue and margin breakdown for automotive vs. energy",
-   "Cash conversion cycle and working capital trends",
-   "Analyst consensus estimates for forward earnings to compare with implied growth expectations"
+   "SEC filings (10\u2011K, 10\u2011Q) for detailed segment revenue, cash\u2011flow breakdown, and management guidance",
+   "Quarterly production and delivery numbers to validate revenue\u2011growth sustainability",
+   "Competitive landscape data on EV market share and pricing pressure",
+   "Macro indicators specific to consumer\u2011discretionary spending and interest\u2011rate sensitivity",
+   "Analyst consensus estimates for forward earnings to compare with the elevated forward P/E"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -371,103 +396,74 @@
  },
  "brief": {
   "ticker": "TSLA",
-  "one_view": "Tesla\u2019s balance sheet remains strong, with low leverage, ample liquidity and positive free cash flow, supporting the bull case that the firm can fund growth internally. At the same time, its trailing P/E of 338\u00d7 and forward P/E of 171\u00d7 are far above historical auto\u2011industry ranges, and medium\u2011term price momentum is negative, which the bear case and the quant model highlight as sources of downside risk. The quant score of \u201331 (expensive) reflects that the valuation, momentum and risk components outweigh the balance\u2011sheet strength, while the bull memo points to a price\u2011to\u2011sales multiple below its own historical median as a counter\u2011weight. Consequently, the near\u2011term outlook hinges on whether Tesla can sustain its 25%+ revenue growth and cash\u2011flow generation to justify its high earnings multiple, or whether a further drawdown in earnings expectations or a continued rise in rates will tip the scales bearish.",
-  "narrative_lean": "mixed",
+  "one_view": "Tesla\u2019s balance sheet remains strong, with low leverage, ample liquidity and positive free cash flow, while revenue continues to grow at a double\u2011digit pace. However, the stock\u2019s valuation is stretched by an extremely high trailing P/E (~330\u00d7) that far exceeds historical norms, even though its price\u2011to\u2011sales multiple sits below its own median. Negative price momentum over the past six\u2011to\u2011twelve months, a deep one\u2011year drawdown and elevated volatility, together with a rising 10\u2011year Treasury yield, weigh on the quantitative signal, which places the shares in the expensive band. Over a three\u2011month horizon, the bearish forces of valuation, momentum, macro\u2011risk and drawdown tend to outweigh the fundamental strengths, though a reversal in any of these factors could quickly shift the balance.",
+  "narrative_lean": "bearish",
   "claims": [
    {
     "claim_id": "syn-1",
-    "text": "Tesla's debt\u2011to\u2011equity ratio is 18.4% and its current ratio is 1.94, indicating a strong balance sheet with low leverage and good liquidity.",
+    "text": "Tesla's debt-to-equity ratio is 18.4% and current ratio is 1.94, indicating a conservative capital structure and healthy short-term liquidity.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "syn-2",
-    "text": "Free cash flow was approximately $4.84\u202fbn in the most recent period, providing internal funding for growth and capex.",
+    "text": "Tesla produced $4.84\u202fbillion of free cash flow over the trailing twelve months, demonstrating cash\u2011generation ability.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "syn-3",
-    "text": "Year\u2011over\u2011year revenue growth was 25.5%, reflecting robust top\u2011line expansion despite a cyclical auto environment.",
+    "text": "Year\u2011over\u2011year revenue growth stands at 25.5%, reflecting robust top\u2011line expansion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "syn-4",
-    "text": "Tesla's price\u2011to\u2011sales ratio is 0.87\u00d7 its own historical median, suggesting the stock is not expensive relative to its own sales\u2011based valuation history.",
+    "text": "The trailing price\u2011to\u2011sales ratio of 13.6\u00d7 is below the company\u2019s historical median of 16.3\u00d7, suggesting the stock is not expensive on a sales basis.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:TSLA",
      "yf:financials:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "syn-5",
-    "text": "The stock posted a +7.9% return over the past month, indicating recent positive short\u2011term momentum.",
+    "text": "Forward P/E of 164.5\u00d7 is markedly lower than the trailing P/E of 331\u00d7, implying market expectations of earnings growth.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:TSLA"
+     "yf:info:TSLA"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "syn-6",
-    "text": "Tesla's trailing P/E ratio is 338.3, well above the typical auto\u2011industry range of 18\u201128\u00d7, indicating extreme valuation.",
+    "text": "Trailing P/E of ~331\u00d7 is far above the historical neutral band of 18\u201128\u00d7, indicating an expensive valuation relative to earnings.",
     "stance": "bear",
-    "support": "sourced",
+    "support": "inference",
     "source_ids": [
+     "quant:v0.1",
      "yf:info:TSLA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-7",
-    "text": "Tesla's forward P/E ratio is 171.3, still far above historical norms, suggesting lofty growth expectations are already priced in.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:TSLA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-8",
-    "text": "Tesla's price\u2011to\u2011sales ratio is 14.2\u00d7, which, while slightly below its own historical median of ~16.3\u00d7, remains elevated relative to peers and implies high growth priced in.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:TSLA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-9",
-    "text": "Over the past six months Tesla's stock price has fallen approximately 2.1%, and the 12\u2011month minus 1\u2011month return is -22.1%, showing negative momentum.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-10",
-    "text": "Tesla experienced a one\u2011year maximum drawdown of about 39% and exhibits 60\u2011day annualized volatility of roughly 53%, indicating high risk.",
+    "text": "Over the past six months Tesla's price has fallen about 1.2%, and the 12\u2011month minus 1\u2011month return is roughly -20%, showing negative short\u2011term momentum.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -476,49 +472,76 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-11",
-    "text": "The 10\u2011year Treasury yield has risen by about 0.72 percentage points over the last three months, increasing the discount rate and posing a headwind for growth\u2011oriented stocks like Tesla.",
-    "stance": "context",
+    "claim_id": "syn-8",
+    "text": "The stock experienced a 1\u2011year drawdown of approximately 39% and its 60\u2011day annualized volatility is around 52%, reflecting elevated downside risk.",
+    "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "fred:DGS10"
+     "yf:hist:TSLA"
     ],
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-12",
-    "text": "The quant model\u2019s valuation component (-0.5) is driven by the high P/E, while the bull memo notes the P/S ratio is below its own historical median, suggesting the stock is not overvalued on a sales basis.",
-    "stance": "context",
+    "claim_id": "syn-9",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.66 percentage points over the last three months, increasing the discount rate applied to Tesla's future cash flows.",
+    "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1",
-     "yf:info:TSLA",
-     "yf:financials:TSLA"
+     "fred:DGS10",
+     "quant:v0.1"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-10",
+    "text": "Revenue grew 25.5% year\u2011over\u2011year and profit margin improved to 3.67%, indicating ongoing expansion of the core automotive and energy businesses.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:TSLA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-11",
+    "text": "Tesla's balance sheet shows modest leverage (debt\u2011to\u2011equity ~18%), a healthy current ratio of 1.94, and positive free cash flow of about $4.8\u202fbn, providing liquidity support.",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:TSLA",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
    }
   ],
   "kill_criteria": [
-   "Forward P/E falls below 30\u00d7 while revenue growth stays above 20% YoY (would weaken the bear valuation argument).",
-   "Six\u2011month total return turns positive >5% and the one\u2011year drawdown improves to <20% (would undermine the bear momentum/risk case).",
-   "Free cash flow turns negative or revenue growth drops below 10% YoY (would invalidate the bull financial\u2011strength argument).",
-   "10\u2011year Treasury yield declines by >0.5 percentage points over the next quarter (would lessen the macro bearish headwind)."
+   "Trailing P/E falls below 50\u00d7 (indicating valuation normalization)",
+   "Six\u2011month price return turns positive >5%",
+   "One\u2011year maximum drawdown improves to less than 20%",
+   "Sixty\u2011day annualized volatility drops below 30%",
+   "10\u2011year Treasury yield declines by more than 0.3 percentage points over the next three months",
+   "Free cash flow turns negative",
+   "Year\u2011over\u2011year revenue growth falls below 5%"
   ],
   "disagreement": {
    "quant_band": "expensive",
-   "quant_score": -31,
-   "narrative_lean": "mixed",
-   "agree": false,
-   "disagreement_summary": "Quant says 'expensive' (score -31); the narrative leans 'mixed'. This is shown, not reconciled. One of them is wrong, or the horizon differs.",
+   "quant_score": -26,
+   "narrative_lean": "bearish",
+   "agree": true,
+   "disagreement_summary": "Quant band 'expensive' and narrative lean 'bearish' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The valuation component uses a fixed 18\u201128\u00d7 P/E reference band that may not suit Tesla\u2019s growth profile, potentially overstating expensiveness.",
-    "Momentum is weighted heavily on short\u2011term negative returns despite possible mean\u2011reversion, which could mislead if momentum reverses.",
-    "Risk is based on historical drawdown and volatility without adjusting for potential improvements in operational stability or new product launches."
+    "The valuation component uses a historical P/S median derived from a limited four\u2011point history, which may not reflect the company's evolving mix of automotive and energy sales.",
+    "The model\u2019s fixed weights may undervalue the balance\u2011sheet strength and cash\u2011flow generation that are particularly relevant for a capital\u2011intensive manufacturer.",
+    "Trailing P/E can be distorted by temporary earnings fluctuations; the model does not incorporate forward\u2011looking analyst estimates or expected earnings growth from new product cycles.",
+    "Momentum and risk calculations rely solely on price history and do not capture potential catalysts such as regulatory credit revenue, energy\u2011storage deployments, or macro\u2011policy shifts.",
+    "The macro component only considers the 10\u2011year Treasury yield change, omitting other relevant factors like consumer\u2011discretionary sentiment or currency effects."
    ],
    "narrative_may_be_wrong_because": [
-    "The bull memo may overstate the significance of a one\u2011month +7.9% price move, which can be noisy and not indicative of a sustained trend.",
-    "The bear memo may underweight the potential impact of upcoming vehicle launches or energy\u2011storage deployments that could accelerate earnings growth.",
-    "Both memos rely on trailing metrics and may miss forward\u2011looking guidance or changes in regulatory credit revenue that could alter valuation."
+    "The memos rely on Yahoo Finance data that may be subject to reporting delays or adjustments, especially for free cash flow and segment\u2011level figures.",
+    "Both memos emphasize short\u2011term price movements and drawdowns, which may overstate near\u2011term risk if a product launch or policy change reverses sentiment quickly.",
+    "The bull memo\u2019s optimism about forward P/E assumes earnings growth that may not materialize if demand softens or competition intensifies in the EV market.",
+    "The bear memo\u2019s focus on valuation multiples may underweight the strategic value of Tesla\u2019s energy\u2011generation\u2011and\u2011storage business and its regulatory\u2011credit revenue stream.",
+    "Neither memo incorporates detailed guidance from SEC filings (10\u2011K/10\u2011Q) that could clarify future capital expenditures, margin trends, or contingent liabilities."
    ]
   },
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -527,11 +550,11 @@
  },
  "critic": {
   "flags": [
-   "quant_narrative_disagree"
+   "quant_claim_mismatch:bear-4,syn-11"
   ],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 1.0
+  "sourced_share_high_conf": 0.84
  },
  "models": {
   "bull": "nvidia/nemotron-3-super-120b-a12b:free",
