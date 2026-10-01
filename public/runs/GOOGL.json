@@ -1,9 +1,9 @@
 {
- "run_id": "googl-20260930T013056-850367",
+ "run_id": "googl-20261001T013012-abb3c0",
  "ticker": "GOOGL",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-09-30T01:32:17.146279Z",
+ "created_at": "2026-10-01T01:32:58.029680Z",
  "sources": [
   {
    "source_id": "yf:hist:GOOGL",
@@ -11,10 +11,10 @@
    "title": "Yahoo Finance daily prices, 1y (GOOGL)",
    "url": "https://finance.yahoo.com/quote/GOOGL/history",
    "accession": null,
-   "retrieved_at": "2026-09-30T01:30:56.136216Z",
+   "retrieved_at": "2026-10-01T01:30:12.181053Z",
    "excerpt": null,
    "data": {
-    "rows": 251,
+    "rows": 250,
     "last": "2026-09-29T00:00:00-04:00"
    }
   },
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (GOOGL)",
    "url": "https://finance.yahoo.com/quote/GOOGL/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-09-30T01:30:56.136216Z",
+   "retrieved_at": "2026-10-01T01:30:12.181053Z",
    "excerpt": null,
    "data": {
     "longName": "Alphabet Inc.",
     "sector": "Communication Services",
     "industry": "Internet Content & Information",
-    "marketCap": 4169429680128,
-    "trailingPE": 17.123055,
-    "forwardPE": 22.62012,
-    "priceToSalesTrailing12Months": 9.351307,
-    "enterpriseToEbitda": 23.479,
+    "marketCap": 4208075997184,
+    "trailingPE": 17.255766,
+    "forwardPE": 22.829782,
+    "priceToSalesTrailing12Months": 9.4379835,
+    "enterpriseToEbitda": 23.708,
     "debtToEquity": 18.859,
     "currentRatio": 2.724,
     "freeCashflow": 22665000960,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (GOOGL), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/GOOGL/financials",
    "accession": null,
-   "retrieved_at": "2026-09-30T01:30:56.136216Z",
+   "retrieved_at": "2026-10-01T01:30:12.181053Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,22 +65,22 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-09-30T01:30:57.102462Z",
+   "retrieved_at": "2026-10-01T01:30:14.731833Z",
    "excerpt": null,
    "data": {
-    "from": "2026-06-22",
-    "to": "2026-09-28",
-    "first": 4.51,
-    "last": 5.24
+    "from": "2026-06-23",
+    "to": "2026-09-29",
+    "first": 4.5,
+    "last": 5.26
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-09-30T01:30:57.102810+00:00) from yf:hist:GOOGL, yf:info:GOOGL, yf:financials:GOOGL, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-10-01T01:30:14.732163+00:00) from yf:hist:GOOGL, yf:info:GOOGL, yf:financials:GOOGL, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-09-30T01:30:57.102868Z",
+   "retrieved_at": "2026-10-01T01:30:14.732210Z",
    "excerpt": null,
    "data": {
     "quant_score": 21,
@@ -89,12 +89,12 @@
      {
       "name": "valuation",
       "value": -0.09999999999999998,
-      "note": "P/E 17.1 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.96\u00d7 its own median \u2192 -0.60"
+      "note": "P/E 17.3 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.99\u00d7 its own median \u2192 -0.60"
      },
      {
       "name": "momentum",
       "value": 0.9134241319398864,
-      "note": "6m return +24.8% \u2192 +0.83; 12m\u22121m +42.2% \u2192 +1.00"
+      "note": "6m return +24.8% \u2192 +0.83; 12m\u22121m +41.1% \u2192 +1.00"
      },
      {
       "name": "risk",
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.73pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.76pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -125,10 +125,10 @@
     "value": -0.09999999999999998,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 17.123055,
-     "ps_vs_own_median": 2.96
+     "trailing_pe": 17.255766,
+     "ps_vs_own_median": 2.99
     },
-    "note": "P/E 17.1 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.96\u00d7 its own median \u2192 -0.60"
+    "note": "P/E 17.3 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.99\u00d7 its own median \u2192 -0.60"
    },
    {
     "name": "momentum",
@@ -136,9 +136,9 @@
     "weight": 0.25,
     "inputs_used": {
      "ret_6m": 24.805447916393184,
-     "ret_12m_minus_1m": 42.18
+     "ret_12m_minus_1m": 41.14
     },
-    "note": "6m return +24.8% \u2192 +0.83; 12m\u22121m +42.2% \u2192 +1.00"
+    "note": "6m return +24.8% \u2192 +0.83; 12m\u22121m +41.1% \u2192 +1.00"
    },
    {
     "name": "risk",
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.7300000000000004
+     "fred_10y_change_3m": 0.7599999999999998
     },
-    "note": "10y yield +0.73pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.76pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "GOOGL",
-   "as_of": "2026-09-30T01:30:56.136216Z",
+   "as_of": "2026-10-01T01:30:12.181053Z",
    "price": 340.9200134277344,
    "high_52w": 402.1211853027344,
-   "low_52w": 235.9563751220703,
+   "low_52w": 235.95635986328125,
    "ret_1m": -1.5727108382674992,
    "ret_3m": -4.541750685179191,
    "ret_6m": 24.805447916393184,
-   "ret_12m": 40.603302254759384,
+   "ret_12m": 39.569883660394154,
    "vol_60d_ann": 34.55372794338405,
    "max_drawdown_1y": -21.047200943300936,
-   "trailing_pe": 17.123055,
-   "forward_pe": 22.62012,
-   "price_to_sales": 9.351307,
+   "trailing_pe": 17.255766,
+   "forward_pe": 22.829782,
+   "price_to_sales": 9.4379835,
    "ps_hist_median": 3.154614460013721,
-   "ev_to_ebitda": 23.479,
+   "ev_to_ebitda": 23.708,
    "debt_to_equity": 18.859,
    "current_ratio": 2.724,
    "free_cash_flow": 22665000960.0,
    "revenue_growth": 24.2,
    "profit_margin": 54.771,
-   "fred_10y_change_3m": 0.7300000000000004,
-   "data_age_days": 0.8964830580555555,
+   "fred_10y_change_3m": 0.7599999999999998,
+   "data_age_days": 1.8959743177430557,
    "source_ids": [
     "yf:hist:GOOGL",
     "yf:info:GOOGL",
@@ -203,100 +203,124 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-09-30T01:30:57.102810Z",
+  "computed_at": "2026-10-01T01:30:14.732163Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +24.8% \u2192 +0.83; 12m\u22121m +42.2% \u2192 +1.00",
+   "momentum: 6m return +24.8% \u2192 +0.83; 12m\u22121m +41.1% \u2192 +1.00",
    "balance_sheet: D/E 19% \u2192 +0.5; current ratio 2.72 \u2192 +0.3; FCF positive \u2192 +0.3",
-   "macro: 10y yield +0.73pp over 3m \u2192 -0.50",
-   "valuation: P/E 17.1 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.96\u00d7 its own median \u2192 -0.60",
+   "macro: 10y yield +0.76pp over 3m \u2192 -0.50",
+   "valuation: P/E 17.3 \u2192 +0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 2.99\u00d7 its own median \u2192 -0.60",
    "risk: 1y drawdown 21% \u2192 +0.08; 60d vol 35% ann. \u2192 +0.02"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Over the past six months Alphabet has delivered strong price momentum, robust revenue growth, and exceptional profitability while maintaining a solid balance sheet with ample free cash flow and low leverage. Although its price\u2011to\u2011sales multiple is well above recent historical levels, its trailing P/E remains below the 18\u201128\u00d7 range considered neutral, suggesting the stock is not overpriced on an earnings basis. Combined with an attractive quant score driven by positive momentum, balance\u2011sheet strength, and modest risk, these factors support a bullish outlook for the next three months.",
+  "summary": "Alphabet's shares traded at $340.92 on September 29, 2026, down modestly month\u2011to\u2011date but up 24.8% over six months and 39.6% year\u2011to\u2011date. The stock carries a trailing P/E of 17.3\u00d7 and a forward P/E of 22.8\u00d7, placing its earnings valuation in a neutral\u2011to\u2011slightly\u2011attractive range, while its price\u2011to\u2011sales of 9.4\u00d7 is about three times its historical median. Strong momentum (+24.8% 6\u2011month return, +41.1% 12m\u20111m return), a pristine balance sheet (low debt, high current ratio, $22.7\u202fB free cash flow), and modest risk metrics combine to give a quant score of 21 in the \u201cattractive\u201d band, despite a macro headwind from rising Treasury yields.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "Alphabet's trailing P/E is 17.12, which is below the 18\u201128\u00d7 reference band considered neutral, indicating relatively attractive valuation on an earnings basis.",
+    "text": "Alphabet's stock price was $340.92 on 2026-09-29, down 1.57% over the prior month but up 24.8% over six months and 39.57% over twelve months.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:info:GOOGL",
-     "quant:v0.1"
+     "yf:hist:GOOGL"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bull-2",
-    "text": "The current price\u2011to\u2011sales ratio of 9.35 exceeds the historical maximum of 4.55 observed in the past few years, showing a premium valuation relative to recent history.",
+    "text": "Trailing P/E is 17.26 and forward P/E is 22.83, indicating the stock trades at a modest earnings multiple relative to historical ranges.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-3",
+    "text": "Price-to-sales ratio is 9.44, which is approximately 3.0 times its historical median P/S of 3.15.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:GOOGL",
      "yf:financials:GOOGL"
     ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "bull-3",
-    "text": "Free cash flow of $22.665\u202fB, a current ratio of 2.72, and a debt\u2011to\u2011equity of 18.9% reflect a strong balance sheet and ample liquidity.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:GOOGL"
-    ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bull-4",
-    "text": "Six\u2011month price return of +24.8% and a 12\u2011month minus one\u2011month return of +42.2% demonstrate strong recent momentum.",
+    "text": "The valuation component of the quant model adds +0.4 from the P/E being in the 18\u201128\u00d7 neutral band, offsetting a -0.60 drag from the elevated P/S, resulting in a net valuation score of -0.10.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:info:GOOGL",
+     "yf:financials:GOOGL"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "bull-5",
+    "text": "Momentum component contributes +0.91, driven by a +24.8% six\u2011month return (+0.83) and a +41.1% 12m\u20111m return (+1.00).",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:GOOGL",
-     "quant:v0.1"
+     "quant:v0.1",
+     "yf:hist:GOOGL"
     ],
     "confidence": 0.9
    },
    {
-    "claim_id": "bull-5",
-    "text": "Revenue grew 24.2% year\u2011over\u2011year and profit margin is 54.8%, indicating robust top\u2011line expansion and high profitability.",
+    "claim_id": "bull-6",
+    "text": "Balance sheet shows low leverage (debt-to-equity 18.86%), strong liquidity (current ratio 2.72), and positive free cash flow of $22.66B, contributing +0.37 to the quant balance\u2011sheet score.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:GOOGL"
     ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "bull-6",
-    "text": "The 10\u2011year Treasury yield rose 0.73 percentage points over the last three months, presenting a macro headwind for valuations.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "fred:DGS10"
-    ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bull-7",
-    "text": "Quant scores Alphabet at 21, placing it in the 'attractive' band, driven by positive momentum, balance\u2011sheet strength, and risk scores despite a modest valuation drag.",
+    "text": "Risk metrics are modest: one\u2011year drawdown of 21% and 60\u2011day annualized volatility of 34.6% give a small positive risk score of +0.05.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
+     "quant:v0.1",
+     "yf:hist:GOOGL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-8",
+    "text": "Macro headwind from a 0.76\u2011percentage\u2011point rise in the 10\u2011year Treasury yield over the past three months subtracts 0.50 from the quant macro score.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "fred:DGS10"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-9",
+    "text": "Despite the macro headwind, the aggregate quant score of 21 places GOOGL in the \u201cattractive\u201d band, supported by strong momentum, solid balance sheet, and reasonable earnings valuation.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
      "quant:v0.1"
     ],
-    "confidence": 0.95
+    "confidence": 0.8
    }
   ],
-  "steelman_of_other_side": "The most compelling bearish argument centers on Alphabet's elevated price\u2011to\u2011sales multiple, which is well above its historical range and could leave the stock vulnerable to a multiple contraction if growth slows or interest rates continue to rise. Rising Treasury yields increase the discount rate applied to future cash flows, pressuring valuations, especially for companies with high growth expectations like Alphabet. Additionally, ongoing regulatory scrutiny of its advertising and platform businesses, coupled with intensifying competition in AI\u2011driven search and cloud services, could weigh on revenue growth and margin stability.",
+  "steelman_of_other_side": "The primary bearish concern is that Alphabet\u2019s price\u2011to\u2011sales multiple is significantly above its own historical median, suggesting the stock may be priced for continued rapid revenue growth that could falter if advertising demand weakens or cloud competition intensifies. Rising Treasury yields also increase the discount rate applied to future earnings, pressuring valuations especially for growth\u2011oriented tech names. Additionally, ongoing regulatory scrutiny over antitrust and data\u2011privacy issues could constrain monetization of core services and increase compliance costs.",
   "missing_data": [
-   "SEC filings (10\u2011K/10\u2011Q) for detailed segment revenue, R&D spend, and capital expenditures to assess investment in high\u2011growth areas",
-   "Specific regulatory risk factors and pending litigation details from Alphabet\u2019s filings",
-   "Forward\u2011looking guidance on AI\u2011related revenue contributions and cloud market share trends",
-   "Breakdown of advertising revenue by geography and product to evaluate exposure to cyclical ad markets"
+   "SEC 10\u2011K/10\u2011Q filings with MD&A commentary on advertising and cloud growth trends",
+   "Segment\u2011level revenue breakdown (Google Services vs. Google Cloud vs. Other Bets) to assess diversification",
+   "Forward-looking guidance or management expectations for ad spend and cloud capex",
+   "Details on ongoing regulatory investigations and potential fines or operational changes",
+   "Macro scenario analysis showing impact of further yield increases on valuation multiples"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -304,23 +328,165 @@
  },
  "bear": {
   "side": "bear",
-  "summary": "Alphabet's price-to-sales multiple is well above its historical median, suggesting the stock may be overpriced relative to sales. Rising 10\u2011year Treasury yields increase discount rates, which tends to hurt high\u2011growth tech valuations. The shares have shown notable price risk, with a 1\u2011year drawdown of about 21% and 60\u2011day annualized volatility near 35%. While recent momentum is strong, such rapid gains could be unsustainable and prone to a pull\u2011back. Regulatory and competitive pressures in advertising and cloud remain a concern, though specific recent data are lacking.",
+  "summary": "Alphabet's valuation looks stretched on a sales basis, with its price-to-sales ratio near triple its historical median, while short-term price momentum has turned negative and rising Treasury yields increase discount rates. The forward P/E of 22.8 exceeds its historical range, implying high growth expectations that may not be met if advertising growth slows or regulatory pressures mount. Although the company generates strong free cash flow and maintains a low-debt, liquid balance sheet, these strengths may not justify the current premium if revenue growth decelerates.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Alphabet's trailing price-to-sales ratio is 9.35\u00d7, which is 2.96\u00d7 its own historical median, indicating a rich valuation relative to sales.",
+    "text": "Alphabet's trailing price-to-earnings ratio is 17.3.",
+    "stance": "context",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.99
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "Alphabet's forward price-to-earnings ratio is 22.8.",
+    "stance": "context",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.99
+   },
+   {
+    "claim_id": "bear-3",
+    "text": "Alphabet's price-to-sales ratio is 9.44\u00d7, about 3.0\u00d7 its historical median P/S of 3.15\u00d7.",
     "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL",
+     "yf:financials:GOOGL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bear-4",
+    "text": "Over the past month, Alphabet's price declined -1.6%; over the past three months, it declined -4.5%.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:GOOGL"
+    ],
+    "confidence": 0.99
+   },
+   {
+    "claim_id": "bear-5",
+    "text": "The 10\u2011year Treasury yield rose approximately 0.76 percentage points over the last three months.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10"
+    ],
+    "confidence": 0.99
+   },
+   {
+    "claim_id": "bear-6",
+    "text": "Alphabet generated free cash flow of $22.7\u202fbillion in the most recent period.",
+    "stance": "context",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.99
+   }
+  ],
+  "steelman_of_other_side": "Alphabet retains a dominant moat in search and YouTube, with Google Cloud growing rapidly and contributing to diversified revenue streams. The company produces substantial free cash flow, carries low debt (debt\u2011to\u2011equity ~19%) and maintains a strong current ratio (>2.7), providing financial flexibility. Even with a forward P/E of 22.8, the valuation is not extreme relative to its historical earnings growth and profitability, suggesting the market may be pricing in continued innovation and market\u2011share gains.",
+  "missing_data": [
+   "SEC 10\u2011K risk factors and MD&A commentary on advertising market trends and regulatory challenges",
+   "Segment\u2011level revenue growth details for Google Services vs. Google Cloud",
+   "Forward-looking guidance or management outlook for ad revenue and cloud",
+   "Detailed breakdown of YouTube subscription and Shorts monetization trends",
+   "Any pending or potential antitrust litigation outcomes and associated financial impacts"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
+  "is_stub": false
+ },
+ "brief": {
+  "ticker": "GOOGL",
+  "one_view": "Alphabet\u2019s stock traded at $340.92 on September 29, 2026, down modestly month\u2011to\u2011date but up 24.8% over six months and 39.6% year\u2011to\u2011date, reflecting strong medium\u2011term momentum. The trailing P/E of 17.3\u00d7 sits in a neutral\u2011to\u2011slightly attractive earnings band, while the price\u2011to\u2011sales ratio of 9.4\u00d7 is roughly three times its historical median, indicating a sales\u2011based premium that the quant model penalizes. A pristine balance sheet (low debt, high current ratio, $22.7\u202fB free cash flow) and modest risk metrics add positive weight, offsetting a macro headwind from rising Treasury yields that subtracts 0.50 from the quant score. The aggregate quant score of 21 places GOOGL in the \u201cattractive\u201d band, driven chiefly by momentum and balance\u2011sheet strength, yet the elevated P/S and negative short\u2011term price action raise concerns about growth sustainability. Overall, the evidence supports a mixed outlook: the company\u2019s financial fundamentals are solid, but valuation multiples imply high growth expectations that could be challenged by advertising slowdown, regulatory pressure, or further yield increases.",
+  "narrative_lean": "mixed",
+  "claims": [
+   {
+    "claim_id": "syn-1",
+    "text": "Alphabet's stock price was $340.92 on 2026-09-29, down 1.57% over the prior month but up 24.8% over six months and 39.57% over twelve months.",
+    "stance": "context",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:GOOGL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-2",
+    "text": "Trailing P/E is 17.26 and forward P/E is 22.83.",
+    "stance": "context",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.99
+   },
+   {
+    "claim_id": "syn-3",
+    "text": "Price-to-sales ratio is 9.44, which is approximately 3.0 times its historical median P/S of 3.15.",
+    "stance": "context",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL",
+     "yf:financials:GOOGL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-4",
+    "text": "The valuation component of the quant model adds +0.4 from the P/E being in the 18\u201128\u00d7 neutral band, offsetting a -0.60 drag from the elevated P/S, resulting in a net valuation score of -0.10.",
+    "stance": "neutral",
     "support": "sourced",
     "source_ids": [
      "quant:v0.1",
      "yf:info:GOOGL",
      "yf:financials:GOOGL"
     ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "Momentum component contributes +0.91, driven by a +24.8% six\u2011month return (+0.83) and a +41.1% 12m\u20111m return (+1.00).",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:hist:GOOGL"
+    ],
     "confidence": 0.9
    },
    {
-    "claim_id": "bear-2",
-    "text": "The 10\u2011year Treasury yield rose 0.73 percentage points over the past three months, raising discount rates and pressuring growth\u2011stock valuations.",
+    "claim_id": "syn-6",
+    "text": "Risk metrics are modest: one\u2011year drawdown of 21% and 60\u2011day annualized volatility of 34.6% give a small positive risk score of +0.05.",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:hist:GOOGL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-7",
+    "text": "Balance sheet shows low leverage (debt\u2011to\u2011equity 18.86%), strong liquidity (current ratio 2.72), and positive free cash flow of $22.66B.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-8",
+    "text": "Macro headwind from a 0.76\u2011percentage\u2011point rise in the 10\u2011year Treasury yield over the past three months subtracts 0.50 from the quant macro score.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -330,136 +496,62 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "bear-3",
-    "text": "Over the past year Alphabet experienced a maximum drawdown of approximately 21% and its 60\u2011day annualized volatility is about 35%, reflecting considerable price risk.",
-    "stance": "bear",
+    "claim_id": "syn-9",
+    "text": "The aggregate quant score of 21 places GOOGL in the \u201cattractive\u201d band.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "quant:v0.1",
-     "yf:hist:GOOGL"
+     "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
-    "claim_id": "bear-4",
-    "text": "Strong recent price momentum (6\u2011month return +24.8%, 12\u2011month\u2011minus\u20111\u2011month return +42.2%) may be unsustainable and vulnerable to reversal.",
+    "claim_id": "syn-10",
+    "text": "Over the past month, Alphabet's price declined -1.6%; over the past three months, it declined -4.5%.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:GOOGL"
+    ],
+    "confidence": 0.99
+   },
+   {
+    "claim_id": "syn-11",
+    "text": "Alphabet generated free cash flow of $22.7\u202fbillion in the most recent period.",
+    "stance": "context",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.99
+   },
+   {
+    "claim_id": "syn-12",
+    "text": "Revenue growth over the last twelve months is 24.2%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:GOOGL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-13",
+    "text": "The forward P/E of 22.8 implies high growth expectations that may not be met if advertising growth slows.",
     "stance": "bear",
     "support": "inference",
     "source_ids": [
-     "quant:v0.1",
-     "yf:hist:GOOGL"
+     "yf:info:GOOGL"
     ],
     "confidence": 0.6
    }
   ],
-  "steelman_of_other_side": "Alphabet generates robust free cash flow (>$22\u202fbn), carries low debt (debt\u2011to\u2011equity ~19%), and maintains a strong liquidity position (current ratio >2.7). Its core advertising business continues to grow, and Google Cloud is expanding rapidly, providing diversified revenue streams. The stock\u2019s trailing P/E of ~17\u00d7 is near the lower end of its historical range, suggesting the earnings multiple is not excessive, and the company\u2019s dominant position in search and YouTube offers durable competitive advantages.",
-  "missing_data": [
-   "Quarterly segment\u2011level revenue growth rates (especially advertising and cloud) from the most recent 10\u2011Q/10\u2011K.",
-   "Details on recent regulatory actions or antitrust investigations affecting Alphabet\u2019s ad business.",
-   "Forward\u2011looking guidance for revenue and operating margin from management commentary."
-  ],
-  "model": "nvidia/nemotron-3-super-120b-a12b:free",
-  "provider": "Nvidia",
-  "is_stub": false
- },
- "brief": {
-  "ticker": "GOOGL",
-  "one_view": "Alphabet shows strong earnings\u2011based valuation (trailing P/E 17.1, below the 18\u201128\u00d7 neutral range) and a solid balance sheet with ample free cash flow, low leverage, and high profitability. At the same time, its price\u2011to\u2011sales multiple is rich at 9.35\u00d7, nearly three times its historical median, and rising Treasury yields create a macro headwind for high\u2011growth tech. Momentum remains robust (6\u2011month return +24.8%, 12\u2011month\u2011minus\u20111\u2011month return +42.2%), but the stock also carries notable price risk (\u224821% 1\u2011year drawdown, 35% 60\u2011day annualized volatility). The quant score of 21 rates the stock as 'attractive', reflecting the bullish momentum and balance\u2011sheet strengths while penalizing the rich P/S. Overall, the case is mixed: fundamentals support upside, but valuation and macro pressures could limit gains.",
-  "narrative_lean": "mixed",
-  "claims": [
-   {
-    "claim_id": "syn-1",
-    "text": "Trailing P/E is 17.12, which is below the 18\u201128\u00d7 reference band considered neutral, indicating relatively attractive valuation on an earnings basis.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:GOOGL",
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-2",
-    "text": "Price\u2011to\u2011sales ratio is 9.35\u00d7, which is 2.96\u00d7 its own historical median, indicating a rich valuation relative to sales.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:GOOGL",
-     "yf:financials:GOOGL",
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-3",
-    "text": "Six\u2011month price return is +24.8% and the 12\u2011month\u2011minus\u2011one\u2011month return is +42.2%, demonstrating strong recent momentum.",
-    "stance": "context",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:GOOGL",
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-4",
-    "text": "Free cash flow of $22.665\u202fB, a current ratio of 2.72, and a debt\u2011to\u2011equity of 18.9% reflect a strong balance sheet and ample liquidity.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:GOOGL"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-5",
-    "text": "Revenue grew 24.2% year\u2011over\u2011year and profit margin is 54.8%, indicating robust top\u2011line expansion and high profitability.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:GOOGL"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-6",
-    "text": "The 10\u2011year Treasury yield rose 0.73 percentage points over the last three months, presenting a macro headwind for valuations.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "fred:DGS10",
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-7",
-    "text": "Quant score of 21 places Alphabet in the 'attractive' band, driven by positive momentum and balance\u2011sheet strength despite a valuation drag from high P/S.",
-    "stance": "context",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-8",
-    "text": "Over the past year Alphabet experienced a maximum drawdown of approximately 21% and its 60\u2011day annualized volatility is about 35%, reflecting considerable price risk.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:GOOGL",
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   }
-  ],
   "kill_criteria": [
-   "Trailing P/E rises above 28\u00d7 (entering the expensive band)",
-   "Price\u2011to\u2011sales falls to \u22644\u00d7 its historical median (signaling valuation normalization)",
-   "Six\u2011month price turn negative (momentum reversal)",
-   "Free cash flow turns negative or current ratio drops below 1.5 (balance\u2011sheet deterioration)",
-   "10\u2011year Treasury yield declines by \u22650.5pp over three months (removing macro headwind)"
+   "Price\u2011to\u2011sales ratio remains above 3\u00d7 its historical median while year\u2011over\u2011year revenue growth falls below 10% for two consecutive quarters.",
+   "Forward P/E exceeds 25\u00d7 and Alphabet reports a quarterly earnings miss (EPS below analyst consensus) amid slowing ad revenue.",
+   "10\u2011year Treasury yield rises an additional 0.5 percentage points (total >1.25pp increase over three months) and the quant macro score falls below \u20130.7.",
+   "Six\u2011month price momentum turns negative (6\u2011month return <0%) and the 12\u2011month\u20111\u2011month return drops below +20%.",
+   "Free cash flow turns negative or debt\u2011to\u2011equity rises above 40% in a quarterly filing."
   ],
   "disagreement": {
    "quant_band": "attractive",
@@ -468,16 +560,18 @@
    "agree": false,
    "disagreement_summary": "Quant says 'attractive' (score 21); the narrative leans 'mixed'. This is shown, not reconciled. One of them is wrong, or the horizon differs.",
    "quant_may_be_wrong_because": [
-    "The P/S median used in the valuation component is derived from a short historical series (only four points) and may not reflect a stable long\u2011term norm.",
-    "Weightings are arbitrary; a different scheme could shift the net score toward neutral or unattractive.",
-    "The model does not incorporate regulatory or competitive risks that could affect future earnings and thus the P/E multiple.",
-    "Trailing P/E can be distorted by one\u2011time tax or accounting items, making the valuation signal less reliable."
+    "The valuation component uses a fixed 18\u201128\u00d7 P/E band that may not reflect Alphabet\u2019s evolving growth profile.",
+    "Price\u2011to\u2011sales penalty is based on a limited historical median (only four data points) and does not adjust for changing mix of high\u2011margin cloud revenue.",
+    "Momentum signals are purely price\u2011based and can ignore fundamental shifts such as a slowdown in ad spending.",
+    "The model does not incorporate regulatory risk or potential fines from ongoing antitrust investigations.",
+    "Macro input only captures the 10\u2011year yield change; it omits other factors like dollar strength or global ad market conditions."
    ],
    "narrative_may_be_wrong_because": [
-    "Both memos rely on Yahoo Finance snapshot data, which may omit recent adjustments or restatements from SEC filings.",
-    "They lack forward\u2011looking guidance on AI\u2011related revenue, cloud market share, or advertising trends that could alter growth expectations.",
-    "The bull memo downplays the P/S premium, while the bull memo\u2019s steelman acknowledges it as a key risk, showing internal inconsistency.",
-    "The bear memo treats momentum as possibly unsustainable without providing concrete thresholds for a reversal."
+    "Bear memo emphasizes short\u2011term price declines that may be noise rather than a trend change.",
+    "Bear memo\u2019s concern about P/S being three times the median overlooks Alphabet\u2019s superior profit margins and cash\u2011flow generation relative to peers.",
+    "Bear memo assumes advertising growth will decelerate without providing current quarter\u2011level ad revenue data.",
+    "Both memos rely on secondary\u2011source statistics (e.g., Yahoo Finance) that may lag actual filing disclosures.",
+    "The bull memo\u2019s reliance on momentum and balance\u2011sheet strength could overstate upside if cloud capex rises sharply and free cash flow is reinvested rather than returned to shareholders."
    ]
   },
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -490,7 +584,7 @@
   ],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 1.0
+  "sourced_share_high_conf": 0.9259259259259259
  },
  "models": {
   "bull": "nvidia/nemotron-3-super-120b-a12b:free",
