@@ -1,9 +1,9 @@
 {
- "run_id": "aapl-20261003T012011-8b739b",
+ "run_id": "aapl-20261006T022535-1a7161",
  "ticker": "AAPL",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-10-03T01:21:54.312874Z",
+ "created_at": "2026-10-06T02:26:43.260786Z",
  "sources": [
   {
    "source_id": "yf:hist:AAPL",
@@ -11,11 +11,11 @@
    "title": "Yahoo Finance daily prices, 1y (AAPL)",
    "url": "https://finance.yahoo.com/quote/AAPL/history",
    "accession": null,
-   "retrieved_at": "2026-10-03T01:20:11.276603Z",
+   "retrieved_at": "2026-10-06T02:25:35.915378Z",
    "excerpt": null,
    "data": {
-    "rows": 250,
-    "last": "2026-10-01T00:00:00-04:00"
+    "rows": 251,
+    "last": "2026-10-05T00:00:00-04:00"
    }
   },
   {
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (AAPL)",
    "url": "https://finance.yahoo.com/quote/AAPL/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-10-03T01:20:11.276603Z",
+   "retrieved_at": "2026-10-06T02:25:35.915378Z",
    "excerpt": null,
    "data": {
     "longName": "Apple Inc.",
     "sector": "Technology",
     "industry": "Consumer Electronics",
-    "marketCap": 4869931925504,
-    "trailingPE": 38.2672,
-    "forwardPE": 34.821583,
-    "priceToSalesTrailing12Months": 10.432074,
-    "enterpriseToEbitda": 29.125,
+    "marketCap": 4858257080320,
+    "trailingPE": 38.17546,
+    "forwardPE": 34.7381,
+    "priceToSalesTrailing12Months": 10.407064,
+    "enterpriseToEbitda": 29.056,
     "debtToEquity": 78.445,
     "currentRatio": 1.003,
     "freeCashflow": 107721875456,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (AAPL), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/AAPL/financials",
    "accession": null,
-   "retrieved_at": "2026-10-03T01:20:11.276603Z",
+   "retrieved_at": "2026-10-06T02:25:35.915378Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,22 +65,22 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-10-03T01:20:12.201950Z",
+   "retrieved_at": "2026-10-06T02:25:37.107391Z",
    "excerpt": null,
    "data": {
-    "from": "2026-06-25",
-    "to": "2026-10-01",
-    "first": 4.4,
-    "last": 5.24
+    "from": "2026-06-29",
+    "to": "2026-10-02",
+    "first": 4.38,
+    "last": 5.28
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-10-03T01:20:12.202232+00:00) from yf:hist:AAPL, yf:info:AAPL, yf:financials:AAPL, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-10-06T02:25:37.107682+00:00) from yf:hist:AAPL, yf:info:AAPL, yf:financials:AAPL, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-10-03T01:20:12.202272Z",
+   "retrieved_at": "2026-10-06T02:25:37.107721Z",
    "excerpt": null,
    "data": {
     "quant_score": 11,
@@ -89,17 +89,17 @@
      {
       "name": "valuation",
       "value": -0.35,
-      "note": "P/E 38.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.21\u00d7 its own median \u2192 -0.30"
+      "note": "P/E 38.2 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.21\u00d7 its own median \u2192 -0.30"
      },
      {
       "name": "momentum",
-      "value": 0.827031522281866,
-      "note": "6m return +29.4% \u2192 +0.98; 12m\u22121m +26.9% \u2192 +0.67"
+      "value": 0.8397007133476848,
+      "note": "6m return +28.8% \u2192 +0.96; 12m\u22121m +28.7% \u2192 +0.72"
      },
      {
       "name": "risk",
-      "value": 0.2676405702868407,
-      "note": "1y drawdown 14% \u2192 +0.30; 60d vol 27% ann. \u2192 +0.24"
+      "value": 0.2674506056225522,
+      "note": "1y drawdown 14% \u2192 +0.30; 60d vol 27% ann. \u2192 +0.23"
      },
      {
       "name": "balance_sheet",
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.84pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.90pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -125,30 +125,30 @@
     "value": -0.35,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 38.2672,
+     "trailing_pe": 38.17546,
      "ps_vs_own_median": 1.21
     },
-    "note": "P/E 38.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.21\u00d7 its own median \u2192 -0.30"
+    "note": "P/E 38.2 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.21\u00d7 its own median \u2192 -0.30"
    },
    {
     "name": "momentum",
-    "value": 0.827031522281866,
+    "value": 0.8397007133476848,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": 29.448604851067017,
-     "ret_12m_minus_1m": 26.9
+     "ret_6m": 28.827986257107273,
+     "ret_12m_minus_1m": 28.74
     },
-    "note": "6m return +29.4% \u2192 +0.98; 12m\u22121m +26.9% \u2192 +0.67"
+    "note": "6m return +28.8% \u2192 +0.96; 12m\u22121m +28.7% \u2192 +0.72"
    },
    {
     "name": "risk",
-    "value": 0.2676405702868407,
+    "value": 0.2674506056225522,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -13.798523953754415,
-     "vol_60d_ann": 27.24026821091103
+     "vol_60d_ann": 27.253419610746388
     },
-    "note": "1y drawdown 14% \u2192 +0.30; 60d vol 27% ann. \u2192 +0.24"
+    "note": "1y drawdown 14% \u2192 +0.30; 60d vol 27% ann. \u2192 +0.23"
    },
    {
     "name": "balance_sheet",
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.8399999999999999
+     "fred_10y_change_3m": 0.9000000000000004
     },
-    "note": "10y yield +0.84pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.90pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "AAPL",
-   "as_of": "2026-10-03T01:20:11.276603Z",
-   "price": 330.32000732421875,
+   "as_of": "2026-10-06T02:25:35.915378Z",
+   "price": 332.8900146484375,
    "high_52w": 341.07000732421875,
    "low_52w": 244.3673095703125,
-   "ret_1m": 1.5962852900263336,
-   "ret_3m": 7.120143722488059,
-   "ret_6m": 29.448604851067017,
-   "ret_12m": 28.49400060448626,
-   "vol_60d_ann": 27.24026821091103,
+   "ret_1m": 1.425923437800014,
+   "ret_3m": 7.248153684985703,
+   "ret_6m": 28.827986257107273,
+   "ret_12m": 30.164665496138433,
+   "vol_60d_ann": 27.253419610746388,
    "max_drawdown_1y": -13.798523953754415,
-   "trailing_pe": 38.2672,
-   "forward_pe": 34.821583,
-   "price_to_sales": 10.432074,
+   "trailing_pe": 38.17546,
+   "forward_pe": 34.7381,
+   "price_to_sales": 10.407064,
    "ps_hist_median": 8.623868766489567,
-   "ev_to_ebitda": 29.125,
+   "ev_to_ebitda": 29.056,
    "debt_to_equity": 78.445,
    "current_ratio": 1.003,
    "free_cash_flow": 107721875456.0,
    "revenue_growth": 16.400000000000002,
    "profit_margin": 27.618998,
-   "fred_10y_change_3m": 0.8399999999999999,
-   "data_age_days": 1.8890194051273148,
+   "fred_10y_change_3m": 0.9000000000000004,
+   "data_age_days": 0.9344434650231482,
    "source_ids": [
     "yf:hist:AAPL",
     "yf:info:AAPL",
@@ -203,35 +203,85 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-10-03T01:20:12.202232Z",
+  "computed_at": "2026-10-06T02:25:37.107682Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +29.4% \u2192 +0.98; 12m\u22121m +26.9% \u2192 +0.67",
-   "valuation: P/E 38.3 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.21\u00d7 its own median \u2192 -0.30",
-   "risk: 1y drawdown 14% \u2192 +0.30; 60d vol 27% ann. \u2192 +0.24",
-   "macro: 10y yield +0.84pp over 3m \u2192 -0.50",
+   "momentum: 6m return +28.8% \u2192 +0.96; 12m\u22121m +28.7% \u2192 +0.72",
+   "valuation: P/E 38.2 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 1.21\u00d7 its own median \u2192 -0.30",
+   "risk: 1y drawdown 14% \u2192 +0.30; 60d vol 27% ann. \u2192 +0.23",
+   "macro: 10y yield +0.90pp over 3m \u2192 -0.50",
    "balance_sheet: D/E 78% \u2192 +0.2; current ratio 1.00 \u2192 +0.0; FCF positive \u2192 +0.3"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Apple's shares have shown strong recent momentum, with a 6\u2011month return of +29.4% and a 12\u2011month minus 1\u2011month return of +26.9%, supporting near\u2011term upside. The company generates substantial free cash flow ($107.7B), posts double\u2011digit revenue growth (16.4%) and maintains a high profit margin (27.6%), providing a solid financial foundation. While the stock trades at a premium valuation (trailing P/E 38.3, P/S 1.21\u00d7 its historical median) and faces a headwind from rising 10\u2011year Treasury yields, its moderate leverage (D/E 78%) and positive cash flow help mitigate risk. Overall, the combination of momentum, cash generation, and growth makes a bullish case for the next three months, though valuation and rate sensitivity remain key concerns.",
+  "summary": "Apple shows strong cash generation, double\u2011digit revenue growth, and high profitability, supported by a solid balance sheet and positive intermediate\u2011term price momentum. While valuation multiples are above historical norms, the premium is underpinned by robust free cash flow and a durable ecosystem. Rising Treasury yields present a macro headwind, but Apple\u2019s large cash cushion mitigates interest\u2011rate sensitivity.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "Apple's trailing P/E ratio is 38.27.",
-    "stance": "neutral",
+    "text": "Apple generated free cash flow of approximately $107.7\u202fbn in the trailing twelve months.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:AAPL"
     ],
-    "confidence": 0.9
+    "confidence": 0.95
    },
    {
     "claim_id": "bull-2",
-    "text": "Apple's price\u2011to\u2011sales ratio is 10.43, which is 1.21\u00d7 its historical median of 8.62.",
-    "stance": "neutral",
-    "support": "inference",
+    "text": "Year\u2011over\u2011year revenue increased 16.4%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bull-3",
+    "text": "Net profit margin stands at roughly 27.6%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bull-4",
+    "text": "Debt\u2011to\u2011equity is 78.4% and the current ratio is 1.00, indicating moderate leverage and adequate short\u2011term liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bull-5",
+    "text": "Over the last six months the stock returned +28.8%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-6",
+    "text": "The one\u2011year maximum drawdown was \u201313.8% and the 60\u2011day annualized volatility is about 27.3%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-7",
+    "text": "Trailing P/E is 38.2\u00d7 and price\u2011to\u2011sales is 10.4\u00d7, above the historical P/S median of 8.6\u00d7, but the premium is backed by strong free\u2011cash\u2011flow generation.",
+    "stance": "bull",
+    "support": "sourced",
     "source_ids": [
      "yf:info:AAPL",
      "yf:financials:AAPL"
@@ -239,103 +289,24 @@
     "confidence": 0.85
    },
    {
-    "claim_id": "bull-3",
-    "text": "Apple's 6\u2011month total return is +29.4%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-4",
-    "text": "Apple's 12\u2011month minus 1\u2011month return is +26.9%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-5",
-    "text": "Apple generated free cash flow of $107.7\u202fbillion.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-6",
-    "text": "Apple's revenue growth is 16.4%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-7",
-    "text": "Apple's profit margin is 27.6%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
     "claim_id": "bull-8",
-    "text": "The 10\u2011year Treasury yield rose by 0.84 percentage points over the past three months.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "fred:DGS10"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-9",
-    "text": "The quant momentum component for AAPL is +0.827, indicating strong upward momentum.",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.90\u202fpercentage points over the past three months, creating a macro headwind, yet Apple\u2019s large cash cushion reduces its interest\u2011rate sensitivity.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
+     "fred:DGS10",
      "quant:v0.1"
     ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-10",
-    "text": "The quant valuation component for AAPL is \u20130.35, reflecting a valuation drag.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-11",
-    "text": "Apple's debt\u2011to\u2011equity ratio is 78.4%, indicating moderate leverage.",
-    "stance": "neutral",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
+    "confidence": 0.8
    }
   ],
-  "steelman_of_other_side": "The primary bearish concern is Apple's elevated valuation: a trailing P/E of 38.3 and a price\u2011to\u2011sales ratio well above its own historical median suggest the stock is priced for perfection. Simultaneously, the sharp rise in the 10\u2011year Treasury yield (+0.84\u202fpp in three months) increases the discount rate applied to future earnings, disproportionately affecting high\u2011growth, high\u2011multiple stocks like Apple. If macro\u2011economic conditions weaken or consumer spending slows, the premium multiple could compress, leading to downside pressure despite the company's strong cash flow.",
+  "steelman_of_other_side": "Apple\u2019s valuation multiples are elevated relative to its own history and to many peers, which limits upside unless earnings growth accelerates significantly. The company remains heavily dependent on iPhone cycles, and any prolonged slowdown in smartphone demand could weigh on overall revenue and margins. Additionally, rising interest rates and increasing regulatory scrutiny of the App Store could compress valuation multiples and increase cost of capital.",
   "missing_data": [
-   "SEC filings (10\u2011K, 10\u2011Q) for detailed risk factors and management discussion",
-   "Quarterly guidance or forward\u2011looking revenue/earnings estimates",
-   "Product launch timeline and expected channel inventory levels for iPhone, Mac, and Services",
-   "Granular breakdown of Services growth and App Store revenue trends",
-   "Consumer sentiment or discretionary spending indicators relevant to Apple's end markets"
+   "segment\u2011level revenue breakdown (iPhone, Services, Wearables, Mac, iPad)",
+   "capital expenditure and R&D intensity trends",
+   "forward\u2011looking guidance for services growth and margin outlook",
+   "details on share\u2011repurchase authorization and dividend sustainability",
+   "analyst consensus estimates for EPS growth over the next 12\u201124 months"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -343,152 +314,32 @@
  },
  "bear": {
   "side": "bear",
-  "summary": "Apple's valuation appears stretched, with a trailing P/E of 38.3x and a price\u2011to\u2011sales ratio well above its historical median, while rising U.S. Treasury yields are increasing the discount rate pressure on equity multiples. Momentum has softened, as the stock\u2019s 3\u2011month gain is only about 7% despite a strong 6\u2011month return, and the balance sheet shows elevated leverage and a current ratio barely above 1.0. Although free cash flow remains robust, revenue growth is moderate at 16%, limiting upside from top\u2011line expansion. These factors together suggest near\u2011term downside risk for AAPL over a three\u2011month horizon.",
+  "summary": "Apple's valuation appears stretched, with a trailing P/E of 38.2 well above its historical 18\u201128x range and a price\u2011to\u2011sales ratio 21% above its own median, while rising Treasury yields increase the discount rate applied to high\u2011multiple stocks. The company carries notable leverage (debt\u2011to\u2011equity 78%) and has a current ratio barely above 1.0, limiting its short\u2011term liquidity cushion. Strong recent price momentum (+28.8% over six months) and a past\u2011year maximum drawdown of -13.8% suggest the stock is vulnerable to a pull\u2011back, especially amid elevated 60\u2011day volatility of 27%. These factors together form a bearish outlook for the next three months.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Apple's trailing P/E of 38.3x and price\u2011to\u2011sales of 10.4x are well above its historical ranges, indicating elevated valuation risk.",
+    "text": "Apple's trailing P/E is 38.2, which is above the historical 18\u201128x neutral band indicating an expensive valuation relative to earnings.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:info:AAPL",
-     "quant:v0.1"
+     "yf:info:AAPL"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bear-2",
-    "text": "The 10\u2011year Treasury yield increased ~0.84 percentage points over the past three months, raising the risk\u2011free rate and pressuring equity multiples.",
+    "text": "Apple's price\u2011to\u2011sales ratio is 10.41, about 1.21 times its own historical median of 8.62, signaling a premium valuation on sales.",
     "stance": "bear",
     "support": "sourced",
-    "source_ids": [
-     "fred:DGS10",
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "bear-3",
-    "text": "Despite strong 6\u2011month returns, the stock\u2019s 3\u2011month gain of only 7% suggests momentum may be losing steam.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:AAPL",
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bear-4",
-    "text": "Apple\u2019s debt\u2011to\u2011equity ratio of 78% and a current ratio barely above 1.0 indicate relatively high leverage and limited short\u2011term liquidity.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL",
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "bear-5",
-    "text": "While free cash flow remains robust (~$108\u202fbn), revenue growth of 16% is modest for a premium\u2011valued tech giant, suggesting limited upside from top\u2011line expansion.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   }
-  ],
-  "steelman_of_other_side": "Apple generates substantial free cash flow and maintains a high profit margin of roughly 27.6%, providing a strong financial cushion for shareholder returns and reinvestment. Its entrenched ecosystem, brand loyalty, and diversified product lineup (iPhone, Mac, Services, Wearables) have historically driven resilient demand even amid macroeconomic headwinds, supporting the case for continued outperformance.",
-  "missing_data": [
-   "Detailed segment\u2011level revenue trends (e.g., Services vs. hardware growth) to assess diversification.",
-   "Forward\u2011looking guidance or management commentary on product pipelines and pricing power.",
-   "Scenario analysis of how further interest\u2011rate moves or consumer\u2011spending shifts could affect Apple\u2019s valuation multiples."
-  ],
-  "model": "nvidia/nemotron-3-super-120b-a12b:free",
-  "provider": "Nvidia",
-  "is_stub": false
- },
- "brief": {
-  "ticker": "AAPL",
-  "one_view": "Apple\u2019s recent price action shows strong six\u2011month momentum (+29.4%) but a more modest three\u2011month gain (~7%), indicating that near\u2011term upside may be losing steam. The company continues to generate substantial free cash flow ($107.7\u202fbn), double\u2011digit revenue growth (16.4%) and a high profit margin (27.6%), providing a solid financial foundation. However, the stock trades at a premium valuation (trailing P/E 38.3\u00d7, price\u2011to\u2011sales 1.21\u00d7 its historical median) and faces a rising 10\u2011year Treasury yield (+0.84\u202fpp), which increases the discount rate and compresses multiples. The quant model reflects this tension: a strong momentum component (+0.83) offset by a negative valuation component (\u20110.35) and a modest risk score, yielding a fair\u2011band score of 11. Whether the near\u2011term outlook leans bullish or bearish will hinge on whether momentum can persist despite valuation pressure and whether macro\u2011economic conditions remain stable.",
-  "narrative_lean": "mixed",
-  "claims": [
-   {
-    "claim_id": "syn-1",
-    "text": "Apple's trailing P/E ratio is 38.27.",
-    "stance": "neutral",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-2",
-    "text": "Apple's price\u2011to\u2011sales ratio is 10.43, which is 1.21\u00d7 its historical median of 8.62.",
-    "stance": "neutral",
-    "support": "inference",
     "source_ids": [
      "yf:info:AAPL",
      "yf:financials:AAPL"
     ],
-    "confidence": 0.85
-   },
-   {
-    "claim_id": "syn-3",
-    "text": "Apple's 6\u2011month total return is +29.4%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:AAPL"
-    ],
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-4",
-    "text": "Apple's 12\u2011month minus 1\u2011month return is +26.9%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-5",
-    "text": "Apple generated free cash flow of $107.7\u202fbillion.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-6",
-    "text": "Apple's revenue growth is 16.4%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-7",
-    "text": "Apple's profit margin is 27.6%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:AAPL"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-8",
-    "text": "The 10\u2011year Treasury yield rose by 0.84 percentage points over the past three months.",
+    "claim_id": "bear-3",
+    "text": "The 10\u2011year Treasury yield rose from 4.38% to 5.28% over the past three months, an increase of roughly 0.90 percentage points, raising the discount rate for growth\u2011oriented equities.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -497,29 +348,9 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-9",
-    "text": "The quant momentum component for AAPL is +0.827, indicating strong upward momentum.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-10",
-    "text": "The quant valuation component for AAPL is \u20130.35, reflecting a valuation drag.",
+    "claim_id": "bear-4",
+    "text": "Apple's debt\u2011to\u2011equity ratio stands at 78.4%, reflecting considerable leverage that could increase financial risk if earnings slow.",
     "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-11",
-    "text": "Apple's debt\u2011to\u2011equity ratio is 78.4%, indicating moderate leverage.",
-    "stance": "neutral",
     "support": "sourced",
     "source_ids": [
      "yf:info:AAPL"
@@ -527,8 +358,177 @@
     "confidence": 0.9
    },
    {
+    "claim_id": "bear-5",
+    "text": "The current ratio is 1.003, just above 1.0, indicating a limited short\u2011term liquidity buffer.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-6",
+    "text": "Over the last six months Apple's price rose +28.8% and the 12\u2011month\u2011minus\u20111\u2011month return was +28.7%, showing strong recent momentum that may be overextended.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "bear-7",
+    "text": "Apple experienced a maximum drawdown of -13.8% over the past year, demonstrating its susceptibility to significant price declines.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bear-8",
+    "text": "The 60\u2011day annualized volatility is 27.2%, reflecting relatively high price swings that could amplify downside moves.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL"
+    ],
+    "confidence": 0.9
+   }
+  ],
+  "steelman_of_other_side": "Apple generates substantial free cash flow (over $107\u202fbn) and maintains high profitability (27.6% net margin) while growing revenue at 16.4% annually, underpinning its ability to fund innovation, returns to shareholders, and weather cyclical downturns. Its entrenched ecosystem of devices, services, and a loyal customer base provides durable competitive advantages that can sustain premium valuations even amid higher interest rates.",
+  "missing_data": [
+   "SEC filing excerpts (risk factors, MD&A) to assess management outlook and contingent liabilities",
+   "Forward\u2011looking guidance or segment\u2011level revenue trends to gauge future growth drivers",
+   "Detailed breakdown of services versus hardware margins to evaluate sustainability of profit expansion"
+  ],
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
+  "provider": "Nvidia",
+  "is_stub": false
+ },
+ "brief": {
+  "ticker": "AAPL",
+  "one_view": "Apple generates strong free cash flow and double\u2011digit revenue growth, supporting a premium valuation despite elevated P/E and P/S multiples relative to its own history. The bull memo highlights the cash cushion, ecosystem durability, and recent price momentum as buffers against higher Treasury yields, while the bear memo stresses that the valuation stretch, modest liquidity, and extended momentum make the stock vulnerable to a pull\u2011back if growth slows or rates keep rising. The quant score sits in the \u201cfair\u201d band, reflecting offsetting forces: negative valuation and macro inputs are balanced by positive momentum, risk, and balance\u2011sheet scores. A careful reader should see that the upside hinges on sustained cash\u2011flow generation and earnings growth that can justify the premium, whereas the downside risk is triggered by a material slowdown in revenue or margin compression that would force the multiples back toward historical norms. Monitoring free\u2011cash\u2011flow trends, revenue\u2011growth rates, and the evolution of the 10\u2011year Treasury yield will be key to resolving the disagreement.",
+  "narrative_lean": "mixed",
+  "claims": [
+   {
+    "claim_id": "syn-1",
+    "text": "Apple generated free cash flow of approximately $107.7\u202fbn in the trailing twelve months.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-2",
+    "text": "Year\u2011over\u2011year revenue increased 16.4%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-3",
+    "text": "Net profit margin stands at roughly 27.6%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-4",
+    "text": "Debt\u2011to\u2011equity is 78.4% and the current ratio is 1.00, indicating moderate leverage and adequate short\u2011term liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "Over the last six months the stock returned +28.8%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-6",
+    "text": "The one\u2011year maximum drawdown was \u201313.8% and the 60\u2011day annualized volatility is about 27.3%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-7",
+    "text": "Trailing P/E is 38.2\u00d7 and price\u2011to\u2011sales is 10.4\u00d7, above the historical P/S median of 8.6\u00d7, but the premium is backed by strong free\u2011cash\u2011flow generation.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL",
+     "yf:financials:AAPL"
+    ],
+    "confidence": 0.85
+   },
+   {
+    "claim_id": "syn-8",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.90\u202fpercentage points over the past three months, creating a macro headwind, yet Apple\u2019s large cash cushion reduces its interest\u2011rate sensitivity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10",
+     "quant:v0.1"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "syn-9",
+    "text": "Apple's trailing P/E is 38.2, which is above the historical 18\u201128x neutral band indicating an expensive valuation relative to earnings.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-10",
+    "text": "Apple's price\u2011to\u2011sales ratio is 10.41, about 1.21 times its own historical median of 8.62, signaling a premium valuation on sales.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL",
+     "yf:financials:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-11",
+    "text": "The 10\u2011year Treasury yield rose from 4.38% to 5.28% over the past three months, an increase of roughly 0.90 percentage points, raising the discount rate for growth\u2011oriented equities.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "fred:DGS10"
+    ],
+    "confidence": 0.9
+   },
+   {
     "claim_id": "syn-12",
-    "text": "Apple's current ratio is 1.003, barely above 1.0.",
+    "text": "Apple's debt\u2011to\u2011equity ratio stands at 78.4%, reflecting considerable leverage that could increase financial risk if earnings slow.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -538,7 +538,37 @@
    },
    {
     "claim_id": "syn-13",
-    "text": "Despite strong 6\u2011month returns, the stock\u2019s 3\u2011month gain is only about 7%.",
+    "text": "The current ratio is 1.003, just above 1.0, indicating a limited short\u2011term liquidity buffer.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-14",
+    "text": "Over the last six months Apple's price rose +28.8% and the 12\u2011month\u2011minus\u20111\u2011month return was +28.7%, showing strong recent momentum that may be overextended.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "syn-15",
+    "text": "Apple experienced a maximum drawdown of -13.8% over the past year, demonstrating its susceptibility to significant price declines.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:AAPL"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-16",
+    "text": "The 60\u2011day annualized volatility is 27.2%, reflecting relatively high price swings that could amplify downside moves.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -548,11 +578,10 @@
    }
   ],
   "kill_criteria": [
-   "If AAPL\u2019s 3\u2011month total return falls below 0% while valuation components remain negative, the bullish momentum thesis would be weakened.",
-   "If Apple\u2019s revenue growth drops below 5% YoY and free cash flow turns negative, the bearish valuation\u2011pressure thesis would be weakened.",
-   "If the 10\u2011year Treasury yield reverses its recent rise and falls by more than 0.5\u202fpp, the bearish rate\u2011headwind argument would be less compelling.",
-   "If Apple announces a new product line that drives services revenue growth above 20% YoY, the bullish growth thesis would gain support.",
-   "If the company\u2019s debt\u2011to\u2011equity ratio rises above 120% or the current ratio falls below 0.9, the bearish leverage concern would be validated."
+   "Free cash flow falls below $80\u202fbn TTM (indicating cash\u2011generation weakness).",
+   "Year\u2011over\u2011year revenue growth drops below 5\u202f% for two consecutive quarters.",
+   "Trailing P/E compresses to the historical 18\u201128\u00d7 range without a corresponding earnings\u2011growth acceleration.",
+   "Maximum one\u2011year drawdown exceeds 20\u202f% or 60\u2011day annualized volatility rises above 35\u202f% (signaling heightened risk)."
   ],
   "disagreement": {
    "quant_band": "fair",
@@ -561,18 +590,18 @@
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The quant model uses only historical valuation bands (18\u201128\u00d7 P/E) and does not incorporate forward\u2011looking earnings expectations or product\u2011cycle shifts.",
-    "Momentum scoring relies on past returns and may overstate persistence if the recent rally is driven by short\u2011term sentiment rather than fundamentals.",
-    "Risk component uses 1\u2011year drawdown and 60\u2011day volatility, which may not capture event\u2011specific risks such as regulatory actions or supply\u2011chain disruptions.",
-    "The model treats balance\u2011sheet metrics statically and ignores the impact of share\u2011repurchase programs on leverage and EPS.",
-    "Macro input only includes 10\u2011year yield change; it omits other factors like dollar strength, consumer confidence, or global growth that could affect Apple\u2019s multinational revenue."
+    "The valuation component uses a fixed historical P/E band (18\u201128\u00d7) that may not reflect Apple\u2019s shifted growth profile toward higher\u2011margin services.",
+    "Momentum weights may overstate persistence; a sharp reversal in price trend would not be captured until the look\u2011back period rolls off.",
+    "Risk component relies on past drawdown and volatility, which can underestimate tail\u2011risk events unrelated to recent price moves.",
+    "Balance\u2011sheet score treats debt\u2011to\u2011equity and current ratio linearly, ignoring the massive cash hoard that provides a larger liquidity buffer than the ratios suggest.",
+    "Macro component assigns a flat \u20130.5 for a 0.90\u202fpp yield rise, potentially over\u2011penalizing stocks with large cash reserves that are less rate\u2011sensitive."
    ],
    "narrative_may_be_wrong_because": [
-    "Bull memo may overemphasize recent price momentum without considering that the 3\u2011month gain has already slowed, suggesting momentum may be fading.",
-    "Bear memo may underweight the durability of Apple\u2019s ecosystem and the potential for services growth to sustain high margins despite moderate hardware revenue growth.",
-    "Both memos rely on trailing multiples and ignore forward guidance or management commentary on upcoming product launches that could re\u2011accelerate growth.",
-    "The memos do not incorporate macro variables beyond Treasury yields, such as exchange\u2011rate movements that affect overseas sales.",
-    "Both sides treat the current ratio as a liquidity proxy without noting Apple\u2019s massive cash reserves and ability to raise debt cheaply."
+    "Both memos rely on trailing\u2011twelve\u2011month fundamentals and do not incorporate forward\u2011looking guidance or segment\u2011level outlooks that could change the growth narrative.",
+    "The bull memo may underweight regulatory risks to the App Store and services that could affect future cash\u2011flow generation.",
+    "The bear memo may overemphasize valuation multiples without fully crediting the durability of Apple\u2019s ecosystem and its ability to sustain premium pricing.",
+    "Missing data on capital\u2011expenditure and R&D trends limits assessment of future productivity and margin sustainability.",
+    "Analyst consensus estimates for EPS growth are absent, making it hard to gauge whether earnings can justify the current multiples."
    ]
   },
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -583,7 +612,7 @@
   "flags": [],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 0.9310344827586207
+  "sourced_share_high_conf": 1.0
  },
  "models": {
   "bull": "nvidia/nemotron-3-super-120b-a12b:free",
