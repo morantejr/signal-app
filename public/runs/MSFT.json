@@ -1,9 +1,9 @@
 {
- "run_id": "msft-20261008T021118-af98af",
+ "run_id": "msft-20261009T022627-65e922",
  "ticker": "MSFT",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-10-08T02:12:25.158884Z",
+ "created_at": "2026-10-09T02:27:55.465417Z",
  "sources": [
   {
    "source_id": "yf:hist:MSFT",
@@ -11,11 +11,11 @@
    "title": "Yahoo Finance daily prices, 1y (MSFT)",
    "url": "https://finance.yahoo.com/quote/MSFT/history",
    "accession": null,
-   "retrieved_at": "2026-10-08T02:11:18.303467Z",
+   "retrieved_at": "2026-10-09T02:26:27.756384Z",
    "excerpt": null,
    "data": {
     "rows": 251,
-    "last": "2026-10-07T00:00:00-04:00"
+    "last": "2026-10-08T00:00:00-04:00"
    }
   },
   {
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (MSFT)",
    "url": "https://finance.yahoo.com/quote/MSFT/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-10-08T02:11:18.303467Z",
+   "retrieved_at": "2026-10-09T02:26:27.756384Z",
    "excerpt": null,
    "data": {
     "longName": "Microsoft Corporation",
     "sector": "Technology",
     "industry": "Software - Infrastructure",
-    "marketCap": 3933757243392,
-    "trailingPE": 29.513092,
-    "forwardPE": 22.374153,
-    "priceToSalesTrailing12Months": 11.854415,
-    "enterpriseToEbitda": 20.52,
+    "marketCap": 3880664432640,
+    "trailingPE": 29.114761,
+    "forwardPE": 22.072176,
+    "priceToSalesTrailing12Months": 11.694419,
+    "enterpriseToEbitda": 20.247,
     "debtToEquity": 29.118,
     "currentRatio": 1.23,
     "freeCashflow": 16545500160,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (MSFT), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/MSFT/financials",
    "accession": null,
-   "retrieved_at": "2026-10-08T02:11:18.303467Z",
+   "retrieved_at": "2026-10-09T02:26:27.756384Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,22 +65,22 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-10-08T02:11:19.807496Z",
+   "retrieved_at": "2026-10-09T02:26:29.390684Z",
    "excerpt": null,
    "data": {
-    "from": "2026-06-30",
-    "to": "2026-10-06",
-    "first": 4.44,
-    "last": 5.27
+    "from": "2026-07-01",
+    "to": "2026-10-07",
+    "first": 4.48,
+    "last": 5.28
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-10-08T02:11:19.807809+00:00) from yf:hist:MSFT, yf:info:MSFT, yf:financials:MSFT, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-10-09T02:26:29.391006+00:00) from yf:hist:MSFT, yf:info:MSFT, yf:financials:MSFT, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-10-08T02:11:19.807861Z",
+   "retrieved_at": "2026-10-09T02:26:29.391042Z",
    "excerpt": null,
    "data": {
     "quant_score": -1,
@@ -89,16 +89,16 @@
      {
       "name": "valuation",
       "value": -0.2,
-      "note": "P/E 29.5 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.91\u00d7 its own median \u2192 +0.00"
+      "note": "P/E 29.1 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.90\u00d7 its own median \u2192 +0.00"
      },
      {
       "name": "momentum",
-      "value": 0.4314532572076211,
-      "note": "6m return +42.1% \u2192 +1.00; 12m\u22121m -5.5% \u2192 -0.14"
+      "value": 0.43207660792294583,
+      "note": "6m return +40.7% \u2192 +1.00; 12m\u22121m -5.4% \u2192 -0.14"
      },
      {
       "name": "risk",
-      "value": -0.2781404810142221,
+      "value": -0.2769708232289931,
       "note": "1y drawdown 34% \u2192 -0.42; 60d vol 40% ann. \u2192 -0.13"
      },
      {
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.83pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.80pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -125,28 +125,28 @@
     "value": -0.2,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 29.513092,
-     "ps_vs_own_median": 0.91
+     "trailing_pe": 29.114761,
+     "ps_vs_own_median": 0.9
     },
-    "note": "P/E 29.5 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.91\u00d7 its own median \u2192 +0.00"
+    "note": "P/E 29.1 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.90\u00d7 its own median \u2192 +0.00"
    },
    {
     "name": "momentum",
-    "value": 0.4314532572076211,
+    "value": 0.43207660792294583,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": 42.09571828743284,
-     "ret_12m_minus_1m": -5.48
+     "ret_6m": 40.65130248505638,
+     "ret_12m_minus_1m": -5.43
     },
-    "note": "6m return +42.1% \u2192 +1.00; 12m\u22121m -5.5% \u2192 -0.14"
+    "note": "6m return +40.7% \u2192 +1.00; 12m\u22121m -5.4% \u2192 -0.14"
    },
    {
     "name": "risk",
-    "value": -0.2781404810142221,
+    "value": -0.2769708232289931,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -34.498397568158836,
-     "vol_60d_ann": 39.95574192214303
+     "vol_60d_ann": 39.87476561393486
     },
     "note": "1y drawdown 34% \u2192 -0.42; 60d vol 40% ann. \u2192 -0.13"
    },
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.8299999999999992
+     "fred_10y_change_3m": 0.7999999999999998
     },
-    "note": "10y yield +0.83pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.80pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "MSFT",
-   "as_of": "2026-10-08T02:11:18.303467Z",
-   "price": 529.760009765625,
+   "as_of": "2026-10-09T02:26:27.756384Z",
+   "price": 522.6099853515625,
    "high_52w": 537.6464233398438,
    "low_52w": 352.1670227050781,
-   "ret_1m": 7.249720958319283,
-   "ret_3m": 38.08858978527081,
-   "ret_6m": 42.09571828743284,
-   "ret_12m": 1.7659815349289731,
-   "vol_60d_ann": 39.95574192214303,
+   "ret_1m": 6.297160955847936,
+   "ret_3m": 35.96307686249241,
+   "ret_6m": 40.65130248505638,
+   "ret_12m": 0.8632895896836024,
+   "vol_60d_ann": 39.87476561393486,
    "max_drawdown_1y": -34.498397568158836,
-   "trailing_pe": 29.513092,
-   "forward_pe": 22.374153,
-   "price_to_sales": 11.854415,
-   "ps_hist_median": 12.982162864204337,
-   "ev_to_ebitda": 20.52,
+   "trailing_pe": 29.114761,
+   "forward_pe": 22.072176,
+   "price_to_sales": 11.694419,
+   "ps_hist_median": 12.98216366857196,
+   "ev_to_ebitda": 20.247,
    "debt_to_equity": 29.118,
    "current_ratio": 1.23,
    "free_cash_flow": 16545500160.0,
    "revenue_growth": 17.7,
    "profit_margin": 40.305,
-   "fred_10y_change_3m": 0.8299999999999992,
-   "data_age_days": 0.924517401238426,
+   "fred_10y_change_3m": 0.7999999999999998,
+   "data_age_days": 0.9350434766666665,
    "source_ids": [
     "yf:hist:MSFT",
     "yf:info:MSFT",
@@ -203,71 +203,93 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-10-08T02:11:19.807809Z",
+  "computed_at": "2026-10-09T02:26:29.391006Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +42.1% \u2192 +1.00; 12m\u22121m -5.5% \u2192 -0.14",
-   "valuation: P/E 29.5 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.91\u00d7 its own median \u2192 +0.00",
+   "momentum: 6m return +40.7% \u2192 +1.00; 12m\u22121m -5.4% \u2192 -0.14",
+   "valuation: P/E 29.1 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.90\u00d7 its own median \u2192 +0.00",
    "risk: 1y drawdown 34% \u2192 -0.42; 60d vol 40% ann. \u2192 -0.13",
    "balance_sheet: D/E 29% \u2192 +0.5; current ratio 1.23 \u2192 +0.0; FCF positive \u2192 +0.3",
-   "macro: 10y yield +0.83pp over 3m \u2192 -0.50"
+   "macro: 10y yield +0.80pp over 3m \u2192 -0.50"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Microsoft shows strong six\u2011month price momentum, a solid balance sheet with low debt and ample free cash flow, a price\u2011to\u2011sales ratio modestly below its historical median, and exceptionally high profit margins. These fundamentals support a bullish outlook for the next three months, even as the stock\u2019s trailing P/E remains above its long\u2011term average and rising Treasury yields pose a headwind. The overall quantitative signal rates the stock as \u201cfair,\u201d but the combination of momentum and financial strength offers upside potential.",
+  "summary": "Microsoft shows strong near\u2011term price momentum, a valuation that is not stretched relative to its own sales history, a solid balance sheet with low debt and healthy free cash flow, and robust revenue growth paired with high profitability. These fundamentals support a bullish outlook over the next three months, even as rising Treasury yields pose a macro headwind.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "Over the past six months, MSFT's price has risen approximately 42.1%, reflecting strong upward momentum.",
+    "text": "6\u2011month price return is +40.7%.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:hist:MSFT",
      "quant:v0.1"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bull-2",
-    "text": "MSFT maintains a conservative balance sheet with debt-to-equity of 29.1%, a current ratio of 1.23, and generated $16.5\u202fbillion of free cash flow, indicating financial flexibility.",
+    "text": "Price\u2011to\u2011sales ratio is 11.69, about 0.90\u00d7 its historical median of 12.98, indicating valuation is not stretched relative to its own history.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:MSFT",
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "bull-3",
-    "text": "The stock's price-to-sales ratio of 11.85 is about 0.91\u00d7 its historical median, suggesting the valuation is not stretched relative to its own past.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
      "yf:financials:MSFT",
      "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
+    "claim_id": "bull-3",
+    "text": "Debt\u2011to\u2011equity is 29.1%, current ratio 1.23, and free cash flow is $16.5\u202fB, reflecting a strong balance sheet and ample liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
     "claim_id": "bull-4",
-    "text": "Microsoft's trailing profit margin stands at 40.3%, underscoring high profitability and earnings quality that can support continued growth.",
+    "text": "Revenue grew 17.7% year\u2011over\u2011year and profit margin is 40.3%, showing robust top\u2011line expansion and high profitability.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:MSFT"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-5",
+    "text": "Forward P/E of 22.07 is closer to the historical 18\u201128\u00d7 range than the trailing P/E of 29.1, suggesting valuation may be more reasonable on earnings outlook.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "yf:info:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.7
+   },
+   {
+    "claim_id": "bull-6",
+    "text": "Despite a 12\u2011month\u2011minus\u20111\u2011month return of \u20135.4%, the 6\u2011month momentum remains strongly positive, indicating near\u2011term price strength.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "yf:hist:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.8
    }
   ],
-  "steelman_of_other_side": "The bearish case centers on Microsoft's elevated valuation: its trailing P/E of 29.5 sits above the historical 18\u201128\u00d7 range considered fair, implying limited upside unless earnings accelerate sharply. Simultaneously, the 10\u2011year Treasury yield has risen roughly 0.8 percentage points over the past three months, increasing the discount rate applied to future cash flows and pressuring equity multiples, especially for growth\u2011oriented tech stocks. These macro\u2011valuation headwinds could offset the positive momentum and balance\u2011sheet strengths, leading to sideways or modestly negative performance over the next quarter.",
+  "steelman_of_other_side": "The stock\u2019s trailing P/E of 29.1 sits above the historical 18\u201128\u00d7 range, suggesting the market may be pricing in optimistic growth that could disappoint if Azure or Office 365 growth slows. Rising 10\u2011year Treasury yields (+0.80\u202fpp over three months) increase the discount rate applied to future cash flows, which could pressure valuations for high\u2011growth tech names. Additionally, the 12\u2011month\u2011minus\u20111\u2011month return of \u20135.4% hints at weakening medium\u2011term momentum, and a 1\u2011year drawdown of ~34% shows the stock remains vulnerable to market\u2011wide risk-off events.",
   "missing_data": [
-   "SEC 10\u2011K MD&A commentary on segment outlook and forward guidance",
-   "Detailed Azure/Cloud growth rates and competitive positioning",
-   "Quarterly earnings guidance or management commentary on demand trends",
-   "Insider transaction data to gauge internal sentiment",
-   "Scenario analysis of how further interest\u2011rate moves would affect valuation multiples"
+   "forward guidance for Azure and commercial cloud revenue",
+   "segment\u2011level profitability trends",
+   "detailed macro\u2011scenario analysis (e.g., impact of further rate hikes)",
+   "analyst consensus estimates for FY2027 earnings"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -275,79 +297,81 @@
  },
  "bear": {
   "side": "bear",
-  "summary": "Microsoft's stock trades at a trailing P/E of 29.5, above its historical 18\u201128x neutral range, and its price\u2011to\u2011sales ratio is roughly in line with its own median, suggesting limited valuation upside. Recent price momentum has weakened, with a 6\u2011month gain of +42.1% offset by a negative 12m\u20111m return of \u20135.5%, while the stock has experienced a 1\u2011year drawdown of \u201334.5% and 60\u2011day volatility near 40%. Rising Treasury yields (+0.83\u202fpp over three months) add a macro headwind, and much of the reported 17.7% revenue growth depends on cloud and AI execution, which remains uncertain.",
+  "summary": "Microsoft's shares trade at a premium valuation, with a trailing P/E above its historical neutral band and a price\u2011to\u2011sales ratio near its own median, while rising Treasury yields increase discount rates for high\u2011multiple tech stocks. The stock has shown significant volatility, posting a 34% one\u2011year drawdown and 40% annualized 60\u2011day volatility, and recent momentum has weakened despite a strong six\u2011month gain. Although free cash flow remains robust at $16.5\u202fbn, ongoing AI\u2011related capital expenditures could pressure cash generation going forward. These factors combine to create a bearish outlook over the next three months.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Microsoft's trailing P/E of 29.5 is above the 18\u201128\u00d7 neutral band, indicating the stock is relatively expensive versus its own historical range.",
+    "text": "Microsoft's trailing P/E of 29.1x exceeds the 18\u201128x neutral band, indicating a rich valuation.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:info:MSFT",
      "quant:v0.1"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bear-2",
-    "text": "The price\u2011to\u2011sales ratio of 11.85 is 0.91\u00d7 the historical median of 12.98, showing the valuation is not cheap relative to its own history.",
+    "text": "The price\u2011to\u2011sales ratio of 11.69x is about 0.90\u00d7 its historical median (based on ps_history [8.33, 11.63, 12.98, 13.6]), suggesting the stock is not cheap relative to its own history.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:info:MSFT",
-     "yf:financials:MSFT"
+     "yf:financials:MSFT",
+     "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-3",
-    "text": "Momentum has weakened: the 6\u2011month return is +42.1% but the 12m\u20111m return is \u20135.5%, signaling a recent slowdown in price appreciation.",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.80pp over the past three months, lifting discount rates and pressuring high\u2011multiple tech stocks.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:MSFT",
+     "fred:DGS10",
      "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-4",
-    "text": "The stock\u2019s 1\u2011year maximum drawdown is \u201334.5% and its 60\u2011day annualized volatility is about 40%, reflecting considerable downside risk.",
+    "text": "Over the past year the stock suffered a maximum drawdown of approximately 34.5% and shows 60\u2011day annualized volatility of about 40%, highlighting notable downside risk.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:hist:MSFT",
      "quant:v0.1"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bear-5",
-    "text": "The 10\u2011year Treasury yield rose roughly 0.83 percentage points over the past three months, increasing the discount rate pressure on growth\u2011oriented stocks like Microsoft.",
+    "text": "While the six\u2011month return is +40.7%, the 12\u2011month minus one\u2011month return is \u20135.4%, pointing to recent momentum weakening.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "fred:DGS10"
+     "yf:hist:MSFT",
+     "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-6",
-    "text": "Much of Microsoft\u2019s 17.7% revenue growth is driven by cloud and AI, making future growth contingent on execution and competitive dynamics in those areas.",
+    "text": "Continued heavy investment in AI infrastructure could erode the current $16.5\u202fbn free cash flow over the next quarters, despite the present strong FCF.",
     "stance": "bear",
     "support": "inference",
     "source_ids": [
      "yf:info:MSFT"
     ],
-    "confidence": 0.6
+    "confidence": 0.5
    }
   ],
-  "steelman_of_other_side": "Microsoft generates strong free cash flow (>$16\u202fB), maintains a low debt\u2011to\u2011equity ratio (\u224829%), and enjoys a high profit margin (>40%), providing a solid financial cushion. Its diversified product suite\u2014spanning Office, Windows, Azure, and gaming\u2014offers multiple growth levers, and the company\u2019s early leadership in AI\u2011enhanced cloud services could sustain above\u2011average revenue expansion even if macro conditions tighten.",
+  "steelman_of_other_side": "Microsoft's cloud and AI businesses are growing at double\u2011digit rates, providing a durable revenue runway that justifies premium multiples. The company generates substantial free cash flow, maintains a low debt\u2011to\u2011equity ratio, and can leverage its entrenched enterprise relationships to sustain pricing power even in a higher\u2011rate environment.",
   "missing_data": [
-   "Segment\u2011level revenue breakdown (e.g., Azure vs. Office vs. Gaming) to assess the durability of cloud/AI growth.",
-   "Forward\u2011looking guidance or management commentary on AI monetization and cloud consumption trends.",
-   "Detailed competitive landscape data for cloud infrastructure and AI services to gauge market share stability.",
-   "Macro\u2011scenario analysis (e.g., impact of further rate rises or recession) on enterprise IT spending."
+   "Detailed segment\u2011level revenue growth (especially Azure and AI services)",
+   "Forward\u2011looking guidance on AI\u2011related capital expenditures and its impact on free cash flow",
+   "Scenario analysis of how further rate increases would affect Microsoft's valuation multiples",
+   "Inventory of any significant litigation or regulatory risks that could affect near\u2011term performance"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -355,111 +379,136 @@
  },
  "brief": {
   "ticker": "MSFT",
-  "one_view": "The bull memo correctly highlights MSFT\u2019s strong six\u2011month price momentum, solid balance sheet with low debt and ample free cash flow, a price\u2011to\u2011sales ratio modestly below its historical median, and exceptionally high profit margins. The bear memo correctly points out that the trailing P/E of 29.5 remains above the historical 18\u201128\u00d7 range, that recent momentum has weakened (12m\u20111m return \u20135.5%), that the stock has suffered a 34% one\u2011year drawdown and 40% 60\u2011day volatility, and that rising Treasury yields add a macro headwind. The quant score aggregates these factors into a slight negative tilt (\u20111, fair) driven mainly by valuation and macro pressures, while the balance\u2011sheet and momentum components are positive. What would settle the debate is a clear move in either valuation (e.g., P/E falling back into the 18\u201128\u00d7 band) or in momentum/macro (e.g., sustained 6\u2011month gains with improving Treasury yields). Until then, the mixed outlook reflects offsetting strengths and risks.",
+  "one_view": "Over the next three months, Microsoft shows strong near\u2011term price momentum and a solid balance sheet, but its trailing P/E sits above the historical neutral band and rising Treasury yields increase discount rates. The quant score reflects these cross\u2011currents, assigning a slight negative valuation component, a positive momentum component, a negative risk component, a positive balance\u2011sheet component, and a strongly negative macro component, resulting in an overall fair\u2011value assessment. Bullish arguments correctly highlight the 6\u2011month return of +40.7%, the price\u2011to\u2011sales ratio near its historical median, low debt, healthy free cash flow, and robust revenue growth and profitability. Bearish arguments correctly point out the elevated trailing P/E, the yield\u2011driven macro headwind, the sizable one\u2011year drawdown and volatility, the recent weakening of medium\u2011term momentum, and the potential for AI\u2011related capital expenditures to pressure future free cash flow. The disagreement between the narratives and the quant model centers on how to weight valuation versus momentum and macro influences. A decisive shift in either momentum (e.g., a sustained reversal of the 6\u2011month gain) or in valuation (e.g., the trailing P/E falling back into the 18\u201128\u00d7 range) would likely tip the outlook toward one side.",
   "narrative_lean": "mixed",
   "claims": [
    {
     "claim_id": "syn-1",
-    "text": "Over the past six months, MSFT's price has risen approximately 42.1%.",
+    "text": "6\u2011month price return is +40.7%.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:MSFT"
+     "yf:hist:MSFT",
+     "quant:v0.1"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-2",
-    "text": "MSFT's trailing P/E is 29.5, above the historical 18\u201128\u00d7 range considered neutral.",
+    "text": "Price\u2011to\u2011sales ratio is 11.69, about 0.90\u00d7 its historical median of 12.98, indicating valuation is not stretched relative to its own history.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:MSFT",
+     "yf:financials:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-3",
+    "text": "Debt\u2011to\u2011equity is 29.1%, current ratio 1.23, and free cash flow is $16.5\u202fB, reflecting a strong balance sheet and ample liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-4",
+    "text": "Revenue grew 17.7% year\u2011over\u2011year and profit margin is 40.3%, showing robust top\u2011line expansion and high profitability.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:MSFT"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-5",
+    "text": "Forward P/E of 22.07 is closer to the historical 18\u201128\u00d7 range than the trailing P/E of 29.1, suggesting valuation may be more reasonable on earnings outlook.",
+    "stance": "bull",
+    "support": "inference",
+    "source_ids": [
+     "yf:info:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.7
+   },
+   {
+    "claim_id": "syn-6",
+    "text": "Microsoft's trailing P/E of 29.1x exceeds the 18\u201128x neutral band, indicating a rich valuation.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:info:MSFT",
      "quant:v0.1"
     ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-3",
-    "text": "MSFT's price-to-sales ratio is 11.85, about 0.91\u00d7 its historical median of 12.98.",
-    "stance": "neutral",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:MSFT",
-     "yf:financials:MSFT"
-    ],
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-4",
-    "text": "MSFT maintains a conservative balance sheet with debt-to-equity of 29.1%, a current ratio of 1.23, and generated $16.5\u202fbillion of free cash flow.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:MSFT"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-5",
-    "text": "Microsoft's trailing profit margin stands at 40.3%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:MSFT"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-6",
-    "text": "The stock\u2019s 1\u2011year maximum drawdown is \u201334.5% and its 60\u2011day annualized volatility is about 40%.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:MSFT"
-    ],
-    "confidence": 0.95
-   },
-   {
     "claim_id": "syn-7",
-    "text": "Momentum has weakened: the 6\u2011month return is +42.1% but the 12m\u20111m return is \u20135.5%.",
+    "text": "The price\u2011to\u2011sales ratio of 11.69x is about 0.90\u00d7 its historical median (based on ps_history [8.33, 11.63, 12.98, 13.6]), suggesting the stock is not cheap relative to its own history.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:MSFT"
+     "yf:info:MSFT",
+     "yf:financials:MSFT",
+     "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-8",
-    "text": "The 10\u2011year Treasury yield rose roughly 0.83 percentage points over the past three months.",
+    "text": "The 10\u2011year Treasury yield rose roughly 0.80pp over the past three months, lifting discount rates and pressuring high\u2011multiple tech stocks.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "fred:DGS10"
+     "fred:DGS10",
+     "quant:v0.1"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-9",
-    "text": "Much of Microsoft\u2019s 17.7% revenue growth is driven by cloud and AI, making future growth contingent on execution.",
+    "text": "Over the past year the stock suffered a maximum drawdown of approximately 34.5% and shows 60\u2011day annualized volatility of about 40%, highlighting notable downside risk.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-10",
+    "text": "While the six\u2011month return is +40.7%, the 12\u2011month minus one\u2011month return is \u20135.4%, pointing to recent momentum weakening.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:hist:MSFT",
+     "quant:v0.1"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-11",
+    "text": "Continued heavy investment in AI infrastructure could erode the current $16.5\u202fbn free cash flow over the next quarters, despite the present strong FCF.",
     "stance": "bear",
     "support": "inference",
     "source_ids": [
      "yf:info:MSFT"
     ],
-    "confidence": 0.6
+    "confidence": 0.5
    }
   ],
   "kill_criteria": [
-   "trailing P/E \u2264 18\u00d7",
-   "trailing P/E \u2265 35\u00d7",
-   "6\u2011month price return \u2264 0%",
-   "12m\u20111m return \u2265 0%",
-   "1\u2011year max drawdown < 20% and 60\u2011day volatility < 30%",
-   "1\u2011year max drawdown > 40% or volatility > 50%",
-   "10\u2011year Treasury yield change over 3m \u2264 0 pp",
-   "10\u2011year Treasury yield change over 3m \u2265 +1.5 pp"
+   "If the 6\u2011month price return turns negative (\u22640%) while the trailing P/E remains above 28\u00d7, the bearish case would be validated.",
+   "If the 6\u2011month price return stays above +20% and the trailing P/E declines into the 18\u201128\u00d7 range with Treasury yields stabilizing or falling, the bullish case would be validated.",
+   "If free cash flow drops significantly (e.g., < $10\u202fB) due to AI\u2011related capex, the bearish case gains weight.",
+   "If the 10\u2011year Treasury yield declines by \u22650.30\u202fpp over the next quarter, reducing the macro headwind, the bullish case gains weight."
   ],
   "disagreement": {
    "quant_band": "fair",
@@ -468,16 +517,18 @@
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The quant model uses fixed weights that may undervalue segment\u2011specific growth drivers such as Azure and AI.",
-    "It relies on historical median P/S as a valuation anchor, which may not reflect changed competitive dynamics.",
-    "Forward\u2011looking earnings estimates and analyst revisions are not incorporated into the score.",
-    "The model does not adjust for share\u2011buyback activity that can affect per\u2011share metrics."
+    "The model\u2019s valuation band (18\u201128\u00d7) is based on historical P/E and may not reflect Microsoft\u2019s changed growth profile from AI and cloud.",
+    "The price\u2011to\u2011sales component is treated as neutral despite being near its historical median, ignoring that sales\u2011based multiples can shift with margin changes.",
+    "The macro component uses only the 10\u2011year yield change, omitting inflation expectations and term\u2011premium shifts that affect discount rates.",
+    "Momentum weighting may overemphasize short\u2011term price moves that can reverse quickly in a volatile market.",
+    "Risk component relies on past drawdown and volatility, which may not capture company\u2011specific risks such as regulatory or competitive pressures."
    ],
    "narrative_may_be_wrong_because": [
-    "Both memos rely on Yahoo Finance data that may lag official SEC filings and miss nuanced MD&A commentary.",
-    "The bear memo\u2019s claim about cloud/AI driving revenue is an inference not directly sourced from segment breakdowns.",
-    "The bull memo does not address the potential impact of continued Treasury\u2011yield increases on discount rates.",
-    "Missing forward guidance leaves both sides uncertain about the sustainability of current growth rates."
+    "Both memos rely on trailing multiples and historical medians without incorporating forward\u2011looking guidance for Azure and commercial cloud.",
+    "The bear memo\u2019s AI\u2011capex impact on free cash flow is speculative and not quantified in the available data.",
+    "The bull memo may overstate the significance of the forward P/E being inside the historical range without considering whether earnings estimates are realistic.",
+    "Both sides omit segment\u2011level profitability trends that could clarify whether growth is driven by high\u2011margin businesses.",
+    "The memos do not address potential regulatory or litigation risks that could affect near\u2011term performance."
    ]
   },
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -486,11 +537,11 @@
  },
  "critic": {
   "flags": [
-   "quant_claim_mismatch:bull-2"
+   "quant_claim_mismatch:bull-3,bear-2,syn-3,syn-7"
   ],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 1.0
+  "sourced_share_high_conf": 0.8571428571428571
  },
  "models": {
   "bull": "nvidia/nemotron-3-super-120b-a12b:free",
