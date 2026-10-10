@@ -1,9 +1,9 @@
 {
- "run_id": "zeta-20261009T021959-135cc6",
+ "run_id": "zeta-20261010T014949-afec22",
  "ticker": "ZETA",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-10-09T02:22:15.586042Z",
+ "created_at": "2026-10-10T01:51:13.248280Z",
  "sources": [
   {
    "source_id": "yf:hist:ZETA",
@@ -11,11 +11,11 @@
    "title": "Yahoo Finance daily prices, 1y (ZETA)",
    "url": "https://finance.yahoo.com/quote/ZETA/history",
    "accession": null,
-   "retrieved_at": "2026-10-09T02:20:00.189126Z",
+   "retrieved_at": "2026-10-10T01:49:50.119429Z",
    "excerpt": null,
    "data": {
     "rows": 251,
-    "last": "2026-10-08T00:00:00-04:00"
+    "last": "2026-10-09T00:00:00-04:00"
    }
   },
   {
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (ZETA)",
    "url": "https://finance.yahoo.com/quote/ZETA/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-10-09T02:20:00.189126Z",
+   "retrieved_at": "2026-10-10T01:49:50.119429Z",
    "excerpt": null,
    "data": {
     "longName": "Zeta Global Holdings Corp.",
     "sector": "Technology",
     "industry": "Software - Infrastructure",
-    "marketCap": 8232978944,
+    "marketCap": 8306039808,
     "trailingPE": null,
-    "forwardPE": 27.325521,
-    "priceToSalesTrailing12Months": 5.241008,
-    "enterpriseToEbitda": 70.737,
+    "forwardPE": 27.37516,
+    "priceToSalesTrailing12Months": 5.2875175,
+    "enterpriseToEbitda": 72.274,
     "debtToEquity": 23.772,
     "currentRatio": 2.382,
     "freeCashflow": 252155632,
@@ -48,14 +48,14 @@
    "title": "Yahoo Finance annual income statement (ZETA), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/ZETA/financials",
    "accession": null,
-   "retrieved_at": "2026-10-09T02:20:00.189126Z",
+   "retrieved_at": "2026-10-10T01:49:50.119429Z",
    "excerpt": null,
    "data": {
     "ps_history": [
-     2.6,
-     3.18,
-     3.52,
-     4.04
+     2.62,
+     3.21,
+     3.55,
+     4.07
     ]
    }
   },
@@ -65,41 +65,41 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-10-09T02:20:02.032165Z",
+   "retrieved_at": "2026-10-10T01:49:51.083861Z",
    "excerpt": null,
    "data": {
-    "from": "2026-07-01",
-    "to": "2026-10-07",
-    "first": 4.48,
-    "last": 5.28
+    "from": "2026-07-02",
+    "to": "2026-10-08",
+    "first": 4.49,
+    "last": 5.22
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-10-09T02:20:02.032497+00:00) from yf:hist:ZETA, yf:info:ZETA, yf:financials:ZETA, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-10-10T01:49:51.084229+00:00) from yf:hist:ZETA, yf:info:ZETA, yf:financials:ZETA, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-10-09T02:20:02.032534Z",
+   "retrieved_at": "2026-10-10T01:49:51.084285Z",
    "excerpt": null,
    "data": {
-    "quant_score": 3,
+    "quant_score": 4,
     "quant_band": "fair",
     "components": [
      {
       "name": "valuation",
       "value": -0.3,
-      "note": "no positive earnings; P/S 5.2 \u2192 -0.3; P/S is 1.49\u00d7 its own median \u2192 -0.30"
+      "note": "no positive earnings; P/S 5.3 \u2192 -0.3; P/S is 1.49\u00d7 its own median \u2192 -0.30"
      },
      {
       "name": "momentum",
       "value": 1.0,
-      "note": "6m return +115.6% \u2192 +1.00; 12m\u22121m +53.6% \u2192 +1.00"
+      "note": "6m return +126.5% \u2192 +1.00; 12m\u22121m +71.6% \u2192 +1.00"
      },
      {
       "name": "risk",
-      "value": -0.6569794110979367,
-      "note": "1y drawdown 40% \u2192 -0.64; 60d vol 59% ann. \u2192 -0.67"
+      "value": -0.6424712581579011,
+      "note": "1y drawdown 40% \u2192 -0.64; 60d vol 58% ann. \u2192 -0.64"
      },
      {
       "name": "balance_sheet",
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.80pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.73pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -117,7 +117,7 @@
  ],
  "quant": {
   "ticker": "ZETA",
-  "quant_score": 3,
+  "quant_score": 4,
   "quant_band": "fair",
   "components": [
    {
@@ -125,30 +125,30 @@
     "value": -0.3,
     "weight": 0.35,
     "inputs_used": {
-     "price_to_sales": 5.241008,
+     "price_to_sales": 5.2875175,
      "ps_vs_own_median": 1.49
     },
-    "note": "no positive earnings; P/S 5.2 \u2192 -0.3; P/S is 1.49\u00d7 its own median \u2192 -0.30"
+    "note": "no positive earnings; P/S 5.3 \u2192 -0.3; P/S is 1.49\u00d7 its own median \u2192 -0.30"
    },
    {
     "name": "momentum",
     "value": 1.0,
     "weight": 0.25,
     "inputs_used": {
-     "ret_6m": 115.6005185199572,
-     "ret_12m_minus_1m": 53.57
+     "ret_6m": 126.48871273220519,
+     "ret_12m_minus_1m": 71.56
     },
-    "note": "6m return +115.6% \u2192 +1.00; 12m\u22121m +53.6% \u2192 +1.00"
+    "note": "6m return +126.5% \u2192 +1.00; 12m\u22121m +71.6% \u2192 +1.00"
    },
    {
     "name": "risk",
-    "value": -0.6569794110979367,
+    "value": -0.6424712581579011,
     "weight": 0.2,
     "inputs_used": {
      "max_drawdown_1y": -40.36885074504244,
-     "vol_60d_ann": 58.63532695326413
+     "vol_60d_ann": 57.63091636510782
     },
-    "note": "1y drawdown 40% \u2192 -0.64; 60d vol 59% ann. \u2192 -0.67"
+    "note": "1y drawdown 40% \u2192 -0.64; 60d vol 58% ann. \u2192 -0.64"
    },
    {
     "name": "balance_sheet",
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.7999999999999998
+     "fred_10y_change_3m": 0.7299999999999995
     },
-    "note": "10y yield +0.80pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.73pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "ZETA",
-   "as_of": "2026-10-09T02:20:00.189126Z",
-   "price": 33.029998779296875,
+   "as_of": "2026-10-10T01:49:50.119429Z",
+   "price": 33.09000015258789,
    "high_52w": 33.7400016784668,
    "low_52w": 14.550000190734863,
-   "ret_1m": 8.579877371653533,
-   "ret_3m": 53.69939102413617,
-   "ret_6m": 115.6005185199572,
-   "ret_12m": 62.150208239951745,
-   "vol_60d_ann": 58.63532695326413,
+   "ret_1m": 8.278798203072846,
+   "ret_3m": 51.30314989849714,
+   "ret_6m": 126.48871273220519,
+   "ret_12m": 79.83696107941007,
+   "vol_60d_ann": 57.63091636510782,
    "max_drawdown_1y": -40.36885074504244,
    "trailing_pe": null,
-   "forward_pe": 27.325521,
-   "price_to_sales": 5.241008,
-   "ps_hist_median": 3.5191717006295034,
-   "ev_to_ebitda": 70.737,
+   "forward_pe": 27.37516,
+   "price_to_sales": 5.2875175,
+   "ps_hist_median": 3.5465612549604555,
+   "ev_to_ebitda": 72.274,
    "debt_to_equity": 23.772,
    "current_ratio": 2.382,
    "free_cash_flow": 252155632.0,
    "revenue_growth": 43.5,
    "profit_margin": -0.13799999,
-   "fred_10y_change_3m": 0.7999999999999998,
-   "data_age_days": 0.9305577445138888,
+   "fred_10y_change_3m": 0.7299999999999995,
+   "data_age_days": 0.9096078637615741,
    "source_ids": [
     "yf:hist:ZETA",
     "yf:info:ZETA",
@@ -203,34 +203,34 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-10-09T02:20:02.032497Z",
+  "computed_at": "2026-10-10T01:49:51.084229Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +115.6% \u2192 +1.00; 12m\u22121m +53.6% \u2192 +1.00",
-   "risk: 1y drawdown 40% \u2192 -0.64; 60d vol 59% ann. \u2192 -0.67",
-   "valuation: no positive earnings; P/S 5.2 \u2192 -0.3; P/S is 1.49\u00d7 its own median \u2192 -0.30",
+   "momentum: 6m return +126.5% \u2192 +1.00; 12m\u22121m +71.6% \u2192 +1.00",
+   "risk: 1y drawdown 40% \u2192 -0.64; 60d vol 58% ann. \u2192 -0.64",
+   "valuation: no positive earnings; P/S 5.3 \u2192 -0.3; P/S is 1.49\u00d7 its own median \u2192 -0.30",
    "balance_sheet: D/E 24% \u2192 +0.5; current ratio 2.38 \u2192 +0.3; FCF positive \u2192 +0.3",
-   "macro: 10y yield +0.80pp over 3m \u2192 -0.50"
+   "macro: 10y yield +0.73pp over 3m \u2192 -0.50"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "Zeta Global Holdings Corp. has exhibited strong price momentum, with a six\u2011month return of +115.6% and a three\u2011month gain of roughly 54%, while delivering 43.5% year\u2011over\u2011year revenue growth and generating positive free cash flow of about $252\u202fmillion. The balance sheet is conservative, showing a low debt\u2011to\u2011equity of 24% and a current ratio of 2.38, which together provide liquidity and limit financial leverage. Although the stock trades at a price\u2011to\u2011sales multiple of 5.2\u2014about 1.5\u00d7 its historical median\u2014and lacks earnings, the combination of rapid growth, solid cash generation, and a supportive technical backdrop underpins a bullish outlook for the next three months.",
+  "summary": "Zeta Global Holdings Corp. has shown powerful price momentum, with six\u2011month returns exceeding 126% and three\u2011month returns above 50%, while delivering 43.5% revenue growth and maintaining a solid balance sheet with low debt and positive free cash flow. Although the stock trades at a premium price\u2011to\u2011sales multiple and lacks earnings, the valuation penalty in the quant model is modest. Combined, these factors support a bullish outlook for the next three months, though elevated volatility and a drawdown\u2011prone history warrant caution.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "ZETA's six\u2011month total return is +115.6%, reflecting strong upward price momentum.",
+    "text": "ZETA\u2019s 6\u2011month total return is +126.5% and its 12\u2011month minus 1\u2011month return is +71.6%, indicating strong recent price momentum.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:ZETA",
-     "quant:v0.1"
+     "quant:v0.1",
+     "yf:hist:ZETA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bull-2",
-    "text": "Year\u2011over\u2011year revenue growth stands at 43.5%, indicating robust top\u2011line expansion.",
+    "text": "The company reported year\u2011over\u2011year revenue growth of 43.5%, reflecting robust top\u2011line expansion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -240,39 +240,8 @@
    },
    {
     "claim_id": "bull-3",
-    "text": "Free cash flow is positive at approximately $252\u202fmillion, providing internal funding capacity.",
+    "text": "ZETA\u2019s debt\u2011to\u2011equity ratio is 23.8%, current ratio is 2.38, and free cash flow is positive at $252\u202fmillion, indicating a conservative capital structure and liquidity.",
     "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:ZETA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-4",
-    "text": "Debt\u2011to\u2011equity is low at 24% and the current ratio is 2.38, showing a conservative balance sheet and ample liquidity.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:ZETA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "bull-5",
-    "text": "The price\u2011to\u2011sales ratio of 5.2 is about 1.5\u00d7 the stock\u2019s historical median, suggesting the market is pricing in continued growth despite the premium.",
-    "stance": "bull",
-    "support": "inference",
-    "source_ids": [
-     "yf:info:ZETA",
-     "yf:financials:ZETA"
-    ],
-    "confidence": 0.8
-   },
-   {
-    "claim_id": "bull-6",
-    "text": "Valuation is pressured by the absence of positive earnings and an elevated P/S relative to history, contributing a negative valuation component of \u20130.30 in the quantitative model.",
-    "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "quant:v0.1",
@@ -281,23 +250,38 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "bull-7",
-    "text": "The 10\u2011year Treasury yield has risen roughly 0.80\u202fpercentage points over the past three months, dragging the macro component to \u20130.50 in the quantitative model.",
+    "claim_id": "bull-4",
+    "text": "ZETA\u2019s price\u2011to\u2011sales ratio of 5.3 is 1.49\u00d7 its historical median of 3.55, and the quant model assigns a modest valuation score of \u20130.3 due to lack of earnings, suggesting the premium is not excessive.",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:info:ZETA",
+     "yf:financials:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-5",
+    "text": "The stock has suffered a 1\u2011year drawdown of approximately 40% and exhibits 60\u2011day annualized volatility of about 58%, highlighting significant downside risk.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "fred:DGS10",
-     "quant:v0.1"
+     "quant:v0.1",
+     "yf:hist:ZETA"
     ],
     "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "The most compelling bearish argument is that ZETA remains unprofitable, with a negative profit margin of \u201313.8%, and its valuation multiples are stretched relative to historical levels. Even though the company shows strong revenue growth and positive cash flow, the lack of earnings means the stock is priced primarily on future expectations, which could reverse quickly if growth slows or macro\u2011economic headwinds (such as rising interest rates) intensify.",
+  "steelman_of_other_side": "ZETA\u2019s earnings remain negative, with a profit margin of \u201313.8%, and the stock trades at a price\u2011to\u2011sales ratio well above its historical median, leaving little cushion for any slowdown in the 43.5% revenue growth rate. Moreover, the 10\u2011year Treasury yield has risen 73 basis points over the past three months, increasing the discount rate applied to future cash flows and potentially pressuring high\u2011growth, unprofitable names. Combined with a 40% one\u2011year drawdown and 58% annualized volatility, these factors constitute a credible bear case for the next quarter.",
   "missing_data": [
-   "forward earnings guidance or EPS estimates",
-   "detailed segment\u2011level revenue and profitability breakdown",
-   "quarter\u2011by\u2011quarter trends in customer acquisition cost and lifetime value",
-   "any disclosed share\u2011repurchase or dividend policy"
+   "GAAP net income/earnings per share",
+   "forward\u2011looking revenue or EBITDA guidance",
+   "segment\u2011level revenue breakdown",
+   "cash conversion cycle",
+   "analyst consensus estimates",
+   "short interest",
+   "insider transaction data"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -305,33 +289,32 @@
  },
  "bear": {
   "side": "bear",
-  "summary": "Zeta Global's stock price has risen sharply over the past six months, but the company remains unprofitable and trades at a premium valuation relative to its historical price-to-sales multiple. Elevated volatility and a sizable one-year drawdown indicate significant price risk, while rising Treasury yields increase the discount rate pressure on growth-oriented shares. Although the firm generates positive free cash flow and carries low debt, its high revenue growth rate may not be sustainable, leaving the current multiple vulnerable to compression if growth slows.",
+  "summary": "Zeta Global Holdings Corp. remains unprofitable despite strong revenue growth, trading at a price\u2011to\u2011sales premium well above its historical median. The stock has exhibited sharp price swings, with a one\u2011year drawdown near 40% and elevated volatility, while rising Treasury yields pose a macro headwind for high\u2011multiple growth names. Although recent momentum has been powerful, such extended gains increase the risk of a near\u2011term pullback. The balance sheet is solid, with positive free cash flow and low leverage, but the lack of earnings casts doubt on the sustainability of its current valuation.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Zeta's price-to-sales ratio of 5.24 is 1.49\u00d7 its historical median of 3.52, indicating a premium valuation despite the lack of positive earnings.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:ZETA",
-     "yf:financials:ZETA",
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "bear-2",
-    "text": "The company reports a negative profit margin of -13.8% and a forward P/E of 27.3\u00d7, showing it is currently unprofitable and relies on expected future earnings to justify its valuation.",
+    "text": "Zeta Global Holdings Corp. reported a negative profit margin of approximately -0.138% (profitMargins -0.00138) for the latest period, indicating the company is not generating earnings.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:info:ZETA"
     ],
+    "confidence": 0.95
+   },
+   {
+    "claim_id": "bear-2",
+    "text": "The trailing price\u2011to\u2011sales ratio stands at 5.29, which is about 1.49\u00d7 the company\u2019s historical median P/S of 3.55, suggesting the stock trades at a valuation premium relative to its own history.",
+    "stance": "bear",
+    "support": "sourced",
+    "source_ids": [
+     "yf:info:ZETA",
+     "yf:financials:ZETA"
+    ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-3",
-    "text": "Zeta exhibits high market risk with a 60\u2011day annualized volatility of 58.6% and a one\u2011year maximum drawdown of -40.4%.",
+    "text": "Over the past year ZETA suffered a maximum drawdown of roughly -40.4% and its 60\u2011day annualized volatility is about 57.6%, reflecting significant price risk.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -341,7 +324,7 @@
    },
    {
     "claim_id": "bear-4",
-    "text": "The 10\u2011year Treasury yield rose approximately 0.80 percentage points over the past three months, increasing the discount rate pressure on growth stocks like Zeta.",
+    "text": "The 10\u2011year Treasury yield increased from 4.49% to 5.22% over the last three months, a rise of about 0.73 percentage points, representing a macro\u2011economic headwind for high\u2011growth, high\u2011multiple equities.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -351,22 +334,31 @@
    },
    {
     "claim_id": "bear-5",
-    "text": "Revenue growth of 43.5% is strong but may be difficult to sustain; if growth decelerates, the current elevated valuation multiple could compress sharply.",
+    "text": "Recent price momentum has been strong \u2014 six\u2011month return +126.5% and twelve\u2011month minus one\u2011month return approximately +71.6% \u2014 which may leave the stock vulnerable to a near\u2011term correction after such an extended advance.",
     "stance": "bear",
     "support": "inference",
     "source_ids": [
+     "yf:hist:ZETA"
+    ],
+    "confidence": 0.8
+   },
+   {
+    "claim_id": "bear-6",
+    "text": "Although the company generates positive free cash flow of $252\u202fmillion, maintains a low debt\u2011to\u2011equity ratio of 23.8% and a current ratio of 2.38, its persistent lack of profitability raises questions about the sustainability of its growth.",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
      "yf:info:ZETA"
     ],
-    "confidence": 0.7
+    "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "Despite the bearish concerns, Zeta delivers robust top\u2011line expansion at 43.5% year\u2011over\u2011year, generates positive free cash flow of $252\u202fmillion, and maintains a conservative balance sheet with a debt\u2011to\u2011equity ratio of only 24% and a current ratio of 2.38. These fundamentals suggest the company can fund its growth internally while weathering short\u2011term market volatility, and its differentiated omnichannel marketing platform may continue to win enterprise spending even in a higher\u2011rate environment.",
+  "steelman_of_other_side": "Bulls point to Zeta\u2019s 43.5% year\u2011over\u2011year revenue growth, driven by its AI\u2011enhanced omnichannel marketing platform and expanding enterprise client base, as evidence of a durable competitive advantage. The firm also generates positive free cash flow, carries modest leverage (debt\u2011to\u2011equity under 25%) and enjoys a strong liquidity position (current ratio >2), which provides financial flexibility to invest in product development and weather downturns. Moreover, the platform\u2019s data\u2011centric approach and messaging capabilities are seen as increasingly valuable in a market where personalized, AI\u2011driven outreach is becoming a necessity for brands seeking higher ROI.",
   "missing_data": [
-   "forward earnings estimates and analyst consensus",
-   "detailed revenue breakdown by product or geography",
-   "customer concentration and churn metrics",
-   "quarterly guidance for revenue and profitability",
-   "competitive landscape analysis and market share trends"
+   "SEC filings (10\u2011K/10\u2011Q) for detailed revenue breakdown, customer concentration, churn rates, and forward\u2011looking guidance",
+   "Analyst earnings estimates and consensus forward PE to gauge expected profitability",
+   "Disclosure of AI product adoption metrics and pipeline to assess sustainability of growth",
+   "Macro\u2011sensitivity analysis showing how ZETA\u2019s valuation reacts to further interest\u2011rate moves"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -374,85 +366,65 @@
  },
  "brief": {
   "ticker": "ZETA",
-  "one_view": "ZETA shows strong short\u2011term price momentum and robust top\u2011line growth, backed by positive free cash flow and a conservative balance sheet, which the bull memo highlights. At the same time, the bear memo points out that the firm remains unprofitable, trades at a premium price\u2011to\u2011sales multiple relative to its history, and faces elevated volatility and rising Treasury yields that increase discount\u2011rate pressure. The quantitative model reflects these opposing forces: a +1.0 momentum boost, a +0.37 balance\u2011sheet boost, but a \u20130.30 valuation penalty, \u20130.66 risk penalty, and \u20130.50 macro penalty, yielding a fair\u2011value score of 3. A careful reader should weigh the durability of the revenue growth and cash generation against the sustainability of the premium multiple and macro headwinds.",
+  "one_view": "The bull memo correctly highlights ZETA\u2019s strong price momentum, robust 43.5% YoY revenue growth, and a conservative balance sheet with low debt and positive free cash flow. The bear memo correctly points out that the company remains unprofitable, trades at a price\u2011to\u2011sales premium well above its historical median, and faces significant price risk from a 40% drawdown and high volatility, compounded by rising Treasury yields. The quant model\u2019s fair score reflects offsetting forces: momentum and balance\u2011sheet positives are counterbalanced by valuation penalties, risk, and macro headwinds. A decisive shift would require either sustained profitability that justifies the premium or a clear deterioration in growth or cash generation that validates the bearish concerns.",
   "narrative_lean": "mixed",
   "claims": [
    {
     "claim_id": "syn-1",
-    "text": "ZETA's six\u2011month total return is +115.6%, reflecting strong upward price momentum.",
+    "text": "ZETA\u2019s 6\u2011month total return is +126.5% and its 12\u2011month minus 1\u2011month return is +71.6%, indicating strong recent price momentum.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:ZETA",
-     "quant:v0.1"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-2",
-    "text": "ZETA's three\u2011month total return is approximately +53.6%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
+     "quant:v0.1",
      "yf:hist:ZETA"
     ],
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-3",
-    "text": "Year\u2011over\u2011year revenue growth stands at 43.5%, indicating robust top\u2011line expansion.",
+    "claim_id": "syn-2",
+    "text": "ZETA reported year\u2011over\u2011year revenue growth of 43.5%, reflecting robust top\u2011line expansion.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
+     "yf:info:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-3",
+    "text": "ZETA\u2019s debt\u2011to\u2011equity ratio is 23.8%, current ratio is 2.38, and free cash flow is positive at $252\u202fmillion, indicating a conservative capital structure and liquidity.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
      "yf:info:ZETA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-4",
-    "text": "Free cash flow is positive at approximately $252\u202fmillion, providing internal funding capacity.",
-    "stance": "bull",
+    "text": "ZETA\u2019s price\u2011to\u2011sales ratio of 5.29 is 1.49\u00d7 its historical median of 3.55.",
+    "stance": "neutral",
     "support": "sourced",
     "source_ids": [
-     "yf:info:ZETA"
+     "yf:info:ZETA",
+     "yf:financials:ZETA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-5",
-    "text": "Debt\u2011to\u2011equity is low at about 24% and the current ratio is 2.38, showing a conservative balance sheet and ample liquidity.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:ZETA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-6",
-    "text": "Zeta's price\u2011to\u2011sales ratio of 5.24 is 1.49\u00d7 its historical median of approximately 3.52, indicating a premium valuation despite the lack of positive earnings.",
+    "text": "ZETA\u2019s profit margin is \u201313.8%, indicating the company is not generating earnings.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:info:ZETA",
-     "yf:financials:ZETA",
-     "quant:v0.1"
+     "yf:info:ZETA"
     ],
     "confidence": 0.95
    },
    {
-    "claim_id": "syn-7",
-    "text": "The company reports a negative profit margin of -13.8%, showing it is currently unprofitable.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:ZETA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-8",
-    "text": "Zeta exhibits high market risk with a 60\u2011day annualized volatility of 58.6% and a one\u2011year maximum drawdown of -40.4%.",
+    "claim_id": "syn-6",
+    "text": "Over the past year ZETA suffered a maximum drawdown of roughly -40.4% and its 60\u2011day annualized volatility is about 57.6%, reflecting significant price risk.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -461,8 +433,8 @@
     "confidence": 0.95
    },
    {
-    "claim_id": "syn-9",
-    "text": "The 10\u2011year Treasury yield rose approximately 0.80 percentage points over the past three months, increasing the discount\u2011rate pressure on growth\u2011oriented shares.",
+    "claim_id": "syn-7",
+    "text": "The 10\u2011year Treasury yield increased from 4.49% to 5.22% over the last three months, a rise of about 0.73 percentage points.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -471,41 +443,42 @@
     "confidence": 0.95
    },
    {
+    "claim_id": "syn-8",
+    "text": "The quant model assigns a valuation component of \u20130.3 due to lack of positive earnings and the P/S premium.",
+    "stance": "neutral",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:info:ZETA",
+     "yf:financials:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "syn-9",
+    "text": "The quant model assigns a momentum component of +1.0 based on the 6\u2011month return of +126.5% and the 12\u2011month minus 1\u2011month return of +71.6%.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:hist:ZETA"
+    ],
+    "confidence": 0.9
+   },
+   {
     "claim_id": "syn-10",
-    "text": "The quantitative model assigns a valuation component of \u20130.30 due to no positive earnings and an elevated P/S relative to its historical median.",
+    "text": "The quant model assigns a risk component of \u20130.64 due to the 1\u2011year drawdown near 40% and 60\u2011day annualized volatility of ~58%.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "quant:v0.1",
-     "yf:info:ZETA"
+     "yf:hist:ZETA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-11",
-    "text": "The quantitative model assigns a momentum component of +1.0 based on the six\u2011month return of +115.6% and the 12m\u20111m return of +53.6%.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1",
-     "yf:hist:ZETA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-12",
-    "text": "The quantitative model assigns a risk component of \u20130.657 reflecting the one\u2011year drawdown of about 40% and the 60\u2011day annualized volatility of roughly 59%.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "quant:v0.1",
-     "yf:hist:ZETA"
-    ],
-    "confidence": 0.9
-   },
-   {
-    "claim_id": "syn-13",
-    "text": "The quantitative model assigns a balance\u2011sheet component of +0.37 from low debt\u2011to\u2011equity (~24%), a current ratio of 2.38, and positive free cash flow.",
+    "text": "The quant model assigns a balance_sheet component of +0.37 from low debt (D/E 24%), a current ratio of 2.38, and positive free cash flow.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -515,8 +488,8 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-14",
-    "text": "The quantitative model assigns a macro component of \u20130.50 due to the 10\u2011year Treasury yield rising about 0.80\u202fpp over the past three months.",
+    "claim_id": "syn-12",
+    "text": "The quant model assigns a macro component of \u20130.5 from the 10\u2011year Treasury yield rise of 0.73 pp over three months.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
@@ -527,30 +500,31 @@
    }
   ],
   "kill_criteria": [
-   "Revenue growth falls below 20% YoY for two consecutive quarters.",
-   "Free cash flow turns negative in a quarter.",
-   "Debt\u2011to\u2011equity rises above 40% or current ratio drops below 1.5.",
-   "Price\u2011to\u2011sales multiple falls to or below its historical median (~3.5).",
-   "10\u2011year Treasury yield declines by more than 0.3 percentage points over a three\u2011month period.",
-   "60\u2011day annualized volatility falls below 30% and the 1\u2011year drawdown narrows to less than 20%."
+   "Quarterly GAAP net income >0 for two consecutive quarters would weaken the bear case.",
+   "Revenue growth falling below 20% YoY for two consecutive quarters would weaken the bull case.",
+   "Free cash flow turning negative would weaken the bull case.",
+   "Price\u2011to\u2011sales ratio expanding beyond 2.5\u00d7 its historical median without earnings improvement would strengthen the bear case.",
+   "One\u2011year drawdown narrowing to <20% and 60\u2011day annualized volatility dropping below 35% would weaken the bear case."
   ],
   "disagreement": {
    "quant_band": "fair",
-   "quant_score": 3,
+   "quant_score": 4,
    "narrative_lean": "mixed",
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The model uses arbitrary linear weights and fixed thresholds that may not capture non\u2011linear relationships between fundamentals and price.",
-    "It relies on historical median P/S as a valuation anchor, which may be irrelevant if the company\u2019s growth profile or margin structure has permanently shifted.",
-    "Forward\u2011looking earnings or analyst estimates are omitted, so the model cannot reflect expected profitability improvements.",
-    "Sector\u2011specific growth premiums (e.g., high\u2011growth software) are not explicitly modelled, potentially undervaluing momentum stocks."
+    "The model uses a linear additive scheme that may understate the impact of a sudden momentum reversal.",
+    "Historical median P/S may not reflect the company\u2019s changed growth profile after AI product rollout.",
+    "Lack of earnings is penalized uniformly, ignoring the quality of positive free cash flow.",
+    "The model does not incorporate forward\u2011looking guidance or AI\u2011adoption metrics that could affect future cash flows.",
+    "60\u2011day volatility may be stale and not capture upcoming event\u2011driven risk."
    ],
    "narrative_may_be_wrong_because": [
-    "Both memos emphasize short\u2011term price momentum and recent price action, which may reverse quickly if market sentiment shifts.",
-    "The bull memo downplays the sustainability of the premium multiple without providing forward guidance or concrete catalysts.",
-    "The bear memo assumes revenue growth will decelerate without presenting data on customer acquisition cost, churn, or competitive positioning.",
-    "Both memos lack disclosed forward earnings guidance, making it difficult to assess whether the current valuation is justified by expected profitability."
+    "Both memos extrapolate recent price momentum without accounting for mean\u2011reversion tendencies.",
+    "The bull case may overstate the sustainability of 43.5% revenue growth absent profitability.",
+    "The bear case may underweight the cushion provided by low leverage and positive free cash flow.",
+    "Neither memo discusses potential share\u2011buyback or dilution effects on per\u2011share value.",
+    "Both omit analysis of how AI\u2011driven product adoption could alter the revenue\u2011growth trajectory."
    ]
   },
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -558,10 +532,12 @@
   "is_stub": false
  },
  "critic": {
-  "flags": [],
+  "flags": [
+   "quant_claim_mismatch:bull-3,syn-3"
+  ],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 0.9230769230769231
+  "sourced_share_high_conf": 0.9565217391304348
  },
  "models": {
   "bull": "nvidia/nemotron-3-super-120b-a12b:free",
