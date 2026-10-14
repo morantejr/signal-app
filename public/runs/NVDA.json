@@ -1,9 +1,9 @@
 {
- "run_id": "nvda-20261013T030652-cfb6d1",
+ "run_id": "nvda-20261014T011920-c7533a",
  "ticker": "NVDA",
  "thesis": null,
  "horizon": "3m",
- "created_at": "2026-10-13T03:08:25.619597Z",
+ "created_at": "2026-10-14T01:20:22.497068Z",
  "sources": [
   {
    "source_id": "yf:hist:NVDA",
@@ -11,10 +11,10 @@
    "title": "Yahoo Finance daily prices, 1y (NVDA)",
    "url": "https://finance.yahoo.com/quote/NVDA/history",
    "accession": null,
-   "retrieved_at": "2026-10-13T03:06:52.830598Z",
+   "retrieved_at": "2026-10-14T01:19:20.832919Z",
    "excerpt": null,
    "data": {
-    "rows": 251,
+    "rows": 250,
     "last": "2026-10-12T00:00:00-04:00"
    }
   },
@@ -24,17 +24,17 @@
    "title": "Yahoo Finance key statistics (NVDA)",
    "url": "https://finance.yahoo.com/quote/NVDA/key-statistics",
    "accession": null,
-   "retrieved_at": "2026-10-13T03:06:52.830598Z",
+   "retrieved_at": "2026-10-14T01:19:20.832919Z",
    "excerpt": null,
    "data": {
     "longName": "NVIDIA Corporation",
     "sector": "Technology",
     "industry": "Semiconductors",
-    "marketCap": 5464948998144,
-    "trailingPE": 28.611885,
-    "forwardPE": 14.220904,
-    "priceToSalesTrailing12Months": 18.03792,
-    "enterpriseToEbitda": 26.983,
+    "marketCap": 5518072479744,
+    "trailingPE": 28.890015,
+    "forwardPE": 14.359142,
+    "priceToSalesTrailing12Months": 18.213263,
+    "enterpriseToEbitda": 27.246,
     "debtToEquity": 16.971,
     "currentRatio": 4.589,
     "freeCashflow": 41809874944,
@@ -48,7 +48,7 @@
    "title": "Yahoo Finance annual income statement (NVDA), P/S history approximated with current share count",
    "url": "https://finance.yahoo.com/quote/NVDA/financials",
    "accession": null,
-   "retrieved_at": "2026-10-13T03:06:52.830598Z",
+   "retrieved_at": "2026-10-14T01:19:20.832919Z",
    "excerpt": null,
    "data": {
     "ps_history": [
@@ -65,36 +65,36 @@
    "title": "FRED DGS10, 10-year Treasury yield",
    "url": "https://fred.stlouisfed.org/series/DGS10",
    "accession": null,
-   "retrieved_at": "2026-10-13T03:06:54.320964Z",
+   "retrieved_at": "2026-10-14T01:19:21.811108Z",
    "excerpt": null,
    "data": {
     "from": "2026-07-06",
-    "to": "2026-10-08",
+    "to": "2026-10-09",
     "first": 4.48,
-    "last": 5.22
+    "last": 5.24
    }
   },
   {
    "source_id": "quant:v0.1",
    "kind": "derived",
-   "title": "SIGNAL quant v0.1 (code, computed 2026-10-13T03:06:54.321289+00:00) from yf:hist:NVDA, yf:info:NVDA, yf:financials:NVDA, fred:DGS10",
+   "title": "SIGNAL quant v0.1 (code, computed 2026-10-14T01:19:21.811487+00:00) from yf:hist:NVDA, yf:info:NVDA, yf:financials:NVDA, fred:DGS10",
    "url": null,
    "accession": null,
-   "retrieved_at": "2026-10-13T03:06:54.321331Z",
+   "retrieved_at": "2026-10-14T01:19:21.811541Z",
    "excerpt": null,
    "data": {
-    "quant_score": 13,
+    "quant_score": 14,
     "quant_band": "fair",
     "components": [
      {
       "name": "valuation",
       "value": -0.07500000000000001,
-      "note": "P/E 28.6 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.81\u00d7 its own median \u2192 +0.25"
+      "note": "P/E 28.9 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.82\u00d7 its own median \u2192 +0.25"
      },
      {
       "name": "momentum",
-      "value": 0.5402336002103019,
-      "note": "6m return +19.8% \u2192 +0.66; 12m\u22121m +16.8% \u2192 +0.42"
+      "value": 0.6095739803993693,
+      "note": "6m return +19.8% \u2192 +0.66; 12m\u22121m +22.3% \u2192 +0.56"
      },
      {
       "name": "risk",
@@ -109,7 +109,7 @@
      {
       "name": "macro",
       "value": -0.5,
-      "note": "10y yield +0.74pp over 3m \u2192 -0.50"
+      "note": "10y yield +0.76pp over 3m \u2192 -0.50"
      }
     ]
    }
@@ -117,7 +117,7 @@
  ],
  "quant": {
   "ticker": "NVDA",
-  "quant_score": 13,
+  "quant_score": 14,
   "quant_band": "fair",
   "components": [
    {
@@ -125,20 +125,20 @@
     "value": -0.07500000000000001,
     "weight": 0.35,
     "inputs_used": {
-     "trailing_pe": 28.611885,
-     "ps_vs_own_median": 0.81
+     "trailing_pe": 28.890015,
+     "ps_vs_own_median": 0.82
     },
-    "note": "P/E 28.6 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.81\u00d7 its own median \u2192 +0.25"
+    "note": "P/E 28.9 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.82\u00d7 its own median \u2192 +0.25"
    },
    {
     "name": "momentum",
-    "value": 0.5402336002103019,
+    "value": 0.6095739803993693,
     "weight": 0.25,
     "inputs_used": {
      "ret_6m": 19.823213575082764,
-     "ret_12m_minus_1m": 16.79
+     "ret_12m_minus_1m": 22.33
     },
-    "note": "6m return +19.8% \u2192 +0.66; 12m\u22121m +16.8% \u2192 +0.42"
+    "note": "6m return +19.8% \u2192 +0.66; 12m\u22121m +22.3% \u2192 +0.56"
    },
    {
     "name": "risk",
@@ -166,35 +166,35 @@
     "value": -0.5,
     "weight": 0.1,
     "inputs_used": {
-     "fred_10y_change_3m": 0.7399999999999993
+     "fred_10y_change_3m": 0.7599999999999998
     },
-    "note": "10y yield +0.74pp over 3m \u2192 -0.50"
+    "note": "10y yield +0.76pp over 3m \u2192 -0.50"
    }
   ],
   "quant_inputs": {
    "ticker": "NVDA",
-   "as_of": "2026-10-13T03:06:52.830598Z",
+   "as_of": "2026-10-14T01:19:20.832919Z",
    "price": 226.32000732421875,
    "high_52w": 239.24000549316406,
    "low_52w": 164.79331970214844,
    "ret_1m": 3.6785992418627567,
    "ret_3m": 6.975090030581299,
    "ret_6m": 19.823213575082764,
-   "ret_12m": 20.46633582524322,
+   "ret_12m": 26.01356624036861,
    "vol_60d_ann": 36.565569219343466,
    "max_drawdown_1y": -20.21438455548231,
-   "trailing_pe": 28.611885,
-   "forward_pe": 14.220904,
-   "price_to_sales": 18.03792,
-   "ps_hist_median": 22.159670552631013,
-   "ev_to_ebitda": 26.983,
+   "trailing_pe": 28.890015,
+   "forward_pe": 14.359142,
+   "price_to_sales": 18.213263,
+   "ps_hist_median": 22.159671964364538,
+   "ev_to_ebitda": 27.246,
    "debt_to_equity": 16.971,
    "current_ratio": 4.589,
    "free_cash_flow": 41809874944.0,
    "revenue_growth": 105.89999999999999,
    "profit_margin": 63.663000000000004,
-   "fred_10y_change_3m": 0.7399999999999993,
-   "data_age_days": 0.9631114652546297,
+   "fred_10y_change_3m": 0.7599999999999998,
+   "data_age_days": 1.8884355661921297,
    "source_ids": [
     "yf:hist:NVDA",
     "yf:info:NVDA",
@@ -203,74 +203,53 @@
    ]
   },
   "quant_version": "v0.1",
-  "computed_at": "2026-10-13T03:06:54.321289Z",
+  "computed_at": "2026-10-14T01:19:21.811487Z",
   "freshness_flags": [],
   "drivers": [
-   "momentum: 6m return +19.8% \u2192 +0.66; 12m\u22121m +16.8% \u2192 +0.42",
+   "momentum: 6m return +19.8% \u2192 +0.66; 12m\u22121m +22.3% \u2192 +0.56",
    "balance_sheet: D/E 17% \u2192 +0.5; current ratio 4.59 \u2192 +0.3; FCF positive \u2192 +0.3",
-   "macro: 10y yield +0.74pp over 3m \u2192 -0.50",
-   "valuation: P/E 28.6 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.81\u00d7 its own median \u2192 +0.25",
+   "macro: 10y yield +0.76pp over 3m \u2192 -0.50",
+   "valuation: P/E 28.9 \u2192 -0.4 (reference band 18\u201328\u00d7 \u2248 neutral); P/S is 0.82\u00d7 its own median \u2192 +0.25",
    "risk: 1y drawdown 20% \u2192 +0.11; 60d vol 37% ann. \u2192 -0.03"
   ]
  },
  "bull": {
   "side": "bull",
-  "summary": "NVIDIA shows exceptional top\u2011line growth with revenue up roughly 106% YoY and profitability near 64%, underpinned by strong free cash flow generation and a very conservative balance sheet. The stock\u2019s price\u2011to\u2011sales multiple sits below its historical median, and momentum indicators remain positive over the six\u2011 and twelve\u2011month horizons. While risk metrics are moderate and macro\u2011interest\u2011rate headwinds exist, the combination of high growth, solid margins, and reasonable valuation relative to its own sales history supports a bullish outlook over the next three months.",
+  "summary": "NVIDIA shows exceptional top\u2011line growth, massive free cash flow generation, and a conservatively leveraged balance sheet, all of which support a bullish outlook for the next three months. Price momentum remains strong, with six\u2011month and 12\u2011month\u2011minus\u2011one\u2011month returns driving a positive quant momentum score. While the trailing P/E is elevated, the price\u2011to\u2011sales ratio sits below its historical median, providing a valuation offset. Risk metrics are moderate, with a limited one\u2011year drawdown and relatively low volatility, yielding a small net risk score. Together, these factors suggest the stock could continue to outperform in the near term.",
   "claims": [
    {
     "claim_id": "bull-1",
-    "text": "NVIDIA's revenue grew approximately 106% year-over-year, indicating exceptionally strong top-line expansion.",
+    "text": "NVIDIA's revenue grew approximately 106% year\u2011over\u2011year in the most recent period.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bull-2",
-    "text": "The company's profit margin stands at about 63.6%, reflecting high profitability.",
+    "text": "Free cash flow was $41.8\u202fbillion, providing substantial liquidity for reinvestment and shareholder returns.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bull-3",
-    "text": "Free cash flow is robust at roughly $41.8\u202fbillion, providing ample liquidity for reinvestment and shareholder returns.",
+    "text": "The balance sheet shows low leverage (debt\u2011to\u2011equity 16.97%) and strong liquidity (current ratio 4.59).",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bull-4",
-    "text": "Balance sheet strength is evident with a low debt\u2011to\u2011equity ratio of 17% and a high current ratio of 4.59.",
-    "stance": "bull",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:NVDA"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "bull-5",
-    "text": "NVIDIA's price\u2011to\u2011sales ratio of 18.0\u00d7 is below its historical median (approximately 22\u00d7), suggesting the stock is not overvalued relative to its own sales history.",
-    "stance": "bull",
-    "support": "inference",
-    "source_ids": [
-     "yf:info:NVDA",
-     "yf:financials:NVDA"
-    ],
-    "confidence": 0.8
-   },
-   {
-    "claim_id": "bull-6",
-    "text": "Momentum remains positive, with a six\u2011month total return of +19.8% and a 12\u2011month minus one\u2011month return of +16.8%.",
+    "text": "Six\u2011month price return of +19.8% and 12\u2011month\u2011minus\u2011one\u2011month return of +22.3% contribute to a positive momentum score of +0.61 in the quant model.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -280,9 +259,21 @@
     "confidence": 0.9
    },
    {
-    "claim_id": "bull-7",
-    "text": "Risk measures are moderate: the one\u2011year drawdown is about 20% and 60\u2011day annualized volatility is roughly 37%.",
-    "stance": "neutral",
+    "claim_id": "bull-5",
+    "text": "Price\u2011to\u2011sales ratio is 0.82\u00d7 its historical median, adding +0.25 to the valuation component despite a high trailing P/E.",
+    "stance": "bull",
+    "support": "sourced",
+    "source_ids": [
+     "quant:v0.1",
+     "yf:financials:NVDA",
+     "yf:info:NVDA"
+    ],
+    "confidence": 0.9
+   },
+   {
+    "claim_id": "bull-6",
+    "text": "One\u2011year maximum drawdown of \u201320.2% and 60\u2011day annualized volatility of 36.6% yield a modest net risk score of +0.04.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "quant:v0.1",
@@ -291,13 +282,13 @@
     "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "The primary bearish concern is NVIDIA's elevated valuation, with a trailing P/E of 28.6\u00d7, above the historical neutral range of 18\u201128\u00d7, and the quant valuation component contributing a negative score. Additionally, the 10\u2011year Treasury yield has risen roughly 0.74\u202fpercentage points over the past three months, increasing the discount rate for equity cash flows and potentially pressuring high\u2011growth multiples. Finally, while AI\u2011related demand has been strong, any slowdown in data\u2011center spending or increased competition from alternative chipmakers could undermine the rapid revenue growth.",
+  "steelman_of_other_side": "The stock\u2019s trailing P/E of 28.9\u00d7 is well above the historical 18\u201128\u00d7 range considered fair, suggesting the market may be pricing in overly optimistic growth expectations. Rising 10\u2011year Treasury yields (+0.76\u202fpp over the past three months) increase the discount rate applied to future earnings, which could pressure valuations, especially for high\u2011growth names. Additionally, the semiconductor industry is cyclical and faces intensifying competition from both established players and new entrants in AI accelerators, which could erode NVIDIA\u2019s market share and margins if demand slows.",
   "missing_data": [
-   "forward-looking revenue guidance for the data\u2011center and AI segments",
-   "detailed capex and R&D expenditure plans",
-   "current inventory levels and days\u2011sales\u2011of\u2011inventory",
-   "competitor market\u2011share data in AI accelerators and GPUs",
-   "broader macroeconomic indicators such as GDP growth and semiconductor billings trends"
+   "SEC filing excerpts (risk factors, MD&A) to assess management\u2019s outlook and disclosed risks",
+   "Forward guidance on revenue, earnings, and capital expenditures for the next quarters",
+   "Detailed segment\u2011level revenue breakdown (data center vs. gaming vs. automotive) to gauge the durability of AI-driven growth",
+   "Information on supply\u2011chain constraints or capacity expansion plans for next\u2011generation GPUs",
+   "Analyst estimates and consensus revisions to gauge sentiment shifts"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -305,57 +296,52 @@
  },
  "bear": {
   "side": "bear",
-  "summary": "NVIDIA's valuation appears rich with a trailing P/E of 28.6, above the historical neutral band, and its price\u2011to\u2011sales multiple remains elevated in absolute terms despite being below its own five\u2011year median. Macro headwinds are mounting as the 10\u2011year Treasury yield has risen roughly 74 basis points over the past three months, increasing discount\u2011rate pressure on high\u2011growth stocks. The stock also shows notable technical vulnerability, having suffered a 20%+ drawdown over the last year and maintaining 36\u2011day annualized volatility near 37%. While the company boasts strong cash flow, low leverage and high margins, its extraordinary revenue growth rate of ~106% may be difficult to sustain, leaving earnings exposed to any slowdown in AI\u2011related spending.",
+  "summary": "NVIDIA's valuation remains rich relative to historical norms, with a trailing P/E of 28.9x above the 18\u201128x neutral band, while short\u2011term price momentum has slowed from a strong six\u2011month gain to a modest three\u2011month rise. The stock also exhibits notable downside risk, shown by a one\u2011year max drawdown exceeding 20% and elevated volatility, and faces headwinds from a rising 10\u2011year Treasury yield that increases discount rates for high\u2011growth equities. Although the balance sheet is solid\u2014low debt, high current ratio, and robust free cash flow\u2014these strengths hinge on the continuation of explosive AI\u2011driven demand, which remains uncertain.",
   "claims": [
    {
     "claim_id": "bear-1",
-    "text": "Trailing P/E of 28.6 places NVIDIA above the 18\u201128\u00d7 neutral valuation band, indicating a rich valuation relative to its own history.",
+    "text": "Trailing P/E of 28.9x exceeds the 18\u201128x neutral valuation band, indicating the stock is richly priced.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:info:NVDA",
-     "quant:v0.1"
+     "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bear-2",
-    "text": "Price\u2011to\u2011sales ratio of 18.0\u00d7, while below the 5\u2011year median of 22.2\u00d7, remains at an elevated absolute level that limits upside if growth decelerates.",
+    "text": "Six\u2011month price return is +19.8% but the three\u2011month return has slowed to +6.98%, suggesting weakening short\u2011term momentum.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:info:NVDA",
-     "yf:financials:NVDA",
-     "quant:v0.1"
+     "yf:hist:NVDA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "bear-3",
-    "text": "The 10\u2011year Treasury yield increased roughly 0.74 percentage points from 4.48% to 5.22% over the past three months, raising discount\u2011rate pressure on NVIDIA\u2019s high\u2011multiple growth profile.",
+    "text": "One\u2011year max drawdown of -20.2% and 60\u2011day annualized volatility of 36.6% show considerable downside risk.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "fred:DGS10",
-     "quant:v0.1"
+     "yf:hist:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bear-4",
-    "text": "NVDA experienced a 20.2% maximum drawdown over the last year and its 60\u2011day annualized volatility is 36.6%, showing susceptibility to sharp price corrections.",
+    "text": "The 10\u2011year Treasury yield rose 0.76 percentage points over the past three months, raising discount rates and pressuring high\u2011valuation growth stocks.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:hist:NVDA",
-     "quant:v0.1"
+     "fred:DGS10"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "bear-5",
-    "text": "Year\u2011over\u2011year revenue growth of 105.9% is exceptionally high and may not be sustainable, making earnings vulnerable to any slowdown in AI/data\u2011center spending.",
-    "stance": "bear",
+    "text": "Free cash flow is strong at $41.8\u202fB and debt\u2011to\u2011equity is low at 17%, providing a financial buffer, though cash flow generation depends on sustained AI demand.",
+    "stance": "context",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
@@ -363,12 +349,13 @@
     "confidence": 0.9
    }
   ],
-  "steelman_of_other_side": "NVIDIA generates robust free cash flow (>$41\u202fbn), carries a low debt\u2011to\u2011equity ratio of 17% and a strong current ratio of 4.6, providing a solid financial cushion. Its profit margin exceeds 63%, reflecting a highly efficient business model, and revenue continues to expand at a triple\u2011digit pace driven by AI\u2011accelerated data\u2011center demand. These fundamentals support the view that the company can sustain premium growth and justify its current valuation multiples.",
+  "steelman_of_other_side": "Bulls point to NVIDIA\u2019s dominant position in AI accelerators, with revenue growth exceeding 100% year\u2011over\u2011year and profit margins above 60%, reflecting strong pricing power and operating leverage. The forward P/E of ~14x suggests the market expects earnings to catch up quickly, and the company\u2019s robust free cash flow and low leverage give it flexibility to invest in next\u2011generation chips and weather cyclical downturns. Continued expansion of data\u2011center AI workloads and potential new product cycles could sustain high growth rates, justifying the current premium valuation.",
   "missing_data": [
-   "SEC filings (10\u2011K, 10\u2011Q) for detailed risk factors, MD&A commentary, forward guidance, and segment\u2011level revenue breakdown",
-   "Analyst consensus estimates and revisions for FY2025\u20112026 earnings",
-   "Customer concentration data and any disclosed exposure to specific AI\u2011cloud providers",
-   "Macro\u2011scenario analysis (e.g., impact of further rate hikes or a recession on capex budgets)"
+   "SEC 10\u2011K/10\u2011Q filings for detailed segment revenue breakdown and forward guidance",
+   "Quarterly capex and R&D spending trends to assess investment intensity",
+   "Inventory levels and supply\u2011chain constraints for AI chips",
+   "Competitor market\u2011share data (AMD, Intel, custom ASICs) to gauge competitive pressures",
+   "Broader macroeconomic indicators beyond the 10\u2011year yield (e.g., credit spreads, global manufacturing PMIs)"
   ],
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "provider": "Nvidia",
@@ -376,63 +363,64 @@
  },
  "brief": {
   "ticker": "NVDA",
-  "one_view": "NVIDIA shows extraordinary top\u2011line growth and profitability, backed by strong free cash flow and a conservative balance sheet, while its price\u2011to\u2011sales multiple sits below its own historical median. However, the stock\u2019s trailing P/E exceeds the 18\u201128\u00d7 neutral band and the 10\u2011year Treasury yield has risen sharply, raising discount\u2011rate concerns. Momentum remains positive over six\u2011 and twelve\u2011month horizons, but the stock has experienced a ~20% drawdown and elevated volatility, indicating technical vulnerability. The quant composite scores the stock as \u2018fair\u2019, reflecting offsetting strengths in balance sheet and momentum against valuation and macro headwinds. Whether the growth trajectory can persist will be the key determinant of near\u2011term performance.",
+  "one_view": "NVIDIA shows extraordinary top\u2011line growth and cash generation, backed by a conservatively leveraged balance sheet, which the bull memo highlights as durable strengths. The bear memo counters that the stock\u2019s trailing P/E remains above its historical neutral band and that short\u2011term momentum has softened while rising Treasury yields increase discount rates for high\u2011growth equities. The quant model aggregates these forces into a fair\u2011value score of 14, reflecting offsetting valuation pressure from a high P/E and a modest boost from a below\u2011median price\u2011to\u2011sales ratio. Momentum and risk components are modestly positive, but the overall signal is neutral, indicating that neither the bullish nor bearish narrative fully dominates. A resolution will depend on whether AI\u2011driven revenue growth can sustain its current pace amid higher financing costs and any signs of competitive or cyclical pressure.",
   "narrative_lean": "mixed",
   "claims": [
    {
     "claim_id": "syn-1",
-    "text": "NVIDIA's revenue grew approximately 106% year\u2011over\u2011year, indicating exceptionally strong top\u2011line expansion.",
+    "text": "NVIDIA's revenue grew approximately 106% year\u2011over\u2011year in the most recent period.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-2",
-    "text": "The company's profit margin stands at about 63.6%, reflecting high profitability.",
+    "text": "Free cash flow was $41.8\u202fbillion, providing substantial liquidity for reinvestment and shareholder returns.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-3",
-    "text": "Free cash flow is robust at roughly $41.8\u202fbillion, providing ample liquidity for reinvestment and shareholder returns.",
+    "text": "The balance sheet shows low leverage (debt\u2011to\u2011equity 16.97%) and strong liquidity (current ratio 4.59).",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-4",
-    "text": "Balance sheet strength is evident with a low debt\u2011to\u2011equity ratio of 17% and a high current ratio of 4.59.",
-    "stance": "bull",
+    "text": "Trailing P/E of 28.9x exceeds the 18\u201128x neutral valuation band, indicating the stock is richly priced.",
+    "stance": "bear",
     "support": "sourced",
     "source_ids": [
      "yf:info:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-5",
-    "text": "NVIDIA's price\u2011to\u2011sales ratio of 18.0\u00d7 is below its historical median (approximately 22\u00d7), suggesting the stock is not overvalued relative to its own sales history.",
+    "text": "Price\u2011to\u2011sales ratio is 0.82\u00d7 its historical median, adding +0.25 to the valuation component despite a high trailing P/E.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
+     "quant:v0.1",
      "yf:info:NVDA",
      "yf:financials:NVDA"
     ],
-    "confidence": 0.85
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-6",
-    "text": "Momentum remains positive, with a six\u2011month total return of +19.8% and a 12\u2011month minus one\u2011month return of +16.8%.",
+    "text": "Six\u2011month price return of +19.8% and 12\u2011month\u2011minus\u2011one\u2011month return of +22.3% contribute to a positive momentum score of +0.61 in the quant model.",
     "stance": "bull",
     "support": "sourced",
     "source_ids": [
@@ -443,97 +431,73 @@
    },
    {
     "claim_id": "syn-7",
-    "text": "Trailing P/E of 28.6 places NVIDIA above the 18\u201128\u00d7 neutral valuation band, indicating a rich valuation relative to its own history.",
-    "stance": "bear",
+    "text": "One\u2011year maximum drawdown of \u201320.2% and 60\u2011day annualized volatility of 36.6% yield a modest net risk score of +0.04.",
+    "stance": "bull",
     "support": "sourced",
     "source_ids": [
-     "yf:info:NVDA",
-     "quant:v0.1"
+     "quant:v0.1",
+     "yf:hist:NVDA"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    },
    {
     "claim_id": "syn-8",
-    "text": "Price\u2011to\u2011sales ratio of 18.0\u00d7, while below the 5\u2011year median of 22.2\u00d7, remains at an elevated absolute level that limits upside if growth decelerates.",
+    "text": "Three\u2011month price return is +6.98%, suggesting weakening short\u2011term momentum.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "yf:info:NVDA",
-     "yf:financials:NVDA",
-     "quant:v0.1"
+     "yf:hist:NVDA"
     ],
     "confidence": 0.9
    },
    {
     "claim_id": "syn-9",
-    "text": "The 10\u2011year Treasury yield increased roughly 0.74 percentage points from 4.48% to 5.22% over the past three months, raising discount\u2011rate pressure on NVIDIA\u2019s high\u2011multiple growth profile.",
+    "text": "The 10\u2011year Treasury yield rose 0.76 percentage points over the past three months, raising discount rates and pressuring high\u2011valuation growth stocks.",
     "stance": "bear",
     "support": "sourced",
     "source_ids": [
-     "fred:DGS10",
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-10",
-    "text": "NVDA experienced a 20.2% maximum drawdown over the last year and its 60\u2011day annualized volatility is 36.6%, showing susceptibility to sharp price corrections.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:hist:NVDA",
-     "quant:v0.1"
-    ],
-    "confidence": 0.95
-   },
-   {
-    "claim_id": "syn-11",
-    "text": "Year\u2011over\u2011year revenue growth of 105.9% is exceptionally high and may not be sustainable, making earnings vulnerable to any slowdown in AI/data\u2011center spending.",
-    "stance": "bear",
-    "support": "sourced",
-    "source_ids": [
-     "yf:info:NVDA"
+     "fred:DGS10"
     ],
     "confidence": 0.9
    },
    {
-    "claim_id": "syn-12",
-    "text": "The quant composite scores the stock as \u2018fair\u2019 (score\u202f13) with valuation \u20130.075, momentum +0.540, risk +0.036, balance sheet +0.367, and macro \u20130.5.",
-    "stance": "neutral",
+    "claim_id": "syn-10",
+    "text": "The quant score is 14 (fair) indicating a neutral overall assessment.",
+    "stance": "context",
     "support": "sourced",
     "source_ids": [
      "quant:v0.1"
     ],
-    "confidence": 0.95
+    "confidence": 0.9
    }
   ],
   "kill_criteria": [
-   "Revenue growth falls below 50% YoY for two consecutive quarters",
-   "Free cash flow turns negative or declines by >30% QoQ",
-   "Debt\u2011to\u2011equity rises above 40% or current ratio falls below 2.0",
-   "Trailing P/E moves back into the 18\u201128\u00d7 band and price\u2011to\u2011sales drops below its 5\u2011year median",
-   "10\u2011year Treasury yield increases another >0.5 percentage points over the next three months",
-   "Maximum one\u2011year drawdown widens beyond 30% or 60\u2011day annualized volatility exceeds 45%"
+   "Revenue growth falls below 50% year\u2011over\u2011year in the next quarter.",
+   "Free cash flow turns negative or declines by more than 30% quarter\u2011over\u2011quarter.",
+   "Debt\u2011to\u2011equity rises above 40% or current ratio drops below 2.0.",
+   "Trailing P/E falls below 20\u00d7 while the price\u2011to\u2011sales ratio remains above 1.2\u00d7 its historical median.",
+   "Three\u2011month price return turns negative (\u20112% or worse) and six\u2011month momentum drops below +5%.",
+   "10\u2011year Treasury yield declines by more than 0.5 percentage points over the next three months."
   ],
   "disagreement": {
    "quant_band": "fair",
-   "quant_score": 13,
+   "quant_score": 14,
    "narrative_lean": "mixed",
    "agree": true,
    "disagreement_summary": "Quant band 'fair' and narrative lean 'mixed' point the same way. Agreement is not proof; both draw on overlapping data.",
    "quant_may_be_wrong_because": [
-    "The valuation component uses a fixed historical P/S median that may not reflect the changed growth profile of the AI\u2011driven business.",
-    "Macro score treats the 10\u2011year yield change as a linear discount\u2011rate impact, ignoring possible term\u2011structure shifts or inflation expectations.",
-    "Momentum weighting may overstate near\u2011term strength if the recent price move is driven by short\u2011term speculative flows rather than fundamentals.",
-    "Balance\u2011sheet score rewards a high current ratio and low debt, but a large cash balance could be tied up in restricted or non\u2011liquid assets.",
-    "Risk component only captures past drawdown and volatility, potentially under\u2011estimating tail risks from sudden AI\u2011spending pauses or supply\u2011chain shocks."
+    "The valuation component uses a historical price\u2011to\u2011sales median that may not reflect a structural shift to higher\u2011margin AI sales.",
+    "Momentum inputs rely on short\u2011term price returns that can reverse quickly and do not capture changes in fundamentals.",
+    "Risk component only measures past drawdown and volatility, ignoring forward\u2011looking risks such as supply constraints or competitive threats.",
+    "The model\u2019s fixed weights may under\u2011 or over\u2011emphasize macro factors like rising rates in a period of atypical AI\u2011driven demand.",
+    "It does not incorporate forward earnings estimates or segment\u2011level guidance that could materially affect fair value."
    ],
    "narrative_may_be_wrong_because": [
-    "Both memos rely on trailing twelve\u2011month figures that may quickly become outdated if quarterly results diverge from the trend.",
-    "Yahoo\u2011Finance sourced numbers may omit adjustments for one\u2011time items or stock\u2011based compensation that affect true profitability.",
-    "The bull case assumes current growth rates are sustainable without considering potential capacity constraints or competitive entry in AI accelerators.",
-    "The bear case emphasizes valuation richness but may under\u2011weight the company\u2019s ability to reinvest free cash flow into higher\u2011return projects that could justify a premium multiple.",
-    "Neither memo incorporates forward\u2011looking guidance or management commentary on future capex, R&D, or AI\u2011demand outlook, which could materially shift the risk\u2011reward balance."
+    "Both memos lean heavily on recent growth rates without providing evidence of durability beyond the latest quarter.",
+    "The bull memo assumes continued AI\u2011driven demand will sustain >100% revenue growth, which is not yet confirmed by forward guidance.",
+    "The bear memo focuses on valuation and macro headwinds but does not quantify how much earnings growth would be needed to justify the current P/E.",
+    "Neither memo cites specific SEC filing disclosures (risk factors, MD&A) that could reveal management\u2019s outlook or hidden risks.",
+    "Both rely on trailing multiples and ignore the forward P/E of ~14\u00d7, which suggests the market expects earnings to catch up quickly."
    ]
   },
   "model": "nvidia/nemotron-3-super-120b-a12b:free",
@@ -541,12 +505,10 @@
   "is_stub": false
  },
  "critic": {
-  "flags": [
-   "quant_claim_mismatch:bear-3,syn-9"
-  ],
+  "flags": [],
   "unsupported_claim_ids": [],
   "dangling_source_ids": [],
-  "sourced_share_high_conf": 0.9583333333333334
+  "sourced_share_high_conf": 1.0
  },
  "models": {
   "bull": "nvidia/nemotron-3-super-120b-a12b:free",
