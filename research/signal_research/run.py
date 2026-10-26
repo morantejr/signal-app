@@ -1,4 +1,4 @@
-"""CLI: python -m signal_research.run --ticker ZETA [--thesis "..."] [--horizon 3m] [--no-llm] [--json]"""
+"""CLI: python -m signal_research.run --ticker NVDA [--thesis "..."] [--horizon 3m] [--no-llm] [--json]"""
 
 from __future__ import annotations
 

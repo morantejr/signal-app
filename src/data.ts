@@ -11,5 +11,5 @@ export const suggestions = [
   'Should I buy NVDA?',
   'Is Apple expensive right now?',
   'Why is META falling?',
-  'What does SIGNAL think of ZETA?',
+  'What does SIGNAL think of GOOGL?',
 ]

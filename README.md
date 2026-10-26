@@ -2,7 +2,7 @@
 
 Consumer investing companion — *complex underneath, effortless on the surface.*
 
-Ask a question like **"Should I hold ZETA for the next 3 months?"** and get an
+Ask a question like **"Should I hold GOOGL for the next 3 months?"** and get an
 answer-first view: the stance, confidence, expected return, three reasons, two
 risks, and a bottom line — in plain language, no jargon.
 

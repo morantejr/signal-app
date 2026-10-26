@@ -1,7 +1,7 @@
 """Static export: one JSON per ticker plus an index, for the web app to read
 without a server. Failures are per ticker so one bad symbol never blocks the rest.
 
-    python -m signal_research.export --tickers ZETA,NVDA --out ../public/runs
+    python -m signal_research.export --tickers NVDA,AAPL --out ../public/runs
 """
 
 from __future__ import annotations

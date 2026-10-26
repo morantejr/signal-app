@@ -45,7 +45,7 @@
           <span>{{ traceLine }}</span>
         </span>
       </sc-if>
-      <span>ZETA 18.42 <span style="color:#4ec99a">+2.14%</span></span>
+      <span>GOOGL 18.42 <span style="color:#4ec99a">+2.14%</span></span>
       <span>13 AUG 2026 · 16:04 ET</span>
     </div>
   </div>
@@ -73,8 +73,8 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:14px">
           <div style="background:#0e1012;border:1px solid #1e2328;border-radius:4px;padding:18px 20px">
             <div style="display:flex;align-items:baseline;gap:12px">
-              <span style="font:600 26px/1 'IBM Plex Mono',monospace;letter-spacing:.02em">ZETA</span>
-              <span style="font:400 13px/1 'IBM Plex Sans',sans-serif;color:#8b949c">Zeta Global Holdings</span>
+              <span style="font:600 26px/1 'IBM Plex Mono',monospace;letter-spacing:.02em">GOOGL</span>
+              <span style="font:400 13px/1 'IBM Plex Sans',sans-serif;color:#8b949c">Alphabet Inc.</span>
             </div>
             <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#5b636b;margin:20px 0 8px">CURRENT RESEARCH STANCE</div>
             <div style="font:600 30px/1 'IBM Plex Sans',sans-serif;letter-spacing:-.01em;color:#4ec99a">MODERATELY BULLISH</div>
@@ -695,13 +695,13 @@
                 <div style="margin-top:16px;animation:sigIn .24s ease both">
                   <div style="font:500 9px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#5b636b;margin-bottom:8px">DETECTED · SINGLE LATENT EXPOSURE</div>
                   <div style="font:600 17px/1.25 'IBM Plex Sans',sans-serif;color:#d9a53f;margin-bottom:12px">AI-driven digital advertising spend</div>
-                  <div style="font:400 11px/1.6 'IBM Plex Sans',sans-serif;color:#a8b0b7">Four of five positions load on the same driver. ZETA monetises AI-driven marketing spend, MSFT and META own the platforms and budgets it depends on, and SPY carries 34% index weight in the same complex. BTC adds liquidity beta that co-moves with the same risk appetite. Nominal diversification across 5 tickers; effective diversification of roughly 1.8 independent bets.</div>
+                  <div style="font:400 11px/1.6 'IBM Plex Sans',sans-serif;color:#a8b0b7">Four of five positions load on the same driver. GOOGL monetises AI-driven marketing spend, MSFT and META own the platforms and budgets it depends on, and SPY carries 34% index weight in the same complex. BTC adds liquidity beta that co-moves with the same risk appetite. Nominal diversification across 5 tickers; effective diversification of roughly 1.8 independent bets.</div>
                   <div style="display:flex;align-items:center;gap:10px;margin-top:14px">
                     <span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#5b636b;width:120px">SHARED VARIANCE</span>
                     <div style="flex:1;height:8px;background:#171b1f;border-radius:2px;overflow:hidden"><div style="width:71%;height:100%;background:#d9a53f"></div></div>
                     <span style="font:500 11px/1 'IBM Plex Mono',monospace;color:#d9a53f">71%</span>
                   </div>
-                  <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin-top:12px">Mitigations are listed for consideration, not executed: ad-cycle-insensitive hedge sleeve, reduce SPY overlap, or shorten ZETA horizon into the next guide.</div>
+                  <div style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#454d54;margin-top:12px">Mitigations are listed for consideration, not executed: ad-cycle-insensitive hedge sleeve, reduce SPY overlap, or shorten GOOGL horizon into the next guide.</div>
                 </div>
               </sc-if>
             </div>
@@ -827,7 +827,7 @@ const MONO = "'IBM Plex Mono',monospace";
 class Component extends DCLogic {
   state = {
     view: 'dashboard',
-    q: 'Should I be bullish or bearish on ZETA over the next 3 months?',
+    q: 'Should I be bullish or bearish on GOOGL over the next 3 months?',
     openSignal: 'fundamental',
     claim: 0,
     node: 'n1',
@@ -998,12 +998,12 @@ class Component extends DCLogic {
       ['n2', 'Direct-platform revenue growth', 320, 30, 'EVIDENCE', '0.84', 'segment report'],
       ['n3', 'Revenue above consensus', 620, 30, 'EVIDENCE', '0.81', 'consensus panel'],
       ['n4', 'Agency budgets shifting to AI platforms', 20, 148, 'EVIDENCE', '0.87', '10-Q ×3'],
-      ['nb', 'BULLISH ZETA', 900, 88, 'HYPOTHESIS', '0.64', 'edge weight'],
+      ['nb', 'BULLISH GOOGL', 900, 88, 'HYPOTHESIS', '0.64', 'edge weight'],
       ['n5', 'Valuation historically elevated', 20, 300, 'EVIDENCE', '0.91', 'percentile study'],
       ['n6', 'Multiple compression risk', 320, 300, 'INFERENCE', '0.72', 'regression'],
       ['n7', 'Rate path uncertainty', 20, 418, 'EVIDENCE', '0.55', 'OIS curve'],
       ['n8', 'Walled-garden platform competition', 320, 418, 'EVIDENCE', '0.49', 'channel checks'],
-      ['nr', 'BEARISH ZETA', 900, 348, 'HYPOTHESIS', '0.36', 'edge weight']
+      ['nr', 'BEARISH GOOGL', 900, 348, 'HYPOTHESIS', '0.36', 'edge weight']
     ];
     const edgeDefs = [['n1', 'n2', 'supports'], ['n4', 'n2', 'supports'], ['n2', 'n3', 'supports'], ['n3', 'nb', 'supports'], ['n5', 'n6', 'increases'], ['n7', 'n6', 'increases'], ['n6', 'nr', 'supports'], ['n8', 'nr', 'supports'], ['n1', 'nr', 'weakens']];
     const NW = 250, NH = 74;
@@ -1089,7 +1089,7 @@ class Component extends DCLogic {
     const fs = stances[Math.min(nBreach, 5)];
 
     const positions = [
-      ['ZETA', 32, '+10.4%', '46%', '1.74', 'AI ad spend · adtech'],
+      ['GOOGL', 32, '+10.4%', '46%', '1.74', 'AI ad spend · search'],
       ['MSFT', 24, '+7.1%', '24%', '0.98', 'AI platform · software'],
       ['META', 16, '+8.8%', '33%', '1.21', 'AI ad platform'],
       ['BTC', 12, '+12.6%', '58%', '1.42', 'Liquidity beta'],
@@ -1099,7 +1099,7 @@ class Component extends DCLogic {
       row: `display:flex;gap:14px;align-items:center;padding:${dense ? '8px 0' : '12px 0'};border-bottom:1px solid #171b1f`,
       erStyle: `width:62px;text-align:right;font:400 11px/1 ${MONO};color:${BULL}`
     }));
-    const symbols = ['ZETA', 'MSFT', 'META', 'BTC', 'SPY'];
+    const symbols = ['GOOGL', 'MSFT', 'META', 'BTC', 'SPY'];
     const corr = [[1, .78, .71, .52, .83], [.78, 1, .74, .44, .86], [.71, .74, 1, .41, .81], [.52, .44, .41, 1, .57], [.83, .86, .81, .57, 1]];
     const corrRows = corr.map((r, i) => ({
       sym: symbols[i],
@@ -1192,7 +1192,7 @@ class Component extends DCLogic {
         bar: `position:absolute;top:2px;height:6px;${v >= 0 ? 'left:50%' : 'right:50%'};width:${Math.abs(v) * 300}%;max-width:50%;background:${v >= 0 ? BULL : BEAR};border-radius:1px`
       })),
       analogies: [
-        { name: 'ZETA · AI re-rating', period: 'Q1 2024 – Q3 2024', sim: '84%', simN: 84, o90: '+41%', o24: '+112%', note: 'Same demand-shock structure and estimate-revision pattern; started from a far lower multiple.', diverge: 'entry valuation, ownership breadth' },
+        { name: 'GOOGL · AI re-rating', period: 'Q1 2024 – Q3 2024', sim: '84%', simN: 84, o90: '+41%', o24: '+112%', note: 'Same demand-shock structure and estimate-revision pattern; started from a far lower multiple.', diverge: 'entry valuation, ownership breadth' },
         { name: 'The Trade Desk · CTV re-rating', period: '2020 – 2022', sim: '61%', simN: 61, o90: '+28%', o24: '−74%', note: 'Similar narrative and budget-shift thesis. Ended in a multi-year drawdown once ad budgets normalised.', diverge: 'earnings base, customer concentration' },
         { name: 'Adtech budget cycle', period: '2022 – 2023', sim: '53%', simN: 53, o90: '−19%', o24: '+34%', note: 'Budget-led downturn after a spend peak; recovered once the cycle cleared.', diverge: 'end-market mix, secular demand' }
       ].map(a => ({

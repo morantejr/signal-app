@@ -9,16 +9,16 @@ test:
 eval:
 	uv run pytest -q tests/test_evals.py -k eval
 
-# Usage: make run TICKER=ZETA THESIS="AI ad demand keeps growing"
+# Usage: make run TICKER=NVDA THESIS="AI datacenter demand keeps growing"
 run:
 	uv run python -m signal_research.run --ticker $(TICKER) $(if $(THESIS),--thesis "$(THESIS)",) $(if $(NO_LLM),--no-llm,)
 
-# Local API for the web app: http://localhost:8000/research/ZETA
+# Local API for the web app: http://localhost:8000/research/NVDA
 api:
 	uv run uvicorn signal_research.api:app --reload --port 8000
 
 # Static export the web app can read without a server (public/runs/<SYM>.json)
-# Usage: make export TICKERS=ZETA,NVDA,AAPL,META,MSFT
+# Usage: make export TICKERS=NVDA,AAPL,META,MSFT,GOOGL
 export:
 	uv run python -m signal_research.export --tickers "$(TICKERS)" --tickers-file tickers.txt --out ../public/runs
 

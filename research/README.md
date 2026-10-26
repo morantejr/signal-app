@@ -82,7 +82,7 @@ cd research
 cp .env.example .env            # add OPENROUTER_API_KEY; everything else is optional
 make setup                      # uv sync
 make test                       # 29 tests, no network
-make run TICKER=ZETA THESIS="AI advertising demand keeps growing"
+make run TICKER=NVDA THESIS="AI datacenter demand keeps growing"
 make run TICKER=AAPL NO_LLM=1   # data + quant + stub memos, no key needed
 ```
 
@@ -122,4 +122,4 @@ Model: `OPENROUTER_MODEL` defaults to `google/gemma-4-31b-it:free`, taken from O
 
 Shipped: data sources including filing text, quant v0.1, OpenRouter client with fallbacks and mocked tests, the pipeline with parallel memos and stub fallbacks, code-side disagreement, critic with quant-claim and one-sidedness rules, prediction log and calibration report, SQLite store, FastAPI service, static export consumed by the web app, local tracing with Langfuse hooks, 17 evals. `make test` proves the LLM path cannot mutate the score.
 
-Decide next: (a) demo tickers for the eval fixtures beyond ZETA / AAPL; (b) score lean (v0.1 is balanced across value, momentum, risk, balance sheet; a momentum-tilted variant is a weight change and a version bump); (c) horizon default (3m); (d) where to host the API if you want fresh runs for arbitrary tickers on the public site (the static export covers the default watchlist).
+Decide next: (a) demo tickers for the eval fixtures beyond NVDA / AAPL; (b) score lean (v0.1 is balanced across value, momentum, risk, balance sheet; a momentum-tilted variant is a weight change and a version bump); (c) horizon default (3m); (d) where to host the API if you want fresh runs for arbitrary tickers on the public site (the static export covers the default watchlist).

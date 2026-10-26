@@ -382,7 +382,7 @@ class Component extends DCLogic {
   };
 
   ask = () => {
-    const q = this.state.q.trim() || 'Should I buy ZETA for the next 3 months?';
+    const q = this.state.q.trim() || 'Should I buy GOOGL for the next 3 months?';
     this.setState({ askedQ: q, screen: 'thinking', think: 0, sub: 'overview' });
     if (this._t) clearInterval(this._t);
     this._t = setInterval(() => this.setState(s => {
@@ -409,7 +409,7 @@ class Component extends DCLogic {
 
     const viewPill = (text, color) => `font:400 15px/1 ${F};color:${color};white-space:nowrap`;
     const recents = [
-      ['Should I hold ZETA for the next 3 months?', 'Moderately bullish', GREEN],
+      ['Should I hold GOOGL for the next 3 months?', 'Moderately bullish', GREEN],
       ['Is Apple expensive right now?', 'Fairly valued', AMBER],
       ['Why is META falling today?', 'Answered', MUTED],
       ['Compare MSFT and GOOG', 'MSFT preferred', GREEN]
@@ -430,7 +430,7 @@ class Component extends DCLogic {
     }));
 
     const watchlist = [
-      ['ZETA', '$18.42', 'Moderately bullish', GREEN, '72%', 'Growth ahead of expectations, but priced richly.'],
+      ['GOOGL', '$18.42', 'Moderately bullish', GREEN, '72%', 'Growth ahead of expectations, but priced richly.'],
       ['NVDA', '$1,042', 'Bullish', GREEN, '77%', 'Demand still outruns supply.'],
       ['AAPL', '$243', 'Neutral', AMBER, '58%', 'Fairly priced for how fast it is growing.'],
       ['META', '$612', 'Moderately bullish', GREEN, '64%', 'Ad revenue steady; spending is the question.'],
@@ -438,7 +438,7 @@ class Component extends DCLogic {
     ].map(([sym, price, view, c, conf, note]) => ({ sym, price, view, conf, note, viewStyle: viewPill(view, c), go: () => this.setState({ screen: 'asset', sub: 'overview' }) }));
 
     const holdings = [
-      ['ZETA', '32%', 'AI advertising demand', 'Moderately bullish', GREEN],
+      ['GOOGL', '32%', 'AI advertising demand', 'Moderately bullish', GREEN],
       ['MSFT', '24%', 'AI software spending', 'Bullish', GREEN],
       ['META', '16%', 'AI advertising demand', 'Moderately bullish', GREEN],
       ['BTC', '12%', 'Appetite for risk', 'Neutral', AMBER],
@@ -446,7 +446,7 @@ class Component extends DCLogic {
     ].map(([sym, w, driver, view, c]) => ({ sym, w, driver, view, viewStyle: viewPill(view, c), go: () => this.setState({ screen: 'asset', sub: 'overview' }) }));
 
     const history = [
-      ['Should I hold ZETA for the next 3 months?', 'Moderately bullish', GREEN, 'Today, 4:04pm'],
+      ['Should I hold GOOGL for the next 3 months?', 'Moderately bullish', GREEN, 'Today, 4:04pm'],
       ['Is my portfolio too concentrated?', 'Yes — one theme', AMBER, 'Today, 11:20am'],
       ['Why is META falling today?', 'Answered', MUTED, 'Yesterday'],
       ['Compare MSFT and GOOG', 'MSFT preferred', GREEN, 'Monday']
@@ -469,7 +469,7 @@ class Component extends DCLogic {
       askedQ: S.askedQ, thinkLine: thinkLines[Math.min(S.think, 3)],
       thinkBar: `width:${(S.think + 1) * 25}%;height:100%;background:${INK};opacity:.55;transition:width .5s`,
 
-      sym: 'ZETA', name: 'Zeta Global', price: '$18.42', chg: '+2.1%',
+      sym: 'GOOGL', name: 'Alphabet Inc.', price: '$18.42', chg: '+2.1%',
       chgStyle: `font:400 15px/1 ${F};color:${GREEN};margin-top:9px`,
       isOverview: S.sub === 'overview', isWhy: S.sub === 'why', isRisks: S.sub === 'risks', isResearchTab: S.sub === 'research',
       stance: 'Moderately Bullish',

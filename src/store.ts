@@ -28,7 +28,7 @@ export function pushHistory(row: HistoryRow): HistoryRow[] {
   return h
 }
 
-export const DEFAULT_WATCHLIST = ['ZETA', 'NVDA', 'AAPL', 'META', 'MSFT']
+export const DEFAULT_WATCHLIST = ['NVDA', 'AAPL', 'META', 'MSFT', 'GOOGL']
 export const loadWatchlist = () => read<string[]>('signal.watchlist', DEFAULT_WATCHLIST)
 export const saveWatchlist = (s: string[]) => write('signal.watchlist', s)
 

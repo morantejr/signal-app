@@ -44,7 +44,7 @@ export default function App() {
   const runId = useRef(0)
 
   const ask = async (preset?: string) => {
-    const asked = (preset ?? q).trim() || 'Should I buy ZETA for the next 3 months?'
+    const asked = (preset ?? q).trim() || 'Should I buy NVDA for the next 3 months?'
     const id = ++runId.current
     setAskedQ(asked)
     setThinkStep(0)

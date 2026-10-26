@@ -112,22 +112,6 @@
     "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
     "quant": "code:v0.1"
    }
-  },
-  {
-   "ticker": "ZETA",
-   "run_id": "zeta-20261020T010733-5be9bf",
-   "created_at": "2026-10-20T01:11:14.980403+00:00",
-   "quant_score": 4,
-   "quant_band": "fair",
-   "narrative_lean": "mixed",
-   "agree": true,
-   "is_stub": false,
-   "models": {
-    "bull": "nvidia/nemotron-3-super-120b-a12b:free",
-    "bear": "nvidia/nemotron-3-super-120b-a12b:free",
-    "synthesis": "nvidia/nemotron-3-super-120b-a12b:free",
-    "quant": "code:v0.1"
-   }
   }
  ]
 }

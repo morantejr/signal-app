@@ -1,7 +1,7 @@
 # Handoff: SIGNAL — AI investment research (Simple + Advanced)
 
 ## Overview
-SIGNAL answers plain investment questions ("Should I buy ZETA?") with one clear view: stance, confidence, expected outcome, why, and risks. The design has two surfaces:
+SIGNAL answers plain investment questions ("Should I buy GOOGL?") with one clear view: stance, confidence, expected outcome, why, and risks. The design has two surfaces:
 1. **Simple** (default, consumer): light, minimal, plain language. Four layers of progressive disclosure: Simple → Explain → Research → Professional.
 2. **Advanced Research** (opt-in, professional): a dark terminal with research agents, evidence graph, scenarios, prediction model and calibration, analogies, investment committee, falsification triggers, portfolio risk, backtesting and architecture.
 
@@ -31,11 +31,11 @@ The `.dc.html` files open directly in a browser (keep `support.js` next to them)
 - Title "Ask SIGNAL": 40px/1.15, letter-spacing −.02em, margin-bottom 28px.
 - Input card: white, 1px `#e2ded6`, radius 14px, height 62px, padding 0 20px, shadow `0 1px 2px rgba(20,22,26,.04)`. Input text 19px, placeholder "Should I buy NVDA?". The "Ask" button uses ink `#16181c` with white text, 16px, padding 13px 20px, radius 9px.
 - "Recent" label 13px `#9a9ea5`. Rows have 14px vertical padding, a 1px bottom border `#e9e6e0` and hover opacity .6. Each row pairs a question (16px) with SIGNAL's short view on the right (15px, colored by stance):
-  - Should I hold ZETA for the next 3 months? → Moderately bullish (green)
+  - Should I hold GOOGL for the next 3 months? → Moderately bullish (green)
   - Is Apple expensive right now? → Fairly valued (amber)
   - Why is META falling today? → Answered (muted)
   - Compare MSFT and GOOG → MSFT preferred (green)
-- Enter or Ask submits. An empty query falls back to "Should I buy ZETA for the next 3 months?".
+- Enter or Ask submits. An empty query falls back to "Should I buy GOOGL for the next 3 months?".
 
 ### Thinking (transition state)
 - Same centered 620px column. The question is echoed in 15px `#9a9ea5`.
@@ -43,9 +43,9 @@ The `.dc.html` files open directly in a browser (keep `support.js` next to them)
 - Progress bar: 2px track `#e6e2da`, fill in ink at 55% opacity, width 25/50/75/100%, 0.5s transition. After step 4 it goes to the Asset screen.
 - Never show agent names or model terms here.
 
-### Asset screen (ZETA)
+### Asset screen (GOOGL)
 Column max-width 720px, padding 44px 24px 120px.
-- Header: "ZETA" 34px on the left; "Zeta Global" 15px `#8e939a` below it. On the right: "$18.42" 28px and "+2.1% today" 15px green.
+- Header: "GOOGL" 34px on the left; "Alphabet Inc." 15px `#8e939a` below it. On the right: "$18.42" 28px and "+2.1% today" 15px green.
 - Sub-tabs: Overview · Why · Risks · Research. 15px, gap 26px, 14px vertical padding, 2px active underline, 1px bottom border `#e9e6e0`.
 
 **Overview (Layer 1 — "What does SIGNAL think?")**
@@ -93,7 +93,7 @@ Column max-width 720px, padding 44px 24px 120px.
   - The stock is expensive — Very strong
 
 ### Watchlist
-Title 32px. Subtitle: "SIGNAL keeps watching these and tells you when its view changes." Each row shows ticker + price, the view (colored) + a one-line note, and confidence. Clicking a row opens the asset screen. Data: ZETA, NVDA, AAPL, META, BTC. Copy is in the file.
+Title 32px. Subtitle: "SIGNAL keeps watching these and tells you when its view changes." Each row shows ticker + price, the view (colored) + a one-line note, and confidence. Clicking a row opens the asset screen. Data: GOOGL, NVDA, AAPL, META, BTC. Copy is in the file.
 
 ### Portfolio
 - Stats: Value $2.41M · Expected over 3 months +8.6% · Ups and downs "Bumpy". Use words, not volatility numbers.

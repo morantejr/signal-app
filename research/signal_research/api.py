@@ -1,6 +1,6 @@
 """Small HTTP surface for the web app. Runs are cached per ticker for a day.
 
-    make api   →  GET /research/ZETA?thesis=...&horizon=3m&refresh=0
+    make api   →  GET /research/NVDA?thesis=...&horizon=3m&refresh=0
                   GET /runs      GET /runs/{run_id}     GET /health
 """
 
